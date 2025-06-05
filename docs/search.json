@@ -131,7 +131,7 @@
     "href": "teaching/courses.html",
     "title": "Courses",
     "section": "",
-    "text": "Description of your first course.\n\n\n\nDescription of your second course.",
+    "text": "Semester: Spring 2024 | Level: Graduate | Credits: 3\n\nAn advanced course exploring the integration of artificial intelligence technologies in educational systems, covering machine learning applications, personalized learning, and ethical considerations.\n\n\n\n\nSemester: Fall 2024 | Level: Undergraduate | Credits: 4\n\nIntroduction to designing effective digital learning experiences, including user experience principles, multimedia design, and assessment strategies for online environments.",
     "crumbs": [
       "Courses"
     ]
@@ -141,7 +141,7 @@
     "href": "teaching/courses.html#current-courses",
     "title": "Courses",
     "section": "",
-    "text": "Description of your first course.\n\n\n\nDescription of your second course.",
+    "text": "Semester: Spring 2024 | Level: Graduate | Credits: 3\n\nAn advanced course exploring the integration of artificial intelligence technologies in educational systems, covering machine learning applications, personalized learning, and ethical considerations.\n\n\n\n\nSemester: Fall 2024 | Level: Undergraduate | Credits: 4\n\nIntroduction to designing effective digital learning experiences, including user experience principles, multimedia design, and assessment strategies for online environments.",
     "crumbs": [
       "Courses"
     ]
@@ -151,7 +151,7 @@
     "href": "teaching/courses.html#past-courses",
     "title": "Courses",
     "section": "Past Courses",
-    "text": "Past Courses\n\nPrevious Course 1\nDescription of a past course.\n\n\nPrevious Course 2\nDescription of another past course.",
+    "text": "Past Courses\n\nEducational Technology Foundations\n\nSemester: Spring 2023 | Level: Graduate | Enrollment: 45 students\n\nFoundational course covering the history, theory, and practice of educational technology in modern learning environments.\n\n\nResearch Methods in Education\n\nSemester: Fall 2023 | Level: Graduate | Enrollment: 32 students\n\nComprehensive introduction to quantitative and qualitative research methodologies specifically applied to educational research contexts.",
     "crumbs": [
       "Courses"
     ]
@@ -290,7 +290,7 @@
     "href": "research/projects.html",
     "title": "Research Projects",
     "section": "",
-    "text": "Duration: 2024-2025\nFunding: [Funding source]\nCollaborators: [Names]\nBrief description of the project objectives and methodology.\n\n\n\nDuration: 2023-2024\nStatus: Ongoing\nDescription of another current research project.",
+    "text": "Duration: 2024-2025 | Funding: [Funding source] | Collaborators: [Names]\n\nBrief description of the project objectives and methodology. This research explores innovative approaches to educational technology and its impact on learning outcomes.\n\n\n\n\nDuration: 2023-2024 | Status: Ongoing\n\nDescription of another current research project focused on artificial intelligence applications in educational contexts.",
     "crumbs": [
       "Research Projects"
     ]
@@ -300,7 +300,7 @@
     "href": "research/projects.html#current-projects",
     "title": "Research Projects",
     "section": "",
-    "text": "Duration: 2024-2025\nFunding: [Funding source]\nCollaborators: [Names]\nBrief description of the project objectives and methodology.\n\n\n\nDuration: 2023-2024\nStatus: Ongoing\nDescription of another current research project.",
+    "text": "Duration: 2024-2025 | Funding: [Funding source] | Collaborators: [Names]\n\nBrief description of the project objectives and methodology. This research explores innovative approaches to educational technology and its impact on learning outcomes.\n\n\n\n\nDuration: 2023-2024 | Status: Ongoing\n\nDescription of another current research project focused on artificial intelligence applications in educational contexts.",
     "crumbs": [
       "Research Projects"
     ]
@@ -310,7 +310,7 @@
     "href": "research/projects.html#completed-projects",
     "title": "Research Projects",
     "section": "Completed Projects",
-    "text": "Completed Projects\n\nPrevious Project 1\nDuration: 2022-2023\nStatus: Completed\nSummary of a completed research project and its outcomes.\n\n\nPrevious Project 2\nDuration: 2021-2022\nStatus: Published\nDescription of another completed project.",
+    "text": "Completed Projects\n\nPrevious Project 1\n\nDuration: 2022-2023 | Status: Completed\n\nSummary of a completed research project and its outcomes. This project resulted in significant insights into digital learning methodologies.\n\n\nPrevious Project 2\n\nDuration: 2021-2022 | Status: Published\n\nDescription of another completed project that led to several peer-reviewed publications in educational technology journals.",
     "crumbs": [
       "Research Projects"
     ]
