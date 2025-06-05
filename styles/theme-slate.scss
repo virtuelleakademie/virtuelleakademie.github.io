@@ -63,6 +63,7 @@ h3 {
   border-bottom: 1px solid rgba(74, 85, 104, 0.1);
 }
 
+
 // Main focus areas styling (Teaching & Research only)
 .navbar-nav .nav-item {
   margin: 0 0.5rem;
@@ -90,6 +91,37 @@ h3 {
 // Regular nav links (About, GitHub, Twitter) stay normal
 .navbar-nav .nav-link:not([href*="teaching/"]):not([href*="research/"]) {
   font-weight: 500;
+}
+
+// Tool icons enhancement
+.quarto-navbar-tools .quarto-navigation-tool {
+  color: #4A5568 !important;
+  font-size: 1.2rem;
+  padding: 0.75rem !important;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.quarto-navbar-tools .quarto-navigation-tool:hover {
+  background: rgba(217, 119, 6, 0.1);
+  color: #D97706 !important;
+  transform: scale(1.1);
+}
+
+// Search icon visibility fix - more aggressive targeting
+#quarto-search .aa-DetachedSearchButtonIcon,
+#quarto-search .aa-DetachedSearchButton .aa-DetachedSearchButtonIcon,
+.navbar #quarto-search .aa-DetachedSearchButtonIcon,
+.navbar[data-bs-theme="dark"] #quarto-search .aa-DetachedSearchButtonIcon {
+  color: #4A5568 !important;
+  opacity: 1 !important;
+  fill: #4A5568 !important;
+}
+
+#quarto-search:hover .aa-DetachedSearchButtonIcon,
+.navbar #quarto-search:hover .aa-DetachedSearchButtonIcon {
+  color: #D97706 !important;
+  fill: #D97706 !important;
 }
 
 a {
@@ -130,8 +162,7 @@ a:hover {
 
 .card:hover, .feature-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(217, 119, 6, 0.12);
-  border-color: rgba(217, 119, 6, 0.2);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
 }
 
 .feature-card h3 {
