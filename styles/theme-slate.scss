@@ -9,7 +9,7 @@ $headings-font-family: "Inter", "Nunito Sans", sans-serif;
 $background-color: #FAFBFC;
 $primary: #4A5568;
 $secondary: #E8ECF1;
-$accent: #059669;
+$accent: #D97706;
 $warm: #F59E0B;
 $light: #F8FAFC;
 $body-bg: $background-color;
@@ -63,19 +63,19 @@ h3 {
 }
 
 a {
-  color: #059669;
+  color: #D97706;
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 a:hover {
-  color: #047857;
+  color: #B45309;
   text-decoration: underline;
 }
 
 .btn-primary {
-  background-color: #059669;
-  border-color: #059669;
+  background-color: #D97706;
+  border-color: #D97706;
   padding: 0.75rem 2rem;
   font-weight: 500;
   border-radius: 8px;
@@ -83,8 +83,8 @@ a:hover {
 }
 
 .btn-primary:hover {
-  background-color: #047857;
-  border-color: #047857;
+  background-color: #B45309;
+  border-color: #B45309;
   transform: translateY(-1px);
 }
 
@@ -100,8 +100,8 @@ a:hover {
 
 .card:hover, .feature-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(5, 150, 105, 0.12);
-  border-color: rgba(5, 150, 105, 0.2);
+  box-shadow: 0 12px 40px rgba(217, 119, 6, 0.12);
+  border-color: rgba(217, 119, 6, 0.2);
 }
 
 .feature-card h3 {
@@ -124,7 +124,7 @@ p {
 }
 
 .gradient-text {
-  background: linear-gradient(45deg, #4A5568, #059669, #F59E0B);
+  background: linear-gradient(45deg, #4A5568, #D97706, #F59E0B);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -148,7 +148,7 @@ p {
 }
 
 .meta strong {
-  color: #059669;
+  color: #D97706;
   font-weight: 600;
 }
 
