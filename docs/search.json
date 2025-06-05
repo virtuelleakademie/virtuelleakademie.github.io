@@ -2,7 +2,7 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "Virtuelle Akademie",
+    "title": "virtuelleakademie",
     "section": "",
     "text": "About this blog"
   },
@@ -53,7 +53,7 @@
     "href": "index.html",
     "title": "virtuelleakademie",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nJun 4, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nJun 4, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJun 1, 2025\n\n\nTristan O’Malley\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJun 1, 2025\n\n\nTristan O’Malley\n\n\n\n\n\nNo matching items"
+    "text": "A modern academic platform combining innovative teaching and cutting-edge research.\n\n\n\nExplore courses, teaching philosophy, and educational resources designed to foster learning and engagement.\n\nCurrent Courses\nTeaching Philosophy\n\nStudent Resources\nEducational Materials\n\n\n\n\nDiscover ongoing projects, publications, and collaborative research initiatives pushing the boundaries of knowledge.\n\nCurrent Projects\nPublications\nCollaborations\nResearch Networks"
   },
   {
     "objectID": "about-2.html",
@@ -75,5 +75,146 @@
     "title": "virtuelleakademie",
     "section": "Website",
     "text": "Website\n virtuelleakademie.github.io/ki-lehre-advanced/"
+  },
+  {
+    "objectID": "teaching/resources.html",
+    "href": "teaching/resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Lecture notes\nPractice exercises\nReading lists\n\n\n\n\n\nRecommended software\nOnline platforms\nUseful websites",
+    "crumbs": [
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "teaching/resources.html#student-resources",
+    "href": "teaching/resources.html#student-resources",
+    "title": "Resources",
+    "section": "",
+    "text": "Lecture notes\nPractice exercises\nReading lists\n\n\n\n\n\nRecommended software\nOnline platforms\nUseful websites",
+    "crumbs": [
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "teaching/resources.html#teaching-resources",
+    "href": "teaching/resources.html#teaching-resources",
+    "title": "Resources",
+    "section": "Teaching Resources",
+    "text": "Teaching Resources\n\nPedagogy\n\nTeaching methods\nAssessment strategies\nClassroom management\n\n\n\nProfessional Development\n\nConferences\nWorkshops\nPublications",
+    "crumbs": [
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "teaching/philosophy.html",
+    "href": "teaching/philosophy.html",
+    "title": "Teaching Philosophy",
+    "section": "",
+    "text": "Describe your fundamental beliefs about education and learning.\n\n\n\nExplain your methodology and techniques.\n\n\n\nHow you foster active learning and student participation.\n\n\n\nYour approach to evaluating student progress and providing feedback.",
+    "crumbs": [
+      "Teaching Philosophy"
+    ]
+  },
+  {
+    "objectID": "teaching/philosophy.html#my-teaching-philosophy",
+    "href": "teaching/philosophy.html#my-teaching-philosophy",
+    "title": "Teaching Philosophy",
+    "section": "",
+    "text": "Describe your fundamental beliefs about education and learning.\n\n\n\nExplain your methodology and techniques.\n\n\n\nHow you foster active learning and student participation.\n\n\n\nYour approach to evaluating student progress and providing feedback.",
+    "crumbs": [
+      "Teaching Philosophy"
+    ]
+  },
+  {
+    "objectID": "teaching/courses.html",
+    "href": "teaching/courses.html",
+    "title": "Courses",
+    "section": "",
+    "text": "Description of your first course.\n\n\n\nDescription of your second course.",
+    "crumbs": [
+      "Courses"
+    ]
+  },
+  {
+    "objectID": "teaching/courses.html#current-courses",
+    "href": "teaching/courses.html#current-courses",
+    "title": "Courses",
+    "section": "",
+    "text": "Description of your first course.\n\n\n\nDescription of your second course.",
+    "crumbs": [
+      "Courses"
+    ]
+  },
+  {
+    "objectID": "teaching/courses.html#past-courses",
+    "href": "teaching/courses.html#past-courses",
+    "title": "Courses",
+    "section": "Past Courses",
+    "text": "Past Courses\n\nPrevious Course 1\nDescription of a past course.\n\n\nPrevious Course 2\nDescription of another past course.",
+    "crumbs": [
+      "Courses"
+    ]
+  },
+  {
+    "objectID": "teaching/index.html",
+    "href": "teaching/index.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "This section contains information about courses, teaching philosophy, and educational resources.\n\n\nExplore the courses I’m currently teaching and their materials.\n\n\n\nLearn about my approach to education and student engagement.\n\n\n\nAccess helpful resources for students and fellow educators.",
+    "crumbs": [
+      "Teaching"
+    ]
+  },
+  {
+    "objectID": "teaching/index.html#welcome-to-teaching",
+    "href": "teaching/index.html#welcome-to-teaching",
+    "title": "Teaching",
+    "section": "",
+    "text": "This section contains information about courses, teaching philosophy, and educational resources.\n\n\nExplore the courses I’m currently teaching and their materials.\n\n\n\nLearn about my approach to education and student engagement.\n\n\n\nAccess helpful resources for students and fellow educators.",
+    "crumbs": [
+      "Teaching"
+    ]
+  },
+  {
+    "objectID": "index.html#welcome-to-virtuelle-akademie",
+    "href": "index.html#welcome-to-virtuelle-akademie",
+    "title": "virtuelleakademie",
+    "section": "",
+    "text": "A modern academic platform combining innovative teaching and cutting-edge research.\n\n\n\nExplore courses, teaching philosophy, and educational resources designed to foster learning and engagement.\n\nCurrent Courses\nTeaching Philosophy\n\nStudent Resources\nEducational Materials\n\n\n\n\nDiscover ongoing projects, publications, and collaborative research initiatives pushing the boundaries of knowledge.\n\nCurrent Projects\nPublications\nCollaborations\nResearch Networks"
+  },
+  {
+    "objectID": "index.html#latest-updates",
+    "href": "index.html#latest-updates",
+    "title": "virtuelleakademie",
+    "section": "Latest Updates",
+    "text": "Latest Updates\n\n\n\n\n\nposts = FileAttachment(\"posts/_metadata.yml\")"
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research",
+    "section": "",
+    "text": "This section showcases my research activities, projects, and publications.\n\n\nExplore my ongoing research initiatives and their progress.\n\n\n\nBrowse my academic publications and scholarly work.\n\n\n\nLearn about research partnerships and collaborative efforts.",
+    "crumbs": [
+      "Research"
+    ]
+  },
+  {
+    "objectID": "research/index.html#welcome-to-research",
+    "href": "research/index.html#welcome-to-research",
+    "title": "Research",
+    "section": "",
+    "text": "This section showcases my research activities, projects, and publications.\n\n\nExplore my ongoing research initiatives and their progress.\n\n\n\nBrowse my academic publications and scholarly work.\n\n\n\nLearn about research partnerships and collaborative efforts.",
+    "crumbs": [
+      "Research"
+    ]
+  },
+  {
+    "objectID": "index.html#latest-posts",
+    "href": "index.html#latest-posts",
+    "title": "virtuelleakademie",
+    "section": "Latest Posts",
+    "text": "Latest Posts"
   }
 ]
