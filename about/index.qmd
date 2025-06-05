@@ -1,6 +1,6 @@
 ---
-title: "About"
-image: "assets/va-logo.png"
+# title: "About"
+# image: "../assets/va-logo.png"
 about:
   template: marquee
   links:

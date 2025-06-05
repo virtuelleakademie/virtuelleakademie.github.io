@@ -51,9 +51,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "virtuelleakademie",
+    "title": "Virtuelle Akademie",
     "section": "",
-    "text": "Welcome to Virtuelle Akademie\nA modern academic platform combining innovative teaching and cutting-edge research."
+    "text": "Explore courses, teaching philosophy, and educational resources designed to foster learning and engagement.\n\nCurrent Courses\nTeaching Philosophy\n\nStudent Resources\nEducational Materials\n\n\n\n\nDiscover ongoing projects, publications, and collaborative research initiatives pushing the boundaries of knowledge.\n\nCurrent Projects\nPublications\nCollaborations\nResearch Networks"
   },
   {
     "objectID": "about-2.html",
@@ -213,7 +213,7 @@
   {
     "objectID": "index.html#latest-posts",
     "href": "index.html#latest-posts",
-    "title": "virtuelleakademie",
+    "title": "Virtuelle Akademie",
     "section": "Latest Posts",
     "text": "Latest Posts"
   },
@@ -507,5 +507,40 @@
     "title": "Research Projects",
     "section": "Completed Projects",
     "text": "Completed Projects\n\nPrevious Project 1\n\nDuration: 2022-2023 | Status: Completed\n\nSummary of a completed research project and its outcomes. This project resulted in significant insights into digital learning methodologies.\n\n\nPrevious Project 2\n\nDuration: 2021-2022 | Status: Published\n\nDescription of another completed project that led to several peer-reviewed publications in educational technology journals."
+  },
+  {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "Virtuelle Akademie",
+    "section": "",
+    "text": "The Virtual Academy (Virtuelle Akademie) is a research and development unit at the Bern University of Applied Sciences, focused on the intersection of technology and education."
+  },
+  {
+    "objectID": "about/index.html#about-the-virtual-academy",
+    "href": "about/index.html#about-the-virtual-academy",
+    "title": "Virtuelle Akademie",
+    "section": "",
+    "text": "The Virtual Academy (Virtuelle Akademie) is a research and development unit at the Bern University of Applied Sciences, focused on the intersection of technology and education."
+  },
+  {
+    "objectID": "about/index.html#our-team",
+    "href": "about/index.html#our-team",
+    "title": "Virtuelle Akademie",
+    "section": "Our Team",
+    "text": "Our Team\nDr. Andrew Ellis and Dr. Stefan Hackstein are researchers at the Virtual Academy of the Bern University of Applied Sciences. Their research focuses on how artificial intelligence can be used effectively in educational systems."
+  },
+  {
+    "objectID": "about/index.html#our-work",
+    "href": "about/index.html#our-work",
+    "title": "Virtuelle Akademie",
+    "section": "Our Work",
+    "text": "Our Work\nWe explore innovative approaches to integrating artificial intelligence into educational contexts, developing tools and methodologies that enhance learning experiences and educational outcomes."
+  },
+  {
+    "objectID": "about/index.html#website",
+    "href": "about/index.html#website",
+    "title": "Virtuelle Akademie",
+    "section": "Website",
+    "text": "Website\n virtuelleakademie.github.io"
   }
 ]

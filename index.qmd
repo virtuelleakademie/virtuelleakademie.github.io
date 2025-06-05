@@ -1,5 +1,5 @@
 ---
-title: "virtuelleakademie"
+# title: "virtuelleakademie"
 listing:
   contents: posts
   sort: "date desc"
@@ -9,14 +9,14 @@ listing:
   filter-ui: true
 page-layout: full
 ---
-
+<!-- 
 ::: {.welcome-headline .gradient-text}
 Welcome to Virtuelle Akademie
 :::
 
-A modern academic platform combining innovative teaching and cutting-edge research.
+A modern academic platform combining innovative teaching and cutting-edge research. -->
 
-::: {.content-grid}
+<!-- ::: {.content-grid}
 
 ::: {.feature-card}
 ### [Teaching](teaching/)
@@ -40,7 +40,7 @@ Discover ongoing projects, publications, and collaborative research initiatives 
 - Research Networks
 :::
 
-:::
+::: -->
 
 ## Latest Posts
 

@@ -16,8 +16,11 @@ website:
         href: teaching/
       - text: "Research"
         href: research/
+
     right:
-      - about.qmd
+      - text: "About"
+        href: about/
+      
     tools:
       - icon: lightbulb-fill
         text: Knowledge Base
@@ -26,6 +29,7 @@ website:
       - icon: github
         href: https://github.com/virtuelleakademie
         target: _blank
+
   sidebar:
     - title: "Teaching"
       href: teaching/
@@ -41,9 +45,12 @@ website:
       href: research/
       contents:
         - research/index.qmd
-        - research/projects/
-        - research/publications/
-        - research/collaborations/
+        - text: "Projects"
+          href: research/projects/
+        - text: "Publications"
+          href: research/publications/
+        - text: "Collaborations"
+          href: research/collaborations/
 
 page-footer:
   left: "© 2025 Virtuelle Akademie"
