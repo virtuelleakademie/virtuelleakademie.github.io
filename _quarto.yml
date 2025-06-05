@@ -6,8 +6,6 @@ website:
   title: "virtuelleakademie"
   navbar:
     left:
-      - text: "Home"
-        href: index.qmd
       - text: "Teaching"
         href: teaching/
       - text: "Research"
