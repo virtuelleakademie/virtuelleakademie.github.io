@@ -37,10 +37,9 @@ website:
 format:
   html:
     theme:
-      light: [simplex]
+      light: [yeti, styles/custom.scss]
     toc: true
     link-external-icon: true
     link-external-newwindow: true
     anchor-sections: true
     smooth-scroll: true
-    linkcolor: rebeccapurple
