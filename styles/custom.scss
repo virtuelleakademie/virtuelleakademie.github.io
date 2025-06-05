@@ -302,3 +302,166 @@ a:hover {
 .sidebar .sidebar-item a:hover {
   background-color: rgba(75, 46, 131, 0.05);
 }
+
+// Animated gradient text
+.gradient-text {
+  background: linear-gradient(45deg, #4b2e83, #6b4ba3, #8b6bc3, #4b2e83);
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 4s ease-in-out infinite;
+  font-weight: 700;
+}
+
+@keyframes gradientAnimation {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+// Welcome headline special styling
+.welcome-headline {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .welcome-headline {
+    font-size: 2.25rem;
+  }
+}
+
+// Hover effects for links
+a {
+  transition: all 0.2s ease;
+}
+
+// Enhanced navbar hover effects
+.navbar-nav .nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+}
+
+.navbar-nav .nav-link:hover {
+  text-decoration: none !important;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #4b2e83, #6b4ba3);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 80%;
+}
+
+// Blog post cards
+.quarto-listing .listing-item {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  border: 1px solid rgba(75, 46, 131, 0.08);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.quarto-listing .listing-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border-color: rgba(75, 46, 131, 0.15);
+}
+
+.quarto-listing .listing-item .listing-title {
+  color: #4b2e83;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.quarto-listing .listing-item .listing-subtitle {
+  color: #666666;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.quarto-listing .listing-item .listing-description {
+  color: #555555;
+  line-height: 1.6;
+}
+
+// Pulse animation for interactive elements
+.pulse-on-hover:hover {
+  animation: pulse 0.6s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+// Smooth scrolling for anchor links
+html {
+  scroll-behavior: smooth;
+}
+
+// Enhanced button animations
+.btn {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+// Loading animation for dynamic content
+.loading-shimmer {
+  background: linear-gradient(90deg, #f0eeeb 25%, #e8e3d3 50%, #f0eeeb 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
