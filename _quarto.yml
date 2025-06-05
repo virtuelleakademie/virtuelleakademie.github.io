@@ -37,7 +37,7 @@ website:
 format:
   html:
     theme:
-      light: [yeti, styles/custom-simple.scss]
+      light: [yeti, styles/custom.scss]
     toc: true
     link-external-icon: true
     link-external-newwindow: true
