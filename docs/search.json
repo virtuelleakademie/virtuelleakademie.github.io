@@ -244,5 +244,115 @@
     "title": "About",
     "section": "Website",
     "text": "Website\n virtuelleakademie.github.io"
+  },
+  {
+    "objectID": "research/publications.html",
+    "href": "research/publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Title of Paper 1 (2024)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]\nTitle of Paper 2 (2024)\nAnother Journal, Vol. A, Issue B, pp. C-C\n[DOI link] | [PDF]\n\n\n\nTitle of Paper 3 (2023)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]",
+    "crumbs": [
+      "Publications"
+    ]
+  },
+  {
+    "objectID": "research/publications.html#journal-articles",
+    "href": "research/publications.html#journal-articles",
+    "title": "Publications",
+    "section": "",
+    "text": "Title of Paper 1 (2024)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]\nTitle of Paper 2 (2024)\nAnother Journal, Vol. A, Issue B, pp. C-C\n[DOI link] | [PDF]\n\n\n\nTitle of Paper 3 (2023)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]",
+    "crumbs": [
+      "Publications"
+    ]
+  },
+  {
+    "objectID": "research/publications.html#conference-proceedings",
+    "href": "research/publications.html#conference-proceedings",
+    "title": "Publications",
+    "section": "Conference Proceedings",
+    "text": "Conference Proceedings\n\n2024\nConference Paper Title (2024)\nConference Name, Location\n[Link] | [PDF]\n\n\n2023\nAnother Conference Paper (2023)\nAnother Conference, Location\n[Link] | [PDF]",
+    "crumbs": [
+      "Publications"
+    ]
+  },
+  {
+    "objectID": "research/publications.html#book-chapters",
+    "href": "research/publications.html#book-chapters",
+    "title": "Publications",
+    "section": "Book Chapters",
+    "text": "Book Chapters\nChapter Title (2024)\nIn: Book Title, Editor Name (Ed.)\nPublisher, pp. X-Y\n[Link]",
+    "crumbs": [
+      "Publications"
+    ]
+  },
+  {
+    "objectID": "research/projects.html",
+    "href": "research/projects.html",
+    "title": "Research Projects",
+    "section": "",
+    "text": "Duration: 2024-2025\nFunding: [Funding source]\nCollaborators: [Names]\nBrief description of the project objectives and methodology.\n\n\n\nDuration: 2023-2024\nStatus: Ongoing\nDescription of another current research project.",
+    "crumbs": [
+      "Research Projects"
+    ]
+  },
+  {
+    "objectID": "research/projects.html#current-projects",
+    "href": "research/projects.html#current-projects",
+    "title": "Research Projects",
+    "section": "",
+    "text": "Duration: 2024-2025\nFunding: [Funding source]\nCollaborators: [Names]\nBrief description of the project objectives and methodology.\n\n\n\nDuration: 2023-2024\nStatus: Ongoing\nDescription of another current research project.",
+    "crumbs": [
+      "Research Projects"
+    ]
+  },
+  {
+    "objectID": "research/projects.html#completed-projects",
+    "href": "research/projects.html#completed-projects",
+    "title": "Research Projects",
+    "section": "Completed Projects",
+    "text": "Completed Projects\n\nPrevious Project 1\nDuration: 2022-2023\nStatus: Completed\nSummary of a completed research project and its outcomes.\n\n\nPrevious Project 2\nDuration: 2021-2022\nStatus: Published\nDescription of another completed project.",
+    "crumbs": [
+      "Research Projects"
+    ]
+  },
+  {
+    "objectID": "research/collaborations.html",
+    "href": "research/collaborations.html",
+    "title": "Collaborations",
+    "section": "",
+    "text": "Partners: [Names]\nProject: [Project name]\nDuration: [Time period]\nDescription of the collaborative research effort.\n\n\n\nPartners: [Names]\nFocus: [Research area]\nDuration: [Time period]\nDetails about another ongoing collaboration.",
+    "crumbs": [
+      "Collaborations"
+    ]
+  },
+  {
+    "objectID": "research/collaborations.html#current-collaborations",
+    "href": "research/collaborations.html#current-collaborations",
+    "title": "Collaborations",
+    "section": "",
+    "text": "Partners: [Names]\nProject: [Project name]\nDuration: [Time period]\nDescription of the collaborative research effort.\n\n\n\nPartners: [Names]\nFocus: [Research area]\nDuration: [Time period]\nDetails about another ongoing collaboration.",
+    "crumbs": [
+      "Collaborations"
+    ]
+  },
+  {
+    "objectID": "research/collaborations.html#past-collaborations",
+    "href": "research/collaborations.html#past-collaborations",
+    "title": "Collaborations",
+    "section": "Past Collaborations",
+    "text": "Past Collaborations\n\nPrevious Institution 1\nProject: [Completed project]\nDuration: [Past time period]\nOutcome: [Results/publications]\nSummary of a completed collaborative project.",
+    "crumbs": [
+      "Collaborations"
+    ]
+  },
+  {
+    "objectID": "research/collaborations.html#international-networks",
+    "href": "research/collaborations.html#international-networks",
+    "title": "Collaborations",
+    "section": "International Networks",
+    "text": "International Networks\n\nNetwork 1\nDescription of involvement in international research networks.\n\n\nProfessional Associations\n\nAssociation 1\nAssociation 2\nCommittee memberships",
+    "crumbs": [
+      "Collaborations"
+    ]
   }
 ]
