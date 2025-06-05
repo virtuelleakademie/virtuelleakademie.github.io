@@ -23,9 +23,12 @@ website:
       href: teaching/
       contents:
         - teaching/index.qmd
-        - teaching/courses/
-        - teaching/resources/
-        - teaching/philosophy/
+        - text: "Courses"
+          href: teaching/courses/
+        - text: "Resources"
+          href: teaching/resources/
+        - text: "Philosophy"
+          href: teaching/philosophy/
     - title: "Research"
       href: research/
       contents:
