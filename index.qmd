@@ -1,5 +1,12 @@
 ---
 title: "virtuelleakademie"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: true
 page-layout: full
 title-block-banner: true
 ---
@@ -32,22 +39,6 @@ Discover ongoing projects, publications, and collaborative research initiatives 
 
 :::
 
-## Latest Updates
-
-::: {#blog-listing}
-:::
-
-```{=html}
-<div id="blog-listing">
-```
-
-```{ojs}
-//| echo: false
-posts = FileAttachment("posts/_metadata.yml")
-```
-
-```{=html}
-</div>
-```
+## Latest Posts
 
 

@@ -1,6 +1,5 @@
 ---
 # title: "Virtuelle Akademie"
-image: profile.jpg
 image: "assets/logo.png"
 
 about:
