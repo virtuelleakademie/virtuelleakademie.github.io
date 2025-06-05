@@ -11,7 +11,9 @@ page-layout: full
 title-block-banner: true
 ---
 
-## Welcome to Virtuelle Akademie
+::: {.welcome-headline .gradient-text}
+Welcome to Virtuelle Akademie
+:::
 
 A modern academic platform combining innovative teaching and cutting-edge research.
 
