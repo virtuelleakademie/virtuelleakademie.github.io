@@ -1,0 +1,20 @@
+---
+title: "Teaching"
+page-layout: full
+---
+
+## Welcome to Teaching
+
+This section contains information about courses, teaching philosophy, and educational resources.
+
+### Current Courses
+
+Explore the courses I'm currently teaching and their materials.
+
+### Teaching Philosophy
+
+Learn about my approach to education and student engagement.
+
+### Resources
+
+Access helpful resources for students and fellow educators.

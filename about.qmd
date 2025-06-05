@@ -1,6 +1,8 @@
 ---
-title: "Virtuelle Akademie"
+# title: "Virtuelle Akademie"
 image: profile.jpg
+image: "assets/logo.png"
+
 about:
   template: jolla
   links:

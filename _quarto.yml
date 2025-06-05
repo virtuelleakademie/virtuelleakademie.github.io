@@ -5,15 +5,42 @@ project:
 website:
   title: "virtuelleakademie"
   navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Teaching"
+        href: teaching/
+      - text: "Research"
+        href: research/
     right:
       - about.qmd
       - icon: github
         href: https://github.com/
       - icon: twitter
         href: https://twitter.com
+  sidebar:
+    - title: "Teaching"
+      href: teaching/
+      contents:
+        - teaching/index.qmd
+        - teaching/courses.qmd
+        - teaching/resources.qmd
+        - teaching/philosophy.qmd
+    - title: "Research"
+      href: research/
+      contents:
+        - research/index.qmd
+        - research/projects.qmd
+        - research/publications.qmd
+        - research/collaborations.qmd
+
 format:
   html:
     theme:
-      - cosmo
-      - brand
-    css: styles.css
+      light: [simplex]
+    toc: true
+    link-external-icon: true
+    link-external-newwindow: true
+    anchor-sections: true
+    smooth-scroll: true
+    linkcolor: rebeccapurple

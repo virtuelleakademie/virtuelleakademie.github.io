@@ -1,0 +1,19 @@
+---
+title: "Courses"
+---
+
+## Current Courses
+
+### Course 1
+Description of your first course.
+
+### Course 2
+Description of your second course.
+
+## Past Courses
+
+### Previous Course 1
+Description of a past course.
+
+### Previous Course 2
+Description of another past course.

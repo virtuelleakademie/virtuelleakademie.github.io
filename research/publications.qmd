@@ -1,0 +1,42 @@
+---
+title: "Publications"
+---
+
+## Journal Articles
+
+### 2024
+
+**Title of Paper 1** (2024)  
+*Journal Name*, Vol. X, Issue Y, pp. Z-Z  
+[DOI link] | [PDF]
+
+**Title of Paper 2** (2024)  
+*Another Journal*, Vol. A, Issue B, pp. C-C  
+[DOI link] | [PDF]
+
+### 2023
+
+**Title of Paper 3** (2023)  
+*Journal Name*, Vol. X, Issue Y, pp. Z-Z  
+[DOI link] | [PDF]
+
+## Conference Proceedings
+
+### 2024
+
+**Conference Paper Title** (2024)  
+*Conference Name*, Location  
+[Link] | [PDF]
+
+### 2023
+
+**Another Conference Paper** (2023)  
+*Another Conference*, Location  
+[Link] | [PDF]
+
+## Book Chapters
+
+**Chapter Title** (2024)  
+In: *Book Title*, Editor Name (Ed.)  
+Publisher, pp. X-Y  
+[Link]

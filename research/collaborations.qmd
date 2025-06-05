@@ -1,0 +1,38 @@
+---
+title: "Collaborations"
+---
+
+## Current Collaborations
+
+### Institution 1
+**Partners:** [Names]  
+**Project:** [Project name]  
+**Duration:** [Time period]
+
+Description of the collaborative research effort.
+
+### Institution 2
+**Partners:** [Names]  
+**Focus:** [Research area]  
+**Duration:** [Time period]
+
+Details about another ongoing collaboration.
+
+## Past Collaborations
+
+### Previous Institution 1
+**Project:** [Completed project]  
+**Duration:** [Past time period]  
+**Outcome:** [Results/publications]
+
+Summary of a completed collaborative project.
+
+## International Networks
+
+### Network 1
+Description of involvement in international research networks.
+
+### Professional Associations
+- Association 1
+- Association 2
+- Committee memberships
