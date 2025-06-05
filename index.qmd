@@ -15,10 +15,11 @@ title-block-banner: true
 
 A modern academic platform combining innovative teaching and cutting-edge research.
 
-::: {.grid}
+::: {.content-grid}
 
-::: {.g-col-12 .g-col-md-6}
+::: {.feature-card}
 ### [Teaching](teaching/)
+
 Explore courses, teaching philosophy, and educational resources designed to foster learning and engagement.
 
 - Current Courses
@@ -27,8 +28,9 @@ Explore courses, teaching philosophy, and educational resources designed to fost
 - Educational Materials
 :::
 
-::: {.g-col-12 .g-col-md-6}
+::: {.feature-card}
 ### [Research](research/)
+
 Discover ongoing projects, publications, and collaborative research initiatives pushing the boundaries of knowledge.
 
 - Current Projects
