@@ -40,7 +40,7 @@ website:
 format:
   html:
     theme:
-      light: [yeti, styles/custom.scss]
+      light: [yeti, styles/theme-slate.scss]
     toc: true
     link-external-icon: true
     link-external-newwindow: true
