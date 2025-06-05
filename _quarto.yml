@@ -23,21 +23,21 @@ website:
       href: teaching/
       contents:
         - teaching/index.qmd
-        - teaching/courses.qmd
-        - teaching/resources.qmd
-        - teaching/philosophy.qmd
+        - teaching/courses/
+        - teaching/resources/
+        - teaching/philosophy/
     - title: "Research"
       href: research/
       contents:
         - research/index.qmd
-        - research/projects.qmd
-        - research/publications.qmd
-        - research/collaborations.qmd
+        - research/projects/
+        - research/publications/
+        - research/collaborations/
 
 format:
   html:
     theme:
-      light: [yeti, styles/custom.scss]
+      light: [yeti, styles/custom-simple.scss]
     toc: true
     link-external-icon: true
     link-external-newwindow: true

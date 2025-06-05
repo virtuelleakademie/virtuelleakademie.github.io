@@ -1,0 +1,95 @@
+/*-- scss:defaults --*/
+
+// Typography
+$font-family-sans-serif: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+// Colors
+$background-color: #F6F5F3;
+$primary: #4b2e83;
+$body-bg: $background-color;
+$body-color: #333333;
+
+/*-- scss:rules --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  background-color: #F6F5F3;
+  color: #333333;
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter", sans-serif;
+  color: #666666;
+  font-weight: 600;
+}
+
+h1 {
+  color: #4b2e83;
+  font-weight: 700;
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+  color: #4b2e83 !important;
+  font-family: "Inter", sans-serif;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+a {
+  color: #4b2e83;
+}
+
+.btn-primary {
+  background-color: #4b2e83;
+  border-color: #4b2e83;
+}
+
+.card, .feature-card, .section-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  border: 1px solid rgba(75, 46, 131, 0.08);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card:hover, .feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #4b2e83, #6b4ba3, #8b6bc3);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.welcome-headline {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+  .welcome-headline {
+    font-size: 2.25rem;
+  }
+}

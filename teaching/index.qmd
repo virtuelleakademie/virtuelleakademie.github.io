@@ -5,16 +5,52 @@ page-layout: full
 
 ## Welcome to Teaching
 
-This section contains information about courses, teaching philosophy, and educational resources.
+This section contains information about courses, teaching philosophy, and educational resources focused on AI in education.
 
-### Current Courses
+## AI in Education Courses
 
-Explore the courses I'm currently teaching and their materials.
+::: {.content-grid}
+
+::: {.feature-card}
+### [KI in der Lehre - Intermediate](https://virtuelleakademie.github.io/ki-lehre-intermediate/)
+
+::: {.meta}
+**Level:** Intermediate | **Format:** Interactive Workshop | **Duration:** Half-day
+:::
+
+An intermediate-level course exploring practical applications of artificial intelligence in educational settings. Learn how to integrate AI tools effectively into your teaching practice.
+
+- Hands-on AI tool exploration
+- Practical implementation strategies
+- Interactive exercises and examples
+- Real-world case studies
+
+[**Launch Intermediate Course →**](https://virtuelleakademie.github.io/ki-lehre-intermediate/){.btn .btn-primary target="_blank"}
+:::
+
+::: {.feature-card}
+### [KI in der Lehre - Advanced](https://virtuelleakademie.github.io/ki-lehre-advanced/)
+
+::: {.meta}
+**Level:** Advanced | **Format:** Interactive Workshop | **Duration:** Half-day
+:::
+
+Advanced concepts and implementations of AI technologies in modern educational environments. Deep dive into sophisticated AI applications and pedagogical frameworks.
+
+- Advanced AI integration techniques
+- Ethical considerations and best practices
+- Custom AI workflow development
+- Assessment and evaluation methods
+
+[**Launch Advanced Course →**](https://virtuelleakademie.github.io/ki-lehre-advanced/){.btn .btn-primary target="_blank"}
+:::
+
+:::
 
 ### Teaching Philosophy
 
-Learn about my approach to education and student engagement.
+Learn about our approach to education and student engagement in the digital age.
 
 ### Resources
 
-Access helpful resources for students and fellow educators.
+Access helpful resources for students and fellow educators interested in AI applications in education.

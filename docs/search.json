@@ -161,7 +161,7 @@
     "href": "teaching/index.html",
     "title": "Teaching",
     "section": "",
-    "text": "This section contains information about courses, teaching philosophy, and educational resources.\n\n\nExplore the courses I’m currently teaching and their materials.\n\n\n\nLearn about my approach to education and student engagement.\n\n\n\nAccess helpful resources for students and fellow educators.",
+    "text": "This section contains information about courses, teaching philosophy, and educational resources focused on AI in education.",
     "crumbs": [
       "Teaching"
     ]
@@ -171,7 +171,7 @@
     "href": "teaching/index.html#welcome-to-teaching",
     "title": "Teaching",
     "section": "",
-    "text": "This section contains information about courses, teaching philosophy, and educational resources.\n\n\nExplore the courses I’m currently teaching and their materials.\n\n\n\nLearn about my approach to education and student engagement.\n\n\n\nAccess helpful resources for students and fellow educators.",
+    "text": "This section contains information about courses, teaching philosophy, and educational resources focused on AI in education.",
     "crumbs": [
       "Teaching"
     ]
@@ -195,7 +195,7 @@
     "href": "research/index.html",
     "title": "Research",
     "section": "",
-    "text": "This section showcases my research activities, projects, and publications.\n\n\nExplore my ongoing research initiatives and their progress.\n\n\n\nBrowse my academic publications and scholarly work.\n\n\n\nLearn about research partnerships and collaborative efforts.",
+    "text": "This section showcases our research activities, projects, and publications in educational technology and AI.",
     "crumbs": [
       "Research"
     ]
@@ -205,7 +205,7 @@
     "href": "research/index.html#welcome-to-research",
     "title": "Research",
     "section": "",
-    "text": "This section showcases my research activities, projects, and publications.\n\n\nExplore my ongoing research initiatives and their progress.\n\n\n\nBrowse my academic publications and scholarly work.\n\n\n\nLearn about research partnerships and collaborative efforts.",
+    "text": "This section showcases our research activities, projects, and publications in educational technology and AI.",
     "crumbs": [
       "Research"
     ]
@@ -354,5 +354,158 @@
     "crumbs": [
       "Collaborations"
     ]
+  },
+  {
+    "objectID": "teaching/index.html#ai-in-education-courses",
+    "href": "teaching/index.html#ai-in-education-courses",
+    "title": "Teaching",
+    "section": "AI in Education Courses",
+    "text": "AI in Education Courses\n\n\nKI in der Lehre - Intermediate\n\nLevel: Intermediate | Format: Interactive Workshop | Duration: Half-day\n\nAn intermediate-level course exploring practical applications of artificial intelligence in educational settings. Learn how to integrate AI tools effectively into your teaching practice.\n\nHands-on AI tool exploration\nPractical implementation strategies\nInteractive exercises and examples\nReal-world case studies\n\nLaunch Intermediate Course →\n\n\nKI in der Lehre - Advanced\n\nLevel: Advanced | Format: Interactive Workshop | Duration: Half-day\n\nAdvanced concepts and implementations of AI technologies in modern educational environments. Deep dive into sophisticated AI applications and pedagogical frameworks.\n\nAdvanced AI integration techniques\nEthical considerations and best practices\nCustom AI workflow development\nAssessment and evaluation methods\n\nLaunch Advanced Course →\n\n\n\nTeaching Philosophy\nLearn about our approach to education and student engagement in the digital age.\n\n\nResources\nAccess helpful resources for students and fellow educators interested in AI applications in education.",
+    "crumbs": [
+      "Teaching"
+    ]
+  },
+  {
+    "objectID": "research/index.html#featured-research-program",
+    "href": "research/index.html#featured-research-program",
+    "title": "Research",
+    "section": "Featured Research Program",
+    "text": "Featured Research Program\n\nBeLEARN - Swiss Research Network\n\nProgram: Swiss National Research Network | Focus: Learning Sciences | Partnership: Multiple Swiss Universities\n\nOur research contributes to BeLEARN, the Swiss research network dedicated to advancing the science of learning through interdisciplinary collaboration and innovation.\nVisit BeLEARN Projects →\n\n\nCurrent Projects\nExplore our ongoing research initiatives and their progress in AI and educational technology.\n\n\nPublications\nBrowse our academic publications and scholarly work in learning sciences.\n\n\nCollaborations\nLearn about research partnerships and collaborative efforts within the Swiss research landscape.",
+    "crumbs": [
+      "Research"
+    ]
+  },
+  {
+    "objectID": "teaching/philosophy/index.html",
+    "href": "teaching/philosophy/index.html",
+    "title": "Teaching Philosophy",
+    "section": "",
+    "text": "Describe your fundamental beliefs about education and learning.\n\n\n\nExplain your methodology and techniques.\n\n\n\nHow you foster active learning and student participation.\n\n\n\nYour approach to evaluating student progress and providing feedback."
+  },
+  {
+    "objectID": "teaching/philosophy/index.html#my-teaching-philosophy",
+    "href": "teaching/philosophy/index.html#my-teaching-philosophy",
+    "title": "Teaching Philosophy",
+    "section": "",
+    "text": "Describe your fundamental beliefs about education and learning.\n\n\n\nExplain your methodology and techniques.\n\n\n\nHow you foster active learning and student participation.\n\n\n\nYour approach to evaluating student progress and providing feedback."
+  },
+  {
+    "objectID": "teaching/resources/index.html",
+    "href": "teaching/resources/index.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Lecture notes\nPractice exercises\nReading lists\n\n\n\n\n\nRecommended software\nOnline platforms\nUseful websites"
+  },
+  {
+    "objectID": "teaching/resources/index.html#student-resources",
+    "href": "teaching/resources/index.html#student-resources",
+    "title": "Resources",
+    "section": "",
+    "text": "Lecture notes\nPractice exercises\nReading lists\n\n\n\n\n\nRecommended software\nOnline platforms\nUseful websites"
+  },
+  {
+    "objectID": "teaching/resources/index.html#teaching-resources",
+    "href": "teaching/resources/index.html#teaching-resources",
+    "title": "Resources",
+    "section": "Teaching Resources",
+    "text": "Teaching Resources\n\nPedagogy\n\nTeaching methods\nAssessment strategies\nClassroom management\n\n\n\nProfessional Development\n\nConferences\nWorkshops\nPublications"
+  },
+  {
+    "objectID": "teaching/courses/index.html",
+    "href": "teaching/courses/index.html",
+    "title": "Courses",
+    "section": "",
+    "text": "Semester: Spring 2024 | Level: Graduate | Credits: 3\n\nAn advanced course exploring the integration of artificial intelligence technologies in educational systems, covering machine learning applications, personalized learning, and ethical considerations.\n\n\n\n\nSemester: Fall 2024 | Level: Undergraduate | Credits: 4\n\nIntroduction to designing effective digital learning experiences, including user experience principles, multimedia design, and assessment strategies for online environments."
+  },
+  {
+    "objectID": "teaching/courses/index.html#current-courses",
+    "href": "teaching/courses/index.html#current-courses",
+    "title": "Courses",
+    "section": "",
+    "text": "Semester: Spring 2024 | Level: Graduate | Credits: 3\n\nAn advanced course exploring the integration of artificial intelligence technologies in educational systems, covering machine learning applications, personalized learning, and ethical considerations.\n\n\n\n\nSemester: Fall 2024 | Level: Undergraduate | Credits: 4\n\nIntroduction to designing effective digital learning experiences, including user experience principles, multimedia design, and assessment strategies for online environments."
+  },
+  {
+    "objectID": "teaching/courses/index.html#past-courses",
+    "href": "teaching/courses/index.html#past-courses",
+    "title": "Courses",
+    "section": "Past Courses",
+    "text": "Past Courses\n\nEducational Technology Foundations\n\nSemester: Spring 2023 | Level: Graduate | Enrollment: 45 students\n\nFoundational course covering the history, theory, and practice of educational technology in modern learning environments.\n\n\nResearch Methods in Education\n\nSemester: Fall 2023 | Level: Graduate | Enrollment: 32 students\n\nComprehensive introduction to quantitative and qualitative research methodologies specifically applied to educational research contexts."
+  },
+  {
+    "objectID": "research/collaborations/index.html",
+    "href": "research/collaborations/index.html",
+    "title": "Collaborations",
+    "section": "",
+    "text": "Partners: [Names]\nProject: [Project name]\nDuration: [Time period]\nDescription of the collaborative research effort.\n\n\n\nPartners: [Names]\nFocus: [Research area]\nDuration: [Time period]\nDetails about another ongoing collaboration."
+  },
+  {
+    "objectID": "research/collaborations/index.html#current-collaborations",
+    "href": "research/collaborations/index.html#current-collaborations",
+    "title": "Collaborations",
+    "section": "",
+    "text": "Partners: [Names]\nProject: [Project name]\nDuration: [Time period]\nDescription of the collaborative research effort.\n\n\n\nPartners: [Names]\nFocus: [Research area]\nDuration: [Time period]\nDetails about another ongoing collaboration."
+  },
+  {
+    "objectID": "research/collaborations/index.html#past-collaborations",
+    "href": "research/collaborations/index.html#past-collaborations",
+    "title": "Collaborations",
+    "section": "Past Collaborations",
+    "text": "Past Collaborations\n\nPrevious Institution 1\nProject: [Completed project]\nDuration: [Past time period]\nOutcome: [Results/publications]\nSummary of a completed collaborative project."
+  },
+  {
+    "objectID": "research/collaborations/index.html#international-networks",
+    "href": "research/collaborations/index.html#international-networks",
+    "title": "Collaborations",
+    "section": "International Networks",
+    "text": "International Networks\n\nNetwork 1\nDescription of involvement in international research networks.\n\n\nProfessional Associations\n\nAssociation 1\nAssociation 2\nCommittee memberships"
+  },
+  {
+    "objectID": "research/publications/index.html",
+    "href": "research/publications/index.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Title of Paper 1 (2024)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]\nTitle of Paper 2 (2024)\nAnother Journal, Vol. A, Issue B, pp. C-C\n[DOI link] | [PDF]\n\n\n\nTitle of Paper 3 (2023)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]"
+  },
+  {
+    "objectID": "research/publications/index.html#journal-articles",
+    "href": "research/publications/index.html#journal-articles",
+    "title": "Publications",
+    "section": "",
+    "text": "Title of Paper 1 (2024)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]\nTitle of Paper 2 (2024)\nAnother Journal, Vol. A, Issue B, pp. C-C\n[DOI link] | [PDF]\n\n\n\nTitle of Paper 3 (2023)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]"
+  },
+  {
+    "objectID": "research/publications/index.html#conference-proceedings",
+    "href": "research/publications/index.html#conference-proceedings",
+    "title": "Publications",
+    "section": "Conference Proceedings",
+    "text": "Conference Proceedings\n\n2024\nConference Paper Title (2024)\nConference Name, Location\n[Link] | [PDF]\n\n\n2023\nAnother Conference Paper (2023)\nAnother Conference, Location\n[Link] | [PDF]"
+  },
+  {
+    "objectID": "research/publications/index.html#book-chapters",
+    "href": "research/publications/index.html#book-chapters",
+    "title": "Publications",
+    "section": "Book Chapters",
+    "text": "Book Chapters\nChapter Title (2024)\nIn: Book Title, Editor Name (Ed.)\nPublisher, pp. X-Y\n[Link]"
+  },
+  {
+    "objectID": "research/projects/index.html",
+    "href": "research/projects/index.html",
+    "title": "Research Projects",
+    "section": "",
+    "text": "Duration: 2024-2025 | Funding: [Funding source] | Collaborators: [Names]\n\nBrief description of the project objectives and methodology. This research explores innovative approaches to educational technology and its impact on learning outcomes.\n\n\n\n\nDuration: 2023-2024 | Status: Ongoing\n\nDescription of another current research project focused on artificial intelligence applications in educational contexts."
+  },
+  {
+    "objectID": "research/projects/index.html#current-projects",
+    "href": "research/projects/index.html#current-projects",
+    "title": "Research Projects",
+    "section": "",
+    "text": "Duration: 2024-2025 | Funding: [Funding source] | Collaborators: [Names]\n\nBrief description of the project objectives and methodology. This research explores innovative approaches to educational technology and its impact on learning outcomes.\n\n\n\n\nDuration: 2023-2024 | Status: Ongoing\n\nDescription of another current research project focused on artificial intelligence applications in educational contexts."
+  },
+  {
+    "objectID": "research/projects/index.html#completed-projects",
+    "href": "research/projects/index.html#completed-projects",
+    "title": "Research Projects",
+    "section": "Completed Projects",
+    "text": "Completed Projects\n\nPrevious Project 1\n\nDuration: 2022-2023 | Status: Completed\n\nSummary of a completed research project and its outcomes. This project resulted in significant insights into digital learning methodologies.\n\n\nPrevious Project 2\n\nDuration: 2021-2022 | Status: Published\n\nDescription of another completed project that led to several peer-reviewed publications in educational technology journals."
   }
 ]

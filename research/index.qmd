@@ -5,16 +5,30 @@ page-layout: full
 
 ## Welcome to Research
 
-This section showcases my research activities, projects, and publications.
+This section showcases our research activities, projects, and publications in educational technology and AI.
+
+## Featured Research Program
+
+::: {.section-card}
+### BeLEARN - Swiss Research Network
+
+::: {.meta}
+**Program:** Swiss National Research Network | **Focus:** Learning Sciences | **Partnership:** Multiple Swiss Universities
+:::
+
+Our research contributes to BeLEARN, the Swiss research network dedicated to advancing the science of learning through interdisciplinary collaboration and innovation.
+
+[**Visit BeLEARN Projects →**](https://belearn.swiss/projekte-belearn/){.btn .btn-primary target="_blank"}
+:::
 
 ### Current Projects
 
-Explore my ongoing research initiatives and their progress.
+Explore our ongoing research initiatives and their progress in AI and educational technology.
 
 ### Publications
 
-Browse my academic publications and scholarly work.
+Browse our academic publications and scholarly work in learning sciences.
 
 ### Collaborations
 
-Learn about research partnerships and collaborative efforts.
+Learn about research partnerships and collaborative efforts within the Swiss research landscape.
