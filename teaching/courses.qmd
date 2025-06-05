@@ -4,16 +4,44 @@ title: "Courses"
 
 ## Current Courses
 
-### Course 1
-Description of your first course.
+::: {.section-card}
+### Advanced AI in Education
 
-### Course 2
-Description of your second course.
+::: {.meta}
+**Semester:** Spring 2024 | **Level:** Graduate | **Credits:** 3
+:::
+
+An advanced course exploring the integration of artificial intelligence technologies in educational systems, covering machine learning applications, personalized learning, and ethical considerations.
+:::
+
+::: {.section-card}
+### Digital Learning Design
+
+::: {.meta}
+**Semester:** Fall 2024 | **Level:** Undergraduate | **Credits:** 4
+:::
+
+Introduction to designing effective digital learning experiences, including user experience principles, multimedia design, and assessment strategies for online environments.
+:::
 
 ## Past Courses
 
-### Previous Course 1
-Description of a past course.
+::: {.section-card}
+### Educational Technology Foundations
 
-### Previous Course 2
-Description of another past course.
+::: {.meta}
+**Semester:** Spring 2023 | **Level:** Graduate | **Enrollment:** 45 students
+:::
+
+Foundational course covering the history, theory, and practice of educational technology in modern learning environments.
+:::
+
+::: {.section-card}
+### Research Methods in Education
+
+::: {.meta}
+**Semester:** Fall 2023 | **Level:** Graduate | **Enrollment:** 32 students
+:::
+
+Comprehensive introduction to quantitative and qualitative research methodologies specifically applied to educational research contexts.
+:::

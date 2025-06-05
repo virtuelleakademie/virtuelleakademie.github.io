@@ -4,29 +4,44 @@ title: "Research Projects"
 
 ## Current Projects
 
+::: {.section-card}
 ### Project 1
-**Duration:** 2024-2025  
-**Funding:** [Funding source]  
-**Collaborators:** [Names]
 
-Brief description of the project objectives and methodology.
+::: {.meta}
+**Duration:** 2024-2025 | **Funding:** [Funding source] | **Collaborators:** [Names]
+:::
 
+Brief description of the project objectives and methodology. This research explores innovative approaches to educational technology and its impact on learning outcomes.
+:::
+
+::: {.section-card}
 ### Project 2
-**Duration:** 2023-2024  
-**Status:** Ongoing
 
-Description of another current research project.
+::: {.meta}
+**Duration:** 2023-2024 | **Status:** Ongoing
+:::
+
+Description of another current research project focused on artificial intelligence applications in educational contexts.
+:::
 
 ## Completed Projects
 
+::: {.section-card}
 ### Previous Project 1
-**Duration:** 2022-2023  
-**Status:** Completed
 
-Summary of a completed research project and its outcomes.
+::: {.meta}
+**Duration:** 2022-2023 | **Status:** Completed
+:::
 
+Summary of a completed research project and its outcomes. This project resulted in significant insights into digital learning methodologies.
+:::
+
+::: {.section-card}
 ### Previous Project 2
-**Duration:** 2021-2022  
-**Status:** Published
 
-Description of another completed project.
+::: {.meta}
+**Duration:** 2021-2022 | **Status:** Published
+:::
+
+Description of another completed project that led to several peer-reviewed publications in educational technology journals.
+:::
