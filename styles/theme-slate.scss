@@ -60,6 +60,36 @@ h3 {
 .navbar {
   background-color: rgba(255, 255, 255, 0.95);
   padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(74, 85, 104, 0.1);
+}
+
+// Main focus areas styling (Teaching & Research only)
+.navbar-nav .nav-item {
+  margin: 0 0.5rem;
+}
+
+// Target only Teaching and Research links
+.navbar-nav .nav-link[href*="teaching/"],
+.navbar-nav .nav-link[href*="research/"] {
+  background: rgba(217, 119, 6, 0.06);
+  border: 1px solid rgba(217, 119, 6, 0.15);
+  border-radius: 6px;
+  padding: 0.5rem 1rem !important;
+  margin: 0 0.25rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all 0.2s ease;
+}
+
+.navbar-nav .nav-link[href*="teaching/"]:hover,
+.navbar-nav .nav-link[href*="research/"]:hover {
+  background: rgba(217, 119, 6, 0.12);
+  border-color: rgba(217, 119, 6, 0.25);
+}
+
+// Regular nav links (About, GitHub, Twitter) stay normal
+.navbar-nav .nav-link:not([href*="teaching/"]):not([href*="research/"]) {
+  font-weight: 500;
 }
 
 a {
