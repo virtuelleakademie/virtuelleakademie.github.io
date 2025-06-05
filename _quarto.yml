@@ -3,7 +3,13 @@ project:
   output-dir: docs
 
 website:
-  title: "virtuelleakademie"
+  title: "Virtuelle Akademie"
+  favicon: /assets/va-logo.png
+  open-graph: true
+  back-to-top-navigation: true
+  search:
+    location: navbar
+    type: overlay
   navbar:
     left:
       - text: "Teaching"
@@ -12,10 +18,14 @@ website:
         href: research/
     right:
       - about.qmd
+    tools:
+      - icon: lightbulb-fill
+        text: Knowledge Base
+        href: https://virtuelleakademie.ch/knowledge-base/
+        target: _blank
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        href: https://github.com/virtuelleakademie
+        target: _blank
   sidebar:
     - title: "Teaching"
       href: teaching/
@@ -35,6 +45,16 @@ website:
         - research/publications/
         - research/collaborations/
 
+page-footer:
+  left: "© 2025 Virtuelle Akademie"
+  right:
+    - icon: github
+      href: https://github.com/virtuelleakademie
+      target: _blank
+    - icon: inbox-fill
+      href: mailto:virtuelle.akademie@bfh.ch
+      target: _blank
+
 format:
   html:
     theme:
@@ -44,3 +64,7 @@ format:
     link-external-newwindow: true
     anchor-sections: true
     smooth-scroll: true
+
+filters:
+  - timer
+  - custom-callout
