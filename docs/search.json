@@ -2,9 +2,9 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "virtuelleakademie",
+    "title": "About",
     "section": "",
-    "text": "About this blog"
+    "text": "The Virtual Academy (Virtuelle Akademie) is a research and development unit at the Bern University of Applied Sciences, focused on the intersection of technology and education."
   },
   {
     "objectID": "virtuelleakademie/about.html",
@@ -216,5 +216,33 @@
     "title": "virtuelleakademie",
     "section": "Latest Posts",
     "text": "Latest Posts"
+  },
+  {
+    "objectID": "about.html#about-the-virtual-academy",
+    "href": "about.html#about-the-virtual-academy",
+    "title": "About",
+    "section": "",
+    "text": "The Virtual Academy (Virtuelle Akademie) is a research and development unit at the Bern University of Applied Sciences, focused on the intersection of technology and education."
+  },
+  {
+    "objectID": "about.html#our-team",
+    "href": "about.html#our-team",
+    "title": "About",
+    "section": "Our Team",
+    "text": "Our Team\nDr. Andrew Ellis and Dr. Stefan Hackstein are researchers at the Virtual Academy of the Bern University of Applied Sciences. Their research focuses on how artificial intelligence can be used effectively in educational systems."
+  },
+  {
+    "objectID": "about.html#our-work",
+    "href": "about.html#our-work",
+    "title": "About",
+    "section": "Our Work",
+    "text": "Our Work\nWe explore innovative approaches to integrating artificial intelligence into educational contexts, developing tools and methodologies that enhance learning experiences and educational outcomes."
+  },
+  {
+    "objectID": "about.html#website",
+    "href": "about.html#website",
+    "title": "About",
+    "section": "Website",
+    "text": "Website\n virtuelleakademie.github.io"
   }
 ]

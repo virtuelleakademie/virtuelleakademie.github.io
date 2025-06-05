@@ -1,20 +1,40 @@
 ---
-# title: "Virtuelle Akademie"
-image: "assets/logo.png"
-
+title: "About"
+image: "assets/va-logo.png"
 about:
-  template: jolla
+  template: marquee
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com
-    - icon: linkedin
-      text: LinkedIn
-      href: https://linkedin.com
+    - icon: inbox-fill
+      text: Email
+      href: mailto:virtuelle.akademie@bfh.ch
+    - icon: magic
+      text: Virtuelle Akademie
+      href: https://virtuelleakademie.ch/
+    - icon: lightbulb-fill
+      text: Knowledge Base
+      href: https://virtuelleakademie.ch/knowledge-base/
+    - icon: mortarboard-fill
+      text: Weiterbildungsangebote
+      href: https://www.bfh.ch/de/ueber-die-bfh/service-beratung/virtuelle-akademie/
     - icon: github
       text: Github
-      href: https://github.com
-
+      href: https://github.com/virtuelleakademie
 ---
 
-About this blog
+## About the Virtual Academy
+
+The Virtual Academy (Virtuelle Akademie) is a research and development unit at the Bern University of Applied Sciences, focused on the intersection of technology and education.
+
+## Our Team
+
+[Dr. Andrew Ellis](mailto:andrew.ellis@bfh.ch) and [Dr. Stefan Hackstein](mailto:stefan.hackstein@bfh.ch) are researchers at the Virtual Academy of the Bern University of Applied Sciences. Their research focuses on how artificial intelligence can be used effectively in educational systems.
+
+## Our Work
+
+We explore innovative approaches to integrating artificial intelligence into educational contexts, developing tools and methodologies that enhance learning experiences and educational outcomes.
+
+## Website
+
+{{< bi link >}} [virtuelleakademie.github.io](https://virtuelleakademie.github.io/)
+
+{{< qrcode https://virtuelleakademie.github.io/ width=200 height=200 colorDark='#000000' >}}
