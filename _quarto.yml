@@ -58,7 +58,8 @@ page-footer:
 format:
   html:
     theme:
-      light: [yeti, styles/theme-slate.scss]
+      # light: [yeti, styles/theme-slate.scss]
+      light: [simplex, styles/theme-slate.scss]
     toc: true
     link-external-icon: true
     link-external-newwindow: true
