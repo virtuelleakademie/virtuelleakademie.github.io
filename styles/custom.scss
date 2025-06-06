@@ -123,8 +123,41 @@ h3 {
   color: #E53E3E !important;
 }
 
-.navbar-nav .nav-link.active {
-  border-bottom: 2px solid #000000;
+// Highlight main nav based on multiple indicators
+// 1. Breadcrumb contains section name
+body:has(.quarto-page-breadcrumbs .breadcrumb-item a[href*="teaching"]) .navbar-nav .nav-link[href*="teaching"],
+body:has(.quarto-page-breadcrumbs .breadcrumb-item a[href*="research"]) .navbar-nav .nav-link[href*="research"],
+body:has(.quarto-page-breadcrumbs .breadcrumb-item a[href*="about"]) .navbar-nav .nav-link[href*="about"],
+// 2. Sidebar has active teaching-related links
+body:has(.sidebar-link.active[href*="teaching"]) .navbar-nav .nav-link[href*="teaching"],
+body:has(.sidebar-link.active[href*="research"]) .navbar-nav .nav-link[href*="research"],
+body:has(.sidebar-link.active[href*="about"]) .navbar-nav .nav-link[href*="about"],
+// 3. Body class or URL-based detection for subpages
+body:has(.sidebar-link.active[href*="courses"]) .navbar-nav .nav-link[href*="teaching"],
+body:has(.sidebar-link.active[href*="resources"]) .navbar-nav .nav-link[href*="teaching"],
+body:has(.sidebar-link.active[href*="philosophy"]) .navbar-nav .nav-link[href*="teaching"],
+body:has(.sidebar-link.active[href*="projects"]) .navbar-nav .nav-link[href*="research"],
+body:has(.sidebar-link.active[href*="publications"]) .navbar-nav .nav-link[href*="research"],
+body:has(.sidebar-link.active[href*="collaborations"]) .navbar-nav .nav-link[href*="research"] {
+  border-bottom: 2px solid #E53E3E;
+  color: #E53E3E !important;
+}
+
+// Same logic for the enhanced squares
+body:has(.quarto-page-breadcrumbs .breadcrumb-item a[href*="teaching"]) .navbar-nav .nav-link[href*="teaching"]::before,
+body:has(.quarto-page-breadcrumbs .breadcrumb-item a[href*="research"]) .navbar-nav .nav-link[href*="research"]::before,
+body:has(.quarto-page-breadcrumbs .breadcrumb-item a[href*="about"]) .navbar-nav .nav-link[href*="about"]::before,
+body:has(.sidebar-link.active[href*="teaching"]) .navbar-nav .nav-link[href*="teaching"]::before,
+body:has(.sidebar-link.active[href*="research"]) .navbar-nav .nav-link[href*="research"]::before,
+body:has(.sidebar-link.active[href*="about"]) .navbar-nav .nav-link[href*="about"]::before,
+body:has(.sidebar-link.active[href*="courses"]) .navbar-nav .nav-link[href*="teaching"]::before,
+body:has(.sidebar-link.active[href*="resources"]) .navbar-nav .nav-link[href*="teaching"]::before,
+body:has(.sidebar-link.active[href*="philosophy"]) .navbar-nav .nav-link[href*="teaching"]::before,
+body:has(.sidebar-link.active[href*="projects"]) .navbar-nav .nav-link[href*="research"]::before,
+body:has(.sidebar-link.active[href*="publications"]) .navbar-nav .nav-link[href*="research"]::before,
+body:has(.sidebar-link.active[href*="collaborations"]) .navbar-nav .nav-link[href*="research"]::before {
+  width: 12px;
+  height: 12px;
 }
 
 // Minimal tool icons
@@ -411,6 +444,7 @@ th {
   background-color: #E53E3E;
   color: #FFFFFF;
 }
+
 
 // Blog listing minimal style
 .quarto-listing .listing-item {
