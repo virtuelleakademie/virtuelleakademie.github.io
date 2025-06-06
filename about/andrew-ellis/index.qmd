@@ -1,0 +1,50 @@
+---
+title: "Dr. Andrew Ellis"
+image: "../../assets/va-logo.png"
+about:
+  template: trestles
+  links:
+    - icon: envelope-fill
+      text: Email
+      href: mailto:andrew.ellis@bfh.ch
+    - icon: mortarboard-fill
+      text: University Profile
+      href: https://www.bfh.ch/
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/awellis/
+    - icon: github
+      text: GitHub
+      href: https://github.com/awellis
+---
+
+## About
+
+Dr. Andrew Ellis is a researcher at the Virtual Academy of the Bern University of Applied Sciences. His research focuses on how artificial intelligence can be used effectively in educational systems.
+
+## Research Interests
+
+- Artificial Intelligence in Education
+- Educational Technology
+- Learning Analytics
+- Adaptive Learning Systems
+- Human-Computer Interaction in Educational Contexts
+
+## Background
+
+Dr. Ellis brings extensive experience in educational technology research, with a particular focus on the practical implementation of AI tools in learning environments. His work bridges the gap between theoretical AI research and real-world educational applications.
+
+## Current Projects
+
+- Development of AI-powered learning assessment tools
+- Integration of machine learning algorithms in educational platforms
+- Research on personalized learning pathways using AI
+- Collaboration on innovative teaching methodologies
+
+## Publications
+
+*Publications and research outputs will be updated regularly.*
+
+## Contact
+
+For research collaborations, inquiries, or more information about ongoing projects, please reach out via email.
