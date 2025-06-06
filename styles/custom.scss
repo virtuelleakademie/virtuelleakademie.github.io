@@ -445,6 +445,15 @@ th {
   color: #FFFFFF;
 }
 
+// Active sidebar items highlighting
+.sidebar .sidebar-item a.active,
+.sidebar .sidebar-item .sidebar-link.active {
+  background-color: #F5F5F5;
+  color: #000000;
+  border-left: 4px solid #E53E3E;
+  font-weight: 600;
+}
+
 
 // Blog listing minimal style
 .quarto-listing .listing-item {
