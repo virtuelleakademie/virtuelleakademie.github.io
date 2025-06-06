@@ -1,15 +1,31 @@
 project:
   type: website
   output-dir: docs
+  render: 
+    - index.qmd
+    - teaching/**/*.qmd
+    - research/**/*.qmd
+    - teaching/**/*.ipynb
+    - research/**/*.ipynb
+    - posts/**/*.qmd
 
 website:
   title: "Virtuelle Akademie"
+
+  site-url: https://virtuelleakademie.github.io/
+  repo-url: https://github.com/virtuelleakademie
+  # repo-actions: [edit, issue]
+
   favicon: /assets/va-logo.png
   open-graph: true
+  reader-mode: false
+  page-navigation: true
   back-to-top-navigation: true
+
   search:
     location: navbar
     type: overlay
+
   navbar:
     left:
       - text: "Teaching"
@@ -71,6 +87,18 @@ format:
     link-external-newwindow: true
     anchor-sections: true
     smooth-scroll: true
+
+execute:
+  cache: true
+  freeze: auto
+  execute-dir: project
+  
+comments:
+  hypothesis:
+    theme: clean
+
+revealjs-plugins:
+  - attribution
 
 filters:
   - timer
