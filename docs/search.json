@@ -123,7 +123,7 @@
     "href": "about/index.html#our-team",
     "title": "Virtuelle Akademie",
     "section": "Our Team",
-    "text": "Our Team\nDr. Andrew Ellis and Dr. Stefan Hackstein are researchers at the Virtual Academy of the Bern University of Applied Sciences. Their research focuses on how artificial intelligence can be used effectively in educational systems."
+    "text": "Our Team\nDr. Andrew Ellis and Dr. Stefan Hackstein are researchers at the Virtual Academy of the Bern University of Applied Sciences. Their research focuses on how artificial intelligence can be used effectively in educational systems.\n\n\nDr. Andrew Ellis\nResearcher specializing in AI applications in educational technology and learning analytics.\n Contact |  Profile\n\n\nDr. Stefan Hackstein\nResearcher focused on machine learning applications and intelligent tutoring systems.\n Contact |  Profile"
   },
   {
     "objectID": "about/index.html#our-work",
@@ -303,5 +303,201 @@
     "title": "Teaching Philosophy",
     "section": "",
     "text": "Describe your fundamental beliefs about education and learning.\n\n\n\nExplain your methodology and techniques.\n\n\n\nHow you foster active learning and student participation.\n\n\n\nYour approach to evaluating student progress and providing feedback."
+  },
+  {
+    "objectID": "about/stefan-hackstein.html",
+    "href": "about/stefan-hackstein.html",
+    "title": "Dr. Stefan Hackstein",
+    "section": "",
+    "text": "Dr. Stefan Hackstein is a researcher at the Virtual Academy of the Bern University of Applied Sciences. His research focuses on how artificial intelligence can be used effectively in educational systems."
+  },
+  {
+    "objectID": "about/stefan-hackstein.html#about",
+    "href": "about/stefan-hackstein.html#about",
+    "title": "Dr. Stefan Hackstein",
+    "section": "",
+    "text": "Dr. Stefan Hackstein is a researcher at the Virtual Academy of the Bern University of Applied Sciences. His research focuses on how artificial intelligence can be used effectively in educational systems."
+  },
+  {
+    "objectID": "about/stefan-hackstein.html#research-interests",
+    "href": "about/stefan-hackstein.html#research-interests",
+    "title": "Dr. Stefan Hackstein",
+    "section": "Research Interests",
+    "text": "Research Interests\n\nArtificial Intelligence in Education\nMachine Learning Applications\nEducational Data Mining\nIntelligent Tutoring Systems\nTechnology-Enhanced Learning"
+  },
+  {
+    "objectID": "about/stefan-hackstein.html#background",
+    "href": "about/stefan-hackstein.html#background",
+    "title": "Dr. Stefan Hackstein",
+    "section": "Background",
+    "text": "Background\nDr. Hackstein specializes in the development and evaluation of AI-driven educational technologies. His work focuses on creating intelligent systems that can adapt to individual learning needs and provide personalized educational experiences."
+  },
+  {
+    "objectID": "about/stefan-hackstein.html#current-projects",
+    "href": "about/stefan-hackstein.html#current-projects",
+    "title": "Dr. Stefan Hackstein",
+    "section": "Current Projects",
+    "text": "Current Projects\n\nDesign of adaptive learning algorithms\nDevelopment of intelligent educational content systems\nResearch on AI-powered student assessment methods\nInvestigation of machine learning techniques for educational analytics"
+  },
+  {
+    "objectID": "about/stefan-hackstein.html#publications",
+    "href": "about/stefan-hackstein.html#publications",
+    "title": "Dr. Stefan Hackstein",
+    "section": "Publications",
+    "text": "Publications\nPublications and research outputs will be updated regularly."
+  },
+  {
+    "objectID": "about/stefan-hackstein.html#contact",
+    "href": "about/stefan-hackstein.html#contact",
+    "title": "Dr. Stefan Hackstein",
+    "section": "Contact",
+    "text": "Contact\nFor research collaborations, inquiries, or more information about ongoing projects, please reach out via email."
+  },
+  {
+    "objectID": "about/andrew-ellis.html",
+    "href": "about/andrew-ellis.html",
+    "title": "Dr. Andrew Ellis",
+    "section": "",
+    "text": "Dr. Andrew Ellis is a researcher at the Virtual Academy of the Bern University of Applied Sciences. His research focuses on how artificial intelligence can be used effectively in educational systems."
+  },
+  {
+    "objectID": "about/andrew-ellis.html#about",
+    "href": "about/andrew-ellis.html#about",
+    "title": "Dr. Andrew Ellis",
+    "section": "",
+    "text": "Dr. Andrew Ellis is a researcher at the Virtual Academy of the Bern University of Applied Sciences. His research focuses on how artificial intelligence can be used effectively in educational systems."
+  },
+  {
+    "objectID": "about/andrew-ellis.html#research-interests",
+    "href": "about/andrew-ellis.html#research-interests",
+    "title": "Dr. Andrew Ellis",
+    "section": "Research Interests",
+    "text": "Research Interests\n\nArtificial Intelligence in Education\nEducational Technology\nLearning Analytics\nAdaptive Learning Systems\nHuman-Computer Interaction in Educational Contexts"
+  },
+  {
+    "objectID": "about/andrew-ellis.html#background",
+    "href": "about/andrew-ellis.html#background",
+    "title": "Dr. Andrew Ellis",
+    "section": "Background",
+    "text": "Background\nDr. Ellis brings extensive experience in educational technology research, with a particular focus on the practical implementation of AI tools in learning environments. His work bridges the gap between theoretical AI research and real-world educational applications."
+  },
+  {
+    "objectID": "about/andrew-ellis.html#current-projects",
+    "href": "about/andrew-ellis.html#current-projects",
+    "title": "Dr. Andrew Ellis",
+    "section": "Current Projects",
+    "text": "Current Projects\n\nDevelopment of AI-powered learning assessment tools\nIntegration of machine learning algorithms in educational platforms\nResearch on personalized learning pathways using AI\nCollaboration on innovative teaching methodologies"
+  },
+  {
+    "objectID": "about/andrew-ellis.html#publications",
+    "href": "about/andrew-ellis.html#publications",
+    "title": "Dr. Andrew Ellis",
+    "section": "Publications",
+    "text": "Publications\nPublications and research outputs will be updated regularly."
+  },
+  {
+    "objectID": "about/andrew-ellis.html#contact",
+    "href": "about/andrew-ellis.html#contact",
+    "title": "Dr. Andrew Ellis",
+    "section": "Contact",
+    "text": "Contact\nFor research collaborations, inquiries, or more information about ongoing projects, please reach out via email."
+  },
+  {
+    "objectID": "about/stefan-hackstein/index.html",
+    "href": "about/stefan-hackstein/index.html",
+    "title": "Dr. Stefan Hackstein",
+    "section": "",
+    "text": "Dr. Stefan Hackstein is a researcher at the Virtual Academy of the Bern University of Applied Sciences. His research focuses on how artificial intelligence can be used effectively in educational systems."
+  },
+  {
+    "objectID": "about/stefan-hackstein/index.html#about",
+    "href": "about/stefan-hackstein/index.html#about",
+    "title": "Dr. Stefan Hackstein",
+    "section": "",
+    "text": "Dr. Stefan Hackstein is a researcher at the Virtual Academy of the Bern University of Applied Sciences. His research focuses on how artificial intelligence can be used effectively in educational systems."
+  },
+  {
+    "objectID": "about/stefan-hackstein/index.html#research-interests",
+    "href": "about/stefan-hackstein/index.html#research-interests",
+    "title": "Dr. Stefan Hackstein",
+    "section": "Research Interests",
+    "text": "Research Interests\n\nArtificial Intelligence in Education\nMachine Learning Applications\nEducational Data Mining\nIntelligent Tutoring Systems\nTechnology-Enhanced Learning"
+  },
+  {
+    "objectID": "about/stefan-hackstein/index.html#background",
+    "href": "about/stefan-hackstein/index.html#background",
+    "title": "Dr. Stefan Hackstein",
+    "section": "Background",
+    "text": "Background\nDr. Hackstein specializes in the development and evaluation of AI-driven educational technologies. His work focuses on creating intelligent systems that can adapt to individual learning needs and provide personalized educational experiences."
+  },
+  {
+    "objectID": "about/stefan-hackstein/index.html#current-projects",
+    "href": "about/stefan-hackstein/index.html#current-projects",
+    "title": "Dr. Stefan Hackstein",
+    "section": "Current Projects",
+    "text": "Current Projects\n\nDesign of adaptive learning algorithms\nDevelopment of intelligent educational content systems\nResearch on AI-powered student assessment methods\nInvestigation of machine learning techniques for educational analytics"
+  },
+  {
+    "objectID": "about/stefan-hackstein/index.html#publications",
+    "href": "about/stefan-hackstein/index.html#publications",
+    "title": "Dr. Stefan Hackstein",
+    "section": "Publications",
+    "text": "Publications\nPublications and research outputs will be updated regularly."
+  },
+  {
+    "objectID": "about/stefan-hackstein/index.html#contact",
+    "href": "about/stefan-hackstein/index.html#contact",
+    "title": "Dr. Stefan Hackstein",
+    "section": "Contact",
+    "text": "Contact\nFor research collaborations, inquiries, or more information about ongoing projects, please reach out via email."
+  },
+  {
+    "objectID": "about/andrew-ellis/index.html",
+    "href": "about/andrew-ellis/index.html",
+    "title": "Dr. Andrew Ellis",
+    "section": "",
+    "text": "Dr. Andrew Ellis is a researcher at the Virtual Academy of the Bern University of Applied Sciences. His research focuses on how artificial intelligence can be used effectively in educational systems."
+  },
+  {
+    "objectID": "about/andrew-ellis/index.html#about",
+    "href": "about/andrew-ellis/index.html#about",
+    "title": "Dr. Andrew Ellis",
+    "section": "",
+    "text": "Dr. Andrew Ellis is a researcher at the Virtual Academy of the Bern University of Applied Sciences. His research focuses on how artificial intelligence can be used effectively in educational systems."
+  },
+  {
+    "objectID": "about/andrew-ellis/index.html#research-interests",
+    "href": "about/andrew-ellis/index.html#research-interests",
+    "title": "Dr. Andrew Ellis",
+    "section": "Research Interests",
+    "text": "Research Interests\n\nArtificial Intelligence in Education\nEducational Technology\nLearning Analytics\nAdaptive Learning Systems\nHuman-Computer Interaction in Educational Contexts"
+  },
+  {
+    "objectID": "about/andrew-ellis/index.html#background",
+    "href": "about/andrew-ellis/index.html#background",
+    "title": "Dr. Andrew Ellis",
+    "section": "Background",
+    "text": "Background\nDr. Ellis brings extensive experience in educational technology research, with a particular focus on the practical implementation of AI tools in learning environments. His work bridges the gap between theoretical AI research and real-world educational applications."
+  },
+  {
+    "objectID": "about/andrew-ellis/index.html#current-projects",
+    "href": "about/andrew-ellis/index.html#current-projects",
+    "title": "Dr. Andrew Ellis",
+    "section": "Current Projects",
+    "text": "Current Projects\n\nDevelopment of AI-powered learning assessment tools\nIntegration of machine learning algorithms in educational platforms\nResearch on personalized learning pathways using AI\nCollaboration on innovative teaching methodologies"
+  },
+  {
+    "objectID": "about/andrew-ellis/index.html#publications",
+    "href": "about/andrew-ellis/index.html#publications",
+    "title": "Dr. Andrew Ellis",
+    "section": "Publications",
+    "text": "Publications\nPublications and research outputs will be updated regularly."
+  },
+  {
+    "objectID": "about/andrew-ellis/index.html#contact",
+    "href": "about/andrew-ellis/index.html#contact",
+    "title": "Dr. Andrew Ellis",
+    "section": "Contact",
+    "text": "Contact\nFor research collaborations, inquiries, or more information about ongoing projects, please reach out via email."
   }
 ]

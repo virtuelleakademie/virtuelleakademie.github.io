@@ -27,7 +27,25 @@ The Virtual Academy (Virtuelle Akademie) is a research and development unit at t
 
 ## Our Team
 
-[Dr. Andrew Ellis](mailto:andrew.ellis@bfh.ch) and [Dr. Stefan Hackstein](mailto:stefan.hackstein@bfh.ch) are researchers at the Virtual Academy of the Bern University of Applied Sciences. Their research focuses on how artificial intelligence can be used effectively in educational systems.
+[Dr. Andrew Ellis](andrew-ellis/) and [Dr. Stefan Hackstein](stefan-hackstein/) are researchers at the Virtual Academy of the Bern University of Applied Sciences. Their research focuses on how artificial intelligence can be used effectively in educational systems.
+
+::: {.grid}
+
+::: {.g-col-6}
+### [Dr. Andrew Ellis](andrew-ellis/)
+Researcher specializing in AI applications in educational technology and learning analytics.
+
+[{{< bi envelope >}} Contact](mailto:andrew.ellis@bfh.ch) | [{{< bi person-circle >}} Profile](andrew-ellis/)
+:::
+
+::: {.g-col-6}
+### [Dr. Stefan Hackstein](stefan-hackstein/)
+Researcher focused on machine learning applications and intelligent tutoring systems.
+
+[{{< bi envelope >}} Contact](mailto:stefan.hackstein@bfh.ch) | [{{< bi person-circle >}} Profile](stefan-hackstein/)
+:::
+
+:::
 
 ## Our Work
 
