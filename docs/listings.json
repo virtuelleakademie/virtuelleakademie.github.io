@@ -1,18 +1,9 @@
 [
   {
-    "listing": "/virtuelleakademie/index.html",
-    "items": [
-      "/virtuelleakademie/posts/post-with-code/index.html",
-      "/virtuelleakademie/posts/welcome/index.html"
-    ]
-  },
-  {
     "listing": "/index.html",
     "items": [
       "/posts/post-with-code/index.html",
-      "/virtuelleakademie/posts/post-with-code/index.html",
-      "/posts/welcome/index.html",
-      "/virtuelleakademie/posts/welcome/index.html"
+      "/posts/welcome/index.html"
     ]
   }
 ]

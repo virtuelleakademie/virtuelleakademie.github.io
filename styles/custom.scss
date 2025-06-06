@@ -1,27 +1,27 @@
 /*-- scss:defaults --*/
 
 // Import Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 // Typography
-$font-family-sans-serif: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-$headings-font-family: "Inter", "Nunito Sans", sans-serif;
+$font-family-sans-serif: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$headings-font-family: "Montserrat", "Work Sans", sans-serif;
 
-// Masiello-inspired color scheme
-$background-color: #F6F5F3;
-$primary: #4b2e83;
-$secondary: #e8e3d3;
-$light: #f0eeeb;
+// Clean red and off-white color scheme
+$background-color: #FAFAFA;
+$primary: #DC2626;
+$secondary: #F5F5F5;
+$light: #F9F9F9;
 $body-bg: $background-color;
-$body-color: #333333;
+$body-color: #1F2937;
 
 /*-- scss:rules --*/
 
 // Global typography and background
 body {
-  background-color: #F6F5F3;
-  color: #333333;
-  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #FAFAFA;
+  color: #1F2937;
+  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   font-weight: 400;
@@ -30,27 +30,27 @@ body {
 // Navigation styling
 .navbar {
   background-color: rgba(255, 255, 255, 0.95);
-  border-bottom: 1px solid rgba(75, 46, 131, 0.1);
+  border-bottom: 1px solid rgba(220, 38, 38, 0.1);
 }
 
 .navbar-brand {
-  color: #4b2e83 !important;
+  color: #DC2626 !important;
   font-weight: 700;
 }
 
 .navbar-nav .nav-link {
-  color: #4b2e83 !important;
+  color: #DC2626 !important;
   font-weight: 500;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #3a2366 !important;
+  color: #B91C1C !important;
 }
 
 // Headings
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Inter", "Nunito Sans", sans-serif;
-  color: #666666;
+  font-family: "Montserrat", "Work Sans", sans-serif;
+  color: #374151;
   font-weight: 600;
   letter-spacing: -0.01em;
   line-height: 1.3;
@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.25rem;
-  color: #4b2e83;
+  color: #DC2626;
   font-weight: 700;
   letter-spacing: -0.02em;
 }
@@ -95,19 +95,19 @@ p {
   font-size: 1.125rem;
   font-weight: 300;
   line-height: 1.7;
-  color: #555555;
+  color: #4B5563;
 }
 
 // Navigation typography
 .navbar-brand {
-  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1.25rem;
   letter-spacing: -0.01em;
 }
 
 .navbar-nav .nav-link {
-  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 0.95rem;
   letter-spacing: 0.01em;
@@ -115,30 +115,30 @@ p {
 
 // Links
 a {
-  color: #4b2e83;
+  color: #DC2626;
   text-decoration: none;
 }
 
 a:hover {
-  color: #3a2366;
+  color: #B91C1C;
   text-decoration: underline;
 }
 
 // Buttons
 .btn-primary {
-  background-color: #4b2e83;
-  border-color: #4b2e83;
+  background-color: #DC2626;
+  border-color: #DC2626;
 }
 
 .btn-primary:hover {
-  background-color: #3a2366;
-  border-color: #3a2366;
+  background-color: #B91C1C;
+  border-color: #B91C1C;
 }
 
 // Cards and content areas
 .card {
   background-color: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(75, 46, 131, 0.08);
+  border: 1px solid rgba(220, 38, 38, 0.08);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   border-radius: 12px;
   transition: all 0.3s ease;
@@ -148,7 +148,7 @@ a:hover {
 .card:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-  border-color: rgba(75, 46, 131, 0.15);
+  border-color: rgba(220, 38, 38, 0.15);
 }
 
 .card-body {
@@ -156,15 +156,15 @@ a:hover {
 }
 
 .card-title {
-  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  color: #4b2e83;
+  color: #DC2626;
   font-size: 1.25rem;
   margin-bottom: 0.75rem;
 }
 
 .card-text {
-  color: #666666;
+  color: #4B5563;
   line-height: 1.6;
   margin-bottom: 1rem;
 }
@@ -187,8 +187,8 @@ a:hover {
 
 // Feature cards for homepage
 .feature-card {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(240, 238, 235, 0.8));
-  border: 1px solid rgba(75, 46, 131, 0.1);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(245, 245, 245, 0.8));
+  border: 1px solid rgba(220, 38, 38, 0.1);
   border-radius: 16px;
   padding: 2rem;
   transition: all 0.3s ease;
@@ -200,20 +200,20 @@ a:hover {
 
 .feature-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(75, 46, 131, 0.15);
+  box-shadow: 0 12px 40px rgba(220, 38, 38, 0.15);
   text-decoration: none;
   color: inherit;
 }
 
 .feature-card h3 {
-  color: #4b2e83;
+  color: #DC2626;
   font-size: 1.5rem;
   margin-bottom: 1rem;
   font-weight: 700;
 }
 
 .feature-card p {
-  color: #666666;
+  color: #4B5563;
   margin-bottom: 1.5rem;
 }
 
@@ -224,7 +224,7 @@ a:hover {
 }
 
 .feature-card li {
-  color: #888888;
+  color: #6B7280;
   font-size: 0.95rem;
   margin-bottom: 0.5rem;
   padding-left: 1.5rem;
@@ -235,7 +235,7 @@ a:hover {
   content: "→";
   position: absolute;
   left: 0;
-  color: #4b2e83;
+  color: #DC2626;
   font-weight: bold;
 }
 
@@ -245,7 +245,7 @@ a:hover {
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  border-left: 4px solid #4b2e83;
+  border-left: 4px solid #DC2626;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
 }
@@ -257,55 +257,55 @@ a:hover {
 
 .section-card h3 {
   margin-top: 0;
-  color: #4b2e83;
+  color: #DC2626;
 }
 
 .section-card .meta {
   font-size: 0.9rem;
-  color: #888888;
+  color: #6B7280;
   font-weight: 500;
   margin-bottom: 0.75rem;
 }
 
 .section-card .meta strong {
-  color: #4b2e83;
+  color: #DC2626;
 }
 
 // Title block
 .quarto-title-block {
   background: none;
-  border-bottom: 2px solid #e8e3d3;
+  border-bottom: 2px solid #F5F5F5;
   padding-bottom: 1rem;
   margin-bottom: 2rem;
 }
 
 .quarto-title-block .quarto-title .title {
-  color: #4b2e83;
+  color: #DC2626;
   font-weight: 600;
 }
 
 // Sidebar styling
 .sidebar {
   background-color: rgba(255, 255, 255, 0.9);
-  border-right: 1px solid rgba(75, 46, 131, 0.1);
+  border-right: 1px solid rgba(220, 38, 38, 0.1);
 }
 
 .sidebar .sidebar-item {
-  border-bottom: 1px solid rgba(75, 46, 131, 0.05);
+  border-bottom: 1px solid rgba(220, 38, 38, 0.05);
 }
 
 .sidebar .sidebar-item a {
-  color: #4b2e83;
+  color: #DC2626;
   padding: 0.75rem 1rem;
 }
 
 .sidebar .sidebar-item a:hover {
-  background-color: rgba(75, 46, 131, 0.05);
+  background-color: rgba(220, 38, 38, 0.05);
 }
 
 // Animated gradient text
 .gradient-text {
-  background: linear-gradient(45deg, #4b2e83, #6b4ba3, #8b6bc3, #4b2e83);
+  background: linear-gradient(45deg, #DC2626, #EF4444, #F87171, #DC2626);
   background-size: 300% 300%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -362,7 +362,7 @@ a {
   left: 50%;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #4b2e83, #6b4ba3);
+  background: linear-gradient(90deg, #DC2626, #EF4444);
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -375,7 +375,7 @@ a {
 .quarto-listing .listing-item {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 12px;
-  border: 1px solid rgba(75, 46, 131, 0.08);
+  border: 1px solid rgba(220, 38, 38, 0.08);
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   transition: all 0.3s ease;
@@ -385,24 +385,24 @@ a {
 .quarto-listing .listing-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-  border-color: rgba(75, 46, 131, 0.15);
+  border-color: rgba(220, 38, 38, 0.15);
 }
 
 .quarto-listing .listing-item .listing-title {
-  color: #4b2e83;
+  color: #DC2626;
   font-weight: 600;
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
 
 .quarto-listing .listing-item .listing-subtitle {
-  color: #666666;
+  color: #4B5563;
   font-size: 0.95rem;
   margin-bottom: 0.75rem;
 }
 
 .quarto-listing .listing-item .listing-description {
-  color: #555555;
+  color: #374151;
   line-height: 1.6;
 }
 
@@ -452,7 +452,7 @@ html {
 
 // Loading animation for dynamic content
 .loading-shimmer {
-  background: linear-gradient(90deg, #f0eeeb 25%, #e8e3d3 50%, #f0eeeb 75%);
+  background: linear-gradient(90deg, #F9F9F9 25%, #F5F5F5 50%, #F9F9F9 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
 }

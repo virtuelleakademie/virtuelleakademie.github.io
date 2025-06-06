@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>about-2 – virtuelleakademie</title>
+<title>claude – Virtuelle Akademie</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,17 +65,19 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href=".//assets/va-logo.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6996330a94d491b702c807a6b9fbe536.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet">
-<script src="site_libs/quarto-contrib/qrcodejs-v1.0.0/qrcode.js"></script>
+<link href="site_libs/bootstrap/bootstrap-53d91cdb7b8da94c90490239930c338a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/quarto-timer-1.0.0/timer.js"></script>
+<link href="site_libs/quarto-contrib/quarto-timer-1.0.0/timer.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -53,7 +90,6 @@ ul.task-list li input[type="checkbox"] {
     "/",
     "s"
   ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -68,12 +104,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
 
-<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Virtuelle Akademie">
+<meta property="og:description" content="">
+<meta property="og:site_name" content="Virtuelle Akademie">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -81,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">virtuelleakademie</span>
+    <span class="navbar-title">Virtuelle Akademie</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -89,24 +128,26 @@ ul.task-list li input[type="checkbox"] {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./teaching/"> 
+<span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./research/"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+</ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">Virtuelle Akademie</span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com"> <i class="bi bi-twitter" role="img">
-</i> 
-<span class="menu-text"></span></a>
+    <a class="nav-link" href="./about/"> 
+<span class="menu-text">About</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+    <a href="https://virtuelleakademie.ch/knowledge-base/" title="Knowledge Base" class="quarto-navigation-tool px-1" aria-label="Knowledge Base" target="_blank"><i class="bi bi-lightbulb-fill"></i></a>
+    <a href="https://github.com/virtuelleakademie" title="" class="quarto-navigation-tool px-1" aria-label="" target="_blank"><i class="bi bi-github"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -115,64 +156,135 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#claude.md" id="toc-claude.md" class="nav-link active" data-scroll-target="#claude.md">CLAUDE.md</a>
+  <ul class="collapse">
+  <li><a href="#project-overview" id="toc-project-overview" class="nav-link" data-scroll-target="#project-overview">Project Overview</a></li>
+  <li><a href="#architecture" id="toc-architecture" class="nav-link" data-scroll-target="#architecture">Architecture</a></li>
+  <li><a href="#file-structure" id="toc-file-structure" class="nav-link" data-scroll-target="#file-structure">File Structure</a></li>
+  <li><a href="#common-commands" id="toc-common-commands" class="nav-link" data-scroll-target="#common-commands">Common Commands</a>
+  <ul class="collapse">
+  <li><a href="#building-the-site" id="toc-building-the-site" class="nav-link" data-scroll-target="#building-the-site">Building the Site</a></li>
+  <li><a href="#preview-during-development" id="toc-preview-during-development" class="nav-link" data-scroll-target="#preview-during-development">Preview During Development</a></li>
+  <li><a href="#clean-build" id="toc-clean-build" class="nav-link" data-scroll-target="#clean-build">Clean Build</a></li>
+  <li><a href="#git-workflow-via-makefile" id="toc-git-workflow-via-makefile" class="nav-link" data-scroll-target="#git-workflow-via-makefile">Git Workflow (via Makefile)</a></li>
+  </ul></li>
+  <li><a href="#content-management" id="toc-content-management" class="nav-link" data-scroll-target="#content-management">Content Management</a></li>
+  <li><a href="#styling" id="toc-styling" class="nav-link" data-scroll-target="#styling">Styling</a></li>
+  <li><a href="#extensions" id="toc-extensions" class="nav-link" data-scroll-target="#extensions">Extensions</a></li>
+  <li><a href="#development-notes" id="toc-development-notes" class="nav-link" data-scroll-target="#development-notes">Development Notes</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<div class="quarto-about-marquee">
-  <div class="about-image-container">
-  </div>
-  <div class="about-contents">
-    <header id="title-block-header" class="quarto-title-block"></header> <main class="content" id="quarto-document-content">
-<p><i class="bi-calendar-event " style="" role="img" aria-hidden="true"></i> 25. April 2025</p>
-<p><i class="bi-clock " style="" role="img" aria-hidden="true"></i> 9:00–12:00 Uhr</p>
-<p><i class="bi-map " style="" role="img" aria-hidden="true"></i> Raum E103, Effingerstrasse 47, 3008 Bern</p>
-<p><br></p>
-<section id="dozenten" class="level2">
-<h2 data-anchor-id="dozenten">Dozenten</h2>
-<!-- [Dr. Andrew Ellis](mailto:andrew.ellis@bfh.ch) ist Kognitionspsychologe und Wissenschaftlicher Mitarbeiter an der [Virtuellen Akademie](https://virtuelleakademie.ch/) der Berner Fachhochschule. 
-[Dr. Stefan Hackstein](mailto:stefan.hackstein@bfh.ch), Physiker und
-Datenwissenschaftler, ist Wissenschaftlicher Mitarbeiter an der Virtuellen
-Akademie der Berner Fachhochschule. -->
-<p><a href="mailto:andrew.ellis@bfh.ch">Dr.&nbsp;Andrew Ellis</a> and <a href="mailto:stefan.hackstein@bfh.ch">Dr.&nbsp;Stefan Hackstein</a> are researchers at the Virtual Academy of the Bern University of Applied Sciences. Their research focusses on how artificial intelligence can be used effectively in educational systems.</p>
-<!-- [Dr. Andrew Ellis](mailto:andrew.ellis@bfh.ch) und [Dr. Stefan Hackstein](mailto:stefan.hackstein@bfh.ch) sind als wissenschaftliche Mitarbeiter an der Virtuellen Akademie der Berner Fachhochschule tätig.
-Zusammen erforschen sie, wie künstliche Intelligenz in Bildungssystemen wirkungsvoll eingesetzt werden kann. -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="claude.md" class="level1">
+<h1>CLAUDE.md</h1>
+<p>This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.</p>
+<section id="project-overview" class="level2">
+<h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
+<p>This is a Quarto-based academic website for Virtuelle Akademie, built as a static site generator that outputs to GitHub Pages. The site features a dual-purpose structure with both a main website and a sub-project (<code>virtuelleakademie/</code>) that appears to be a blog-style section.</p>
 </section>
-<section id="website" class="level2">
-<h2 data-anchor-id="website">Website</h2>
-<p><i class="bi-link " style="" role="img" aria-hidden="true"></i> <a href="https://virtuelleakademie.github.io/ki-lehre-advanced/">virtuelleakademie.github.io/ki-lehre-advanced/</a></p>
-<p><br> <!-- ## QR Code --> </p><div id="qrcode" class="qrcode"></div>
-<script type="text/javascript">
-var qrcode = new QRCode("qrcode", {"colorDark":"#000000","colorLight":"#ffffff","height":"200","text":"https://virtuelleakademie.github.io/ki-lehre-advanced/","width":"200"});
-</script>
-    <p></p>
-<p><br> <br></p>
+<section id="architecture" class="level2">
+<h2 class="anchored" data-anchor-id="architecture">Architecture</h2>
+<p>The project uses Quarto’s website format with these key components:</p>
+<ul>
+<li><strong>Main site</strong>: Academic website with Teaching, Research, and About sections</li>
+<li><strong>Sub-project</strong>: Blog-style section in <code>virtuelleakademie/</code> directory<br>
+</li>
+<li><strong>Output</strong>: Static HTML generated to <code>docs/</code> directory for GitHub Pages</li>
+<li><strong>Styling</strong>: Custom SCSS themes with Nunito Sans/Inter fonts and purple branding (#4b2e83)</li>
+<li><strong>Extensions</strong>: Multiple Quarto extensions including timer, custom-callout, pyodide, fontawesome, etc.</li>
+</ul>
+</section>
+<section id="file-structure" class="level2">
+<h2 class="anchored" data-anchor-id="file-structure">File Structure</h2>
+<ul>
+<li><code>_quarto.yml</code>: Main site configuration with navbar, sidebar, and page structure</li>
+<li><code>virtuelleakademie/_quarto.yml</code>: Sub-project configuration for blog section</li>
+<li><code>styles/</code>: SCSS files for custom styling and themes</li>
+<li><code>posts/</code>: Blog posts with metadata</li>
+<li><code>teaching/</code>, <code>research/</code>, <code>about/</code>: Main content sections</li>
+<li><code>docs/</code>: Generated output directory (do not edit directly)</li>
+</ul>
+</section>
+<section id="common-commands" class="level2">
+<h2 class="anchored" data-anchor-id="common-commands">Common Commands</h2>
+<section id="building-the-site" class="level3">
+<h3 class="anchored" data-anchor-id="building-the-site">Building the Site</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="preview-during-development" class="level3">
+<h3 class="anchored" data-anchor-id="preview-during-development">Preview During Development</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="clean-build" class="level3">
+<h3 class="anchored" data-anchor-id="clean-build">Clean Build</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render <span class="at">--clean</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="git-workflow-via-makefile" class="level3">
+<h3 class="anchored" data-anchor-id="git-workflow-via-makefile">Git Workflow (via Makefile)</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> branch name=feature-name    <span class="co"># Create new branch</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> commit msg=<span class="st">"Description"</span>    <span class="co"># Add and commit changes  </span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> push                        <span class="co"># Push current branch</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> merge                       <span class="co"># Admin: merge to main</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="content-management" class="level2">
+<h2 class="anchored" data-anchor-id="content-management">Content Management</h2>
+<ul>
+<li>New blog posts go in <code>posts/</code> directory as <code>.qmd</code> files</li>
+<li>Teaching content uses sidebar navigation defined in <code>_quarto.yml</code></li>
+<li>Research sections follow the same sidebar pattern</li>
+<li>All content uses Quarto markdown format with YAML frontmatter</li>
+</ul>
+</section>
+<section id="styling" class="level2">
+<h2 class="anchored" data-anchor-id="styling">Styling</h2>
+<p>The site uses a custom purple theme (#4b2e83) with sophisticated typography and animations. The main stylesheet is <code>styles/custom.scss</code> which defines:</p>
+<ul>
+<li>Typography hierarchy with Inter/Nunito Sans fonts</li>
+<li>Card-based layouts with hover effects</li>
+<li>Gradient animations and smooth transitions</li>
+<li>Responsive grid systems</li>
+</ul>
+</section>
+<section id="extensions" class="level2">
+<h2 class="anchored" data-anchor-id="extensions">Extensions</h2>
+<p>The site heavily uses Quarto extensions for enhanced functionality: - <code>timer</code>: Interactive timers for presentations - <code>custom-callout</code>: Enhanced callout boxes - <code>fontawesome</code>: Icon support - <code>pyodide</code>: Python code execution in browser - <code>live</code>: Interactive code cells</p>
+</section>
+<section id="development-notes" class="level2">
+<h2 class="anchored" data-anchor-id="development-notes">Development Notes</h2>
+<ul>
+<li>The <code>Makefile</code> provides convenient git workflow commands</li>
+<li>The site outputs to <code>docs/</code> for GitHub Pages hosting</li>
+<li>Two separate <code>_quarto.yml</code> files manage different site sections</li>
+<li>Custom SCSS compilation handles the sophisticated styling system</li>
+</ul>
 
 
 </section>
-</main> 
-    <div class="about-footer"><div class="about-links">
-  <a href="mailto:virtuelle.akademie@bfh.ch" class="about-link" rel="" target="">
-    <i class="bi bi-inbox-fill"></i>
-     <span class="about-link-text">Email</span>
-  </a>
-  <a href="https://virtuelleakademie.ch/" class="about-link" rel="" target="">
-    <i class="bi bi-magic"></i>
-     <span class="about-link-text">Virtuelle Akademie</span>
-  </a>
-  <a href="https://virtuelleakademie.ch/knowledge-base/" class="about-link" rel="" target="">
-    <i class="bi bi-lightbulb-fill"></i>
-     <span class="about-link-text">Knowledge Base</span>
-  </a>
-  <a href="https://www.bfh.ch/de/ueber-die-bfh/service-beratung/virtuelle-akademie/" class="about-link" rel="" target="">
-    <i class="bi bi-mortarboard-fill"></i>
-     <span class="about-link-text">Weiterbildungsangebote</span>
-  </a>
-</div>
-</div>
-  </div>
-</div>
- <!-- /main -->
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -250,6 +362,13 @@ var qrcode = new QRCode("qrcode", {"colorDark":"#000000","colorLight":"#ffffff",
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -568,4 +687,5 @@ var qrcode = new QRCode("qrcode", {"colorDark":"#000000","colorLight":"#ffffff",
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
