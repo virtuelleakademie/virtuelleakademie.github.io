@@ -42,8 +42,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-593c5d41b065211e658c63f083804846.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/quarto-timer-1.0.0/timer.js"></script>
 <link href="../site_libs/quarto-contrib/quarto-timer-1.0.0/timer.css" rel="stylesheet">
-<script src="../site_libs/quarto-contrib/qrcodejs-v1.0.0/qrcode.js"></script>
 <link href="../site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/qrcodejs-v1.0.0/qrcode.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,6 +71,17 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script type="application/json" class="js-hypothesis-config">
+{
+  "theme": "clean"
+}
+</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 
 
 <meta property="og:title" content="Virtuelle Akademie">
@@ -128,8 +139,6 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#about-the-virtual-academy" id="toc-about-the-virtual-academy" class="nav-link active" data-scroll-target="#about-the-virtual-academy">About the Virtual Academy</a></li>
   <li><a href="#our-team" id="toc-our-team" class="nav-link" data-scroll-target="#our-team">Our Team</a></li>
-  <li><a href="#our-work" id="toc-our-work" class="nav-link" data-scroll-target="#our-work">Our Work</a></li>
-  <li><a href="#website" id="toc-website" class="nav-link" data-scroll-target="#website">Website</a></li>
   </ul>
 </nav>
     </div>
@@ -159,18 +168,11 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="mailto:stefan.hackstein@bfh.ch"><i class="bi-envelope " style="" role="img" aria-hidden="true"></i> Contact</a> | <a href="stefan-hackstein/"><i class="bi-person-circle " style="" role="img" aria-hidden="true"></i> Profile</a></p>
 </section>
 </div>
-</section>
-<section id="our-work" class="level2">
-<h2 data-anchor-id="our-work">Our Work</h2>
-<p>We explore innovative approaches to integrating artificial intelligence into educational contexts, developing tools and methodologies that enhance learning experiences and educational outcomes.</p>
-</section>
-<section id="website" class="level2">
-<h2 data-anchor-id="website">Website</h2>
-<p><i class="bi-link " style="" role="img" aria-hidden="true"></i> <a href="https://virtuelleakademie.github.io/">virtuelleakademie.github.io</a></p>
-<div id="qrcode" class="qrcode"></div>
-<script type="text/javascript">
-var qrcode = new QRCode("qrcode", {"colorDark":"#000000","colorLight":"#ffffff","height":"200","text":"https://virtuelleakademie.github.io/","width":"200"});
-</script>
+<!-- ## Our Work
+We explore innovative approaches to integrating artificial intelligence into educational contexts, developing tools and methodologies that enhance learning experiences and educational outcomes.
+## Website
+ [virtuelleakademie.github.io](https://virtuelleakademie.github.io/)
+ -->
 
 
 </section>
@@ -266,7 +268,7 @@ var qrcode = new QRCode("qrcode", {"colorDark":"#000000","colorLight":"#ffffff",
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/virtuelleakademie\.github\.io\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

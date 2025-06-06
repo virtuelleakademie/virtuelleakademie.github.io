@@ -1,0 +1,534 @@
+---
+title: "Interactive Data Visualization with Observable JavaScript"
+date: 4 June, 2025
+date-format: "DD MMM, YYYY"
+
+author: 
+  - name: Stefan Hackstein
+    url: https://github.com/shacks3
+    affiliation: Virtual Academy, Bern University of Applied Sciences
+    affiliation-url: https://virtuelleakademie.ch
+    orcid: 0000-0003-2927-549X
+
+categories: [Observable, JavaScript, D3.js, data visualization, interactive, tutorial]
+format:
+    html:
+        code-fold: false
+        code-summary: "Show the code"
+        toc: true
+
+draft: true
+---
+
+This tutorial demonstrates how to create interactive data visualizations using Observable JavaScript in Quarto. Observable provides a reactive programming environment perfect for educational content, allowing students and researchers to explore data interactively.
+
+## What is Observable JavaScript?
+
+Observable JavaScript is a reactive, JavaScript-based environment for data analysis and visualization. Unlike traditional JavaScript, Observable automatically updates cells when their dependencies change, making it perfect for interactive tutorials and exploratory data analysis.
+
+### Key Features:
+- **Reactive execution**: Cells automatically re-run when dependencies change
+- **Built-in data visualization**: Seamless integration with D3.js
+- **Educational focus**: Perfect for teaching data science concepts
+- **Live updates**: See changes immediately as you modify code
+
+## Setting Up Interactive Visualizations
+
+Let's start with some basic interactive examples that demonstrate the power of Observable in educational contexts.
+
+### 1. Reactive Data Filtering
+
+```{ojs}
+// Create sample student performance data
+studentData = {
+  const subjects = ["Mathematics", "Science", "Literature", "History"];
+  const semesters = ["Fall 2023", "Spring 2024", "Fall 2024"];
+  
+  return d3.cross(subjects, semesters).map((d, i) => ({
+    subject: d[0],
+    semester: d[1],
+    avgScore: Math.round(Math.random() * 30 + 70),
+    studyHours: Math.round(Math.random() * 10 + 10),
+    studentCount: Math.round(Math.random() * 50 + 100)
+  }));
+}
+```
+
+```{ojs}
+// Interactive subject filter
+viewof selectedSubject = Inputs.select(
+  ["All", ...new Set(studentData.map(d => d.subject))],
+  {label: "Select Subject:", value: "All"}
+)
+```
+
+```{ojs}
+// Reactive data filtering
+filteredData = selectedSubject === "All" 
+  ? studentData 
+  : studentData.filter(d => d.subject === selectedSubject)
+```
+
+```{ojs}
+// Display filtered results in a table
+Inputs.table(filteredData, {
+  header: {
+    subject: "Subject",
+    semester: "Semester", 
+    avgScore: "Average Score",
+    studyHours: "Study Hours",
+    studentCount: "Students"
+  }
+})
+```
+
+### 2. Interactive Scatter Plot with D3.js
+
+```{ojs}
+// Load D3.js library
+d3 = require("d3@7")
+```
+
+```{ojs}
+// Interactive controls for the scatter plot
+viewof plotControls = Inputs.form({
+  xAxis: Inputs.select(["studyHours", "studentCount"], {
+    label: "X-axis variable:",
+    value: "studyHours"
+  }),
+  yAxis: Inputs.select(["avgScore", "studentCount"], {
+    label: "Y-axis variable:", 
+    value: "avgScore"
+  }),
+  colorBy: Inputs.select(["subject", "semester"], {
+    label: "Color by:",
+    value: "subject"
+  })
+})
+```
+
+```{ojs}
+// Create interactive scatter plot
+{
+  const width = 600;
+  const height = 400;
+  const margin = {top: 20, right: 120, bottom: 40, left: 60};
+  
+  // Create scales
+  const xExtent = d3.extent(filteredData, d => d[plotControls.xAxis]);
+  const yExtent = d3.extent(filteredData, d => d[plotControls.yAxis]);
+  
+  const xScale = d3.scaleLinear()
+    .domain(xExtent)
+    .range([margin.left, width - margin.right]);
+    
+  const yScale = d3.scaleLinear()
+    .domain(yExtent)
+    .range([height - margin.bottom, margin.top]);
+    
+  const colorScale = d3.scaleOrdinal(d3.schemeSet2)
+    .domain([...new Set(filteredData.map(d => d[plotControls.colorBy]))]);
+  
+  // Create SVG
+  const svg = d3.create("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .style("background", "#f9f9f9");
+  
+  // Add axes
+  svg.append("g")
+    .attr("transform", `translate(0,${height - margin.bottom})`)
+    .call(d3.axisBottom(xScale));
+    
+  svg.append("g")
+    .attr("transform", `translate(${margin.left},0)`)
+    .call(d3.axisLeft(yScale));
+  
+  // Add axis labels
+  svg.append("text")
+    .attr("x", width / 2)
+    .attr("y", height - 5)
+    .attr("text-anchor", "middle")
+    .style("font-size", "12px")
+    .text(plotControls.xAxis === "studyHours" ? "Study Hours" : "Student Count");
+    
+  svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("x", -height / 2)
+    .attr("y", 15)
+    .attr("text-anchor", "middle")
+    .style("font-size", "12px")
+    .text(plotControls.yAxis === "avgScore" ? "Average Score" : "Student Count");
+  
+  // Add points
+  svg.selectAll(".point")
+    .data(filteredData)
+    .enter()
+    .append("circle")
+    .attr("class", "point")
+    .attr("cx", d => xScale(d[plotControls.xAxis]))
+    .attr("cy", d => yScale(d[plotControls.yAxis]))
+    .attr("r", 6)
+    .attr("fill", d => colorScale(d[plotControls.colorBy]))
+    .attr("stroke", "#333")
+    .attr("stroke-width", 1)
+    .style("opacity", 0.8);
+  
+  // Add legend
+  const legend = svg.append("g")
+    .attr("transform", `translate(${width - margin.right + 10}, ${margin.top})`);
+    
+  const legendItems = [...new Set(filteredData.map(d => d[plotControls.colorBy]))];
+  
+  legend.selectAll(".legend-item")
+    .data(legendItems)
+    .enter()
+    .append("g")
+    .attr("class", "legend-item")
+    .attr("transform", (d, i) => `translate(0, ${i * 20})`)
+    .each(function(d) {
+      d3.select(this).append("circle")
+        .attr("r", 5)
+        .attr("fill", colorScale(d));
+      d3.select(this).append("text")
+        .attr("x", 15)
+        .attr("y", 4)
+        .style("font-size", "12px")
+        .text(d);
+    });
+  
+  return svg.node();
+}
+```
+
+### 3. Interactive Bar Chart with Transitions
+
+```{ojs}
+// Control for selecting metric to display
+viewof selectedMetric = Inputs.radio(
+  ["avgScore", "studyHours", "studentCount"],
+  {
+    label: "Select Metric:",
+    value: "avgScore"
+  }
+)
+```
+
+```{ojs}
+// Animated bar chart
+{
+  const width = 600;
+  const height = 300;
+  const margin = {top: 20, right: 30, bottom: 80, left: 60};
+  
+  // Aggregate data by subject
+  const aggregatedData = d3.rollups(
+    filteredData,
+    v => d3.mean(v, d => d[selectedMetric]),
+    d => d.subject
+  ).map(([subject, value]) => ({subject, value}));
+  
+  // Create scales
+  const xScale = d3.scaleBand()
+    .domain(aggregatedData.map(d => d.subject))
+    .range([margin.left, width - margin.right])
+    .padding(0.2);
+    
+  const yScale = d3.scaleLinear()
+    .domain([0, d3.max(aggregatedData, d => d.value)])
+    .range([height - margin.bottom, margin.top]);
+  
+  // Create SVG
+  const svg = d3.create("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .style("background", "#f9f9f9");
+  
+  // Add axes
+  svg.append("g")
+    .attr("transform", `translate(0,${height - margin.bottom})`)
+    .call(d3.axisBottom(xScale))
+    .selectAll("text")
+    .attr("transform", "rotate(-45)")
+    .style("text-anchor", "end");
+    
+  svg.append("g")
+    .attr("transform", `translate(${margin.left},0)`)
+    .call(d3.axisLeft(yScale));
+  
+  // Add bars with animation
+  svg.selectAll(".bar")
+    .data(aggregatedData)
+    .enter()
+    .append("rect")
+    .attr("class", "bar")
+    .attr("x", d => xScale(d.subject))
+    .attr("width", xScale.bandwidth())
+    .attr("y", height - margin.bottom)
+    .attr("height", 0)
+    .attr("fill", "#4b2e83")
+    .transition()
+    .duration(800)
+    .attr("y", d => yScale(d.value))
+    .attr("height", d => height - margin.bottom - yScale(d.value));
+  
+  // Add value labels
+  svg.selectAll(".label")
+    .data(aggregatedData)
+    .enter()
+    .append("text")
+    .attr("class", "label")
+    .attr("x", d => xScale(d.subject) + xScale.bandwidth() / 2)
+    .attr("y", d => yScale(d.value) - 5)
+    .attr("text-anchor", "middle")
+    .style("font-size", "12px")
+    .style("font-weight", "bold")
+    .text(d => Math.round(d.value));
+  
+  return svg.node();
+}
+```
+
+### 4. Real-time Data Simulation
+
+```{ojs}
+// Create a timer for real-time updates
+viewof isRunning = Inputs.toggle({label: "Start/Stop Simulation", value: false})
+```
+
+```{ojs}
+// Real-time data generator
+realTimeData = {
+  if (!isRunning) return [];
+  
+  const timer = setInterval(() => {
+    mutable currentData = [
+      ...currentData.slice(-19), // Keep last 20 points
+      {
+        timestamp: Date.now(),
+        value: Math.random() * 100,
+        category: Math.random() > 0.5 ? "A" : "B"
+      }
+    ];
+  }, 500);
+  
+  invalidation.then(() => clearInterval(timer));
+  
+  return mutable currentData;
+}
+```
+
+```{ojs}
+// Initialize mutable data
+mutable currentData = []
+```
+
+```{ojs}
+// Real-time line chart
+{
+  if (!isRunning || realTimeData.length === 0) {
+    return html`<div style="height: 200px; display: flex; align-items: center; justify-content: center; background: #f9f9f9; border: 1px solid #ddd;">
+      <p>Start simulation to see real-time data</p>
+    </div>`;
+  }
+  
+  const width = 600;
+  const height = 200;
+  const margin = {top: 20, right: 30, bottom: 30, left: 40};
+  
+  const xScale = d3.scaleTime()
+    .domain(d3.extent(realTimeData, d => new Date(d.timestamp)))
+    .range([margin.left, width - margin.right]);
+    
+  const yScale = d3.scaleLinear()
+    .domain([0, 100])
+    .range([height - margin.bottom, margin.top]);
+  
+  const line = d3.line()
+    .x(d => xScale(new Date(d.timestamp)))
+    .y(d => yScale(d.value))
+    .curve(d3.curveMonotoneX);
+  
+  const svg = d3.create("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .style("background", "#f9f9f9");
+  
+  // Add axes
+  svg.append("g")
+    .attr("transform", `translate(0,${height - margin.bottom})`)
+    .call(d3.axisBottom(xScale).tickFormat(d3.timeFormat("%H:%M:%S")));
+    
+  svg.append("g")
+    .attr("transform", `translate(${margin.left},0)`)
+    .call(d3.axisLeft(yScale));
+  
+  // Group data by category
+  const dataByCategory = d3.groups(realTimeData, d => d.category);
+  const colorScale = d3.scaleOrdinal(["#4b2e83", "#e53e3e"]);
+  
+  // Add lines for each category
+  dataByCategory.forEach(([category, data]) => {
+    svg.append("path")
+      .datum(data)
+      .attr("fill", "none")
+      .attr("stroke", colorScale(category))
+      .attr("stroke-width", 2)
+      .attr("d", line);
+  });
+  
+  return svg.node();
+}
+```
+
+## Educational Applications
+
+### Interactive Learning Modules
+
+Observable is particularly powerful for creating educational content because:
+
+1. **Immediate Feedback**: Students see results instantly as they modify parameters
+2. **Exploration**: Encourages experimentation with different scenarios
+3. **Visualization**: Complex concepts become accessible through interactive graphics
+4. **Engagement**: Interactive elements maintain student attention
+
+### Data Science Pedagogy
+
+```{ojs}
+// Educational example: Exploring correlation
+viewof correlationDemo = Inputs.range([-1, 1], {
+  label: "Correlation coefficient:",
+  step: 0.1,
+  value: 0.7
+})
+```
+
+```{ojs}
+// Generate correlated data for demonstration
+correlatedData = {
+  const n = 50;
+  const data = [];
+  
+  for (let i = 0; i < n; i++) {
+    const x = d3.randomNormal(0, 1)();
+    const y = correlationDemo * x + Math.sqrt(1 - correlationDemo * correlationDemo) * d3.randomNormal(0, 1)();
+    data.push({x, y});
+  }
+  
+  return data;
+}
+```
+
+```{ojs}
+// Correlation demonstration plot
+{
+  const width = 400;
+  const height = 300;
+  const margin = {top: 20, right: 20, bottom: 40, left: 40};
+  
+  const xScale = d3.scaleLinear()
+    .domain(d3.extent(correlatedData, d => d.x))
+    .range([margin.left, width - margin.right]);
+    
+  const yScale = d3.scaleLinear()
+    .domain(d3.extent(correlatedData, d => d.y))
+    .range([height - margin.bottom, margin.top]);
+  
+  const svg = d3.create("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .style("background", "#f9f9f9");
+  
+  // Add axes
+  svg.append("g")
+    .attr("transform", `translate(0,${height - margin.bottom})`)
+    .call(d3.axisBottom(xScale));
+    
+  svg.append("g")
+    .attr("transform", `translate(${margin.left},0)`)
+    .call(d3.axisLeft(yScale));
+  
+  // Add points
+  svg.selectAll(".point")
+    .data(correlatedData)
+    .enter()
+    .append("circle")
+    .attr("class", "point")
+    .attr("cx", d => xScale(d.x))
+    .attr("cy", d => yScale(d.y))
+    .attr("r", 4)
+    .attr("fill", "#4b2e83")
+    .attr("opacity", 0.7);
+  
+  // Add trend line
+  const regression = ss.linearRegression(correlatedData.map(d => [d.x, d.y]));
+  const line = ss.linearRegressionLine(regression);
+  
+  const lineData = xScale.domain().map(x => ({x, y: line(x)}));
+  
+  const lineGenerator = d3.line()
+    .x(d => xScale(d.x))
+    .y(d => yScale(d.y));
+  
+  svg.append("path")
+    .datum(lineData)
+    .attr("fill", "none")
+    .attr("stroke", "#e53e3e")
+    .attr("stroke-width", 2)
+    .attr("d", lineGenerator);
+  
+  // Add correlation coefficient text
+  svg.append("text")
+    .attr("x", width - margin.right - 10)
+    .attr("y", margin.top + 20)
+    .attr("text-anchor", "end")
+    .style("font-size", "14px")
+    .style("font-weight", "bold")
+    .text(`r = ${correlationDemo.toFixed(2)}`);
+  
+  return svg.node();
+}
+```
+
+```{ojs}
+// Load simple statistics library for regression
+ss = require("simple-statistics@7")
+```
+
+## Best Practices for Educational Observable Content
+
+### 1. Progressive Complexity
+Start with simple interactions and gradually introduce more complex concepts.
+
+### 2. Clear Documentation
+Always explain what each cell does and how it relates to the learning objectives.
+
+### 3. Meaningful Defaults
+Choose default values that produce interesting and educational results.
+
+### 4. Error Handling
+Provide meaningful feedback when students enter invalid inputs.
+
+### 5. Performance Considerations
+Keep computations light to ensure smooth interactions, especially for real-time visualizations.
+
+## Integration with Quarto
+
+Observable JavaScript integrates seamlessly with Quarto, allowing you to:
+
+- **Combine with R and Python**: Mix Observable cells with other computational languages
+- **Export to multiple formats**: Generate static versions for print or offline use
+- **Version control**: Track changes to interactive content alongside traditional code
+- **Collaborative editing**: Share and collaborate on interactive educational materials
+
+## Conclusion
+
+Observable JavaScript provides a powerful platform for creating interactive educational content. Its reactive nature makes it perfect for data science education, allowing students to immediately see the effects of parameter changes and explore concepts through direct manipulation.
+
+Key benefits for education include:
+- **Immediate feedback** enhances learning
+- **Interactive exploration** encourages deeper understanding
+- **Visual learning** makes abstract concepts concrete
+- **Engagement** through hands-on experimentation
+
+By combining Observable with Quarto, educators can create rich, interactive learning experiences that scale from simple demonstrations to complex analytical workflows.

@@ -47,7 +47,7 @@ Researcher focused on machine learning applications and intelligent tutoring sys
 
 :::
 
-## Our Work
+<!-- ## Our Work
 
 We explore innovative approaches to integrating artificial intelligence into educational contexts, developing tools and methodologies that enhance learning experiences and educational outcomes.
 
@@ -55,4 +55,4 @@ We explore innovative approaches to integrating artificial intelligence into edu
 
 {{< bi link >}} [virtuelleakademie.github.io](https://virtuelleakademie.github.io/)
 
-{{< qrcode https://virtuelleakademie.github.io/ width=200 height=200 colorDark='#000000' >}}
+{{< qrcode https://virtuelleakademie.github.io/ width=200 height=200 colorDark='#000000' >}} -->

@@ -1,0 +1,331 @@
+---
+title: "High-Performance Data Science with Julia and Tidier.jl"
+date: 7 June, 2025
+date-format: "DD MMM, YYYY"
+
+author: 
+  - name: Andrew Ellis
+    url: https://github.com/awellis
+    affiliation: Virtual Academy, Bern University of Applied Sciences
+    affiliation-url: https://virtuelleakademie.ch
+    orcid: 0000-0002-2788-936X
+
+categories: [Julia, Tidier.jl, data manipulation, performance, tutorial]
+format:
+    html:
+        code-fold: true
+        code-tools: true
+        code-summary: "Show the code"
+        toc: true
+---
+
+This tutorial explores the power of **Julia** combined with **Tidier.jl** for high-performance data science. Julia brings blazing-fast computation with Python-like syntax, while Tidier.jl provides the beloved tidyverse syntax from R, creating a perfect combination for modern data analysis.
+
+## Installation Prerequisites
+
+Before running the examples, you'll need to install Julia and the required packages:
+
+### Installing Julia
+
+1. **Download Julia** from [julialang.org](https://julialang.org/downloads/)
+2. **Using Homebrew** (macOS): `brew install julia`
+3. **Using juliaup** (recommended): Follow instructions at [github.com/JuliaLang/juliaup](https://github.com/JuliaLang/juliaup)
+
+### Installing Required Packages
+
+```julia
+# In Julia REPL, install required packages
+using Pkg
+Pkg.add(["Tidier", "DataFrames"])
+```
+
+## Why Julia + Tidier.jl?
+
+### The Performance Advantage: Julia
+
+Julia offers compelling advantages for data science:
+
+- **Near C-speed performance** with high-level syntax
+- **Multiple dispatch** for elegant, extensible code
+- **Native parallelism** and distributed computing
+- **Excellent interoperability** with Python, R, and C
+- **Growing ecosystem** of scientific computing packages
+
+### The Familiar Syntax: Tidier.jl
+
+Tidier.jl brings the tidyverse workflow to Julia:
+
+- **Familiar dplyr-style verbs** (`select`, `filter`, `mutate`, `summarize`)
+- **Pipe operator** (`|>`) for readable code chains
+- **Consistent grammar** for data manipulation
+- **Performance benefits** of Julia's compiled execution
+
+## Setup and Data Preparation
+
+```{julia}
+# Load required packages
+using Tidier
+using DataFrames
+using Random
+using Statistics
+
+# Set random seed for reproducibility
+Random.seed!(123)
+
+# Display Julia and package versions
+println("Julia version: ", VERSION)
+println("Tidier.jl version: v1.2.0")
+```
+
+
+```{julia}
+# Create a simple dataset for demonstration
+students = DataFrame(
+    id = 1:100,
+    name = ["Student $i" for i in 1:100],
+    math_score = rand(60:100, 100),
+    science_score = rand(55:100, 100),
+    program = rand(["CS", "Math", "Physics"], 100),
+    grade_level = rand([1, 2, 3, 4], 100)
+)
+
+println("Dataset shape: ", size(students))
+first(students, 5)
+```
+
+```{julia}
+# Add a total score column
+students = @mutate(students, total = math_score + science_score)
+first(students, 5)
+```
+
+## Basic Tidier.jl Operations
+
+### 1. Filtering Data
+
+```{julia}
+# Filter students with high math scores
+high_performers = @filter(students, math_score >= 90)
+println("Students with math score >= 90: ", nrow(high_performers))
+first(high_performers, 5)
+```
+
+```{julia}
+# Filter by multiple conditions
+cs_seniors = @filter(students, program == "CS" && grade_level == 4)
+println("CS seniors: ", nrow(cs_seniors))
+first(cs_seniors, 5)
+```
+
+### 2. Selecting Columns
+
+```{julia}
+# Select specific columns
+scores_only = @select(students, id, math_score, science_score, total)
+first(scores_only, 5)
+```
+
+```{julia}
+# Select columns using patterns
+name_and_scores = @select(students, name, ends_with("score"))
+first(name_and_scores, 5)
+```
+
+### 3. Creating New Columns with Mutate
+
+```{julia}
+# Add calculated columns
+students_graded = @mutate(students, 
+    average_score = (math_score + science_score) / 2,
+    passed = total >= 140
+)
+first(students_graded, 5)
+```
+
+### 4. Summarizing Data
+
+```{julia}
+# Basic summary statistics
+summary_stats = @summarize(students,
+    avg_math = mean(math_score),
+    avg_science = mean(science_score),
+    max_total = maximum(total),
+    min_total = minimum(total),
+    n_students = length(id)
+)
+summary_stats
+```
+
+### 5. Grouping and Summarizing
+
+```{julia}
+# Summary by program
+program_summary = @chain students begin
+    @group_by(program)
+    @summarize(
+        count = length(id),
+        avg_math = mean(math_score),
+        avg_science = mean(science_score),
+        avg_total = mean(total)
+    )
+    @arrange(desc(avg_total))
+end
+program_summary
+```
+
+```{julia}
+# Summary by grade level
+grade_level_summary = @chain students begin
+    @group_by(grade_level)
+    @summarize(
+        n_students = length(id),
+        avg_math = round(mean(math_score), digits=1),
+        avg_science = round(mean(science_score), digits=1)
+    )
+    @arrange(grade_level)
+end
+grade_level_summary
+```
+
+### 6. Arranging Data
+
+```{julia}
+# Sort by total score (descending)
+top_students = @chain students begin
+    @arrange(desc(total))
+    @select(name, program, math_score, science_score, total)
+    @slice(1:10)
+end
+println("Top 10 students by total score:")
+top_students
+```
+
+### 7. Complex Data Transformations
+
+```{julia}
+# First, let's verify the DataFrame exists and has the right columns
+if @isdefined(students)
+    println("Students DataFrame columns: ", names(students))
+    println("Number of rows: ", nrow(students))
+else
+    println("Students DataFrame not found!")
+end
+
+# Use DataFrames.jl functions instead of Tidier.jl for this example
+# Filter for upper-level students (grade_level >= 3)
+upper_level = filter(row -> row.grade_level >= 3, students)
+
+# Add performance column
+upper_level.performance = map(upper_level.total) do t
+    if t >= 160
+        "Excellent"
+    elseif t >= 140
+        "Good"
+    else
+        "Average"
+    end
+end
+
+# Group and summarize using DataFrames.jl
+result = combine(groupby(upper_level, [:program, :performance]), nrow => :count)
+sort!(result, [:program, order(:count, rev=true)])
+
+println("\nPerformance distribution for upper-level students:")
+result
+```
+
+## Practical Examples
+
+### 8. Working with Missing Data
+
+```{julia}
+# Create a DataFrame with some missing values
+students_missing = DataFrame(
+    id = 1:10,
+    name = ["Student $i" for i in 1:10],
+    math_score = [85, missing, 92, 78, missing, 88, 95, missing, 82, 90],
+    science_score = [78, 85, missing, 82, 88, missing, 92, 85, missing, 87]
+)
+
+println("Data with missing values:")
+println(students_missing)
+
+# Count missing values
+missing_counts = DataFrame(
+    math_missing = sum(ismissing.(students_missing.math_score)),
+    science_missing = sum(ismissing.(students_missing.science_score))
+)
+println("\nMissing value counts:")
+println(missing_counts)
+
+# Calculate mean, skipping missing values
+math_mean = mean(skipmissing(students_missing.math_score))
+science_mean = mean(skipmissing(students_missing.science_score))
+println("\nMeans (excluding missing): Math = $math_mean, Science = $science_mean")
+```
+
+### 9. Joining DataFrames
+
+```{julia}
+# Create a simple grades DataFrame
+grades = DataFrame(
+    id = [1, 2, 3, 4, 5],
+    final_grade = ["A", "B", "A", "C", "B"]
+)
+
+# Join with students data
+students_with_grades = @left_join(students[1:5, :], grades, id)
+students_with_grades
+```
+
+### 10. Reshaping Data
+
+```{julia}
+# Create wide data
+wide_scores = @chain students[1:5, :] begin
+    @select(id, name, math_score, science_score)
+end
+
+println("Wide format:")
+wide_scores
+
+# Convert to long format (using DataFrames stack function)
+long_scores = stack(wide_scores, [:math_score, :science_score], 
+                    variable_name=:subject, value_name=:score)
+println("\nLong format:")
+first(long_scores, 10)
+```
+
+## Summary of Basic Tidier.jl Operations
+
+### Core Functions
+- **`@filter`**: Select rows based on conditions
+- **`@select`**: Choose specific columns
+- **`@mutate`**: Create or modify columns
+- **`@summarize`**: Calculate summary statistics
+- **`@group_by`**: Group data for aggregated operations
+- **`@arrange`**: Sort rows
+- **`@chain`** or **`|>`**: Combine multiple operations
+
+### Key Benefits of Julia + Tidier.jl
+
+1. **Familiar Syntax**: If you know dplyr from R, you already know Tidier.jl
+2. **High Performance**: Julia's speed makes operations on large datasets fast
+3. **Clean Code**: The pipe operator makes complex operations readable
+4. **Type Safety**: Julia catches errors before runtime
+
+## Next Steps
+
+To continue learning:
+
+1. **Practice with your own data**: Import a CSV and try these operations
+2. **Explore more functions**: Tidier.jl supports many more operations
+3. **Learn Julia basics**: Understanding Julia makes you more effective
+4. **Join the community**: Julia has a welcoming, helpful community
+
+## Resources
+
+- [Tidier.jl Documentation](https://tidierorg.github.io/Tidier.jl/stable/)
+- [Julia Documentation](https://docs.julialang.org)
+- [DataFrames.jl Tutorial](https://dataframes.juliadata.org/stable/)
+- [Julia for Data Science](https://juliadatascience.io/)

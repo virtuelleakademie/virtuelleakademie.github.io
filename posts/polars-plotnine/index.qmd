@@ -1,0 +1,845 @@
+---
+title: "Lightning-Fast Data Analysis: Polars and plotnine for Modern Python"
+date: 6 June, 2025
+date-format: "DD MMM, YYYY"
+
+author: 
+  - name: Andrew Ellis
+    url: https://github.com/awellis
+    affiliation: Virtual Academy, Bern University of Applied Sciences
+    affiliation-url: https://virtuelleakademie.ch
+    orcid: 0000-0002-2788-936X
+
+categories: [Python, Polars, plotnine, data manipulation, visualization, performance, tutorial]
+format:
+    html:
+        code-fold: true
+        code-tools: true
+        code-summary: "Show the code"
+        toc: true
+---
+
+This tutorial explores the powerful combination of **Polars** and **plotnine** for high-performance data analysis in Python. Polars brings lightning-fast data manipulation with lazy evaluation, while plotnine provides ggplot2's elegant grammar of graphics for Python, creating a modern alternative to the pandas + matplotlib/seaborn ecosystem.
+
+## Why Polars + plotnine?
+
+### The Performance Revolution: Polars
+
+Polars is a blazingly fast DataFrame library that leverages:
+
+- **Rust backend**: Memory-efficient and CPU-optimized operations
+- **Lazy evaluation**: Query optimization before execution  
+- **Columnar processing**: Apache Arrow format for speed
+- **Parallel execution**: Automatic multi-threading
+- **Expressive API**: Clean, readable data manipulation syntax
+
+### The Grammar Advantage: plotnine
+
+plotnine brings ggplot2's grammar of graphics to Python:
+
+- **Declarative syntax**: Describe what you want, not how to draw it
+- **Layered approach**: Build complex plots incrementally  
+- **Consistent aesthetics**: Systematic approach to visual mapping
+- **Extensible**: Easy customization and theming
+- **Educational**: Matches R's ggplot2 for cross-language consistency
+
+## Setup and Data Preparation
+
+```{python}
+#| message: false
+#| warning: false
+
+import polars as pl
+import numpy as np
+from plotnine import (
+    ggplot, aes, geom_point, geom_smooth, geom_violin, geom_boxplot, geom_col, 
+    geom_tile, geom_text, stat_summary, facet_wrap,
+    scale_color_brewer, scale_fill_brewer, scale_color_manual, scale_fill_manual,
+    scale_color_gradient, scale_fill_gradient, scale_color_gradient2, 
+    scale_fill_gradient2, scale_size_continuous, scale_alpha_continuous,
+    labs, theme_minimal, theme, element_text, element_rect, element_line,
+    element_blank, guide_legend, coord_flip, xlim, ylim, position_dodge
+)
+import plotnine.options
+from datetime import datetime, timedelta
+import warnings
+
+# Configure plotnine for better output
+plotnine.options.figure_size = (10, 6)
+plotnine.options.dpi = 100
+warnings.filterwarnings('ignore')
+
+# Ensure proper display in Quarto
+from IPython.display import display
+import matplotlib
+matplotlib.use('Agg')  # Use non-interactive backend
+
+# Display Polars version and configuration
+print(f"Polars version: {pl.__version__}")
+print(f"Available threads: {pl.thread_pool_size()}")
+```
+
+```{python}
+# Create a comprehensive educational dataset using Polars
+# This demonstrates Polars' syntax while creating realistic data
+
+np.random.seed(42)
+
+# Generate base student data
+n_students = 5000
+n_courses = 8
+n_semesters = 6
+
+# Create students DataFrame
+students_df = pl.DataFrame({
+    "student_id": range(1, n_students + 1),
+    "age": np.random.normal(22, 2, n_students).round().astype(int),
+    "program": np.random.choice(["Computer Science", "Mathematics", "Physics", "Statistics"], n_students),
+    "entry_year": np.random.choice([2020, 2021, 2022, 2023], n_students),
+    "study_mode": np.random.choice(["Full-time", "Part-time"], n_students, p=[0.8, 0.2])
+}).with_columns([
+    # Add realistic constraints using Polars expressions
+    pl.col("age").clip(18, 28).alias("age"),
+    # Generate GPA with program-based bias
+    pl.when(pl.col("program") == "Computer Science")
+      .then(np.random.normal(3.2, 0.5, n_students))
+      .when(pl.col("program") == "Mathematics") 
+      .then(np.random.normal(3.4, 0.4, n_students))
+      .when(pl.col("program") == "Physics")
+      .then(np.random.normal(3.1, 0.6, n_students))
+      .otherwise(np.random.normal(3.3, 0.5, n_students))
+      .clip(1.0, 4.0)
+      .round(2)
+      .alias("gpa")
+])
+
+print("Students DataFrame shape:", students_df.shape)
+students_df.head()
+```
+
+```{python}
+# Create course performance data using a simple approach
+courses = ["Calculus", "Linear Algebra", "Statistics", "Programming", 
+          "Data Structures", "Machine Learning", "Research Methods", "Thesis"]
+
+# Create performance data manually to avoid cross join issues
+np.random.seed(42)
+performance_records = []
+
+# Get student data as list for iteration
+student_records = students_df.to_dicts()
+
+for student in student_records:
+    for i, course in enumerate(courses):
+        # Course difficulty multipliers
+        if course in ["Machine Learning", "Thesis"]:
+            base_multiplier = 20
+            noise_factor = 1.6
+        elif course in ["Calculus", "Linear Algebra"]:
+            base_multiplier = 22
+            noise_factor = 2.0
+        else:
+            base_multiplier = 21
+            noise_factor = 1.2
+        
+        # Generate pseudo-random values based on student_id and course
+        seed_val = (student["student_id"] * 7 + i * 13) % 1000
+        
+        # Calculate score
+        base_score = student["gpa"] * base_multiplier
+        score_variation = (seed_val / 100.0 - 5.0) * noise_factor
+        score = max(0, min(100, round(base_score + score_variation, 1)))
+        
+        # Study hours based on course type
+        if course in ["Programming", "Data Structures"]:
+            study_hours = 8 + (seed_val % 100) / 10.0
+        elif course == "Thesis":
+            study_hours = 15 + (seed_val % 150) / 10.0
+        else:
+            study_hours = 5 + (seed_val % 80) / 10.0
+        
+        # Attendance
+        attendance = max(50, min(100, round(85 + (seed_val % 50) / 5.0 - 5.0, 1)))
+        
+        performance_records.append({
+            "student_id": student["student_id"],
+            "program": student["program"],
+            "gpa": student["gpa"],
+            "course": course,
+            "semester": i + 1,
+            "score": score,
+            "study_hours": round(study_hours, 1),
+            "attendance": attendance
+        })
+
+# Create Polars DataFrame from the records
+performance_df = pl.DataFrame(performance_records)
+
+print("Performance DataFrame shape:", performance_df.shape)
+performance_df.head()
+```
+
+## Polars Data Manipulation Mastery
+
+### 1. Basic Operations and Lazy Evaluation
+
+```{python}
+# Demonstrate Polars' lazy evaluation
+lazy_query = (
+    performance_df
+    .lazy()  # Switch to lazy mode
+    .filter(pl.col("score") >= 70)
+    .group_by(["program", "course"])
+    .agg([
+        pl.col("score").mean().alias("avg_score"),
+        pl.col("study_hours").mean().alias("avg_study_hours"),
+        pl.col("attendance").mean().alias("avg_attendance"),
+        pl.count().alias("n_students")
+    ])
+    .sort("avg_score", descending=True)
+)
+
+# Execute the lazy query
+program_performance = lazy_query.collect()
+print("Top performing program-course combinations:")
+program_performance.head(10)
+```
+
+```{python}
+# Advanced Polars expressions and window functions
+student_rankings = (
+    performance_df
+    .with_columns([
+        # Calculate percentile rank within each course
+        pl.col("score").rank(method="average").over("course").alias("course_rank"),
+        
+        # Calculate student average score
+        pl.col("score").mean().over("student_id").alias("student_avg"),
+        
+        # Flag high performers (top 10% in course) - simplified calculation
+        (pl.col("score").rank(method="average", descending=True).over("course") <= 
+         (pl.col("score").count().over("course") * 0.1).cast(pl.Int64)).alias("top_performer")
+    ])
+    .filter(pl.col("semester") >= 4)  # Focus on advanced courses
+)
+
+print("Student rankings with advanced metrics:")
+student_rankings.head()
+```
+
+### 2. Complex Aggregations and Transformations
+
+```{python}
+# Multi-level aggregations using Polars
+program_analysis = (
+    student_rankings
+    .group_by("program")
+    .agg([
+        # Basic statistics
+        pl.col("score").mean().alias("avg_score"),
+        pl.col("score").std().alias("std_score"),
+        pl.col("score").quantile(0.5).alias("median_score"),
+        
+        # Advanced metrics
+        pl.col("top_performer").sum().alias("top_performers_count"),
+        pl.col("top_performer").mean().alias("top_performer_rate"),
+        
+        # Study behavior
+        pl.col("study_hours").mean().alias("avg_study_hours"),
+        pl.col("attendance").mean().alias("avg_attendance"),
+        
+        # Count and range
+        pl.count().alias("total_records"),
+        (pl.col("score").max() - pl.col("score").min()).alias("score_range")
+    ])
+    .sort("avg_score", descending=True)
+)
+
+print("Comprehensive program analysis:")
+program_analysis
+```
+
+```{python}
+# For correlation analysis, we'll use a simpler approach
+# Calculate correlations using pandas (since plotnine uses pandas anyway)
+import pandas as pd
+
+correlation_results = []
+for program in performance_df["program"].unique():
+    program_data = performance_df.filter(pl.col("program") == program).to_pandas()
+    
+    score_study_corr = program_data["score"].corr(program_data["study_hours"])
+    score_attendance_corr = program_data["score"].corr(program_data["attendance"])
+    
+    correlation_results.append({
+        "program": program,
+        "score_study_correlation": round(score_study_corr, 3),
+        "score_attendance_correlation": round(score_attendance_corr, 3)
+    })
+
+correlation_df = pl.DataFrame(correlation_results)
+
+# Combine with program analysis
+final_program_analysis = program_analysis.join(correlation_df, on="program")
+print("\nProgram analysis with correlations:")
+final_program_analysis
+```
+
+## Declarative Visualization with plotnine
+
+### 3. Grammar of Graphics Implementation
+
+```{python}
+#| fig-width: 12
+#| fig-height: 8
+#| output: true
+
+# Convert Polars to pandas for plotnine (plotnine expects pandas)
+performance_pd = performance_df.to_pandas()
+
+# Configure plotnine for this specific plot
+import plotnine.options
+plotnine.options.figure_size = (12, 8)
+
+# Create a sophisticated multi-faceted visualization
+p1 = (
+    ggplot(performance_pd, aes(x="study_hours", y="score", color="program")) +
+    geom_point(alpha=0.6, size=1.5) +
+    geom_smooth(method="lm", se=True, size=1.2) +
+    facet_wrap("course", ncol=4, scales="free") +
+    scale_color_brewer(type="qual", palette="Set2") +
+    labs(
+        title="Relationship Between Study Hours and Academic Performance",
+        subtitle="Linear trends with 95% confidence intervals across courses and programs",
+        x="Weekly Study Hours",
+        y="Course Score (%)",
+        color="Academic Program",
+        caption="Data: Simulated student performance (n=5,000 students, 8 courses)"
+    ) +
+    theme_minimal() +
+    theme(
+        plot_title=element_text(size=14, weight="bold"),
+        plot_subtitle=element_text(size=11, color="#666666"),
+        strip_text=element_text(size=10, weight="bold"),
+        legend_position="bottom"
+    )
+)
+
+
+# Display the plot
+p1
+```
+
+### 4. Advanced Layered Visualizations
+
+```{python}
+#| fig-width: 10
+#| fig-height: 6
+#| output: true
+
+# Configure plotnine for this plot
+plotnine.options.figure_size = (10, 6)
+
+# Aggregate data for program comparison
+program_summary = program_analysis.to_pandas()
+
+# Create a sophisticated comparison plot
+p2 = (
+    ggplot(program_summary, aes(x="avg_study_hours", y="avg_score")) +
+    
+    # Add confidence ellipses based on standard deviation
+    geom_point(aes(size="total_records", color="top_performer_rate"), alpha=0.8) +
+    
+    # Add program labels
+    geom_text(aes(label="program"), nudge_y=1.5, size=9, fontweight="bold") +
+    
+    # Add trend line
+    geom_smooth(method="lm", color="darkred", linetype="dashed", se=False) +
+    
+    # Customize scales
+    scale_size_continuous(
+        name="Total Records",
+        range=(8, 15),
+        guide=guide_legend(override_aes={"alpha": 1})
+    ) +
+    scale_color_gradient2(
+        name="Top Performer\nRate",
+        low="blue", mid="white", high="red",
+        midpoint=0.1,
+        labels=lambda breaks: [f"{x:.1%}" for x in breaks]
+    ) +
+    
+    # Elegant theming
+    labs(
+        title="Academic Program Performance Analysis",
+        subtitle="Bubble size represents sample size, color indicates top performer rate",
+        x="Average Study Hours per Week",
+        y="Average Score (%)",
+        caption="Programs with higher study hours don't always yield higher scores"
+    ) +
+    theme_minimal() +
+    theme(
+        plot_title=element_text(size=14, weight="bold"),
+        plot_subtitle=element_text(size=11, color="#666666"),
+        legend_position="right",
+        panel_grid_minor=element_blank()
+    )
+)
+
+# Display the plot
+p2
+```
+
+### 5. Distribution Analysis with Multiple Geometries
+
+```{python}
+#| fig-width: 12
+#| fig-height: 8
+#| output: true
+
+# Focus on advanced courses for distribution analysis
+advanced_courses = performance_pd[
+    performance_pd["course"].isin(["Machine Learning", "Data Structures", "Research Methods", "Thesis"])
+]
+
+# Configure plotnine for this plot
+plotnine.options.figure_size = (12, 8)
+
+# Create comprehensive distribution plot
+p3 = (
+    ggplot(advanced_courses, aes(x="program", y="score", fill="program")) +
+    
+    # Violin plots for distribution shape
+    geom_violin(alpha=0.7, trim=False) +
+    
+    # Box plots for summary statistics
+    geom_boxplot(width=0.3, alpha=0.8, outlier_alpha=0.6) +
+    
+    # Add mean points
+    stat_summary(fun_y=np.mean, geom="point", size=3, color="white", shape="D") +
+    
+    # Facet by course
+    facet_wrap("course", ncol=2) +
+    
+    # Color scheme
+    scale_fill_brewer(type="qual", palette="Dark2") +
+    
+    # Coordinate system
+    coord_flip() +
+    
+    # Labels and theme
+    labs(
+        title="Score Distribution Analysis for Advanced Courses",
+        subtitle="Violin plots show full distribution, box plots highlight quartiles, diamonds mark means",
+        x="Academic Program",
+        y="Course Score (%)",
+        fill="Program",
+        caption="Advanced courses: Machine Learning, Data Structures, Research Methods, Thesis"
+    ) +
+    theme_minimal() +
+    theme(
+        plot_title=element_text(size=14, weight="bold"),
+        plot_subtitle=element_text(size=11, color="#666666"),
+        strip_text=element_text(size=11, weight="bold"),
+        legend_position="none",  # Remove legend since x-axis shows programs
+        axis_text_x=element_text(angle=45, hjust=1)
+    )
+)
+
+# Display the plot
+
+p3
+```
+
+## Performance Comparison: Polars vs Pandas
+
+### 6. Speed Benchmarking
+
+```{python}
+import time
+import pandas as pd
+
+# Create larger dataset for meaningful comparison
+large_n = 50000
+large_students = pl.DataFrame({
+    "student_id": range(1, large_n + 1),
+    "program": np.random.choice(["CS", "Math", "Physics", "Stats"], large_n),
+    "score": np.random.normal(75, 15, large_n),
+    "study_hours": np.random.gamma(3, 2, large_n),
+    "semester": np.random.choice(range(1, 9), large_n)
+})
+
+# Convert to pandas for comparison
+large_students_pd = large_students.to_pandas()
+
+print(f"Dataset size: {large_students.shape[0]:,} rows")
+```
+
+```{python}
+# Benchmark complex aggregation operations
+
+def benchmark_polars():
+    start_time = time.time()
+    result = (
+        large_students
+        .group_by(["program", "semester"])
+        .agg([
+            pl.col("score").mean().alias("avg_score"),
+            pl.col("score").std().alias("std_score"),
+            pl.col("study_hours").mean().alias("avg_hours"),
+            pl.col("score").quantile(0.9).alias("score_90th"),
+            pl.count().alias("count")
+        ])
+        .filter(pl.col("count") >= 100)
+        .sort(["program", "semester"])
+    )
+    end_time = time.time()
+    return end_time - start_time, result.shape[0]
+
+def benchmark_pandas():
+    start_time = time.time()
+    result = (
+        large_students_pd
+        .groupby(["program", "semester"])
+        .agg({
+            "score": ["mean", "std", lambda x: x.quantile(0.9)],
+            "study_hours": "mean",
+            "student_id": "count"
+        })
+        .reset_index()
+    )
+    # Flatten column names
+    result.columns = ["_".join(col).strip() if col[1] else col[0] for col in result.columns]
+    result = result[result.iloc[:, -1] >= 100]  # Filter by count
+    end_time = time.time()
+    return end_time - start_time, result.shape[0]
+
+# Run benchmarks
+polars_time, polars_rows = benchmark_polars()
+pandas_time, pandas_rows = benchmark_pandas()
+
+print(f"Polars: {polars_time:.4f} seconds ({polars_rows} result rows)")
+print(f"Pandas: {pandas_time:.4f} seconds ({pandas_rows} result rows)")
+print(f"Speedup: {pandas_time/polars_time:.2f}x faster with Polars")
+```
+
+### 7. Memory Usage Analysis
+
+```{python}
+# Memory usage comparison
+print("Memory usage comparison:")
+print(f"Polars DataFrame: {large_students.estimated_size('mb'):.2f} MB")
+print(f"Pandas DataFrame: {large_students_pd.memory_usage(deep=True).sum() / 1024**2:.2f} MB")
+
+# Show data types efficiency
+print("\nData types:")
+print("Polars dtypes:")
+for col, dtype in zip(large_students.columns, large_students.dtypes):
+    print(f"  {col}: {dtype}")
+    
+print("\nPandas dtypes:")
+for col, dtype in large_students_pd.dtypes.items():
+    print(f"  {col}: {dtype}")
+```
+
+## Advanced plotnine Techniques
+
+### 8. Custom Themes and Statistical Layers
+
+```{python}
+#| fig-width: 10
+#| fig-height: 6
+#| output: true
+
+# Configure plotnine for this plot
+plotnine.options.figure_size = (10, 6)
+
+# Create a custom theme for academic publications
+academic_theme = theme_minimal() + theme(
+    plot_title=element_text(size=14, weight="bold", margin={"b": 20}),
+    plot_subtitle=element_text(size=11, color="#4d4d4d", margin={"b": 15}),
+    axis_title=element_text(size=12, weight="bold"),
+    axis_text=element_text(size=10),
+    legend_title=element_text(size=11, weight="bold"),
+    legend_text=element_text(size=10),
+    strip_text=element_text(size=11, weight="bold", margin={"b": 10}),
+    panel_grid_major=element_line(color="#e6e6e6", size=0.5),
+    panel_grid_minor=element_blank(),
+    plot_background=element_rect(fill="white"),
+    panel_background=element_rect(fill="white")
+)
+
+# Advanced statistical visualization
+study_performance = (
+    performance_df
+    .filter(pl.col("course").is_in(["Programming", "Machine Learning", "Statistics"]))
+    .to_pandas()
+)
+
+p4 = (
+    ggplot(study_performance, aes(x="attendance", y="score")) +
+    
+    # Add points with transparency to show density
+    geom_point(aes(color="program"), alpha=0.3, size=0.8) +
+    
+    # Add smooth trend lines
+    geom_smooth(aes(color="program"), method="loess", se=True) +
+    
+    # Facet by course
+    facet_wrap("course", ncol=3) +
+    
+    # Custom color palette
+    scale_color_manual(
+        values=["#2E4057", "#5D737E", "#8FA68E", "#C7D59F"],
+        name="Program"
+    ) +
+    
+    # Coordinate limits
+    xlim(50, 100) +
+    ylim(0, 100) +
+    
+    # Labels
+    labs(
+        title="Attendance vs Performance Analysis by Course",
+        subtitle="Point density shows distribution, smooth curves indicate trends",
+        x="Attendance Rate (%)",
+        y="Course Score (%)",
+        caption="Statistical analysis of 40,000 course enrollments"
+    ) +
+    
+    # Apply custom theme
+    academic_theme +
+    theme(legend_position="bottom")
+)
+
+# Display the plot
+display(p4)
+p4
+```
+
+## Polars-plotnine Integration Best Practices
+
+### 9. Efficient Data Pipeline
+
+```{python}
+# Demonstrate efficient Polars → plotnine workflow
+def create_analysis_pipeline(data: pl.DataFrame, analysis_type: str):
+    """
+    Efficient pipeline that processes data in Polars and visualizes with plotnine
+    """
+    
+    if analysis_type == "performance_trends":
+        # Complex Polars aggregation
+        processed = (
+            data
+            .with_columns([
+                pl.when(pl.col("score") >= 90).then(pl.lit("A"))
+                  .when(pl.col("score") >= 80).then(pl.lit("B")) 
+                  .when(pl.col("score") >= 70).then(pl.lit("C"))
+                  .when(pl.col("score") >= 60).then(pl.lit("D"))
+                  .otherwise(pl.lit("F")).alias("grade")
+            ])
+            .group_by(["course", "program", "grade"])
+            .agg([
+                pl.count().alias("student_count"),
+                pl.col("study_hours").mean().alias("avg_study_hours")
+            ])
+            .with_columns([
+                pl.col("student_count").sum().over(["course", "program"]).alias("total_students")
+            ])
+            .with_columns([
+                (pl.col("student_count") / pl.col("total_students") * 100).alias("percentage")
+            ])
+            .filter(pl.col("total_students") >= 50)  # Sufficient sample size
+        )
+        
+        # Convert to pandas only for plotting
+        plot_data = processed.to_pandas()
+        
+        # Configure plotnine for this plot
+        plotnine.options.figure_size = (10, 6)
+        
+        # Create visualization
+        p = (
+            ggplot(plot_data, aes(x="grade", y="percentage", fill="program")) +
+            geom_col(position="dodge", alpha=0.8) +
+            facet_wrap("course", ncol=4) +
+            scale_fill_brewer(type="qual", palette="Set3") +
+            labs(
+                title="Grade Distribution by Program and Course",
+                x="Grade", y="Percentage of Students (%)",
+                fill="Program"
+            ) +
+            academic_theme +
+            theme(
+                axis_text_x=element_text(size=12, weight="bold"),
+                legend_position="bottom"
+            )
+        )
+        
+        return processed, p
+    
+    else:
+        raise ValueError("Unknown analysis type")
+
+# Execute pipeline
+grade_analysis, grade_plot = create_analysis_pipeline(performance_df, "performance_trends")
+
+print("Processed data shape:", grade_analysis.shape)
+# Display the plot
+display(grade_plot)
+grade_plot
+```
+
+## Real-World Applications
+
+### 10. Educational Data Science Workflow
+
+```{python}
+# Simulate a complete educational analytics workflow
+
+# 1. Data Quality Assessment with Polars
+# Create quality report with separate operations to avoid mixing agg types
+null_counts = performance_df.null_count()
+stats_summary = performance_df.select([
+    pl.col("score").min().alias("score_min"),
+    pl.col("score").max().alias("score_max"),
+    pl.col("score").mean().alias("score_mean"),
+])
+quality_flags = performance_df.select([
+    (pl.col("score") < 0).sum().alias("negative_scores"),
+    (pl.col("score") > 100).sum().alias("invalid_scores"),
+    (pl.col("study_hours") < 0).sum().alias("negative_hours"),
+])
+
+print("Data Quality Report:")
+print("Null counts:")
+print(null_counts)
+print("\nStatistical summary:")
+print(stats_summary)
+print("\nQuality flags:")
+print(quality_flags)
+```
+
+```{python}
+# 2. Predictive modeling preparation
+# Check what columns we have available
+print("Performance DataFrame columns:", performance_df.columns)
+
+# Create modeling features directly from performance_df (which already includes key student data)
+modeling_data = (
+    performance_df
+    .with_columns([
+        # Feature engineering - simplified approach
+        pl.col("score").shift(1, fill_value=0).over("student_id").alias("previous_score"),
+        pl.col("study_hours").mean().over("student_id").alias("avg_study_hours_student"),
+        (pl.col("attendance") >= 85).alias("high_attendance"),
+        
+        # Target encoding - course difficulty (average score for each course)
+        pl.col("score").mean().over("course").alias("course_difficulty"),
+        
+        # Interaction features
+        (pl.col("study_hours") * pl.col("attendance") / 100.0).alias("effective_study_time"),
+        
+        # Course progress indicator
+        pl.col("semester").rank().over("student_id").alias("course_sequence")
+    ])
+    .filter(pl.col("score").is_not_null())  # Remove missing values for modeling
+)
+
+print("Modeling dataset shape:", modeling_data.shape)
+print("Features available for modeling:")
+print(modeling_data.columns)
+```
+
+```{python}
+#| fig-width: 12
+#| fig-height: 6
+#| output: true
+
+# 3. Final comprehensive visualization
+final_plot_data = modeling_data.to_pandas()
+
+# Configure plotnine for this plot
+plotnine.options.figure_size = (12, 6)
+
+p_final = (
+    ggplot(final_plot_data.sample(2000), aes(x="effective_study_time", y="score")) +
+    
+    # Use points with alpha for density visualization
+    geom_point(aes(color="program"), alpha=0.4, size=1.5) +
+    
+    # Overlay trend line
+    geom_smooth(color="red", method="loess") +
+    
+    # Facet by program
+    facet_wrap("program", ncol=2) +
+    
+    # Color scale for points
+    scale_color_brewer(type="qual", palette="Set2", name="Program") +
+    
+    # Labels
+    labs(
+        title="Effective Study Time vs Academic Performance",
+        subtitle="Point density shows student distribution, red line indicates trend",
+        x="Effective Study Time (hours × attendance rate)",
+        y="Course Score (%)",
+        caption="Sample of 2,000 students from modeling dataset"
+    ) +
+    
+    # Professional theme
+    academic_theme +
+    theme(
+        strip_text=element_text(size=12, weight="bold"),
+        legend_position="right"
+    )
+)
+
+# Display the plot
+display(p_final)
+p_final
+```
+
+## Key Takeaways and Best Practices
+
+### Performance Benefits
+1. **Polars advantages**: 2-10x faster than pandas for most operations
+2. **Memory efficiency**: Lower memory footprint with optimized data types
+3. **Lazy evaluation**: Query optimization before execution
+4. **Parallel processing**: Automatic multi-threading
+
+### Visualization Excellence  
+1. **Grammar of graphics**: Systematic approach to building complex visualizations
+2. **Layer composition**: Build plots incrementally for clarity
+3. **Consistent aesthetics**: Professional appearance with minimal code
+4. **Cross-platform**: Same syntax as R's ggplot2
+
+### Integration Strategy
+1. **Data processing in Polars**: Leverage speed for heavy computations
+2. **Visualization in plotnine**: Convert to pandas only when plotting
+3. **Memory management**: Process in chunks for very large datasets
+4. **Type consistency**: Ensure proper data types throughout pipeline
+
+### Educational Applications
+- **Performance analytics**: Fast processing of large student datasets
+- **Interactive exploration**: Quick iteration during analysis
+- **Publication-ready plots**: Professional visualizations for research
+- **Reproducible workflows**: Clear, readable data science pipelines
+
+The combination of Polars and plotnine represents the future of Python data science: blazing-fast processing with elegant, declarative visualization. This powerful duo enables researchers and educators to handle larger datasets while creating more sophisticated analyses and beautiful visualizations.
+
+## Conclusion
+
+Polars and plotnine together offer a compelling alternative to the traditional pandas + matplotlib ecosystem:
+
+- **Polars** delivers exceptional performance for data manipulation with an intuitive API
+- **plotnine** provides the grammar of graphics for systematic visualization
+- **Together** they enable fast, elegant, and reproducible data science workflows
+
+For educational data analysis, this combination is particularly powerful, allowing researchers to:
+- Process large institutional datasets efficiently
+- Create publication-quality visualizations
+- Build reproducible analytical pipelines  
+- Scale analyses as data grows
+
+The investment in learning these tools pays dividends in both performance and code clarity, making them excellent choices for modern Python data science.
