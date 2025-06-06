@@ -1,0 +1,50 @@
+---
+title: "Dr. Stefan Hackstein"
+image: "../../assets/va-logo.png"
+about:
+  template: solana
+  links:
+    - icon: envelope-fill
+      text: Email
+      href: mailto:stefan.hackstein@bfh.ch
+    - icon: mortarboard-fill
+      text: University Profile
+      href: https://www.bfh.ch/
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/stefan-hackstein/
+    - icon: github
+      text: GitHub
+      href: https://github.com/shacks3
+---
+
+## About
+
+Dr. Stefan Hackstein is a researcher at the Virtual Academy of the Bern University of Applied Sciences. His research focuses on how artificial intelligence can be used effectively in educational systems.
+
+## Research Interests
+
+- Artificial Intelligence in Education
+- Machine Learning Applications
+- Educational Data Mining
+- Intelligent Tutoring Systems
+- Technology-Enhanced Learning
+
+## Background
+
+Dr. Hackstein specializes in the development and evaluation of AI-driven educational technologies. His work focuses on creating intelligent systems that can adapt to individual learning needs and provide personalized educational experiences.
+
+## Current Projects
+
+- Design of adaptive learning algorithms
+- Development of intelligent educational content systems
+- Research on AI-powered student assessment methods
+- Investigation of machine learning techniques for educational analytics
+
+## Publications
+
+*Publications and research outputs will be updated regularly.*
+
+## Contact
+
+For research collaborations, inquiries, or more information about ongoing projects, please reach out via email.
