@@ -55,7 +55,7 @@ student_data <- tibble(
   score = round(rnorm(600, mean = 78, sd = 12), 1),
   study_hours = round(runif(600, min = 5, max = 25), 1),
   attendance = round(runif(600, min = 75, max = 100), 1)
-) %>%
+) |>
   # Add some realistic constraints
   mutate(
     score = pmax(0, pmin(100, score)),
@@ -76,8 +76,8 @@ Let's explore our data using tidy data manipulation techniques:
 
 ```{r}
 # Calculate summary statistics by subject and semester
-summary_stats <- student_data %>%
-  group_by(subject, semester) %>%
+summary_stats <- student_data |>
+  group_by(subject, semester) |>
   summarise(
     n_students = n_distinct(student_id),
     avg_score = mean(score, na.rm = TRUE),
@@ -86,11 +86,11 @@ summary_stats <- student_data %>%
     avg_study_hours = mean(study_hours, na.rm = TRUE),
     avg_attendance = mean(attendance, na.rm = TRUE),
     .groups = "drop"
-  ) %>%
+  ) |>
   arrange(subject, semester)
 
 # Display the summary
-summary_stats %>%
+summary_stats |>
   knitr::kable(digits = 2, caption = "Summary Statistics by Subject and Semester")
 ```
 
@@ -103,7 +103,7 @@ summary_stats %>%
 #| fig-height: 6
 
 # Create a violin plot with box plots overlay
-p1 <- student_data %>%
+p1 <- student_data |>
   ggplot(aes(x = subject, y = score, fill = subject)) +
   geom_violin(alpha = 0.7, trim = FALSE) +
   geom_boxplot(width = 0.2, fill = "white", alpha = 0.8) +
@@ -132,18 +132,18 @@ print(p1)
 #| fig-height: 8
 
 # Calculate means and confidence intervals for trend analysis
-trend_data <- student_data %>%
-  group_by(subject, semester) %>%
+trend_data <- student_data |>
+  group_by(subject, semester) |>
   summarise(
     mean_score = mean(score),
     se = sd(score) / sqrt(n()),
     ci_lower = mean_score - 1.96 * se,
     ci_upper = mean_score + 1.96 * se,
     .groups = "drop"
-  ) %>%
+  ) |>
   mutate(semester = factor(semester, levels = c("Fall 2023", "Spring 2024", "Fall 2024")))
 
-p2 <- trend_data %>%
+p2 <- trend_data |>
   ggplot(aes(x = semester, y = mean_score, color = subject, group = subject)) +
   geom_ribbon(aes(ymin = ci_lower, ymax = ci_upper, fill = subject), 
               alpha = 0.2, color = NA) +
@@ -178,7 +178,7 @@ print(p2)
 #| fig-height: 8
 
 # Create a sophisticated scatter plot with trend lines
-p3 <- student_data %>%
+p3 <- student_data |>
   ggplot(aes(x = study_hours, y = score)) +
   geom_point(aes(color = subject, alpha = attendance), size = 2) +
   geom_smooth(aes(color = subject), method = "lm", se = TRUE, size = 1.2) +
@@ -211,7 +211,7 @@ print(p3)
 #| fig-height: 6
 
 # Create performance bins and calculate percentages
-heatmap_data <- student_data %>%
+heatmap_data <- student_data |>
   mutate(
     study_bins = cut(study_hours, 
                      breaks = c(0, 10, 15, 20, 25),
@@ -225,13 +225,13 @@ heatmap_data <- student_data %>%
       score >= 60 ~ "D (60-69)",
       TRUE ~ "F (<60)"
     )
-  ) %>%
-  count(study_bins, score_grade, subject) %>%
-  group_by(study_bins, subject) %>%
-  mutate(percentage = n / sum(n) * 100) %>%
+  ) |>
+  count(study_bins, score_grade, subject) |>
+  group_by(study_bins, subject) |>
+  mutate(percentage = n / sum(n) * 100) |>
   ungroup()
 
-p4 <- heatmap_data %>%
+p4 <- heatmap_data |>
   ggplot(aes(x = study_bins, y = score_grade, fill = percentage)) +
   geom_tile(color = "white", size = 0.5) +
   geom_text(aes(label = paste0(round(percentage, 1), "%")), 
@@ -260,15 +260,15 @@ print(p4)
 
 Throughout this analysis, we've followed key tidy R principles:
 
-### 1. **Pipe Operator (`%>%`)** for Readable Code Flow
+### 1. **Pipe Operator (`|>`)** for Readable Code Flow
 ```{r eval=FALSE}
 # Instead of nested functions:
 # plot(summary(filter(data, condition)))
 
 # Use pipes for clarity:
-data %>%
-  filter(condition) %>%
-  summary() %>%
+data |>
+  filter(condition) |>
+  summary() |>
   plot()
 ```
 
@@ -282,9 +282,9 @@ data %>%
 ### 3. **Meaningful Variable Names and Grouping**
 ```{r eval=FALSE}
 # Group operations clearly
-student_data %>%
-  group_by(subject, semester) %>%
-  summarise(avg_score = mean(score)) %>%
+student_data |>
+  group_by(subject, semester) |>
+  summarise(avg_score = mean(score)) |>
   ungroup()
 ```
 
