@@ -10,6 +10,8 @@ project:
     - about/**/*.qmd
     - posts/**/*.qmd
 
+brand: _brand.yml
+
 website:
   title: "Virtuelle Akademie"
 
