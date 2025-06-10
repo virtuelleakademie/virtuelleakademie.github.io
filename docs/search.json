@@ -1,434 +1,10 @@
 [
   {
-    "objectID": "posts/r-code/index.html",
-    "href": "posts/r-code/index.html",
-    "title": "Mastering Tidy R: Data Visualization with tidyverse and ggplot2",
-    "section": "",
-    "text": "This post demonstrates how to use tidy R code principles with the tidyverse ecosystem to create compelling data visualizations using ggplot2. We’ll explore data manipulation techniques and build publication-ready plots step by step."
-  },
-  {
-    "objectID": "posts/r-code/index.html#the-tidy-data-philosophy",
-    "href": "posts/r-code/index.html#the-tidy-data-philosophy",
-    "title": "Mastering Tidy R: Data Visualization with tidyverse and ggplot2",
-    "section": "The Tidy Data Philosophy",
-    "text": "The Tidy Data Philosophy\nThe tidyverse is built around the concept of tidy data, where:\n\nEach variable forms a column\nEach observation forms a row\n\nEach value has its own cell\n\nThis structure makes data analysis more intuitive and code more readable."
-  },
-  {
-    "objectID": "posts/r-code/index.html#setup-and-data-preparation",
-    "href": "posts/r-code/index.html#setup-and-data-preparation",
-    "title": "Mastering Tidy R: Data Visualization with tidyverse and ggplot2",
-    "section": "Setup and Data Preparation",
-    "text": "Setup and Data Preparation\nFirst, we load the necessary libraries and create some example data to demonstrate key concepts:\n\nShow the code# Load the tidyverse (includes dplyr, ggplot2, tidyr, readr, and more)\nlibrary(tidyverse)\nlibrary(scales)\n\n# Set a custom theme for our plots\ntheme_set(theme_minimal(base_size = 12))\n\n# Create example dataset: Student performance across different subjects and semesters\nset.seed(123)\nstudent_data &lt;- tibble(\n  student_id = rep(1:100, each = 6),\n  semester = rep(c(\"Fall 2023\", \"Spring 2024\", \"Fall 2024\"), times = 200),\n  subject = rep(c(\"Mathematics\", \"Science\"), times = 300),\n  score = round(rnorm(600, mean = 78, sd = 12), 1),\n  study_hours = round(runif(600, min = 5, max = 25), 1),\n  attendance = round(runif(600, min = 75, max = 100), 1)\n) |&gt;\n  # Add some realistic constraints\n  mutate(\n    score = pmax(0, pmin(100, score)),\n    # Students who study more tend to score higher\n    score = score + (study_hours - mean(study_hours)) * 0.8,\n    # Better attendance correlates with better scores\n    score = score + (attendance - mean(attendance)) * 0.3,\n    score = round(pmax(0, pmin(100, score)), 1)\n  )\n\n# Display the structure of our data\nglimpse(student_data)\n\nRows: 600\nColumns: 6\n$ student_id  &lt;int&gt; 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4…\n$ semester    &lt;chr&gt; \"Fall 2023\", \"Spring 2024\", \"Fall 2024\", \"Fall 2023\", \"Spr…\n$ subject     &lt;chr&gt; \"Mathematics\", \"Science\", \"Mathematics\", \"Science\", \"Mathe…\n$ score       &lt;dbl&gt; 74.5, 83.9, 94.4, 83.6, 80.2, 100.0, 79.9, 58.0, 77.0, 73.…\n$ study_hours &lt;dbl&gt; 22.2, 22.7, 14.8, 19.4, 14.7, 24.8, 6.3, 8.2, 20.7, 15.8, …\n$ attendance  &lt;dbl&gt; 78.9, 96.1, 80.4, 91.7, 90.4, 76.2, 98.7, 89.6, 96.5, 88.0…"
-  },
-  {
-    "objectID": "posts/r-code/index.html#data-exploration-with-dplyr",
-    "href": "posts/r-code/index.html#data-exploration-with-dplyr",
-    "title": "Mastering Tidy R: Data Visualization with tidyverse and ggplot2",
-    "section": "Data Exploration with dplyr",
-    "text": "Data Exploration with dplyr\nLet’s explore our data using tidy data manipulation techniques:\n\nShow the code# Calculate summary statistics by subject and semester\nsummary_stats &lt;- student_data |&gt;\n  group_by(subject, semester) |&gt;\n  summarise(\n    n_students = n_distinct(student_id),\n    avg_score = mean(score, na.rm = TRUE),\n    median_score = median(score, na.rm = TRUE),\n    sd_score = sd(score, na.rm = TRUE),\n    avg_study_hours = mean(study_hours, na.rm = TRUE),\n    avg_attendance = mean(attendance, na.rm = TRUE),\n    .groups = \"drop\"\n  ) |&gt;\n  arrange(subject, semester)\n\n# Display the summary\nsummary_stats |&gt;\n  knitr::kable(digits = 2, caption = \"Summary Statistics by Subject and Semester\")\n\n\nSummary Statistics by Subject and Semester\n\n\n\n\n\n\n\n\n\n\n\nsubject\nsemester\nn_students\navg_score\nmedian_score\nsd_score\navg_study_hours\navg_attendance\n\n\n\nMathematics\nFall 2023\n100\n78.82\n79.00\n11.08\n14.75\n87.96\n\n\nMathematics\nFall 2024\n100\n79.59\n80.70\n13.19\n15.70\n86.86\n\n\nMathematics\nSpring 2024\n100\n78.29\n80.20\n12.32\n14.96\n87.64\n\n\nScience\nFall 2023\n100\n75.90\n76.70\n12.02\n14.28\n87.61\n\n\nScience\nFall 2024\n100\n77.69\n77.95\n13.27\n14.87\n87.17\n\n\nScience\nSpring 2024\n100\n77.23\n77.30\n11.29\n15.91\n87.07"
-  },
-  {
-    "objectID": "posts/r-code/index.html#creating-effective-visualizations",
-    "href": "posts/r-code/index.html#creating-effective-visualizations",
-    "title": "Mastering Tidy R: Data Visualization with tidyverse and ggplot2",
-    "section": "Creating Effective Visualizations",
-    "text": "Creating Effective Visualizations\n1. Distribution of Scores by Subject\n\nShow the code# Create a violin plot with box plots overlay\np1 &lt;- student_data |&gt;\n  ggplot(aes(x = subject, y = score, fill = subject)) +\n  geom_violin(alpha = 0.7, trim = FALSE) +\n  geom_boxplot(width = 0.2, fill = \"white\", alpha = 0.8) +\n  scale_fill_viridis_d(option = \"plasma\", begin = 0.3, end = 0.8) +\n  labs(\n    title = \"Distribution of Student Scores by Subject\",\n    subtitle = \"Violin plots show the full distribution shape with box plots for summary statistics\",\n    x = \"Subject\",\n    y = \"Score (%)\",\n    caption = \"Data: Simulated student performance data\"\n  ) +\n  theme(\n    legend.position = \"none\",\n    plot.title = element_text(size = 16, face = \"bold\"),\n    plot.subtitle = element_text(size = 12, color = \"grey40\"),\n    panel.grid.minor = element_blank()\n  )\n\nprint(p1)\n\n\n\n\n\n\n\n2. Trend Analysis Across Semesters\n\nShow the code# Calculate means and confidence intervals for trend analysis\ntrend_data &lt;- student_data |&gt;\n  group_by(subject, semester) |&gt;\n  summarise(\n    mean_score = mean(score),\n    se = sd(score) / sqrt(n()),\n    ci_lower = mean_score - 1.96 * se,\n    ci_upper = mean_score + 1.96 * se,\n    .groups = \"drop\"\n  ) |&gt;\n  mutate(semester = factor(semester, levels = c(\"Fall 2023\", \"Spring 2024\", \"Fall 2024\")))\n\np2 &lt;- trend_data |&gt;\n  ggplot(aes(x = semester, y = mean_score, color = subject, group = subject)) +\n  geom_ribbon(aes(ymin = ci_lower, ymax = ci_upper, fill = subject), \n              alpha = 0.2, color = NA) +\n  geom_line(size = 1.2) +\n  geom_point(size = 3) +\n  scale_color_viridis_d(option = \"plasma\", begin = 0.3, end = 0.8) +\n  scale_fill_viridis_d(option = \"plasma\", begin = 0.3, end = 0.8) +\n  labs(\n    title = \"Student Performance Trends Across Semesters\",\n    subtitle = \"Mean scores with 95% confidence intervals\",\n    x = \"Semester\",\n    y = \"Average Score (%)\",\n    color = \"Subject\",\n    fill = \"Subject\",\n    caption = \"Shaded areas represent 95% confidence intervals\"\n  ) +\n  theme(\n    plot.title = element_text(size = 16, face = \"bold\"),\n    plot.subtitle = element_text(size = 12, color = \"grey40\"),\n    legend.position = \"bottom\",\n    panel.grid.minor = element_blank(),\n    axis.text.x = element_text(angle = 45, hjust = 1)\n  )\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\nShow the codeprint(p2)\n\n\n\n\n\n\n\n3. Relationship Between Study Time and Performance\n\nShow the code# Create a sophisticated scatter plot with trend lines\np3 &lt;- student_data |&gt;\n  ggplot(aes(x = study_hours, y = score)) +\n  geom_point(aes(color = subject, alpha = attendance), size = 2) +\n  geom_smooth(aes(color = subject), method = \"lm\", se = TRUE, size = 1.2) +\n  scale_color_viridis_d(option = \"plasma\", begin = 0.3, end = 0.8) +\n  scale_alpha_continuous(range = c(0.3, 0.8), name = \"Attendance %\") +\n  labs(\n    title = \"Relationship Between Study Hours and Academic Performance\",\n    subtitle = \"Point transparency indicates attendance rate\",\n    x = \"Weekly Study Hours\",\n    y = \"Score (%)\",\n    color = \"Subject\",\n    caption = \"Linear trend lines with 95% confidence intervals\"\n  ) +\n  facet_wrap(~semester, ncol = 3) +\n  theme(\n    plot.title = element_text(size = 16, face = \"bold\"),\n    plot.subtitle = element_text(size = 12, color = \"grey40\"),\n    legend.position = \"bottom\",\n    panel.grid.minor = element_blank(),\n    strip.text = element_text(size = 12, face = \"bold\")\n  )\n\nprint(p3)\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n4. Advanced: Heat Map of Performance Patterns\n\nShow the code# Create performance bins and calculate percentages\nheatmap_data &lt;- student_data |&gt;\n  mutate(\n    study_bins = cut(study_hours, \n                     breaks = c(0, 10, 15, 20, 25),\n                     labels = c(\"Low (5-10h)\", \"Medium (10-15h)\", \n                               \"High (15-20h)\", \"Very High (20-25h)\"),\n                     include.lowest = TRUE),\n    score_grade = case_when(\n      score &gt;= 90 ~ \"A (90-100)\",\n      score &gt;= 80 ~ \"B (80-89)\",\n      score &gt;= 70 ~ \"C (70-79)\",\n      score &gt;= 60 ~ \"D (60-69)\",\n      TRUE ~ \"F (&lt;60)\"\n    )\n  ) |&gt;\n  count(study_bins, score_grade, subject) |&gt;\n  group_by(study_bins, subject) |&gt;\n  mutate(percentage = n / sum(n) * 100) |&gt;\n  ungroup()\n\np4 &lt;- heatmap_data |&gt;\n  ggplot(aes(x = study_bins, y = score_grade, fill = percentage)) +\n  geom_tile(color = \"white\", size = 0.5) +\n  geom_text(aes(label = paste0(round(percentage, 1), \"%\")), \n            color = \"white\", fontface = \"bold\", size = 3) +\n  scale_fill_viridis_c(option = \"plasma\", name = \"Percentage\\nof Students\") +\n  labs(\n    title = \"Grade Distribution by Study Time Investment\",\n    subtitle = \"Percentage of students achieving each grade level by study hours\",\n    x = \"Weekly Study Hours\",\n    y = \"Grade Level\",\n    caption = \"Higher study hours clearly correlate with better grades\"\n  ) +\n  facet_wrap(~subject) +\n  theme(\n    plot.title = element_text(size = 16, face = \"bold\"),\n    plot.subtitle = element_text(size = 12, color = \"grey40\"),\n    axis.text.x = element_text(angle = 45, hjust = 1),\n    panel.grid = element_blank(),\n    strip.text = element_text(size = 12, face = \"bold\")\n  )\n\nprint(p4)"
-  },
-  {
-    "objectID": "posts/r-code/index.html#tidy-code-best-practices-demonstrated",
-    "href": "posts/r-code/index.html#tidy-code-best-practices-demonstrated",
-    "title": "Mastering Tidy R: Data Visualization with tidyverse and ggplot2",
-    "section": "Tidy Code Best Practices Demonstrated",
-    "text": "Tidy Code Best Practices Demonstrated\nThroughout this analysis, we’ve followed key tidy R principles:\n1. Pipe Operator (|&gt;) for Readable Code Flow\n\nShow the code# Instead of nested functions:\n# plot(summary(filter(data, condition)))\n\n# Use pipes for clarity:\ndata |&gt;\n  filter(condition) |&gt;\n  summary() |&gt;\n  plot()\n\n\n2. Consistent Grammar of Graphics\n\n\nData (data =)\nAesthetics (aes())\nGeometries (geom_*())\nScales (scale_*())\nThemes (theme())\n3. Meaningful Variable Names and Grouping\n\n\nShow the code# Group operations clearly\nstudent_data |&gt;\n  group_by(subject, semester) |&gt;\n  summarise(avg_score = mean(score)) |&gt;\n  ungroup()\n\n\n4. Functional Approach with Consistent Styling\n\n\nUse snake_case for variable names\nKeep line length reasonable\nAdd meaningful labels and captions\nUse consistent color schemes"
-  },
-  {
-    "objectID": "posts/r-code/index.html#key-takeaways",
-    "href": "posts/r-code/index.html#key-takeaways",
-    "title": "Mastering Tidy R: Data Visualization with tidyverse and ggplot2",
-    "section": "Key Takeaways",
-    "text": "Key Takeaways\n\n\nTidy data structure makes analysis intuitive and code readable\n\ndplyr verbs (filter, mutate, summarise, group_by) provide powerful data manipulation\n\nggplot2’s grammar of graphics enables building complex visualizations systematically\n\nConsistent styling and theming makes plots publication-ready\n\nPipe operator creates readable analysis workflows\n\nThe tidyverse ecosystem provides a coherent framework for data science that emphasizes code readability, reproducibility, and elegant solutions to common data challenges."
-  },
-  {
-    "objectID": "about/stefan-hackstein/index.html",
-    "href": "about/stefan-hackstein/index.html",
-    "title": "Dr. Stefan Hackstein",
-    "section": "",
-    "text": "Dr. Stefan Hackstein is a researcher at the Virtual Academy of the Bern University of Applied Sciences. His research focuses on how artificial intelligence can be used effectively in educational systems."
-  },
-  {
-    "objectID": "about/stefan-hackstein/index.html#about",
-    "href": "about/stefan-hackstein/index.html#about",
-    "title": "Dr. Stefan Hackstein",
-    "section": "",
-    "text": "Dr. Stefan Hackstein is a researcher at the Virtual Academy of the Bern University of Applied Sciences. His research focuses on how artificial intelligence can be used effectively in educational systems."
-  },
-  {
-    "objectID": "about/stefan-hackstein/index.html#research-interests",
-    "href": "about/stefan-hackstein/index.html#research-interests",
-    "title": "Dr. Stefan Hackstein",
-    "section": "Research Interests",
-    "text": "Research Interests\n\nArtificial Intelligence in Education\nMachine Learning Applications\nEducational Data Mining\nIntelligent Tutoring Systems\nTechnology-Enhanced Learning"
-  },
-  {
-    "objectID": "about/stefan-hackstein/index.html#background",
-    "href": "about/stefan-hackstein/index.html#background",
-    "title": "Dr. Stefan Hackstein",
-    "section": "Background",
-    "text": "Background\nDr. Hackstein specializes in the development and evaluation of AI-driven educational technologies. His work focuses on creating intelligent systems that can adapt to individual learning needs and provide personalized educational experiences."
-  },
-  {
-    "objectID": "about/stefan-hackstein/index.html#current-projects",
-    "href": "about/stefan-hackstein/index.html#current-projects",
-    "title": "Dr. Stefan Hackstein",
-    "section": "Current Projects",
-    "text": "Current Projects\n\nDesign of adaptive learning algorithms\nDevelopment of intelligent educational content systems\nResearch on AI-powered student assessment methods\nInvestigation of machine learning techniques for educational analytics"
-  },
-  {
-    "objectID": "about/stefan-hackstein/index.html#publications",
-    "href": "about/stefan-hackstein/index.html#publications",
-    "title": "Dr. Stefan Hackstein",
-    "section": "Publications",
-    "text": "Publications\nPublications and research outputs will be updated regularly."
-  },
-  {
-    "objectID": "about/stefan-hackstein/index.html#contact",
-    "href": "about/stefan-hackstein/index.html#contact",
-    "title": "Dr. Stefan Hackstein",
-    "section": "Contact",
-    "text": "Contact\nFor research collaborations, inquiries, or more information about ongoing projects, please reach out via email."
-  },
-  {
-    "objectID": "about/andrew-ellis/index.html",
-    "href": "about/andrew-ellis/index.html",
-    "title": "Dr. Andrew Ellis",
-    "section": "",
-    "text": "Dr. Andrew Ellis is a researcher at the Virtual Academy of the Bern University of Applied Sciences. His research focuses on how artificial intelligence can be used effectively in educational systems."
-  },
-  {
-    "objectID": "about/andrew-ellis/index.html#about",
-    "href": "about/andrew-ellis/index.html#about",
-    "title": "Dr. Andrew Ellis",
-    "section": "",
-    "text": "Dr. Andrew Ellis is a researcher at the Virtual Academy of the Bern University of Applied Sciences. His research focuses on how artificial intelligence can be used effectively in educational systems."
-  },
-  {
-    "objectID": "about/andrew-ellis/index.html#research-interests",
-    "href": "about/andrew-ellis/index.html#research-interests",
-    "title": "Dr. Andrew Ellis",
-    "section": "Research Interests",
-    "text": "Research Interests\n\nArtificial Intelligence in Education\nEducational Technology\nLearning Analytics\nAdaptive Learning Systems\nHuman-Computer Interaction in Educational Contexts"
-  },
-  {
-    "objectID": "about/andrew-ellis/index.html#background",
-    "href": "about/andrew-ellis/index.html#background",
-    "title": "Dr. Andrew Ellis",
-    "section": "Background",
-    "text": "Background\nDr. Ellis brings extensive experience in educational technology research, with a particular focus on the practical implementation of AI tools in learning environments. His work bridges the gap between theoretical AI research and real-world educational applications."
-  },
-  {
-    "objectID": "about/andrew-ellis/index.html#current-projects",
-    "href": "about/andrew-ellis/index.html#current-projects",
-    "title": "Dr. Andrew Ellis",
-    "section": "Current Projects",
-    "text": "Current Projects\n\nDevelopment of AI-powered learning assessment tools\nIntegration of machine learning algorithms in educational platforms\nResearch on personalized learning pathways using AI\nCollaboration on innovative teaching methodologies"
-  },
-  {
-    "objectID": "about/andrew-ellis/index.html#publications",
-    "href": "about/andrew-ellis/index.html#publications",
-    "title": "Dr. Andrew Ellis",
-    "section": "Publications",
-    "text": "Publications\nPublications and research outputs will be updated regularly."
-  },
-  {
-    "objectID": "about/andrew-ellis/index.html#contact",
-    "href": "about/andrew-ellis/index.html#contact",
-    "title": "Dr. Andrew Ellis",
-    "section": "Contact",
-    "text": "Contact\nFor research collaborations, inquiries, or more information about ongoing projects, please reach out via email."
-  },
-  {
-    "objectID": "research/projects/index.html",
-    "href": "research/projects/index.html",
-    "title": "Research Projects",
-    "section": "",
-    "text": "Duration: 2024-2025 | Funding: [Funding source] | Collaborators: [Names]\n\nBrief description of the project objectives and methodology. This research explores innovative approaches to educational technology and its impact on learning outcomes.\n\n\n\n\nDuration: 2023-2024 | Status: Ongoing\n\nDescription of another current research project focused on artificial intelligence applications in educational contexts."
-  },
-  {
-    "objectID": "research/projects/index.html#current-projects",
-    "href": "research/projects/index.html#current-projects",
-    "title": "Research Projects",
-    "section": "",
-    "text": "Duration: 2024-2025 | Funding: [Funding source] | Collaborators: [Names]\n\nBrief description of the project objectives and methodology. This research explores innovative approaches to educational technology and its impact on learning outcomes.\n\n\n\n\nDuration: 2023-2024 | Status: Ongoing\n\nDescription of another current research project focused on artificial intelligence applications in educational contexts."
-  },
-  {
-    "objectID": "research/projects/index.html#completed-projects",
-    "href": "research/projects/index.html#completed-projects",
-    "title": "Research Projects",
-    "section": "Completed Projects",
-    "text": "Completed Projects\n\nPrevious Project 1\n\nDuration: 2022-2023 | Status: Completed\n\nSummary of a completed research project and its outcomes. This project resulted in significant insights into digital learning methodologies.\n\n\nPrevious Project 2\n\nDuration: 2021-2022 | Status: Published\n\nDescription of another completed project that led to several peer-reviewed publications in educational technology journals."
-  },
-  {
-    "objectID": "research/collaborations/index.html",
-    "href": "research/collaborations/index.html",
-    "title": "Collaborations",
-    "section": "",
-    "text": "Partners: [Names]\nProject: [Project name]\nDuration: [Time period]\nDescription of the collaborative research effort.\n\n\n\nPartners: [Names]\nFocus: [Research area]\nDuration: [Time period]\nDetails about another ongoing collaboration."
-  },
-  {
-    "objectID": "research/collaborations/index.html#current-collaborations",
-    "href": "research/collaborations/index.html#current-collaborations",
-    "title": "Collaborations",
-    "section": "",
-    "text": "Partners: [Names]\nProject: [Project name]\nDuration: [Time period]\nDescription of the collaborative research effort.\n\n\n\nPartners: [Names]\nFocus: [Research area]\nDuration: [Time period]\nDetails about another ongoing collaboration."
-  },
-  {
-    "objectID": "research/collaborations/index.html#past-collaborations",
-    "href": "research/collaborations/index.html#past-collaborations",
-    "title": "Collaborations",
-    "section": "Past Collaborations",
-    "text": "Past Collaborations\n\nPrevious Institution 1\nProject: [Completed project]\nDuration: [Past time period]\nOutcome: [Results/publications]\nSummary of a completed collaborative project."
-  },
-  {
-    "objectID": "research/collaborations/index.html#international-networks",
-    "href": "research/collaborations/index.html#international-networks",
-    "title": "Collaborations",
-    "section": "International Networks",
-    "text": "International Networks\n\nNetwork 1\nDescription of involvement in international research networks.\n\n\nProfessional Associations\n\nAssociation 1\nAssociation 2\nCommittee memberships"
-  },
-  {
-    "objectID": "teaching/philosophy/index.html",
-    "href": "teaching/philosophy/index.html",
-    "title": "Teaching Philosophy",
-    "section": "",
-    "text": "Describe your fundamental beliefs about education and learning.\n\n\n\nExplain your methodology and techniques.\n\n\n\nHow you foster active learning and student participation.\n\n\n\nYour approach to evaluating student progress and providing feedback."
-  },
-  {
-    "objectID": "teaching/philosophy/index.html#my-teaching-philosophy",
-    "href": "teaching/philosophy/index.html#my-teaching-philosophy",
-    "title": "Teaching Philosophy",
-    "section": "",
-    "text": "Describe your fundamental beliefs about education and learning.\n\n\n\nExplain your methodology and techniques.\n\n\n\nHow you foster active learning and student participation.\n\n\n\nYour approach to evaluating student progress and providing feedback."
-  },
-  {
-    "objectID": "teaching/courses/index.html",
-    "href": "teaching/courses/index.html",
-    "title": "Courses",
-    "section": "",
-    "text": "Semester: Spring 2024 | Level: Graduate | Credits: 3\n\nAn advanced course exploring the integration of artificial intelligence technologies in educational systems, covering machine learning applications, personalized learning, and ethical considerations.\n\n\n\n\nSemester: Fall 2024 | Level: Undergraduate | Credits: 4\n\nIntroduction to designing effective digital learning experiences, including user experience principles, multimedia design, and assessment strategies for online environments."
-  },
-  {
-    "objectID": "teaching/courses/index.html#current-courses",
-    "href": "teaching/courses/index.html#current-courses",
-    "title": "Courses",
-    "section": "",
-    "text": "Semester: Spring 2024 | Level: Graduate | Credits: 3\n\nAn advanced course exploring the integration of artificial intelligence technologies in educational systems, covering machine learning applications, personalized learning, and ethical considerations.\n\n\n\n\nSemester: Fall 2024 | Level: Undergraduate | Credits: 4\n\nIntroduction to designing effective digital learning experiences, including user experience principles, multimedia design, and assessment strategies for online environments."
-  },
-  {
-    "objectID": "teaching/courses/index.html#past-courses",
-    "href": "teaching/courses/index.html#past-courses",
-    "title": "Courses",
-    "section": "Past Courses",
-    "text": "Past Courses\n\nEducational Technology Foundations\n\nSemester: Spring 2023 | Level: Graduate | Enrollment: 45 students\n\nFoundational course covering the history, theory, and practice of educational technology in modern learning environments.\n\n\nResearch Methods in Education\n\nSemester: Fall 2023 | Level: Graduate | Enrollment: 32 students\n\nComprehensive introduction to quantitative and qualitative research methodologies specifically applied to educational research contexts."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Virtuelle Akademie",
     "section": "",
     "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nHigh-Performance Data Science with Julia and Tidier.jl\n\n\n\nJulia\n\nTidier.jl\n\ndata manipulation\n\nperformance\n\ntutorial\n\n\n\n\n\n\n\n\n\nJun 7, 2025\n\n\nAndrew Ellis\n\n\n\n\n\n\n\n\n\n\n\n\nLightning-Fast Data Analysis: Polars and plotnine for Modern Python\n\n\n\nPython\n\nPolars\n\nplotnine\n\ndata manipulation\n\nvisualization\n\nperformance\n\ntutorial\n\n\n\n\n\n\n\n\n\nJun 6, 2025\n\n\nAndrew Ellis\n\n\n\n\n\n\n\n\n\n\n\n\nMastering Tidy R: Data Visualization with tidyverse and ggplot2\n\n\n\nR\n\nggplot2\n\ntidyverse\n\ndata visualization\n\ntutorial\n\n\n\n\n\n\n\n\n\nJun 5, 2025\n\n\nAndrew Ellis\n\n\n\n\n\nNo matching items\n Back to top"
-  },
-  {
-    "objectID": "teaching/index.html",
-    "href": "teaching/index.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "This section contains information about courses, teaching philosophy, and educational resources focused on AI in education.",
-    "crumbs": [
-      "Teaching"
-    ]
-  },
-  {
-    "objectID": "teaching/index.html#welcome-to-teaching",
-    "href": "teaching/index.html#welcome-to-teaching",
-    "title": "Teaching",
-    "section": "",
-    "text": "This section contains information about courses, teaching philosophy, and educational resources focused on AI in education.",
-    "crumbs": [
-      "Teaching"
-    ]
-  },
-  {
-    "objectID": "teaching/index.html#ai-in-education-courses",
-    "href": "teaching/index.html#ai-in-education-courses",
-    "title": "Teaching",
-    "section": "AI in Education Courses",
-    "text": "AI in Education Courses\n\n\nKI in der Lehre - Intermediate\n\nLevel: Intermediate | Format: Interactive Workshop | Duration: Half-day\n\nAn intermediate-level course exploring practical applications of artificial intelligence in educational settings. Learn how to integrate AI tools effectively into your teaching practice.\n\nHands-on AI tool exploration\nPractical implementation strategies\nInteractive exercises and examples\nReal-world case studies\n\nLaunch Intermediate Course →\n\n\nKI in der Lehre - Advanced\n\nLevel: Advanced | Format: Interactive Workshop | Duration: Half-day\n\nAdvanced concepts and implementations of AI technologies in modern educational environments. Deep dive into sophisticated AI applications and pedagogical frameworks.\n\nAdvanced AI integration techniques\nEthical considerations and best practices\nCustom AI workflow development\nAssessment and evaluation methods\n\nLaunch Advanced Course →\n\n\n\nTeaching Philosophy\nLearn about our approach to education and student engagement in the digital age.\n\n\nResources\nAccess helpful resources for students and fellow educators interested in AI applications in education.",
-    "crumbs": [
-      "Teaching"
-    ]
-  },
-  {
-    "objectID": "teaching/resources/index.html",
-    "href": "teaching/resources/index.html",
-    "title": "Resources",
-    "section": "",
-    "text": "Lecture notes\nPractice exercises\nReading lists\n\n\n\n\n\nRecommended software\nOnline platforms\nUseful websites"
-  },
-  {
-    "objectID": "teaching/resources/index.html#student-resources",
-    "href": "teaching/resources/index.html#student-resources",
-    "title": "Resources",
-    "section": "",
-    "text": "Lecture notes\nPractice exercises\nReading lists\n\n\n\n\n\nRecommended software\nOnline platforms\nUseful websites"
-  },
-  {
-    "objectID": "teaching/resources/index.html#teaching-resources",
-    "href": "teaching/resources/index.html#teaching-resources",
-    "title": "Resources",
-    "section": "Teaching Resources",
-    "text": "Teaching Resources\n\nPedagogy\n\nTeaching methods\nAssessment strategies\nClassroom management\n\n\n\nProfessional Development\n\nConferences\nWorkshops\nPublications"
-  },
-  {
-    "objectID": "research/index.html",
-    "href": "research/index.html",
-    "title": "Research",
-    "section": "",
-    "text": "This section showcases our research activities, projects, and publications in educational technology and AI.",
-    "crumbs": [
-      "Research"
-    ]
-  },
-  {
-    "objectID": "research/index.html#welcome-to-research",
-    "href": "research/index.html#welcome-to-research",
-    "title": "Research",
-    "section": "",
-    "text": "This section showcases our research activities, projects, and publications in educational technology and AI.",
-    "crumbs": [
-      "Research"
-    ]
-  },
-  {
-    "objectID": "research/index.html#featured-research-program",
-    "href": "research/index.html#featured-research-program",
-    "title": "Research",
-    "section": "Featured Research Program",
-    "text": "Featured Research Program\n\nBeLEARN - Swiss Research Network\n\nProgram: Swiss National Research Network | Focus: Learning Sciences | Partnership: Multiple Swiss Universities\n\nOur research contributes to BeLEARN, the Swiss research network dedicated to advancing the science of learning through interdisciplinary collaboration and innovation.\nVisit BeLEARN Projects →\n\n\nCurrent Projects\nExplore our ongoing research initiatives and their progress in AI and educational technology.\n\n\nPublications\nBrowse our academic publications and scholarly work in learning sciences.\n\n\nCollaborations\nLearn about research partnerships and collaborative efforts within the Swiss research landscape.",
-    "crumbs": [
-      "Research"
-    ]
-  },
-  {
-    "objectID": "research/publications/index.html",
-    "href": "research/publications/index.html",
-    "title": "Publications",
-    "section": "",
-    "text": "Title of Paper 1 (2024)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]\nTitle of Paper 2 (2024)\nAnother Journal, Vol. A, Issue B, pp. C-C\n[DOI link] | [PDF]\n\n\n\nTitle of Paper 3 (2023)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]"
-  },
-  {
-    "objectID": "research/publications/index.html#journal-articles",
-    "href": "research/publications/index.html#journal-articles",
-    "title": "Publications",
-    "section": "",
-    "text": "Title of Paper 1 (2024)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]\nTitle of Paper 2 (2024)\nAnother Journal, Vol. A, Issue B, pp. C-C\n[DOI link] | [PDF]\n\n\n\nTitle of Paper 3 (2023)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]"
-  },
-  {
-    "objectID": "research/publications/index.html#conference-proceedings",
-    "href": "research/publications/index.html#conference-proceedings",
-    "title": "Publications",
-    "section": "Conference Proceedings",
-    "text": "Conference Proceedings\n\n2024\nConference Paper Title (2024)\nConference Name, Location\n[Link] | [PDF]\n\n\n2023\nAnother Conference Paper (2023)\nAnother Conference, Location\n[Link] | [PDF]"
-  },
-  {
-    "objectID": "research/publications/index.html#book-chapters",
-    "href": "research/publications/index.html#book-chapters",
-    "title": "Publications",
-    "section": "Book Chapters",
-    "text": "Book Chapters\nChapter Title (2024)\nIn: Book Title, Editor Name (Ed.)\nPublisher, pp. X-Y\n[Link]"
-  },
-  {
-    "objectID": "about/index.html",
-    "href": "about/index.html",
-    "title": "Virtuelle Akademie",
-    "section": "",
-    "text": "The Virtual Academy (Virtuelle Akademie) is a research and development unit at the Bern University of Applied Sciences, focused on the intersection of technology and education."
-  },
-  {
-    "objectID": "about/index.html#about-the-virtual-academy",
-    "href": "about/index.html#about-the-virtual-academy",
-    "title": "Virtuelle Akademie",
-    "section": "",
-    "text": "The Virtual Academy (Virtuelle Akademie) is a research and development unit at the Bern University of Applied Sciences, focused on the intersection of technology and education."
-  },
-  {
-    "objectID": "about/index.html#our-team",
-    "href": "about/index.html#our-team",
-    "title": "Virtuelle Akademie",
-    "section": "Our Team",
-    "text": "Our Team\nDr. Andrew Ellis and Dr. Stefan Hackstein are researchers at the Virtual Academy of the Bern University of Applied Sciences. Their research focuses on how artificial intelligence can be used effectively in educational systems.\n\n\nDr. Andrew Ellis\nResearcher specializing in AI applications in educational technology and learning analytics.\n Contact |  Profile\n\n\nDr. Stefan Hackstein\nResearcher focused on machine learning applications and intelligent tutoring systems.\n Contact |  Profile"
-  },
-  {
-    "objectID": "posts/julia-tidier/index.html",
-    "href": "posts/julia-tidier/index.html",
-    "title": "High-Performance Data Science with Julia and Tidier.jl",
-    "section": "",
-    "text": "This tutorial explores the power of Julia combined with Tidier.jl for high-performance data science. Julia brings blazing-fast computation with Python-like syntax, while Tidier.jl provides the beloved tidyverse syntax from R, creating a perfect combination for modern data analysis."
-  },
-  {
-    "objectID": "posts/julia-tidier/index.html#installation-prerequisites",
-    "href": "posts/julia-tidier/index.html#installation-prerequisites",
-    "title": "High-Performance Data Science with Julia and Tidier.jl",
-    "section": "Installation Prerequisites",
-    "text": "Installation Prerequisites\nBefore running the examples, you’ll need to install Julia and the required packages:\n\nInstalling Julia\n\nDownload Julia from julialang.org\nUsing Homebrew (macOS): brew install julia\nUsing juliaup (recommended): Follow instructions at github.com/JuliaLang/juliaup\n\n\n\nInstalling Required Packages\n# In Julia REPL, install required packages\nusing Pkg\nPkg.add([\"Tidier\", \"DataFrames\"])"
-  },
-  {
-    "objectID": "posts/julia-tidier/index.html#why-julia-tidier.jl",
-    "href": "posts/julia-tidier/index.html#why-julia-tidier.jl",
-    "title": "High-Performance Data Science with Julia and Tidier.jl",
-    "section": "Why Julia + Tidier.jl?",
-    "text": "Why Julia + Tidier.jl?\n\nThe Performance Advantage: Julia\nJulia offers compelling advantages for data science:\n\nNear C-speed performance with high-level syntax\nMultiple dispatch for elegant, extensible code\nNative parallelism and distributed computing\nExcellent interoperability with Python, R, and C\nGrowing ecosystem of scientific computing packages\n\n\n\nThe Familiar Syntax: Tidier.jl\nTidier.jl brings the tidyverse workflow to Julia:\n\nFamiliar dplyr-style verbs (select, filter, mutate, summarize)\nPipe operator (|&gt;) for readable code chains\nConsistent grammar for data manipulation\nPerformance benefits of Julia’s compiled execution"
-  },
-  {
-    "objectID": "posts/julia-tidier/index.html#setup-and-data-preparation",
-    "href": "posts/julia-tidier/index.html#setup-and-data-preparation",
-    "title": "High-Performance Data Science with Julia and Tidier.jl",
-    "section": "Setup and Data Preparation",
-    "text": "Setup and Data Preparation\n\n\nShow the code\n# Load required packages\nusing Tidier\nusing DataFrames\nusing Random\nusing Statistics\n\n# Set random seed for reproducibility\nRandom.seed!(123)\n\n# Display Julia and package versions\nprintln(\"Julia version: \", VERSION)\nprintln(\"Tidier.jl version: v1.2.0\")\n\n\nJulia version: 1.11.5\nTidier.jl version: v1.2.0\n\n\n\n\nShow the code\n# Create a simple dataset for demonstration\nstudents = DataFrame(\n    id = 1:100,\n    name = [\"Student $i\" for i in 1:100],\n    math_score = rand(60:100, 100),\n    science_score = rand(55:100, 100),\n    program = rand([\"CS\", \"Math\", \"Physics\"], 100),\n    grade_level = rand([1, 2, 3, 4], 100)\n)\n\nprintln(\"Dataset shape: \", size(students))\nfirst(students, 5)\n\n\nDataset shape: (100, 6)\n\n\n5×6 DataFrame\n\n\n\nRow\nid\nname\nmath_score\nscience_score\nprogram\ngrade_level\n\n\n\nInt64\nString\nInt64\nInt64\nString\nInt64\n\n\n\n\n1\n1\nStudent 1\n81\n81\nPhysics\n1\n\n\n2\n2\nStudent 2\n84\n57\nPhysics\n4\n\n\n3\n3\nStudent 3\n96\n82\nPhysics\n3\n\n\n4\n4\nStudent 4\n67\n64\nMath\n4\n\n\n5\n5\nStudent 5\n81\n83\nPhysics\n3\n\n\n\n\n\n\n\n\nShow the code\n# Add a total score column\nstudents = @mutate(students, total = math_score + science_score)\nfirst(students, 5)\n\n\n5×7 DataFrame\n\n\n\nRow\nid\nname\nmath_score\nscience_score\nprogram\ngrade_level\ntotal\n\n\n\nInt64\nString\nInt64\nInt64\nString\nInt64\nInt64\n\n\n\n\n1\n1\nStudent 1\n81\n81\nPhysics\n1\n162\n\n\n2\n2\nStudent 2\n84\n57\nPhysics\n4\n141\n\n\n3\n3\nStudent 3\n96\n82\nPhysics\n3\n178\n\n\n4\n4\nStudent 4\n67\n64\nMath\n4\n131\n\n\n5\n5\nStudent 5\n81\n83\nPhysics\n3\n164"
-  },
-  {
-    "objectID": "posts/julia-tidier/index.html#basic-tidier.jl-operations",
-    "href": "posts/julia-tidier/index.html#basic-tidier.jl-operations",
-    "title": "High-Performance Data Science with Julia and Tidier.jl",
-    "section": "Basic Tidier.jl Operations",
-    "text": "Basic Tidier.jl Operations\n\n1. Filtering Data\n\n\nShow the code\n# Filter students with high math scores\nhigh_performers = @filter(students, math_score &gt;= 90)\nprintln(\"Students with math score &gt;= 90: \", nrow(high_performers))\nfirst(high_performers, 5)\n\n\nStudents with math score &gt;= 90: 26\n\n\n5×7 DataFrame\n\n\n\nRow\nid\nname\nmath_score\nscience_score\nprogram\ngrade_level\ntotal\n\n\n\nInt64\nString\nInt64\nInt64\nString\nInt64\nInt64\n\n\n\n\n1\n3\nStudent 3\n96\n82\nPhysics\n3\n178\n\n\n2\n8\nStudent 8\n98\n98\nCS\n2\n196\n\n\n3\n12\nStudent 12\n94\n67\nCS\n4\n161\n\n\n4\n22\nStudent 22\n100\n83\nPhysics\n3\n183\n\n\n5\n23\nStudent 23\n96\n82\nCS\n3\n178\n\n\n\n\n\n\n\n\nShow the code\n# Filter by multiple conditions\ncs_seniors = @filter(students, program == \"CS\" && grade_level == 4)\nprintln(\"CS seniors: \", nrow(cs_seniors))\nfirst(cs_seniors, 5)\n\n\nCS seniors: 9\n\n\n5×7 DataFrame\n\n\n\nRow\nid\nname\nmath_score\nscience_score\nprogram\ngrade_level\ntotal\n\n\n\nInt64\nString\nInt64\nInt64\nString\nInt64\nInt64\n\n\n\n\n1\n7\nStudent 7\n61\n67\nCS\n4\n128\n\n\n2\n12\nStudent 12\n94\n67\nCS\n4\n161\n\n\n3\n27\nStudent 27\n63\n83\nCS\n4\n146\n\n\n4\n48\nStudent 48\n90\n100\nCS\n4\n190\n\n\n5\n52\nStudent 52\n69\n85\nCS\n4\n154\n\n\n\n\n\n\n\n\n2. Selecting Columns\n\n\nShow the code\n# Select specific columns\nscores_only = @select(students, id, math_score, science_score, total)\nfirst(scores_only, 5)\n\n\n5×4 DataFrame\n\n\n\nRow\nid\nmath_score\nscience_score\ntotal\n\n\n\nInt64\nInt64\nInt64\nInt64\n\n\n\n\n1\n1\n81\n81\n162\n\n\n2\n2\n84\n57\n141\n\n\n3\n3\n96\n82\n178\n\n\n4\n4\n67\n64\n131\n\n\n5\n5\n81\n83\n164\n\n\n\n\n\n\n\n\nShow the code\n# Select columns using patterns\nname_and_scores = @select(students, name, ends_with(\"score\"))\nfirst(name_and_scores, 5)\n\n\n5×3 DataFrame\n\n\n\nRow\nname\nmath_score\nscience_score\n\n\n\nString\nInt64\nInt64\n\n\n\n\n1\nStudent 1\n81\n81\n\n\n2\nStudent 2\n84\n57\n\n\n3\nStudent 3\n96\n82\n\n\n4\nStudent 4\n67\n64\n\n\n5\nStudent 5\n81\n83\n\n\n\n\n\n\n\n\n3. Creating New Columns with Mutate\n\n\nShow the code\n# Add calculated columns\nstudents_graded = @mutate(students, \n    average_score = (math_score + science_score) / 2,\n    passed = total &gt;= 140\n)\nfirst(students_graded, 5)\n\n\n5×9 DataFrame\n\n\n\nRow\nid\nname\nmath_score\nscience_score\nprogram\ngrade_level\ntotal\naverage_score\npassed\n\n\n\nInt64\nString\nInt64\nInt64\nString\nInt64\nInt64\nFloat64\nBool\n\n\n\n\n1\n1\nStudent 1\n81\n81\nPhysics\n1\n162\n81.0\ntrue\n\n\n2\n2\nStudent 2\n84\n57\nPhysics\n4\n141\n70.5\ntrue\n\n\n3\n3\nStudent 3\n96\n82\nPhysics\n3\n178\n89.0\ntrue\n\n\n4\n4\nStudent 4\n67\n64\nMath\n4\n131\n65.5\nfalse\n\n\n5\n5\nStudent 5\n81\n83\nPhysics\n3\n164\n82.0\ntrue\n\n\n\n\n\n\n\n\n4. Summarizing Data\n\n\nShow the code\n# Basic summary statistics\nsummary_stats = @summarize(students,\n    avg_math = mean(math_score),\n    avg_science = mean(science_score),\n    max_total = maximum(total),\n    min_total = minimum(total),\n    n_students = length(id)\n)\nsummary_stats\n\n\n1×5 DataFrame\n\n\n\nRow\navg_math\navg_science\nmax_total\nmin_total\nn_students\n\n\n\nFloat64\nFloat64\nInt64\nInt64\nInt64\n\n\n\n\n1\n80.07\n76.96\n196\n119\n100\n\n\n\n\n\n\n\n\n5. Grouping and Summarizing\n\n\nShow the code\n# Summary by program\nprogram_summary = @chain students begin\n    @group_by(program)\n    @summarize(\n        count = length(id),\n        avg_math = mean(math_score),\n        avg_science = mean(science_score),\n        avg_total = mean(total)\n    )\n    @arrange(desc(avg_total))\nend\nprogram_summary\n\n\n3×5 DataFrame\n\n\n\nRow\nprogram\ncount\navg_math\navg_science\navg_total\n\n\n\nString\nInt64\nFloat64\nFloat64\nFloat64\n\n\n\n\n1\nPhysics\n41\n81.7073\n76.5854\n158.293\n\n\n2\nMath\n23\n78.913\n79.2174\n158.13\n\n\n3\nCS\n36\n78.9444\n75.9444\n154.889\n\n\n\n\n\n\n\n\nShow the code\n# Summary by grade level\ngrade_level_summary = @chain students begin\n    @group_by(grade_level)\n    @summarize(\n        n_students = length(id),\n        avg_math = round(mean(math_score), digits=1),\n        avg_science = round(mean(science_score), digits=1)\n    )\n    @arrange(grade_level)\nend\ngrade_level_summary\n\n\n4×4 DataFrame\n\n\n\nRow\ngrade_level\nn_students\navg_math\navg_science\n\n\n\nInt64\nInt64\nFloat64\nFloat64\n\n\n\n\n1\n1\n23\n82.9\n84.3\n\n\n2\n2\n18\n80.1\n77.6\n\n\n3\n3\n33\n80.5\n73.6\n\n\n4\n4\n26\n77.0\n74.2\n\n\n\n\n\n\n\n\n6. Arranging Data\n\n\nShow the code\n# Sort by total score (descending)\ntop_students = @chain students begin\n    @arrange(desc(total))\n    @select(name, program, math_score, science_score, total)\n    @slice(1:10)\nend\nprintln(\"Top 10 students by total score:\")\ntop_students\n\n\nTop 10 students by total score:\n\n\n10×5 DataFrame\n\n\n\nRow\nname\nprogram\nmath_score\nscience_score\ntotal\n\n\n\nString\nString\nInt64\nInt64\nInt64\n\n\n\n\n1\nStudent 8\nCS\n98\n98\n196\n\n\n2\nStudent 72\nPhysics\n98\n98\n196\n\n\n3\nStudent 59\nPhysics\n96\n99\n195\n\n\n4\nStudent 48\nCS\n90\n100\n190\n\n\n5\nStudent 50\nPhysics\n84\n100\n184\n\n\n6\nStudent 87\nPhysics\n87\n97\n184\n\n\n7\nStudent 22\nPhysics\n100\n83\n183\n\n\n8\nStudent 80\nMath\n89\n94\n183\n\n\n9\nStudent 64\nPhysics\n83\n98\n181\n\n\n10\nStudent 86\nPhysics\n85\n96\n181\n\n\n\n\n\n\n\n\n7. Complex Data Transformations\n\n\nShow the code\n# First, let's verify the DataFrame exists and has the right columns\nif @isdefined(students)\n    println(\"Students DataFrame columns: \", names(students))\n    println(\"Number of rows: \", nrow(students))\nelse\n    println(\"Students DataFrame not found!\")\nend\n\n# Use DataFrames.jl functions instead of Tidier.jl for this example\n# Filter for upper-level students (grade_level &gt;= 3)\nupper_level = filter(row -&gt; row.grade_level &gt;= 3, students)\n\n# Add performance column\nupper_level.performance = map(upper_level.total) do t\n    if t &gt;= 160\n        \"Excellent\"\n    elseif t &gt;= 140\n        \"Good\"\n    else\n        \"Average\"\n    end\nend\n\n# Group and summarize using DataFrames.jl\nresult = combine(groupby(upper_level, [:program, :performance]), nrow =&gt; :count)\nsort!(result, [:program, order(:count, rev=true)])\n\nprintln(\"\\nPerformance distribution for upper-level students:\")\nresult\n\n\nStudents DataFrame columns: [\"id\", \"name\", \"math_score\", \"science_score\", \"program\", \"grade_level\", \"total\"]\nNumber of rows: 100\n\nPerformance distribution for upper-level students:\n\n\n9×3 DataFrame\n\n\n\nRow\nprogram\nperformance\ncount\n\n\n\nString\nString\nInt64\n\n\n\n\n1\nCS\nGood\n11\n\n\n2\nCS\nAverage\n6\n\n\n3\nCS\nExcellent\n6\n\n\n4\nMath\nExcellent\n5\n\n\n5\nMath\nGood\n5\n\n\n6\nMath\nAverage\n2\n\n\n7\nPhysics\nGood\n9\n\n\n8\nPhysics\nExcellent\n9\n\n\n9\nPhysics\nAverage\n6"
-  },
-  {
-    "objectID": "posts/julia-tidier/index.html#practical-examples",
-    "href": "posts/julia-tidier/index.html#practical-examples",
-    "title": "High-Performance Data Science with Julia and Tidier.jl",
-    "section": "Practical Examples",
-    "text": "Practical Examples\n\n8. Working with Missing Data\n\n\nShow the code\n# Create a DataFrame with some missing values\nstudents_missing = DataFrame(\n    id = 1:10,\n    name = [\"Student $i\" for i in 1:10],\n    math_score = [85, missing, 92, 78, missing, 88, 95, missing, 82, 90],\n    science_score = [78, 85, missing, 82, 88, missing, 92, 85, missing, 87]\n)\n\nprintln(\"Data with missing values:\")\nprintln(students_missing)\n\n# Count missing values\nmissing_counts = DataFrame(\n    math_missing = sum(ismissing.(students_missing.math_score)),\n    science_missing = sum(ismissing.(students_missing.science_score))\n)\nprintln(\"\\nMissing value counts:\")\nprintln(missing_counts)\n\n# Calculate mean, skipping missing values\nmath_mean = mean(skipmissing(students_missing.math_score))\nscience_mean = mean(skipmissing(students_missing.science_score))\nprintln(\"\\nMeans (excluding missing): Math = $math_mean, Science = $science_mean\")\n\n\n\nData with missing values:\n\n10×4 DataFrame\n\n Row │ id     name        math_score  science_score \n\n     │ Int64  String      Int64?      Int64?        \n\n─────┼──────────────────────────────────────────────\n\n   1 │     1  Student 1           85             78\n\n   2 │     2  Student 2      missing             85\n\n   3 │     3  Student 3           92        missing \n\n   4 │     4  Student 4           78             82\n\n   5 │     5  Student 5      missing             88\n\n   6 │     6  Student 6           88        missing \n\n   7 │     7  Student 7           95             92\n\n   8 │     8  Student 8      missing             85\n\n   9 │     9  Student 9           82        missing \n\n  10 │    10  Student 10          90             87\n\n\n\nMissing value counts:\n\n1×2 DataFrame\n\n Row │ math_missing  science_missing \n\n     │ Int64         Int64           \n\n─────┼───────────────────────────────\n\n   1 │            3                3\n\n\n\nMeans (excluding missing): Math = 87.14285714285714, Science = 85.28571428571429\n\n\n\n\n\n\n9. Joining DataFrames\n\n\nShow the code\n# Create a simple grades DataFrame\ngrades = DataFrame(\n    id = [1, 2, 3, 4, 5],\n    final_grade = [\"A\", \"B\", \"A\", \"C\", \"B\"]\n)\n\n# Join with students data\nstudents_with_grades = @left_join(students[1:5, :], grades, id)\nstudents_with_grades\n\n\n5×8 DataFrame\n\n\n\nRow\nid\nname\nmath_score\nscience_score\nprogram\ngrade_level\ntotal\nfinal_grade\n\n\n\nInt64\nString\nInt64\nInt64\nString\nInt64\nInt64\nString?\n\n\n\n\n1\n1\nStudent 1\n81\n81\nPhysics\n1\n162\nA\n\n\n2\n2\nStudent 2\n84\n57\nPhysics\n4\n141\nB\n\n\n3\n3\nStudent 3\n96\n82\nPhysics\n3\n178\nA\n\n\n4\n4\nStudent 4\n67\n64\nMath\n4\n131\nC\n\n\n5\n5\nStudent 5\n81\n83\nPhysics\n3\n164\nB\n\n\n\n\n\n\n\n\n10. Reshaping Data\n\n\nShow the code\n# Create wide data\nwide_scores = @chain students[1:5, :] begin\n    @select(id, name, math_score, science_score)\nend\n\nprintln(\"Wide format:\")\nwide_scores\n\n# Convert to long format (using DataFrames stack function)\nlong_scores = stack(wide_scores, [:math_score, :science_score], \n                    variable_name=:subject, value_name=:score)\nprintln(\"\\nLong format:\")\nfirst(long_scores, 10)\n\n\nWide format:\n\nLong format:\n\n\n10×4 DataFrame\n\n\n\nRow\nid\nname\nsubject\nscore\n\n\n\nInt64\nString\nString\nInt64\n\n\n\n\n1\n1\nStudent 1\nmath_score\n81\n\n\n2\n2\nStudent 2\nmath_score\n84\n\n\n3\n3\nStudent 3\nmath_score\n96\n\n\n4\n4\nStudent 4\nmath_score\n67\n\n\n5\n5\nStudent 5\nmath_score\n81\n\n\n6\n1\nStudent 1\nscience_score\n81\n\n\n7\n2\nStudent 2\nscience_score\n57\n\n\n8\n3\nStudent 3\nscience_score\n82\n\n\n9\n4\nStudent 4\nscience_score\n64\n\n\n10\n5\nStudent 5\nscience_score\n83"
-  },
-  {
-    "objectID": "posts/julia-tidier/index.html#summary-of-basic-tidier.jl-operations",
-    "href": "posts/julia-tidier/index.html#summary-of-basic-tidier.jl-operations",
-    "title": "High-Performance Data Science with Julia and Tidier.jl",
-    "section": "Summary of Basic Tidier.jl Operations",
-    "text": "Summary of Basic Tidier.jl Operations\n\nCore Functions\n\n@filter: Select rows based on conditions\n@select: Choose specific columns\n@mutate: Create or modify columns\n@summarize: Calculate summary statistics\n@group_by: Group data for aggregated operations\n@arrange: Sort rows\n@chain or |&gt;: Combine multiple operations\n\n\n\nKey Benefits of Julia + Tidier.jl\n\nFamiliar Syntax: If you know dplyr from R, you already know Tidier.jl\nHigh Performance: Julia’s speed makes operations on large datasets fast\nClean Code: The pipe operator makes complex operations readable\nType Safety: Julia catches errors before runtime"
-  },
-  {
-    "objectID": "posts/julia-tidier/index.html#next-steps",
-    "href": "posts/julia-tidier/index.html#next-steps",
-    "title": "High-Performance Data Science with Julia and Tidier.jl",
-    "section": "Next Steps",
-    "text": "Next Steps\nTo continue learning:\n\nPractice with your own data: Import a CSV and try these operations\nExplore more functions: Tidier.jl supports many more operations\nLearn Julia basics: Understanding Julia makes you more effective\nJoin the community: Julia has a welcoming, helpful community"
-  },
-  {
-    "objectID": "posts/julia-tidier/index.html#resources",
-    "href": "posts/julia-tidier/index.html#resources",
-    "title": "High-Performance Data Science with Julia and Tidier.jl",
-    "section": "Resources",
-    "text": "Resources\n\nTidier.jl Documentation\nJulia Documentation\nDataFrames.jl Tutorial\nJulia for Data Science"
   },
   {
     "objectID": "posts/polars-plotnine/index.html",
@@ -506,5 +82,429 @@
     "title": "Lightning-Fast Data Analysis: Polars and plotnine for Modern Python",
     "section": "Conclusion",
     "text": "Conclusion\nPolars and plotnine together offer a compelling alternative to the traditional pandas + matplotlib ecosystem:\n\nPolars delivers exceptional performance for data manipulation with an intuitive API\nplotnine provides the grammar of graphics for systematic visualization\nTogether they enable fast, elegant, and reproducible data science workflows\n\nFor educational data analysis, this combination is particularly powerful, allowing researchers to: - Process large institutional datasets efficiently - Create publication-quality visualizations - Build reproducible analytical pipelines\n- Scale analyses as data grows\nThe investment in learning these tools pays dividends in both performance and code clarity, making them excellent choices for modern Python data science."
+  },
+  {
+    "objectID": "posts/julia-tidier/index.html",
+    "href": "posts/julia-tidier/index.html",
+    "title": "High-Performance Data Science with Julia and Tidier.jl",
+    "section": "",
+    "text": "This tutorial explores the power of Julia combined with Tidier.jl for high-performance data science. Julia brings blazing-fast computation with Python-like syntax, while Tidier.jl provides the beloved tidyverse syntax from R, creating a perfect combination for modern data analysis."
+  },
+  {
+    "objectID": "posts/julia-tidier/index.html#installation-prerequisites",
+    "href": "posts/julia-tidier/index.html#installation-prerequisites",
+    "title": "High-Performance Data Science with Julia and Tidier.jl",
+    "section": "Installation Prerequisites",
+    "text": "Installation Prerequisites\nBefore running the examples, you’ll need to install Julia and the required packages:\n\nInstalling Julia\n\nDownload Julia from julialang.org\nUsing Homebrew (macOS): brew install julia\nUsing juliaup (recommended): Follow instructions at github.com/JuliaLang/juliaup\n\n\n\nInstalling Required Packages\n# In Julia REPL, install required packages\nusing Pkg\nPkg.add([\"Tidier\", \"DataFrames\"])"
+  },
+  {
+    "objectID": "posts/julia-tidier/index.html#why-julia-tidier.jl",
+    "href": "posts/julia-tidier/index.html#why-julia-tidier.jl",
+    "title": "High-Performance Data Science with Julia and Tidier.jl",
+    "section": "Why Julia + Tidier.jl?",
+    "text": "Why Julia + Tidier.jl?\n\nThe Performance Advantage: Julia\nJulia offers compelling advantages for data science:\n\nNear C-speed performance with high-level syntax\nMultiple dispatch for elegant, extensible code\nNative parallelism and distributed computing\nExcellent interoperability with Python, R, and C\nGrowing ecosystem of scientific computing packages\n\n\n\nThe Familiar Syntax: Tidier.jl\nTidier.jl brings the tidyverse workflow to Julia:\n\nFamiliar dplyr-style verbs (select, filter, mutate, summarize)\nPipe operator (|&gt;) for readable code chains\nConsistent grammar for data manipulation\nPerformance benefits of Julia’s compiled execution"
+  },
+  {
+    "objectID": "posts/julia-tidier/index.html#setup-and-data-preparation",
+    "href": "posts/julia-tidier/index.html#setup-and-data-preparation",
+    "title": "High-Performance Data Science with Julia and Tidier.jl",
+    "section": "Setup and Data Preparation",
+    "text": "Setup and Data Preparation\n\n\nShow the code\n# Load required packages\nusing Tidier\nusing DataFrames\nusing Random\nusing Statistics\n\n# Set random seed for reproducibility\nRandom.seed!(123)\n\n# Display Julia and package versions\nprintln(\"Julia version: \", VERSION)\nprintln(\"Tidier.jl version: v1.2.0\")\n\n\nJulia version: 1.11.5\nTidier.jl version: v1.2.0\n\n\n\n\nShow the code\n# Create a simple dataset for demonstration\nstudents = DataFrame(\n    id = 1:100,\n    name = [\"Student $i\" for i in 1:100],\n    math_score = rand(60:100, 100),\n    science_score = rand(55:100, 100),\n    program = rand([\"CS\", \"Math\", \"Physics\"], 100),\n    grade_level = rand([1, 2, 3, 4], 100)\n)\n\nprintln(\"Dataset shape: \", size(students))\nfirst(students, 5)\n\n\nDataset shape: (100, 6)\n\n\n5×6 DataFrame\n\n\n\nRow\nid\nname\nmath_score\nscience_score\nprogram\ngrade_level\n\n\n\nInt64\nString\nInt64\nInt64\nString\nInt64\n\n\n\n\n1\n1\nStudent 1\n81\n81\nPhysics\n1\n\n\n2\n2\nStudent 2\n84\n57\nPhysics\n4\n\n\n3\n3\nStudent 3\n96\n82\nPhysics\n3\n\n\n4\n4\nStudent 4\n67\n64\nMath\n4\n\n\n5\n5\nStudent 5\n81\n83\nPhysics\n3\n\n\n\n\n\n\n\n\nShow the code\n# Add a total score column\nstudents = @mutate(students, total = math_score + science_score)\nfirst(students, 5)\n\n\n5×7 DataFrame\n\n\n\nRow\nid\nname\nmath_score\nscience_score\nprogram\ngrade_level\ntotal\n\n\n\nInt64\nString\nInt64\nInt64\nString\nInt64\nInt64\n\n\n\n\n1\n1\nStudent 1\n81\n81\nPhysics\n1\n162\n\n\n2\n2\nStudent 2\n84\n57\nPhysics\n4\n141\n\n\n3\n3\nStudent 3\n96\n82\nPhysics\n3\n178\n\n\n4\n4\nStudent 4\n67\n64\nMath\n4\n131\n\n\n5\n5\nStudent 5\n81\n83\nPhysics\n3\n164"
+  },
+  {
+    "objectID": "posts/julia-tidier/index.html#basic-tidier.jl-operations",
+    "href": "posts/julia-tidier/index.html#basic-tidier.jl-operations",
+    "title": "High-Performance Data Science with Julia and Tidier.jl",
+    "section": "Basic Tidier.jl Operations",
+    "text": "Basic Tidier.jl Operations\n\n1. Filtering Data\n\n\nShow the code\n# Filter students with high math scores\nhigh_performers = @filter(students, math_score &gt;= 90)\nprintln(\"Students with math score &gt;= 90: \", nrow(high_performers))\nfirst(high_performers, 5)\n\n\nStudents with math score &gt;= 90: 26\n\n\n5×7 DataFrame\n\n\n\nRow\nid\nname\nmath_score\nscience_score\nprogram\ngrade_level\ntotal\n\n\n\nInt64\nString\nInt64\nInt64\nString\nInt64\nInt64\n\n\n\n\n1\n3\nStudent 3\n96\n82\nPhysics\n3\n178\n\n\n2\n8\nStudent 8\n98\n98\nCS\n2\n196\n\n\n3\n12\nStudent 12\n94\n67\nCS\n4\n161\n\n\n4\n22\nStudent 22\n100\n83\nPhysics\n3\n183\n\n\n5\n23\nStudent 23\n96\n82\nCS\n3\n178\n\n\n\n\n\n\n\n\nShow the code\n# Filter by multiple conditions\ncs_seniors = @filter(students, program == \"CS\" && grade_level == 4)\nprintln(\"CS seniors: \", nrow(cs_seniors))\nfirst(cs_seniors, 5)\n\n\nCS seniors: 9\n\n\n5×7 DataFrame\n\n\n\nRow\nid\nname\nmath_score\nscience_score\nprogram\ngrade_level\ntotal\n\n\n\nInt64\nString\nInt64\nInt64\nString\nInt64\nInt64\n\n\n\n\n1\n7\nStudent 7\n61\n67\nCS\n4\n128\n\n\n2\n12\nStudent 12\n94\n67\nCS\n4\n161\n\n\n3\n27\nStudent 27\n63\n83\nCS\n4\n146\n\n\n4\n48\nStudent 48\n90\n100\nCS\n4\n190\n\n\n5\n52\nStudent 52\n69\n85\nCS\n4\n154\n\n\n\n\n\n\n\n\n2. Selecting Columns\n\n\nShow the code\n# Select specific columns\nscores_only = @select(students, id, math_score, science_score, total)\nfirst(scores_only, 5)\n\n\n5×4 DataFrame\n\n\n\nRow\nid\nmath_score\nscience_score\ntotal\n\n\n\nInt64\nInt64\nInt64\nInt64\n\n\n\n\n1\n1\n81\n81\n162\n\n\n2\n2\n84\n57\n141\n\n\n3\n3\n96\n82\n178\n\n\n4\n4\n67\n64\n131\n\n\n5\n5\n81\n83\n164\n\n\n\n\n\n\n\n\nShow the code\n# Select columns using patterns\nname_and_scores = @select(students, name, ends_with(\"score\"))\nfirst(name_and_scores, 5)\n\n\n5×3 DataFrame\n\n\n\nRow\nname\nmath_score\nscience_score\n\n\n\nString\nInt64\nInt64\n\n\n\n\n1\nStudent 1\n81\n81\n\n\n2\nStudent 2\n84\n57\n\n\n3\nStudent 3\n96\n82\n\n\n4\nStudent 4\n67\n64\n\n\n5\nStudent 5\n81\n83\n\n\n\n\n\n\n\n\n3. Creating New Columns with Mutate\n\n\nShow the code\n# Add calculated columns\nstudents_graded = @mutate(students, \n    average_score = (math_score + science_score) / 2,\n    passed = total &gt;= 140\n)\nfirst(students_graded, 5)\n\n\n5×9 DataFrame\n\n\n\nRow\nid\nname\nmath_score\nscience_score\nprogram\ngrade_level\ntotal\naverage_score\npassed\n\n\n\nInt64\nString\nInt64\nInt64\nString\nInt64\nInt64\nFloat64\nBool\n\n\n\n\n1\n1\nStudent 1\n81\n81\nPhysics\n1\n162\n81.0\ntrue\n\n\n2\n2\nStudent 2\n84\n57\nPhysics\n4\n141\n70.5\ntrue\n\n\n3\n3\nStudent 3\n96\n82\nPhysics\n3\n178\n89.0\ntrue\n\n\n4\n4\nStudent 4\n67\n64\nMath\n4\n131\n65.5\nfalse\n\n\n5\n5\nStudent 5\n81\n83\nPhysics\n3\n164\n82.0\ntrue\n\n\n\n\n\n\n\n\n4. Summarizing Data\n\n\nShow the code\n# Basic summary statistics\nsummary_stats = @summarize(students,\n    avg_math = mean(math_score),\n    avg_science = mean(science_score),\n    max_total = maximum(total),\n    min_total = minimum(total),\n    n_students = length(id)\n)\nsummary_stats\n\n\n1×5 DataFrame\n\n\n\nRow\navg_math\navg_science\nmax_total\nmin_total\nn_students\n\n\n\nFloat64\nFloat64\nInt64\nInt64\nInt64\n\n\n\n\n1\n80.07\n76.96\n196\n119\n100\n\n\n\n\n\n\n\n\n5. Grouping and Summarizing\n\n\nShow the code\n# Summary by program\nprogram_summary = @chain students begin\n    @group_by(program)\n    @summarize(\n        count = length(id),\n        avg_math = mean(math_score),\n        avg_science = mean(science_score),\n        avg_total = mean(total)\n    )\n    @arrange(desc(avg_total))\nend\nprogram_summary\n\n\n3×5 DataFrame\n\n\n\nRow\nprogram\ncount\navg_math\navg_science\navg_total\n\n\n\nString\nInt64\nFloat64\nFloat64\nFloat64\n\n\n\n\n1\nPhysics\n41\n81.7073\n76.5854\n158.293\n\n\n2\nMath\n23\n78.913\n79.2174\n158.13\n\n\n3\nCS\n36\n78.9444\n75.9444\n154.889\n\n\n\n\n\n\n\n\nShow the code\n# Summary by grade level\ngrade_level_summary = @chain students begin\n    @group_by(grade_level)\n    @summarize(\n        n_students = length(id),\n        avg_math = round(mean(math_score), digits=1),\n        avg_science = round(mean(science_score), digits=1)\n    )\n    @arrange(grade_level)\nend\ngrade_level_summary\n\n\n4×4 DataFrame\n\n\n\nRow\ngrade_level\nn_students\navg_math\navg_science\n\n\n\nInt64\nInt64\nFloat64\nFloat64\n\n\n\n\n1\n1\n23\n82.9\n84.3\n\n\n2\n2\n18\n80.1\n77.6\n\n\n3\n3\n33\n80.5\n73.6\n\n\n4\n4\n26\n77.0\n74.2\n\n\n\n\n\n\n\n\n6. Arranging Data\n\n\nShow the code\n# Sort by total score (descending)\ntop_students = @chain students begin\n    @arrange(desc(total))\n    @select(name, program, math_score, science_score, total)\n    @slice(1:10)\nend\nprintln(\"Top 10 students by total score:\")\ntop_students\n\n\nTop 10 students by total score:\n\n\n10×5 DataFrame\n\n\n\nRow\nname\nprogram\nmath_score\nscience_score\ntotal\n\n\n\nString\nString\nInt64\nInt64\nInt64\n\n\n\n\n1\nStudent 8\nCS\n98\n98\n196\n\n\n2\nStudent 72\nPhysics\n98\n98\n196\n\n\n3\nStudent 59\nPhysics\n96\n99\n195\n\n\n4\nStudent 48\nCS\n90\n100\n190\n\n\n5\nStudent 50\nPhysics\n84\n100\n184\n\n\n6\nStudent 87\nPhysics\n87\n97\n184\n\n\n7\nStudent 22\nPhysics\n100\n83\n183\n\n\n8\nStudent 80\nMath\n89\n94\n183\n\n\n9\nStudent 64\nPhysics\n83\n98\n181\n\n\n10\nStudent 86\nPhysics\n85\n96\n181\n\n\n\n\n\n\n\n\n7. Complex Data Transformations\n\n\nShow the code\n# First, let's verify the DataFrame exists and has the right columns\nif @isdefined(students)\n    println(\"Students DataFrame columns: \", names(students))\n    println(\"Number of rows: \", nrow(students))\nelse\n    println(\"Students DataFrame not found!\")\nend\n\n# Use DataFrames.jl functions instead of Tidier.jl for this example\n# Filter for upper-level students (grade_level &gt;= 3)\nupper_level = filter(row -&gt; row.grade_level &gt;= 3, students)\n\n# Add performance column\nupper_level.performance = map(upper_level.total) do t\n    if t &gt;= 160\n        \"Excellent\"\n    elseif t &gt;= 140\n        \"Good\"\n    else\n        \"Average\"\n    end\nend\n\n# Group and summarize using DataFrames.jl\nresult = combine(groupby(upper_level, [:program, :performance]), nrow =&gt; :count)\nsort!(result, [:program, order(:count, rev=true)])\n\nprintln(\"\\nPerformance distribution for upper-level students:\")\nresult\n\n\nStudents DataFrame columns: [\"id\", \"name\", \"math_score\", \"science_score\", \"program\", \"grade_level\", \"total\"]\nNumber of rows: 100\n\nPerformance distribution for upper-level students:\n\n\n9×3 DataFrame\n\n\n\nRow\nprogram\nperformance\ncount\n\n\n\nString\nString\nInt64\n\n\n\n\n1\nCS\nGood\n11\n\n\n2\nCS\nAverage\n6\n\n\n3\nCS\nExcellent\n6\n\n\n4\nMath\nExcellent\n5\n\n\n5\nMath\nGood\n5\n\n\n6\nMath\nAverage\n2\n\n\n7\nPhysics\nGood\n9\n\n\n8\nPhysics\nExcellent\n9\n\n\n9\nPhysics\nAverage\n6"
+  },
+  {
+    "objectID": "posts/julia-tidier/index.html#practical-examples",
+    "href": "posts/julia-tidier/index.html#practical-examples",
+    "title": "High-Performance Data Science with Julia and Tidier.jl",
+    "section": "Practical Examples",
+    "text": "Practical Examples\n\n8. Working with Missing Data\n\n\nShow the code\n# Create a DataFrame with some missing values\nstudents_missing = DataFrame(\n    id = 1:10,\n    name = [\"Student $i\" for i in 1:10],\n    math_score = [85, missing, 92, 78, missing, 88, 95, missing, 82, 90],\n    science_score = [78, 85, missing, 82, 88, missing, 92, 85, missing, 87]\n)\n\nprintln(\"Data with missing values:\")\nprintln(students_missing)\n\n# Count missing values\nmissing_counts = DataFrame(\n    math_missing = sum(ismissing.(students_missing.math_score)),\n    science_missing = sum(ismissing.(students_missing.science_score))\n)\nprintln(\"\\nMissing value counts:\")\nprintln(missing_counts)\n\n# Calculate mean, skipping missing values\nmath_mean = mean(skipmissing(students_missing.math_score))\nscience_mean = mean(skipmissing(students_missing.science_score))\nprintln(\"\\nMeans (excluding missing): Math = $math_mean, Science = $science_mean\")\n\n\n\nData with missing values:\n\n10×4 DataFrame\n\n Row │ id     name        math_score  science_score \n\n     │ Int64  String      Int64?      Int64?        \n\n─────┼──────────────────────────────────────────────\n\n   1 │     1  Student 1           85             78\n\n   2 │     2  Student 2      missing             85\n\n   3 │     3  Student 3           92        missing \n\n   4 │     4  Student 4           78             82\n\n   5 │     5  Student 5      missing             88\n\n   6 │     6  Student 6           88        missing \n\n   7 │     7  Student 7           95             92\n\n   8 │     8  Student 8      missing             85\n\n   9 │     9  Student 9           82        missing \n\n  10 │    10  Student 10          90             87\n\n\n\nMissing value counts:\n\n1×2 DataFrame\n\n Row │ math_missing  science_missing \n\n     │ Int64         Int64           \n\n─────┼───────────────────────────────\n\n   1 │            3                3\n\n\n\nMeans (excluding missing): Math = 87.14285714285714, Science = 85.28571428571429\n\n\n\n\n\n\n9. Joining DataFrames\n\n\nShow the code\n# Create a simple grades DataFrame\ngrades = DataFrame(\n    id = [1, 2, 3, 4, 5],\n    final_grade = [\"A\", \"B\", \"A\", \"C\", \"B\"]\n)\n\n# Join with students data\nstudents_with_grades = @left_join(students[1:5, :], grades, id)\nstudents_with_grades\n\n\n5×8 DataFrame\n\n\n\nRow\nid\nname\nmath_score\nscience_score\nprogram\ngrade_level\ntotal\nfinal_grade\n\n\n\nInt64\nString\nInt64\nInt64\nString\nInt64\nInt64\nString?\n\n\n\n\n1\n1\nStudent 1\n81\n81\nPhysics\n1\n162\nA\n\n\n2\n2\nStudent 2\n84\n57\nPhysics\n4\n141\nB\n\n\n3\n3\nStudent 3\n96\n82\nPhysics\n3\n178\nA\n\n\n4\n4\nStudent 4\n67\n64\nMath\n4\n131\nC\n\n\n5\n5\nStudent 5\n81\n83\nPhysics\n3\n164\nB\n\n\n\n\n\n\n\n\n10. Reshaping Data\n\n\nShow the code\n# Create wide data\nwide_scores = @chain students[1:5, :] begin\n    @select(id, name, math_score, science_score)\nend\n\nprintln(\"Wide format:\")\nwide_scores\n\n# Convert to long format (using DataFrames stack function)\nlong_scores = stack(wide_scores, [:math_score, :science_score], \n                    variable_name=:subject, value_name=:score)\nprintln(\"\\nLong format:\")\nfirst(long_scores, 10)\n\n\nWide format:\n\nLong format:\n\n\n10×4 DataFrame\n\n\n\nRow\nid\nname\nsubject\nscore\n\n\n\nInt64\nString\nString\nInt64\n\n\n\n\n1\n1\nStudent 1\nmath_score\n81\n\n\n2\n2\nStudent 2\nmath_score\n84\n\n\n3\n3\nStudent 3\nmath_score\n96\n\n\n4\n4\nStudent 4\nmath_score\n67\n\n\n5\n5\nStudent 5\nmath_score\n81\n\n\n6\n1\nStudent 1\nscience_score\n81\n\n\n7\n2\nStudent 2\nscience_score\n57\n\n\n8\n3\nStudent 3\nscience_score\n82\n\n\n9\n4\nStudent 4\nscience_score\n64\n\n\n10\n5\nStudent 5\nscience_score\n83"
+  },
+  {
+    "objectID": "posts/julia-tidier/index.html#summary-of-basic-tidier.jl-operations",
+    "href": "posts/julia-tidier/index.html#summary-of-basic-tidier.jl-operations",
+    "title": "High-Performance Data Science with Julia and Tidier.jl",
+    "section": "Summary of Basic Tidier.jl Operations",
+    "text": "Summary of Basic Tidier.jl Operations\n\nCore Functions\n\n@filter: Select rows based on conditions\n@select: Choose specific columns\n@mutate: Create or modify columns\n@summarize: Calculate summary statistics\n@group_by: Group data for aggregated operations\n@arrange: Sort rows\n@chain or |&gt;: Combine multiple operations\n\n\n\nKey Benefits of Julia + Tidier.jl\n\nFamiliar Syntax: If you know dplyr from R, you already know Tidier.jl\nHigh Performance: Julia’s speed makes operations on large datasets fast\nClean Code: The pipe operator makes complex operations readable\nType Safety: Julia catches errors before runtime"
+  },
+  {
+    "objectID": "posts/julia-tidier/index.html#next-steps",
+    "href": "posts/julia-tidier/index.html#next-steps",
+    "title": "High-Performance Data Science with Julia and Tidier.jl",
+    "section": "Next Steps",
+    "text": "Next Steps\nTo continue learning:\n\nPractice with your own data: Import a CSV and try these operations\nExplore more functions: Tidier.jl supports many more operations\nLearn Julia basics: Understanding Julia makes you more effective\nJoin the community: Julia has a welcoming, helpful community"
+  },
+  {
+    "objectID": "posts/julia-tidier/index.html#resources",
+    "href": "posts/julia-tidier/index.html#resources",
+    "title": "High-Performance Data Science with Julia and Tidier.jl",
+    "section": "Resources",
+    "text": "Resources\n\nTidier.jl Documentation\nJulia Documentation\nDataFrames.jl Tutorial\nJulia for Data Science"
+  },
+  {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "Virtuelle Akademie",
+    "section": "",
+    "text": "The Virtual Academy (Virtuelle Akademie) is a research and development unit at the Bern University of Applied Sciences, focused on the intersection of technology and education."
+  },
+  {
+    "objectID": "about/index.html#about-the-virtual-academy",
+    "href": "about/index.html#about-the-virtual-academy",
+    "title": "Virtuelle Akademie",
+    "section": "",
+    "text": "The Virtual Academy (Virtuelle Akademie) is a research and development unit at the Bern University of Applied Sciences, focused on the intersection of technology and education."
+  },
+  {
+    "objectID": "about/index.html#our-team",
+    "href": "about/index.html#our-team",
+    "title": "Virtuelle Akademie",
+    "section": "Our Team",
+    "text": "Our Team\nDr. Andrew Ellis and Dr. Stefan Hackstein are researchers at the Virtual Academy of the Bern University of Applied Sciences. Their research focuses on how artificial intelligence can be used effectively in educational systems.\n\n\nDr. Andrew Ellis\nResearcher specializing in AI applications in educational technology and learning analytics.\n Contact |  Profile\n\n\nDr. Stefan Hackstein\nResearcher focused on machine learning applications and intelligent tutoring systems.\n Contact |  Profile"
+  },
+  {
+    "objectID": "research/publications/index.html",
+    "href": "research/publications/index.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Title of Paper 1 (2024)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]\nTitle of Paper 2 (2024)\nAnother Journal, Vol. A, Issue B, pp. C-C\n[DOI link] | [PDF]\n\n\n\nTitle of Paper 3 (2023)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]"
+  },
+  {
+    "objectID": "research/publications/index.html#journal-articles",
+    "href": "research/publications/index.html#journal-articles",
+    "title": "Publications",
+    "section": "",
+    "text": "Title of Paper 1 (2024)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]\nTitle of Paper 2 (2024)\nAnother Journal, Vol. A, Issue B, pp. C-C\n[DOI link] | [PDF]\n\n\n\nTitle of Paper 3 (2023)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]"
+  },
+  {
+    "objectID": "research/publications/index.html#conference-proceedings",
+    "href": "research/publications/index.html#conference-proceedings",
+    "title": "Publications",
+    "section": "Conference Proceedings",
+    "text": "Conference Proceedings\n\n2024\nConference Paper Title (2024)\nConference Name, Location\n[Link] | [PDF]\n\n\n2023\nAnother Conference Paper (2023)\nAnother Conference, Location\n[Link] | [PDF]"
+  },
+  {
+    "objectID": "research/publications/index.html#book-chapters",
+    "href": "research/publications/index.html#book-chapters",
+    "title": "Publications",
+    "section": "Book Chapters",
+    "text": "Book Chapters\nChapter Title (2024)\nIn: Book Title, Editor Name (Ed.)\nPublisher, pp. X-Y\n[Link]"
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research",
+    "section": "",
+    "text": "This section showcases our research activities, projects, and publications in educational technology and AI.",
+    "crumbs": [
+      "Research"
+    ]
+  },
+  {
+    "objectID": "research/index.html#welcome-to-research",
+    "href": "research/index.html#welcome-to-research",
+    "title": "Research",
+    "section": "",
+    "text": "This section showcases our research activities, projects, and publications in educational technology and AI.",
+    "crumbs": [
+      "Research"
+    ]
+  },
+  {
+    "objectID": "research/index.html#featured-research-program",
+    "href": "research/index.html#featured-research-program",
+    "title": "Research",
+    "section": "Featured Research Program",
+    "text": "Featured Research Program\n\nBeLEARN - Swiss Research Network\n\nProgram: Swiss National Research Network | Focus: Learning Sciences | Partnership: Multiple Swiss Universities\n\nOur research contributes to BeLEARN, the Swiss research network dedicated to advancing the science of learning through interdisciplinary collaboration and innovation.\nVisit BeLEARN Projects →\n\n\nCurrent Projects\nExplore our ongoing research initiatives and their progress in AI and educational technology.\n\n\nPublications\nBrowse our academic publications and scholarly work in learning sciences.\n\n\nCollaborations\nLearn about research partnerships and collaborative efforts within the Swiss research landscape.",
+    "crumbs": [
+      "Research"
+    ]
+  },
+  {
+    "objectID": "teaching/resources/index.html",
+    "href": "teaching/resources/index.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Lecture notes\nPractice exercises\nReading lists\n\n\n\n\n\nRecommended software\nOnline platforms\nUseful websites"
+  },
+  {
+    "objectID": "teaching/resources/index.html#student-resources",
+    "href": "teaching/resources/index.html#student-resources",
+    "title": "Resources",
+    "section": "",
+    "text": "Lecture notes\nPractice exercises\nReading lists\n\n\n\n\n\nRecommended software\nOnline platforms\nUseful websites"
+  },
+  {
+    "objectID": "teaching/resources/index.html#teaching-resources",
+    "href": "teaching/resources/index.html#teaching-resources",
+    "title": "Resources",
+    "section": "Teaching Resources",
+    "text": "Teaching Resources\n\nPedagogy\n\nTeaching methods\nAssessment strategies\nClassroom management\n\n\n\nProfessional Development\n\nConferences\nWorkshops\nPublications"
+  },
+  {
+    "objectID": "teaching/index.html",
+    "href": "teaching/index.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "This section contains information about courses, teaching philosophy, and educational resources focused on AI in education.",
+    "crumbs": [
+      "Teaching"
+    ]
+  },
+  {
+    "objectID": "teaching/index.html#welcome-to-teaching",
+    "href": "teaching/index.html#welcome-to-teaching",
+    "title": "Teaching",
+    "section": "",
+    "text": "This section contains information about courses, teaching philosophy, and educational resources focused on AI in education.",
+    "crumbs": [
+      "Teaching"
+    ]
+  },
+  {
+    "objectID": "teaching/index.html#ai-in-education-courses",
+    "href": "teaching/index.html#ai-in-education-courses",
+    "title": "Teaching",
+    "section": "AI in Education Courses",
+    "text": "AI in Education Courses\n\n\nKI in der Lehre - Intermediate\n\nLevel: Intermediate | Format: Interactive Workshop | Duration: Half-day\n\nAn intermediate-level course exploring practical applications of artificial intelligence in educational settings. Learn how to integrate AI tools effectively into your teaching practice.\n\nHands-on AI tool exploration\nPractical implementation strategies\nInteractive exercises and examples\nReal-world case studies\n\nLaunch Intermediate Course →\n\n\nKI in der Lehre - Advanced\n\nLevel: Advanced | Format: Interactive Workshop | Duration: Half-day\n\nAdvanced concepts and implementations of AI technologies in modern educational environments. Deep dive into sophisticated AI applications and pedagogical frameworks.\n\nAdvanced AI integration techniques\nEthical considerations and best practices\nCustom AI workflow development\nAssessment and evaluation methods\n\nLaunch Advanced Course →\n\n\n\nTeaching Philosophy\nLearn about our approach to education and student engagement in the digital age.\n\n\nResources\nAccess helpful resources for students and fellow educators interested in AI applications in education.",
+    "crumbs": [
+      "Teaching"
+    ]
+  },
+  {
+    "objectID": "teaching/courses/index.html",
+    "href": "teaching/courses/index.html",
+    "title": "Courses",
+    "section": "",
+    "text": "Semester: Spring 2024 | Level: Graduate | Credits: 3\n\nAn advanced course exploring the integration of artificial intelligence technologies in educational systems, covering machine learning applications, personalized learning, and ethical considerations.\n\n\n\n\nSemester: Fall 2024 | Level: Undergraduate | Credits: 4\n\nIntroduction to designing effective digital learning experiences, including user experience principles, multimedia design, and assessment strategies for online environments."
+  },
+  {
+    "objectID": "teaching/courses/index.html#current-courses",
+    "href": "teaching/courses/index.html#current-courses",
+    "title": "Courses",
+    "section": "",
+    "text": "Semester: Spring 2024 | Level: Graduate | Credits: 3\n\nAn advanced course exploring the integration of artificial intelligence technologies in educational systems, covering machine learning applications, personalized learning, and ethical considerations.\n\n\n\n\nSemester: Fall 2024 | Level: Undergraduate | Credits: 4\n\nIntroduction to designing effective digital learning experiences, including user experience principles, multimedia design, and assessment strategies for online environments."
+  },
+  {
+    "objectID": "teaching/courses/index.html#past-courses",
+    "href": "teaching/courses/index.html#past-courses",
+    "title": "Courses",
+    "section": "Past Courses",
+    "text": "Past Courses\n\nEducational Technology Foundations\n\nSemester: Spring 2023 | Level: Graduate | Enrollment: 45 students\n\nFoundational course covering the history, theory, and practice of educational technology in modern learning environments.\n\n\nResearch Methods in Education\n\nSemester: Fall 2023 | Level: Graduate | Enrollment: 32 students\n\nComprehensive introduction to quantitative and qualitative research methodologies specifically applied to educational research contexts."
+  },
+  {
+    "objectID": "teaching/philosophy/index.html",
+    "href": "teaching/philosophy/index.html",
+    "title": "Teaching Philosophy",
+    "section": "",
+    "text": "Describe your fundamental beliefs about education and learning.\n\n\n\nExplain your methodology and techniques.\n\n\n\nHow you foster active learning and student participation.\n\n\n\nYour approach to evaluating student progress and providing feedback."
+  },
+  {
+    "objectID": "teaching/philosophy/index.html#my-teaching-philosophy",
+    "href": "teaching/philosophy/index.html#my-teaching-philosophy",
+    "title": "Teaching Philosophy",
+    "section": "",
+    "text": "Describe your fundamental beliefs about education and learning.\n\n\n\nExplain your methodology and techniques.\n\n\n\nHow you foster active learning and student participation.\n\n\n\nYour approach to evaluating student progress and providing feedback."
+  },
+  {
+    "objectID": "research/collaborations/index.html",
+    "href": "research/collaborations/index.html",
+    "title": "Collaborations",
+    "section": "",
+    "text": "Partners: [Names]\nProject: [Project name]\nDuration: [Time period]\nDescription of the collaborative research effort.\n\n\n\nPartners: [Names]\nFocus: [Research area]\nDuration: [Time period]\nDetails about another ongoing collaboration."
+  },
+  {
+    "objectID": "research/collaborations/index.html#current-collaborations",
+    "href": "research/collaborations/index.html#current-collaborations",
+    "title": "Collaborations",
+    "section": "",
+    "text": "Partners: [Names]\nProject: [Project name]\nDuration: [Time period]\nDescription of the collaborative research effort.\n\n\n\nPartners: [Names]\nFocus: [Research area]\nDuration: [Time period]\nDetails about another ongoing collaboration."
+  },
+  {
+    "objectID": "research/collaborations/index.html#past-collaborations",
+    "href": "research/collaborations/index.html#past-collaborations",
+    "title": "Collaborations",
+    "section": "Past Collaborations",
+    "text": "Past Collaborations\n\nPrevious Institution 1\nProject: [Completed project]\nDuration: [Past time period]\nOutcome: [Results/publications]\nSummary of a completed collaborative project."
+  },
+  {
+    "objectID": "research/collaborations/index.html#international-networks",
+    "href": "research/collaborations/index.html#international-networks",
+    "title": "Collaborations",
+    "section": "International Networks",
+    "text": "International Networks\n\nNetwork 1\nDescription of involvement in international research networks.\n\n\nProfessional Associations\n\nAssociation 1\nAssociation 2\nCommittee memberships"
+  },
+  {
+    "objectID": "research/projects/index.html",
+    "href": "research/projects/index.html",
+    "title": "Research Projects",
+    "section": "",
+    "text": "Duration: 2024-2025 | Funding: [Funding source] | Collaborators: [Names]\n\nBrief description of the project objectives and methodology. This research explores innovative approaches to educational technology and its impact on learning outcomes.\n\n\n\n\nDuration: 2023-2024 | Status: Ongoing\n\nDescription of another current research project focused on artificial intelligence applications in educational contexts."
+  },
+  {
+    "objectID": "research/projects/index.html#current-projects",
+    "href": "research/projects/index.html#current-projects",
+    "title": "Research Projects",
+    "section": "",
+    "text": "Duration: 2024-2025 | Funding: [Funding source] | Collaborators: [Names]\n\nBrief description of the project objectives and methodology. This research explores innovative approaches to educational technology and its impact on learning outcomes.\n\n\n\n\nDuration: 2023-2024 | Status: Ongoing\n\nDescription of another current research project focused on artificial intelligence applications in educational contexts."
+  },
+  {
+    "objectID": "research/projects/index.html#completed-projects",
+    "href": "research/projects/index.html#completed-projects",
+    "title": "Research Projects",
+    "section": "Completed Projects",
+    "text": "Completed Projects\n\nPrevious Project 1\n\nDuration: 2022-2023 | Status: Completed\n\nSummary of a completed research project and its outcomes. This project resulted in significant insights into digital learning methodologies.\n\n\nPrevious Project 2\n\nDuration: 2021-2022 | Status: Published\n\nDescription of another completed project that led to several peer-reviewed publications in educational technology journals."
+  },
+  {
+    "objectID": "about/andrew-ellis/index.html",
+    "href": "about/andrew-ellis/index.html",
+    "title": "Dr. Andrew Ellis",
+    "section": "",
+    "text": "Dr. Andrew Ellis is a researcher at the Virtual Academy of the Bern University of Applied Sciences. His research focuses on how artificial intelligence can be used effectively in educational systems."
+  },
+  {
+    "objectID": "about/andrew-ellis/index.html#about",
+    "href": "about/andrew-ellis/index.html#about",
+    "title": "Dr. Andrew Ellis",
+    "section": "",
+    "text": "Dr. Andrew Ellis is a researcher at the Virtual Academy of the Bern University of Applied Sciences. His research focuses on how artificial intelligence can be used effectively in educational systems."
+  },
+  {
+    "objectID": "about/andrew-ellis/index.html#research-interests",
+    "href": "about/andrew-ellis/index.html#research-interests",
+    "title": "Dr. Andrew Ellis",
+    "section": "Research Interests",
+    "text": "Research Interests\n\nArtificial Intelligence in Education\nEducational Technology\nLearning Analytics\nAdaptive Learning Systems\nHuman-Computer Interaction in Educational Contexts"
+  },
+  {
+    "objectID": "about/andrew-ellis/index.html#background",
+    "href": "about/andrew-ellis/index.html#background",
+    "title": "Dr. Andrew Ellis",
+    "section": "Background",
+    "text": "Background\nDr. Ellis brings extensive experience in educational technology research, with a particular focus on the practical implementation of AI tools in learning environments. His work bridges the gap between theoretical AI research and real-world educational applications."
+  },
+  {
+    "objectID": "about/andrew-ellis/index.html#current-projects",
+    "href": "about/andrew-ellis/index.html#current-projects",
+    "title": "Dr. Andrew Ellis",
+    "section": "Current Projects",
+    "text": "Current Projects\n\nDevelopment of AI-powered learning assessment tools\nIntegration of machine learning algorithms in educational platforms\nResearch on personalized learning pathways using AI\nCollaboration on innovative teaching methodologies"
+  },
+  {
+    "objectID": "about/andrew-ellis/index.html#publications",
+    "href": "about/andrew-ellis/index.html#publications",
+    "title": "Dr. Andrew Ellis",
+    "section": "Publications",
+    "text": "Publications\nPublications and research outputs will be updated regularly."
+  },
+  {
+    "objectID": "about/andrew-ellis/index.html#contact",
+    "href": "about/andrew-ellis/index.html#contact",
+    "title": "Dr. Andrew Ellis",
+    "section": "Contact",
+    "text": "Contact\nFor research collaborations, inquiries, or more information about ongoing projects, please reach out via email."
+  },
+  {
+    "objectID": "about/stefan-hackstein/index.html",
+    "href": "about/stefan-hackstein/index.html",
+    "title": "Dr. Stefan Hackstein",
+    "section": "",
+    "text": "Dr. Stefan Hackstein is a researcher at the Virtual Academy of the Bern University of Applied Sciences. His research focuses on how artificial intelligence can be used effectively in educational systems."
+  },
+  {
+    "objectID": "about/stefan-hackstein/index.html#about",
+    "href": "about/stefan-hackstein/index.html#about",
+    "title": "Dr. Stefan Hackstein",
+    "section": "",
+    "text": "Dr. Stefan Hackstein is a researcher at the Virtual Academy of the Bern University of Applied Sciences. His research focuses on how artificial intelligence can be used effectively in educational systems."
+  },
+  {
+    "objectID": "about/stefan-hackstein/index.html#research-interests",
+    "href": "about/stefan-hackstein/index.html#research-interests",
+    "title": "Dr. Stefan Hackstein",
+    "section": "Research Interests",
+    "text": "Research Interests\n\nArtificial Intelligence in Education\nMachine Learning Applications\nEducational Data Mining\nIntelligent Tutoring Systems\nTechnology-Enhanced Learning"
+  },
+  {
+    "objectID": "about/stefan-hackstein/index.html#background",
+    "href": "about/stefan-hackstein/index.html#background",
+    "title": "Dr. Stefan Hackstein",
+    "section": "Background",
+    "text": "Background\nDr. Hackstein specializes in the development and evaluation of AI-driven educational technologies. His work focuses on creating intelligent systems that can adapt to individual learning needs and provide personalized educational experiences."
+  },
+  {
+    "objectID": "about/stefan-hackstein/index.html#current-projects",
+    "href": "about/stefan-hackstein/index.html#current-projects",
+    "title": "Dr. Stefan Hackstein",
+    "section": "Current Projects",
+    "text": "Current Projects\n\nDesign of adaptive learning algorithms\nDevelopment of intelligent educational content systems\nResearch on AI-powered student assessment methods\nInvestigation of machine learning techniques for educational analytics"
+  },
+  {
+    "objectID": "about/stefan-hackstein/index.html#publications",
+    "href": "about/stefan-hackstein/index.html#publications",
+    "title": "Dr. Stefan Hackstein",
+    "section": "Publications",
+    "text": "Publications\nPublications and research outputs will be updated regularly."
+  },
+  {
+    "objectID": "about/stefan-hackstein/index.html#contact",
+    "href": "about/stefan-hackstein/index.html#contact",
+    "title": "Dr. Stefan Hackstein",
+    "section": "Contact",
+    "text": "Contact\nFor research collaborations, inquiries, or more information about ongoing projects, please reach out via email."
+  },
+  {
+    "objectID": "posts/r-code/index.html",
+    "href": "posts/r-code/index.html",
+    "title": "Mastering Tidy R: Data Visualization with tidyverse and ggplot2",
+    "section": "",
+    "text": "This post demonstrates how to use tidy R code principles with the tidyverse ecosystem to create compelling data visualizations using ggplot2. We’ll explore data manipulation techniques and build publication-ready plots step by step."
+  },
+  {
+    "objectID": "posts/r-code/index.html#the-tidy-data-philosophy",
+    "href": "posts/r-code/index.html#the-tidy-data-philosophy",
+    "title": "Mastering Tidy R: Data Visualization with tidyverse and ggplot2",
+    "section": "The Tidy Data Philosophy",
+    "text": "The Tidy Data Philosophy\nThe tidyverse is built around the concept of tidy data, where:\n\nEach variable forms a column\nEach observation forms a row\n\nEach value has its own cell\n\nThis structure makes data analysis more intuitive and code more readable."
+  },
+  {
+    "objectID": "posts/r-code/index.html#setup-and-data-preparation",
+    "href": "posts/r-code/index.html#setup-and-data-preparation",
+    "title": "Mastering Tidy R: Data Visualization with tidyverse and ggplot2",
+    "section": "Setup and Data Preparation",
+    "text": "Setup and Data Preparation\nFirst, we load the necessary libraries and create some example data to demonstrate key concepts:\n\nShow the code# Load the tidyverse (includes dplyr, ggplot2, tidyr, readr, and more)\nlibrary(tidyverse)\nlibrary(scales)\n\n# Set a custom theme for our plots\ntheme_set(theme_minimal(base_size = 12))\n\n# Create example dataset: Student performance across different subjects and semesters\nset.seed(123)\nstudent_data &lt;- tibble(\n  student_id = rep(1:100, each = 6),\n  semester = rep(c(\"Fall 2023\", \"Spring 2024\", \"Fall 2024\"), times = 200),\n  subject = rep(c(\"Mathematics\", \"Science\"), times = 300),\n  score = round(rnorm(600, mean = 78, sd = 12), 1),\n  study_hours = round(runif(600, min = 5, max = 25), 1),\n  attendance = round(runif(600, min = 75, max = 100), 1)\n) |&gt;\n  # Add some realistic constraints\n  mutate(\n    score = pmax(0, pmin(100, score)),\n    # Students who study more tend to score higher\n    score = score + (study_hours - mean(study_hours)) * 0.8,\n    # Better attendance correlates with better scores\n    score = score + (attendance - mean(attendance)) * 0.3,\n    score = round(pmax(0, pmin(100, score)), 1)\n  )\n\n# Display the structure of our data\nglimpse(student_data)\n\nRows: 600\nColumns: 6\n$ student_id  &lt;int&gt; 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4…\n$ semester    &lt;chr&gt; \"Fall 2023\", \"Spring 2024\", \"Fall 2024\", \"Fall 2023\", \"Spr…\n$ subject     &lt;chr&gt; \"Mathematics\", \"Science\", \"Mathematics\", \"Science\", \"Mathe…\n$ score       &lt;dbl&gt; 74.5, 83.9, 94.4, 83.6, 80.2, 100.0, 79.9, 58.0, 77.0, 73.…\n$ study_hours &lt;dbl&gt; 22.2, 22.7, 14.8, 19.4, 14.7, 24.8, 6.3, 8.2, 20.7, 15.8, …\n$ attendance  &lt;dbl&gt; 78.9, 96.1, 80.4, 91.7, 90.4, 76.2, 98.7, 89.6, 96.5, 88.0…"
+  },
+  {
+    "objectID": "posts/r-code/index.html#data-exploration-with-dplyr",
+    "href": "posts/r-code/index.html#data-exploration-with-dplyr",
+    "title": "Mastering Tidy R: Data Visualization with tidyverse and ggplot2",
+    "section": "Data Exploration with dplyr",
+    "text": "Data Exploration with dplyr\nLet’s explore our data using tidy data manipulation techniques:\n\nShow the code# Calculate summary statistics by subject and semester\nsummary_stats &lt;- student_data |&gt;\n  group_by(subject, semester) |&gt;\n  summarise(\n    n_students = n_distinct(student_id),\n    avg_score = mean(score, na.rm = TRUE),\n    median_score = median(score, na.rm = TRUE),\n    sd_score = sd(score, na.rm = TRUE),\n    avg_study_hours = mean(study_hours, na.rm = TRUE),\n    avg_attendance = mean(attendance, na.rm = TRUE),\n    .groups = \"drop\"\n  ) |&gt;\n  arrange(subject, semester)\n\n# Display the summary\nsummary_stats |&gt;\n  knitr::kable(digits = 2, caption = \"Summary Statistics by Subject and Semester\")\n\n\nSummary Statistics by Subject and Semester\n\n\n\n\n\n\n\n\n\n\n\nsubject\nsemester\nn_students\navg_score\nmedian_score\nsd_score\navg_study_hours\navg_attendance\n\n\n\nMathematics\nFall 2023\n100\n78.82\n79.00\n11.08\n14.75\n87.96\n\n\nMathematics\nFall 2024\n100\n79.59\n80.70\n13.19\n15.70\n86.86\n\n\nMathematics\nSpring 2024\n100\n78.29\n80.20\n12.32\n14.96\n87.64\n\n\nScience\nFall 2023\n100\n75.90\n76.70\n12.02\n14.28\n87.61\n\n\nScience\nFall 2024\n100\n77.69\n77.95\n13.27\n14.87\n87.17\n\n\nScience\nSpring 2024\n100\n77.23\n77.30\n11.29\n15.91\n87.07"
+  },
+  {
+    "objectID": "posts/r-code/index.html#creating-effective-visualizations",
+    "href": "posts/r-code/index.html#creating-effective-visualizations",
+    "title": "Mastering Tidy R: Data Visualization with tidyverse and ggplot2",
+    "section": "Creating Effective Visualizations",
+    "text": "Creating Effective Visualizations\n1. Distribution of Scores by Subject\n\nShow the code# Create a violin plot with box plots overlay\np1 &lt;- student_data |&gt;\n  ggplot(aes(x = subject, y = score, fill = subject)) +\n  geom_violin(alpha = 0.7, trim = FALSE) +\n  geom_boxplot(width = 0.2, fill = \"white\", alpha = 0.8) +\n  scale_fill_viridis_d(option = \"plasma\", begin = 0.3, end = 0.8) +\n  labs(\n    title = \"Distribution of Student Scores by Subject\",\n    subtitle = \"Violin plots show the full distribution shape with box plots for summary statistics\",\n    x = \"Subject\",\n    y = \"Score (%)\",\n    caption = \"Data: Simulated student performance data\"\n  ) +\n  theme(\n    legend.position = \"none\",\n    plot.title = element_text(size = 16, face = \"bold\"),\n    plot.subtitle = element_text(size = 12, color = \"grey40\"),\n    panel.grid.minor = element_blank()\n  )\n\nprint(p1)\n\n\n\n\n\n\n\n2. Trend Analysis Across Semesters\n\nShow the code# Calculate means and confidence intervals for trend analysis\ntrend_data &lt;- student_data |&gt;\n  group_by(subject, semester) |&gt;\n  summarise(\n    mean_score = mean(score),\n    se = sd(score) / sqrt(n()),\n    ci_lower = mean_score - 1.96 * se,\n    ci_upper = mean_score + 1.96 * se,\n    .groups = \"drop\"\n  ) |&gt;\n  mutate(semester = factor(semester, levels = c(\"Fall 2023\", \"Spring 2024\", \"Fall 2024\")))\n\np2 &lt;- trend_data |&gt;\n  ggplot(aes(x = semester, y = mean_score, color = subject, group = subject)) +\n  geom_ribbon(aes(ymin = ci_lower, ymax = ci_upper, fill = subject), \n              alpha = 0.2, color = NA) +\n  geom_line(size = 1.2) +\n  geom_point(size = 3) +\n  scale_color_viridis_d(option = \"plasma\", begin = 0.3, end = 0.8) +\n  scale_fill_viridis_d(option = \"plasma\", begin = 0.3, end = 0.8) +\n  labs(\n    title = \"Student Performance Trends Across Semesters\",\n    subtitle = \"Mean scores with 95% confidence intervals\",\n    x = \"Semester\",\n    y = \"Average Score (%)\",\n    color = \"Subject\",\n    fill = \"Subject\",\n    caption = \"Shaded areas represent 95% confidence intervals\"\n  ) +\n  theme(\n    plot.title = element_text(size = 16, face = \"bold\"),\n    plot.subtitle = element_text(size = 12, color = \"grey40\"),\n    legend.position = \"bottom\",\n    panel.grid.minor = element_blank(),\n    axis.text.x = element_text(angle = 45, hjust = 1)\n  )\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\nShow the codeprint(p2)\n\n\n\n\n\n\n\n3. Relationship Between Study Time and Performance\n\nShow the code# Create a sophisticated scatter plot with trend lines\np3 &lt;- student_data |&gt;\n  ggplot(aes(x = study_hours, y = score)) +\n  geom_point(aes(color = subject, alpha = attendance), size = 2) +\n  geom_smooth(aes(color = subject), method = \"lm\", se = TRUE, size = 1.2) +\n  scale_color_viridis_d(option = \"plasma\", begin = 0.3, end = 0.8) +\n  scale_alpha_continuous(range = c(0.3, 0.8), name = \"Attendance %\") +\n  labs(\n    title = \"Relationship Between Study Hours and Academic Performance\",\n    subtitle = \"Point transparency indicates attendance rate\",\n    x = \"Weekly Study Hours\",\n    y = \"Score (%)\",\n    color = \"Subject\",\n    caption = \"Linear trend lines with 95% confidence intervals\"\n  ) +\n  facet_wrap(~semester, ncol = 3) +\n  theme(\n    plot.title = element_text(size = 16, face = \"bold\"),\n    plot.subtitle = element_text(size = 12, color = \"grey40\"),\n    legend.position = \"bottom\",\n    panel.grid.minor = element_blank(),\n    strip.text = element_text(size = 12, face = \"bold\")\n  )\n\nprint(p3)\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n4. Advanced: Heat Map of Performance Patterns\n\nShow the code# Create performance bins and calculate percentages\nheatmap_data &lt;- student_data |&gt;\n  mutate(\n    study_bins = cut(study_hours, \n                     breaks = c(0, 10, 15, 20, 25),\n                     labels = c(\"Low (5-10h)\", \"Medium (10-15h)\", \n                               \"High (15-20h)\", \"Very High (20-25h)\"),\n                     include.lowest = TRUE),\n    score_grade = case_when(\n      score &gt;= 90 ~ \"A (90-100)\",\n      score &gt;= 80 ~ \"B (80-89)\",\n      score &gt;= 70 ~ \"C (70-79)\",\n      score &gt;= 60 ~ \"D (60-69)\",\n      TRUE ~ \"F (&lt;60)\"\n    )\n  ) |&gt;\n  count(study_bins, score_grade, subject) |&gt;\n  group_by(study_bins, subject) |&gt;\n  mutate(percentage = n / sum(n) * 100) |&gt;\n  ungroup()\n\np4 &lt;- heatmap_data |&gt;\n  ggplot(aes(x = study_bins, y = score_grade, fill = percentage)) +\n  geom_tile(color = \"white\", size = 0.5) +\n  geom_text(aes(label = paste0(round(percentage, 1), \"%\")), \n            color = \"white\", fontface = \"bold\", size = 3) +\n  scale_fill_viridis_c(option = \"plasma\", name = \"Percentage\\nof Students\") +\n  labs(\n    title = \"Grade Distribution by Study Time Investment\",\n    subtitle = \"Percentage of students achieving each grade level by study hours\",\n    x = \"Weekly Study Hours\",\n    y = \"Grade Level\",\n    caption = \"Higher study hours clearly correlate with better grades\"\n  ) +\n  facet_wrap(~subject) +\n  theme(\n    plot.title = element_text(size = 16, face = \"bold\"),\n    plot.subtitle = element_text(size = 12, color = \"grey40\"),\n    axis.text.x = element_text(angle = 45, hjust = 1),\n    panel.grid = element_blank(),\n    strip.text = element_text(size = 12, face = \"bold\")\n  )\n\nprint(p4)"
+  },
+  {
+    "objectID": "posts/r-code/index.html#tidy-code-best-practices-demonstrated",
+    "href": "posts/r-code/index.html#tidy-code-best-practices-demonstrated",
+    "title": "Mastering Tidy R: Data Visualization with tidyverse and ggplot2",
+    "section": "Tidy Code Best Practices Demonstrated",
+    "text": "Tidy Code Best Practices Demonstrated\nThroughout this analysis, we’ve followed key tidy R principles:\n1. Pipe Operator (|&gt;) for Readable Code Flow\n\nShow the code# Instead of nested functions:\n# plot(summary(filter(data, condition)))\n\n# Use pipes for clarity:\ndata |&gt;\n  filter(condition) |&gt;\n  summary() |&gt;\n  plot()\n\n\n2. Consistent Grammar of Graphics\n\n\nData (data =)\nAesthetics (aes())\nGeometries (geom_*())\nScales (scale_*())\nThemes (theme())\n3. Meaningful Variable Names and Grouping\n\n\nShow the code# Group operations clearly\nstudent_data |&gt;\n  group_by(subject, semester) |&gt;\n  summarise(avg_score = mean(score)) |&gt;\n  ungroup()\n\n\n4. Functional Approach with Consistent Styling\n\n\nUse snake_case for variable names\nKeep line length reasonable\nAdd meaningful labels and captions\nUse consistent color schemes"
+  },
+  {
+    "objectID": "posts/r-code/index.html#key-takeaways",
+    "href": "posts/r-code/index.html#key-takeaways",
+    "title": "Mastering Tidy R: Data Visualization with tidyverse and ggplot2",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\n\nTidy data structure makes analysis intuitive and code readable\n\ndplyr verbs (filter, mutate, summarise, group_by) provide powerful data manipulation\n\nggplot2’s grammar of graphics enables building complex visualizations systematically\n\nConsistent styling and theming makes plots publication-ready\n\nPipe operator creates readable analysis workflows\n\nThe tidyverse ecosystem provides a coherent framework for data science that emphasizes code readability, reproducibility, and elegant solutions to common data challenges."
   }
 ]
