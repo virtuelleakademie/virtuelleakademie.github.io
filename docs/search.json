@@ -260,7 +260,7 @@
     "href": "index.html",
     "title": "Virtuelle Akademie",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nHigh-Performance Data Science with Julia and Tidier.jl\n\n\n\nJulia\n\nTidier.jl\n\ndata manipulation\n\nperformance\n\ntutorial\n\n\n\n\n\n\n\n\n\nJun 7, 2025\n\n\nAndrew Ellis\n\n\n\n\n\n\n\n\n\n\n\n\nLightning-Fast Data Analysis: Polars and plotnine for Modern Python\n\n\n\nPython\n\nPolars\n\nplotnine\n\ndata manipulation\n\nvisualization\n\nperformance\n\ntutorial\n\n\n\n\n\n\n\n\n\nJun 6, 2025\n\n\nAndrew Ellis\n\n\n\n\n\n\n\n\n\n\n\n\nMastering Tidy R: Data Visualization with tidyverse and ggplot2\n\n\n\nR\n\nggplot2\n\ntidyverse\n\ndata visualization\n\ntutorial\n\n\n\n\n\n\n\n\n\nJun 5, 2025\n\n\nAndrew Ellis\n\n\n\n\n\nNo matching items\n Back to top"
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nHigh-Performance Data Science with Julia and Tidier.jl\n\n\n\nJulia\n\nTidier.jl\n\ndata manipulation\n\nperformance\n\ntutorial\n\n\n\n\n\n\n\n\n\nJun 7, 2025\n\n\nAndrew Ellis\n\n\n\n\n\n\n\n\n\n\n\n\nLightning-Fast Data Analysis: Polars and plotnine for Modern Python\n\n\n\nPython\n\nPolars\n\nplotnine\n\ndata manipulation\n\nvisualization\n\nperformance\n\ntutorial\n\n\n\n\n\n\n\n\n\nJun 6, 2025\n\n\nAndrew Ellis\n\n\n\n\n\n\n\n\n\n\n\n\nMastering Tidy R: Data Visualization with tidyverse and ggplot2\n\n\n\nR\n\nggplot2\n\ntidyverse\n\ndata visualization\n\ntutorial\n\n\n\n\n\n\n\n\n\nJun 5, 2025\n\n\nAndrew Ellis\n\n\n\n\n\n\n\n\n\n\n\n\nInteractive Data Visualization with Observable JavaScript\n\n\n\nObservable\n\nJavaScript\n\nD3.js\n\ndata visualization\n\ninteractive\n\ntutorial\n\n\n\n\n\n\n\n\n\nJun 4, 2025\n\n\nStefan Hackstein\n\n\n\n\n\nNo matching items\n Back to top"
   },
   {
     "objectID": "research/collaborations/index.html",
@@ -351,7 +351,7 @@
     "href": "workshops/index.html",
     "title": "Workshops",
     "section": "",
-    "text": "Back to top",
+    "text": "Format: Interactive Workshop | Language: German\n\nHow can mental effort be reconciled with the use of AI in schools? We examine the fundamental relationship between AI systems and human thinking, considering research on the distinction between merely completing tasks and genuine cognitive engagement. Drawing from cognitive psychology, we develop pedagogical strategies that support rather than weaken student development.\n\nExplores cognitive load and AI interaction\nResearch-based pedagogical approaches\nBalancing efficiency with learning depth\nPractical strategies for educators\n\nExplore Workshop →",
     "crumbs": [
       "Workshops"
     ]
@@ -516,5 +516,15 @@
     "title": "Lightning-Fast Data Analysis: Polars and plotnine for Modern Python",
     "section": "Conclusion",
     "text": "Conclusion\nPolars and plotnine together offer a compelling alternative to the traditional pandas + matplotlib ecosystem:\n\nPolars delivers exceptional performance for data manipulation with an intuitive API\nplotnine provides the grammar of graphics for systematic visualization\nTogether they enable fast, elegant, and reproducible data science workflows\n\nFor educational data analysis, this combination is particularly powerful, allowing researchers to: - Process large institutional datasets efficiently - Create publication-quality visualizations - Build reproducible analytical pipelines\n- Scale analyses as data grows\nThe investment in learning these tools pays dividends in both performance and code clarity, making them excellent choices for modern Python data science."
+  },
+  {
+    "objectID": "workshops/index.html#current-workshops",
+    "href": "workshops/index.html#current-workshops",
+    "title": "Workshops",
+    "section": "",
+    "text": "Format: Interactive Workshop | Language: German\n\nHow can mental effort be reconciled with the use of AI in schools? We examine the fundamental relationship between AI systems and human thinking, considering research on the distinction between merely completing tasks and genuine cognitive engagement. Drawing from cognitive psychology, we develop pedagogical strategies that support rather than weaken student development.\n\nExplores cognitive load and AI interaction\nResearch-based pedagogical approaches\nBalancing efficiency with learning depth\nPractical strategies for educators\n\nExplore Workshop →",
+    "crumbs": [
+      "Workshops"
+    ]
   }
 ]
