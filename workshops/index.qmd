@@ -2,3 +2,26 @@
 title: "Workshops"
 page-layout: full
 ---
+
+## Current Workshops
+
+::: {.content-grid}
+
+::: {.feature-card}
+### [Thinking Instead of Delegating: Cognitive Processing for Learning with AI Assistants](https://virtuelleakademie.github.io/denken-statt-delegieren/)
+
+::: {.meta}
+**Format:** Interactive Workshop | **Language:** German
+:::
+
+How can mental effort be reconciled with the use of AI in schools? We examine the fundamental relationship between AI systems and human thinking, considering research on the distinction between merely completing tasks and genuine cognitive engagement. Drawing from cognitive psychology, we develop pedagogical strategies that support rather than weaken student development.
+
+- Explores cognitive load and AI interaction
+- Research-based pedagogical approaches
+- Balancing efficiency with learning depth
+- Practical strategies for educators
+
+[**Explore Workshop →**](https://virtuelleakademie.github.io/denken-statt-delegieren/){.btn .btn-primary target="_blank"}
+:::
+
+:::
