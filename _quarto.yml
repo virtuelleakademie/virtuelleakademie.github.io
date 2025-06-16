@@ -3,10 +3,11 @@ project:
   output-dir: docs
   render: 
     - index.qmd
-    - teaching/**/*.qmd
     - research/**/*.qmd
     - teaching/**/*.ipynb
     - research/**/*.ipynb
+    - teaching/**/*.qmd
+    - workshops/**/*.qmd
     - about/**/*.qmd
     - posts/**/*.qmd
 
@@ -29,10 +30,12 @@ website:
 
   navbar:
     left:
-      - text: "Teaching"
-        href: teaching/
       - text: "Research"
         href: research/
+      - text: "Teaching"
+        href: teaching/
+      - text: "Workshops"
+        href: workshops/
 
     right:
       - text: "About"
@@ -48,16 +51,6 @@ website:
         target: _blank
 
   sidebar:
-    - title: "Teaching"
-      href: teaching/
-      contents:
-        - teaching/index.qmd
-        - text: "Courses"
-          href: teaching/courses/
-        - text: "Resources"
-          href: teaching/resources/
-        - text: "Philosophy"
-          href: teaching/philosophy/
     - title: "Research"
       href: research/
       contents:
@@ -68,6 +61,20 @@ website:
           href: research/publications/
         - text: "Collaborations"
           href: research/collaborations/
+    - title: "Teaching"
+      href: teaching/
+      contents:
+        - teaching/index.qmd
+        - text: "Courses"
+          href: teaching/courses/
+        - text: "Resources"
+          href: teaching/resources/
+        - text: "Philosophy"
+          href: teaching/philosophy/
+    - title: "Workshops"
+      href: workshops/
+      contents:
+        - workshops/index.qmd
 
 page-footer:
   left: "© 2025 Virtuelle Akademie"
