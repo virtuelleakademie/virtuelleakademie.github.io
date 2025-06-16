@@ -103,10 +103,8 @@ h3 {
   position: relative;
 }
 
-// Enhanced red square accent for main nav items
-.navbar-nav .nav-link[href*="teaching/"]::before,
-.navbar-nav .nav-link[href*="research/"]::before,
-.navbar-nav .nav-link[href*="about/"]::before {
+// Red square accent for all nav items
+.navbar-nav .nav-link::before {
   content: '';
   position: absolute;
   left: -1rem;
