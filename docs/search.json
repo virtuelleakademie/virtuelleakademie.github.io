@@ -147,95 +147,25 @@
     "text": "Contact\nFor research collaborations, inquiries, or more information about ongoing projects, please reach out via email."
   },
   {
-    "objectID": "research/projects/index.html",
-    "href": "research/projects/index.html",
-    "title": "Research Projects",
+    "objectID": "teaching/resources/index.html",
+    "href": "teaching/resources/index.html",
+    "title": "Resources",
     "section": "",
-    "text": "Duration: 2024-2025 | Funding: [Funding source] | Collaborators: [Names]\n\nBrief description of the project objectives and methodology. This research explores innovative approaches to educational technology and its impact on learning outcomes.\n\n\n\n\nDuration: 2023-2024 | Status: Ongoing\n\nDescription of another current research project focused on artificial intelligence applications in educational contexts."
+    "text": "Lecture notes\nPractice exercises\nReading lists\n\n\n\n\n\nRecommended software\nOnline platforms\nUseful websites"
   },
   {
-    "objectID": "research/projects/index.html#current-projects",
-    "href": "research/projects/index.html#current-projects",
-    "title": "Research Projects",
+    "objectID": "teaching/resources/index.html#student-resources",
+    "href": "teaching/resources/index.html#student-resources",
+    "title": "Resources",
     "section": "",
-    "text": "Duration: 2024-2025 | Funding: [Funding source] | Collaborators: [Names]\n\nBrief description of the project objectives and methodology. This research explores innovative approaches to educational technology and its impact on learning outcomes.\n\n\n\n\nDuration: 2023-2024 | Status: Ongoing\n\nDescription of another current research project focused on artificial intelligence applications in educational contexts."
+    "text": "Lecture notes\nPractice exercises\nReading lists\n\n\n\n\n\nRecommended software\nOnline platforms\nUseful websites"
   },
   {
-    "objectID": "research/projects/index.html#completed-projects",
-    "href": "research/projects/index.html#completed-projects",
-    "title": "Research Projects",
-    "section": "Completed Projects",
-    "text": "Completed Projects\n\nPrevious Project 1\n\nDuration: 2022-2023 | Status: Completed\n\nSummary of a completed research project and its outcomes. This project resulted in significant insights into digital learning methodologies.\n\n\nPrevious Project 2\n\nDuration: 2021-2022 | Status: Published\n\nDescription of another completed project that led to several peer-reviewed publications in educational technology journals."
-  },
-  {
-    "objectID": "research/collaborations/index.html",
-    "href": "research/collaborations/index.html",
-    "title": "Collaborations",
-    "section": "",
-    "text": "Partners: [Names]\nProject: [Project name]\nDuration: [Time period]\nDescription of the collaborative research effort.\n\n\n\nPartners: [Names]\nFocus: [Research area]\nDuration: [Time period]\nDetails about another ongoing collaboration."
-  },
-  {
-    "objectID": "research/collaborations/index.html#current-collaborations",
-    "href": "research/collaborations/index.html#current-collaborations",
-    "title": "Collaborations",
-    "section": "",
-    "text": "Partners: [Names]\nProject: [Project name]\nDuration: [Time period]\nDescription of the collaborative research effort.\n\n\n\nPartners: [Names]\nFocus: [Research area]\nDuration: [Time period]\nDetails about another ongoing collaboration."
-  },
-  {
-    "objectID": "research/collaborations/index.html#past-collaborations",
-    "href": "research/collaborations/index.html#past-collaborations",
-    "title": "Collaborations",
-    "section": "Past Collaborations",
-    "text": "Past Collaborations\n\nPrevious Institution 1\nProject: [Completed project]\nDuration: [Past time period]\nOutcome: [Results/publications]\nSummary of a completed collaborative project."
-  },
-  {
-    "objectID": "research/collaborations/index.html#international-networks",
-    "href": "research/collaborations/index.html#international-networks",
-    "title": "Collaborations",
-    "section": "International Networks",
-    "text": "International Networks\n\nNetwork 1\nDescription of involvement in international research networks.\n\n\nProfessional Associations\n\nAssociation 1\nAssociation 2\nCommittee memberships"
-  },
-  {
-    "objectID": "teaching/philosophy/index.html",
-    "href": "teaching/philosophy/index.html",
-    "title": "Teaching Philosophy",
-    "section": "",
-    "text": "Describe your fundamental beliefs about education and learning.\n\n\n\nExplain your methodology and techniques.\n\n\n\nHow you foster active learning and student participation.\n\n\n\nYour approach to evaluating student progress and providing feedback."
-  },
-  {
-    "objectID": "teaching/philosophy/index.html#my-teaching-philosophy",
-    "href": "teaching/philosophy/index.html#my-teaching-philosophy",
-    "title": "Teaching Philosophy",
-    "section": "",
-    "text": "Describe your fundamental beliefs about education and learning.\n\n\n\nExplain your methodology and techniques.\n\n\n\nHow you foster active learning and student participation.\n\n\n\nYour approach to evaluating student progress and providing feedback."
-  },
-  {
-    "objectID": "teaching/courses/index.html",
-    "href": "teaching/courses/index.html",
-    "title": "Courses",
-    "section": "",
-    "text": "Semester: Spring 2024 | Level: Graduate | Credits: 3\n\nAn advanced course exploring the integration of artificial intelligence technologies in educational systems, covering machine learning applications, personalized learning, and ethical considerations.\n\n\n\n\nSemester: Fall 2024 | Level: Undergraduate | Credits: 4\n\nIntroduction to designing effective digital learning experiences, including user experience principles, multimedia design, and assessment strategies for online environments."
-  },
-  {
-    "objectID": "teaching/courses/index.html#current-courses",
-    "href": "teaching/courses/index.html#current-courses",
-    "title": "Courses",
-    "section": "",
-    "text": "Semester: Spring 2024 | Level: Graduate | Credits: 3\n\nAn advanced course exploring the integration of artificial intelligence technologies in educational systems, covering machine learning applications, personalized learning, and ethical considerations.\n\n\n\n\nSemester: Fall 2024 | Level: Undergraduate | Credits: 4\n\nIntroduction to designing effective digital learning experiences, including user experience principles, multimedia design, and assessment strategies for online environments."
-  },
-  {
-    "objectID": "teaching/courses/index.html#past-courses",
-    "href": "teaching/courses/index.html#past-courses",
-    "title": "Courses",
-    "section": "Past Courses",
-    "text": "Past Courses\n\nEducational Technology Foundations\n\nSemester: Spring 2023 | Level: Graduate | Enrollment: 45 students\n\nFoundational course covering the history, theory, and practice of educational technology in modern learning environments.\n\n\nResearch Methods in Education\n\nSemester: Fall 2023 | Level: Graduate | Enrollment: 32 students\n\nComprehensive introduction to quantitative and qualitative research methodologies specifically applied to educational research contexts."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Virtuelle Akademie",
-    "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nHigh-Performance Data Science with Julia and Tidier.jl\n\n\n\nJulia\n\nTidier.jl\n\ndata manipulation\n\nperformance\n\ntutorial\n\n\n\n\n\n\n\n\n\nJun 7, 2025\n\n\nAndrew Ellis\n\n\n\n\n\n\n\n\n\n\n\n\nLightning-Fast Data Analysis: Polars and plotnine for Modern Python\n\n\n\nPython\n\nPolars\n\nplotnine\n\ndata manipulation\n\nvisualization\n\nperformance\n\ntutorial\n\n\n\n\n\n\n\n\n\nJun 6, 2025\n\n\nAndrew Ellis\n\n\n\n\n\n\n\n\n\n\n\n\nMastering Tidy R: Data Visualization with tidyverse and ggplot2\n\n\n\nR\n\nggplot2\n\ntidyverse\n\ndata visualization\n\ntutorial\n\n\n\n\n\n\n\n\n\nJun 5, 2025\n\n\nAndrew Ellis\n\n\n\n\n\nNo matching items\n Back to top"
+    "objectID": "teaching/resources/index.html#teaching-resources",
+    "href": "teaching/resources/index.html#teaching-resources",
+    "title": "Resources",
+    "section": "Teaching Resources",
+    "text": "Teaching Resources\n\nPedagogy\n\nTeaching methods\nAssessment strategies\nClassroom management\n\n\n\nProfessional Development\n\nConferences\nWorkshops\nPublications"
   },
   {
     "objectID": "teaching/index.html",
@@ -268,25 +198,32 @@
     ]
   },
   {
-    "objectID": "teaching/resources/index.html",
-    "href": "teaching/resources/index.html",
-    "title": "Resources",
+    "objectID": "research/publications/index.html",
+    "href": "research/publications/index.html",
+    "title": "Publications",
     "section": "",
-    "text": "Lecture notes\nPractice exercises\nReading lists\n\n\n\n\n\nRecommended software\nOnline platforms\nUseful websites"
+    "text": "Title of Paper 1 (2024)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]\nTitle of Paper 2 (2024)\nAnother Journal, Vol. A, Issue B, pp. C-C\n[DOI link] | [PDF]\n\n\n\nTitle of Paper 3 (2023)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]"
   },
   {
-    "objectID": "teaching/resources/index.html#student-resources",
-    "href": "teaching/resources/index.html#student-resources",
-    "title": "Resources",
+    "objectID": "research/publications/index.html#journal-articles",
+    "href": "research/publications/index.html#journal-articles",
+    "title": "Publications",
     "section": "",
-    "text": "Lecture notes\nPractice exercises\nReading lists\n\n\n\n\n\nRecommended software\nOnline platforms\nUseful websites"
+    "text": "Title of Paper 1 (2024)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]\nTitle of Paper 2 (2024)\nAnother Journal, Vol. A, Issue B, pp. C-C\n[DOI link] | [PDF]\n\n\n\nTitle of Paper 3 (2023)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]"
   },
   {
-    "objectID": "teaching/resources/index.html#teaching-resources",
-    "href": "teaching/resources/index.html#teaching-resources",
-    "title": "Resources",
-    "section": "Teaching Resources",
-    "text": "Teaching Resources\n\nPedagogy\n\nTeaching methods\nAssessment strategies\nClassroom management\n\n\n\nProfessional Development\n\nConferences\nWorkshops\nPublications"
+    "objectID": "research/publications/index.html#conference-proceedings",
+    "href": "research/publications/index.html#conference-proceedings",
+    "title": "Publications",
+    "section": "Conference Proceedings",
+    "text": "Conference Proceedings\n\n2024\nConference Paper Title (2024)\nConference Name, Location\n[Link] | [PDF]\n\n\n2023\nAnother Conference Paper (2023)\nAnother Conference, Location\n[Link] | [PDF]"
+  },
+  {
+    "objectID": "research/publications/index.html#book-chapters",
+    "href": "research/publications/index.html#book-chapters",
+    "title": "Publications",
+    "section": "Book Chapters",
+    "text": "Book Chapters\nChapter Title (2024)\nIn: Book Title, Editor Name (Ed.)\nPublisher, pp. X-Y\n[Link]"
   },
   {
     "objectID": "research/index.html",
@@ -319,32 +256,105 @@
     ]
   },
   {
-    "objectID": "research/publications/index.html",
-    "href": "research/publications/index.html",
-    "title": "Publications",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Virtuelle Akademie",
     "section": "",
-    "text": "Title of Paper 1 (2024)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]\nTitle of Paper 2 (2024)\nAnother Journal, Vol. A, Issue B, pp. C-C\n[DOI link] | [PDF]\n\n\n\nTitle of Paper 3 (2023)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]"
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nHigh-Performance Data Science with Julia and Tidier.jl\n\n\n\nJulia\n\nTidier.jl\n\ndata manipulation\n\nperformance\n\ntutorial\n\n\n\n\n\n\n\n\n\nJun 7, 2025\n\n\nAndrew Ellis\n\n\n\n\n\n\n\n\n\n\n\n\nLightning-Fast Data Analysis: Polars and plotnine for Modern Python\n\n\n\nPython\n\nPolars\n\nplotnine\n\ndata manipulation\n\nvisualization\n\nperformance\n\ntutorial\n\n\n\n\n\n\n\n\n\nJun 6, 2025\n\n\nAndrew Ellis\n\n\n\n\n\n\n\n\n\n\n\n\nMastering Tidy R: Data Visualization with tidyverse and ggplot2\n\n\n\nR\n\nggplot2\n\ntidyverse\n\ndata visualization\n\ntutorial\n\n\n\n\n\n\n\n\n\nJun 5, 2025\n\n\nAndrew Ellis\n\n\n\n\n\nNo matching items\n Back to top"
   },
   {
-    "objectID": "research/publications/index.html#journal-articles",
-    "href": "research/publications/index.html#journal-articles",
-    "title": "Publications",
+    "objectID": "research/collaborations/index.html",
+    "href": "research/collaborations/index.html",
+    "title": "Collaborations",
     "section": "",
-    "text": "Title of Paper 1 (2024)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]\nTitle of Paper 2 (2024)\nAnother Journal, Vol. A, Issue B, pp. C-C\n[DOI link] | [PDF]\n\n\n\nTitle of Paper 3 (2023)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]"
+    "text": "Partners: [Names]\nProject: [Project name]\nDuration: [Time period]\nDescription of the collaborative research effort.\n\n\n\nPartners: [Names]\nFocus: [Research area]\nDuration: [Time period]\nDetails about another ongoing collaboration."
   },
   {
-    "objectID": "research/publications/index.html#conference-proceedings",
-    "href": "research/publications/index.html#conference-proceedings",
-    "title": "Publications",
-    "section": "Conference Proceedings",
-    "text": "Conference Proceedings\n\n2024\nConference Paper Title (2024)\nConference Name, Location\n[Link] | [PDF]\n\n\n2023\nAnother Conference Paper (2023)\nAnother Conference, Location\n[Link] | [PDF]"
+    "objectID": "research/collaborations/index.html#current-collaborations",
+    "href": "research/collaborations/index.html#current-collaborations",
+    "title": "Collaborations",
+    "section": "",
+    "text": "Partners: [Names]\nProject: [Project name]\nDuration: [Time period]\nDescription of the collaborative research effort.\n\n\n\nPartners: [Names]\nFocus: [Research area]\nDuration: [Time period]\nDetails about another ongoing collaboration."
   },
   {
-    "objectID": "research/publications/index.html#book-chapters",
-    "href": "research/publications/index.html#book-chapters",
-    "title": "Publications",
-    "section": "Book Chapters",
-    "text": "Book Chapters\nChapter Title (2024)\nIn: Book Title, Editor Name (Ed.)\nPublisher, pp. X-Y\n[Link]"
+    "objectID": "research/collaborations/index.html#past-collaborations",
+    "href": "research/collaborations/index.html#past-collaborations",
+    "title": "Collaborations",
+    "section": "Past Collaborations",
+    "text": "Past Collaborations\n\nPrevious Institution 1\nProject: [Completed project]\nDuration: [Past time period]\nOutcome: [Results/publications]\nSummary of a completed collaborative project."
+  },
+  {
+    "objectID": "research/collaborations/index.html#international-networks",
+    "href": "research/collaborations/index.html#international-networks",
+    "title": "Collaborations",
+    "section": "International Networks",
+    "text": "International Networks\n\nNetwork 1\nDescription of involvement in international research networks.\n\n\nProfessional Associations\n\nAssociation 1\nAssociation 2\nCommittee memberships"
+  },
+  {
+    "objectID": "research/projects/index.html",
+    "href": "research/projects/index.html",
+    "title": "Research Projects",
+    "section": "",
+    "text": "Duration: 2024-2025 | Funding: [Funding source] | Collaborators: [Names]\n\nBrief description of the project objectives and methodology. This research explores innovative approaches to educational technology and its impact on learning outcomes.\n\n\n\n\nDuration: 2023-2024 | Status: Ongoing\n\nDescription of another current research project focused on artificial intelligence applications in educational contexts."
+  },
+  {
+    "objectID": "research/projects/index.html#current-projects",
+    "href": "research/projects/index.html#current-projects",
+    "title": "Research Projects",
+    "section": "",
+    "text": "Duration: 2024-2025 | Funding: [Funding source] | Collaborators: [Names]\n\nBrief description of the project objectives and methodology. This research explores innovative approaches to educational technology and its impact on learning outcomes.\n\n\n\n\nDuration: 2023-2024 | Status: Ongoing\n\nDescription of another current research project focused on artificial intelligence applications in educational contexts."
+  },
+  {
+    "objectID": "research/projects/index.html#completed-projects",
+    "href": "research/projects/index.html#completed-projects",
+    "title": "Research Projects",
+    "section": "Completed Projects",
+    "text": "Completed Projects\n\nPrevious Project 1\n\nDuration: 2022-2023 | Status: Completed\n\nSummary of a completed research project and its outcomes. This project resulted in significant insights into digital learning methodologies.\n\n\nPrevious Project 2\n\nDuration: 2021-2022 | Status: Published\n\nDescription of another completed project that led to several peer-reviewed publications in educational technology journals."
+  },
+  {
+    "objectID": "teaching/courses/index.html",
+    "href": "teaching/courses/index.html",
+    "title": "Courses",
+    "section": "",
+    "text": "Semester: Spring 2024 | Level: Graduate | Credits: 3\n\nAn advanced course exploring the integration of artificial intelligence technologies in educational systems, covering machine learning applications, personalized learning, and ethical considerations.\n\n\n\n\nSemester: Fall 2024 | Level: Undergraduate | Credits: 4\n\nIntroduction to designing effective digital learning experiences, including user experience principles, multimedia design, and assessment strategies for online environments."
+  },
+  {
+    "objectID": "teaching/courses/index.html#current-courses",
+    "href": "teaching/courses/index.html#current-courses",
+    "title": "Courses",
+    "section": "",
+    "text": "Semester: Spring 2024 | Level: Graduate | Credits: 3\n\nAn advanced course exploring the integration of artificial intelligence technologies in educational systems, covering machine learning applications, personalized learning, and ethical considerations.\n\n\n\n\nSemester: Fall 2024 | Level: Undergraduate | Credits: 4\n\nIntroduction to designing effective digital learning experiences, including user experience principles, multimedia design, and assessment strategies for online environments."
+  },
+  {
+    "objectID": "teaching/courses/index.html#past-courses",
+    "href": "teaching/courses/index.html#past-courses",
+    "title": "Courses",
+    "section": "Past Courses",
+    "text": "Past Courses\n\nEducational Technology Foundations\n\nSemester: Spring 2023 | Level: Graduate | Enrollment: 45 students\n\nFoundational course covering the history, theory, and practice of educational technology in modern learning environments.\n\n\nResearch Methods in Education\n\nSemester: Fall 2023 | Level: Graduate | Enrollment: 32 students\n\nComprehensive introduction to quantitative and qualitative research methodologies specifically applied to educational research contexts."
+  },
+  {
+    "objectID": "teaching/philosophy/index.html",
+    "href": "teaching/philosophy/index.html",
+    "title": "Teaching Philosophy",
+    "section": "",
+    "text": "Describe your fundamental beliefs about education and learning.\n\n\n\nExplain your methodology and techniques.\n\n\n\nHow you foster active learning and student participation.\n\n\n\nYour approach to evaluating student progress and providing feedback."
+  },
+  {
+    "objectID": "teaching/philosophy/index.html#my-teaching-philosophy",
+    "href": "teaching/philosophy/index.html#my-teaching-philosophy",
+    "title": "Teaching Philosophy",
+    "section": "",
+    "text": "Describe your fundamental beliefs about education and learning.\n\n\n\nExplain your methodology and techniques.\n\n\n\nHow you foster active learning and student participation.\n\n\n\nYour approach to evaluating student progress and providing feedback."
+  },
+  {
+    "objectID": "workshops/index.html",
+    "href": "workshops/index.html",
+    "title": "Workshops",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "Workshops"
+    ]
   },
   {
     "objectID": "about/index.html",
