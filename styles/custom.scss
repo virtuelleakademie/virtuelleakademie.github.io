@@ -121,39 +121,16 @@ h3 {
   color: #E53E3E !important;
 }
 
-// Highlight main nav based on multiple indicators
-// 1. Breadcrumb contains section name
-body:has(.quarto-page-breadcrumbs .breadcrumb-item a[href*="teaching"]) .navbar-nav .nav-link[href*="teaching"],
-body:has(.quarto-page-breadcrumbs .breadcrumb-item a[href*="research"]) .navbar-nav .nav-link[href*="research"],
-body:has(.quarto-page-breadcrumbs .breadcrumb-item a[href*="about"]) .navbar-nav .nav-link[href*="about"],
-// 2. Sidebar has active teaching-related links
-body:has(.sidebar-link.active[href*="teaching"]) .navbar-nav .nav-link[href*="teaching"],
-body:has(.sidebar-link.active[href*="research"]) .navbar-nav .nav-link[href*="research"],
-body:has(.sidebar-link.active[href*="about"]) .navbar-nav .nav-link[href*="about"],
-// 3. Body class or URL-based detection for subpages
-body:has(.sidebar-link.active[href*="courses"]) .navbar-nav .nav-link[href*="teaching"],
-body:has(.sidebar-link.active[href*="resources"]) .navbar-nav .nav-link[href*="teaching"],
-body:has(.sidebar-link.active[href*="philosophy"]) .navbar-nav .nav-link[href*="teaching"],
-body:has(.sidebar-link.active[href*="projects"]) .navbar-nav .nav-link[href*="research"],
-body:has(.sidebar-link.active[href*="publications"]) .navbar-nav .nav-link[href*="research"],
-body:has(.sidebar-link.active[href*="collaborations"]) .navbar-nav .nav-link[href*="research"] {
+// Highlight active navbar items
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link[aria-current="page"] {
   border-bottom: 2px solid #E53E3E;
   color: #E53E3E !important;
 }
 
-// Same logic for the enhanced squares
-body:has(.quarto-page-breadcrumbs .breadcrumb-item a[href*="teaching"]) .navbar-nav .nav-link[href*="teaching"]::before,
-body:has(.quarto-page-breadcrumbs .breadcrumb-item a[href*="research"]) .navbar-nav .nav-link[href*="research"]::before,
-body:has(.quarto-page-breadcrumbs .breadcrumb-item a[href*="about"]) .navbar-nav .nav-link[href*="about"]::before,
-body:has(.sidebar-link.active[href*="teaching"]) .navbar-nav .nav-link[href*="teaching"]::before,
-body:has(.sidebar-link.active[href*="research"]) .navbar-nav .nav-link[href*="research"]::before,
-body:has(.sidebar-link.active[href*="about"]) .navbar-nav .nav-link[href*="about"]::before,
-body:has(.sidebar-link.active[href*="courses"]) .navbar-nav .nav-link[href*="teaching"]::before,
-body:has(.sidebar-link.active[href*="resources"]) .navbar-nav .nav-link[href*="teaching"]::before,
-body:has(.sidebar-link.active[href*="philosophy"]) .navbar-nav .nav-link[href*="teaching"]::before,
-body:has(.sidebar-link.active[href*="projects"]) .navbar-nav .nav-link[href*="research"]::before,
-body:has(.sidebar-link.active[href*="publications"]) .navbar-nav .nav-link[href*="research"]::before,
-body:has(.sidebar-link.active[href*="collaborations"]) .navbar-nav .nav-link[href*="research"]::before {
+// Enhanced red square for active items
+.navbar-nav .nav-link.active::before,
+.navbar-nav .nav-link[aria-current="page"]::before {
   width: 12px;
   height: 12px;
 }
