@@ -3,10 +3,11 @@ color:
     black: "#000000"
     white: "#FFFFFF"
     red: "#E53E3E"
+    maroon: "#800000"
     light-grey: "#FAFAFA"
   background: white
   foreground: black
-  primary: red
+  primary: maroon
 
 # logo: 
 #   large: assets/bfh-logo.png
