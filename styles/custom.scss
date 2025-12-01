@@ -60,7 +60,7 @@ h3 {
 .navbar {
   background-color: #FFFFFF;
   padding: 1.5rem 0;
-  border-bottom: 1px solid #E0E0E0;
+  border-bottom: 2px solid #000000;
   box-shadow: none;
 }
 
@@ -156,11 +156,11 @@ a:hover {
   border-color: #333333;
 }
 
-// Cards - subtle borders, clean design
+// Cards - clean borders
 .card, .feature-card, .section-card {
   background: #FFFFFF;
   border-radius: 0;
-  border: 1px solid #E0E0E0;
+  border: 2px solid #000000;
   padding: 2rem;
   margin-bottom: 2rem;
   box-shadow: none;
@@ -200,7 +200,7 @@ p {
 .quarto-title-block {
   padding-bottom: 2rem;
   margin-bottom: 2rem;
-  border-bottom: 1px solid #E0E0E0;
+  border-bottom: 2px solid #000000;
 }
 
 .quarto-title-block .quarto-title .title {
@@ -272,9 +272,9 @@ li::marker {
   padding-left: 0;
 }
 
-// Blockquotes - subtle left border
+// Blockquotes - bold left border
 blockquote {
-  border-left: 3px solid #E0E0E0;
+  border-left: 3px solid #000000;
   padding-left: 1.5rem;
   margin: 1.5rem 0;
   font-style: normal;
@@ -292,7 +292,7 @@ table {
 th, td {
   padding: 0.75rem 1rem;
   text-align: left;
-  border-bottom: 1px solid #E0E0E0;
+  border-bottom: 2px solid #000000;
 }
 
 th {
@@ -302,39 +302,55 @@ th {
 }
 
 // Sidebar - clean styling
-.sidebar {
+#quarto-sidebar {
   background-color: #FFFFFF;
-  border-right: 1px solid #E0E0E0;
+  border-left: 2px solid #000000;
+  border-right: 2px solid #000000;
 }
 
-.sidebar .sidebar-item {
-  border-bottom: 1px solid #F5F5F5;
+// Remove default padding/margin from sidebar containers
+#quarto-sidebar .sidebar-menu-container {
+  padding: 0;
 }
 
-.sidebar .sidebar-item a {
+#quarto-sidebar .sidebar-menu-container > ul {
+  padding: 0;
+  margin: 0;
+}
+
+#quarto-sidebar .sidebar-item {
+  border-bottom: 2px solid #000000;
+  margin: 0;
+  padding: 0;
+}
+
+#quarto-sidebar .sidebar-item a {
   color: #000000;
   padding: 0.75rem 1rem;
   font-weight: 500;
   font-size: 0.95rem;
+  display: block;
 }
 
-.sidebar .sidebar-item a:hover {
+#quarto-sidebar .sidebar-item a:hover {
   background-color: #F5F5F5;
   color: #000000;
 }
 
-.sidebar .sidebar-item a.active,
-.sidebar .sidebar-item .sidebar-link.active {
+#quarto-sidebar .sidebar-item a.active,
+#quarto-sidebar .sidebar-link.active {
   background-color: #F5F5F5;
   color: #000000;
-  border-left: 3px solid #000000;
   font-weight: 600;
+  border-left: 4px solid #000000;
+  margin-left: 0;
+  padding-left: calc(1rem - 4px);
 }
 
 // Blog listing - clean cards
 .quarto-listing .listing-item {
   background: #FFFFFF;
-  border: 1px solid #E0E0E0;
+  border: 2px solid #000000;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   transition: all 0.2s ease;
@@ -368,7 +384,7 @@ th {
   color: #000000;
   padding: 2rem 0;
   margin-top: 4rem;
-  border-top: 1px solid #E0E0E0;
+  border-top: 2px solid #000000;
 }
 
 .page-footer a {
@@ -385,7 +401,7 @@ th {
 // Code blocks
 pre {
   background-color: #F5F5F5;
-  border: 1px solid #E0E0E0;
+  border: 2px solid #000000;
   padding: 1rem;
   border-radius: 0;
 }
