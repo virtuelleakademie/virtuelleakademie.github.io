@@ -35,15 +35,15 @@ website:
     background: light
     left:
       - text: "Research"
-        href: research/
+        href: research/index.qmd
       - text: "Teaching"
-        href: teaching/
+        href: teaching/index.qmd
       - text: "Workshops"
-        href: workshops/
+        href: workshops/index.qmd
 
     right:
       - text: "About"
-        href: about/
+        href: about/index.qmd
       
     tools:
       - icon: lightbulb-fill
