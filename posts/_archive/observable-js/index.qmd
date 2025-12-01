@@ -3,12 +3,10 @@ title: "Interactive Data Visualization with Observable JavaScript"
 date: 4 June, 2025
 date-format: "DD MMM, YYYY"
 
-author: 
-  - name: Stefan Hackstein
-    url: https://github.com/shacks3
+author:
+  - name: Andrew Ellis
     affiliation: Virtual Academy, Bern University of Applied Sciences
     affiliation-url: https://virtuelleakademie.ch
-    orcid: 0000-0003-2927-549X
 
 categories: [Observable, JavaScript, D3.js, data visualization, interactive, tutorial]
 format:
