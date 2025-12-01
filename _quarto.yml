@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: docs
   preview:
-    port: 8800
+    port: 8803
     browser: true
   render: 
     - index.qmd

@@ -16,7 +16,7 @@ color:
 
 typography:
   fonts:
-    - family: Nunito
+    - family: Urbanist
       source: google
-  base: Nunito
-  headings: Nunito
+  base: Urbanist
+  headings: Urbanist
