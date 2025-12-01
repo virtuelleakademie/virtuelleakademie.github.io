@@ -16,7 +16,7 @@ page-layout: full
 
 Module 4 of the CAS Hochschuldidaktik program, focusing on AI in higher education teaching.
 
-[**Access →**](https://virtuelleakademie.github.io/cas-hochschuldidaktik/){.btn .btn-primary target="_blank"}
+[**Launch CAS module →**](https://virtuelleakademie.github.io/cas-hochschuldidaktik/){.btn .btn-primary target="_blank"}
 :::
 
 :::

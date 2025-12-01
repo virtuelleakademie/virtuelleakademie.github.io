@@ -36,13 +36,10 @@ website:
     left:
       - text: "Research"
         href: research/
-        id: research
       - text: "Teaching"
         href: teaching/
-        id: teaching
       - text: "Workshops"
         href: workshops/
-        id: workshops
 
     right:
       - text: "About"
@@ -60,7 +57,6 @@ website:
   sidebar:
     - id: research
       title: "Research"
-      href: research/
       style: "docked"
       search: true
       background: light
@@ -68,28 +64,22 @@ website:
         - research/index.qmd
     - id: teaching
       title: "Teaching"
-      href: teaching/
       style: "docked"
       search: true
       background: light
       contents:
         - teaching/index.qmd
-        - text: "BFH Weiterbildung"
-          href: teaching/bfh-weiterbildung/
-        - text: "CAS Hochschuldidaktik"
-          href: teaching/cas-hochschuldidaktik/
+        - teaching/bfh-weiterbildung/index.qmd
+        - teaching/cas-hochschuldidaktik/index.qmd
     - id: workshops
       title: "Workshops"
-      href: workshops/
       style: "docked"
       search: true
       background: light
       contents:
         - workshops/index.qmd
-        - text: "Special Topics"
-          href: workshops/special-topics/
-        - text: "Bespoke Workshops"
-          href: workshops/bespoke/
+        - workshops/special-topics/index.qmd
+        - workshops/bespoke/index.qmd
 
 page-footer:
   left: "© 2025 Virtuelle Akademie"
@@ -113,8 +103,6 @@ format:
     anchor-sections: true
     smooth-scroll: true
     linkcolor: "#000000"
-    # include-after-body:
-    #   - navbar-active.js
 
 execute:
   cache: true

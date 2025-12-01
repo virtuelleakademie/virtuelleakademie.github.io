@@ -12,7 +12,7 @@ Workshops on AI in education for various audiences and contexts.
 
 Specialized workshops on focused topics such as fact-checking and lateral reading.
 
-[**View Workshops →**](special-topics/)
+[**View Workshops →**](special-topics/){.btn .btn-primary target="_blank"}
 :::
 
 ::: {.feature-card}
@@ -20,7 +20,7 @@ Specialized workshops on focused topics such as fact-checking and lateral readin
 
 Custom workshops developed for specific institutions including UB/HAFL, HKB, and health sector organizations.
 
-[**View Workshops →**](bespoke/)
+[**View Workshops →**](bespoke/){.btn .btn-primary target="_blank"}
 :::
 
 :::
