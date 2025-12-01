@@ -1,20 +1,17 @@
 color:
   palette:
-    black: "#000000"
-    white: "#FFFFFF"
-    red: "#E53E3E"
-    maroon: "#800000"
-    light-grey: "#FAFAFA"
-  background: white
-  foreground: black
-  primary: maroon
+    dark-grey: "#222222"
+    blue: "#F5F5F5" 
+  background: blue
+  foreground: dark-grey
+  primary: black
 
 # logo: 
 #   large: assets/bfh-logo.png
 
 typography:
   fonts:
-    - family: Inter
+    - family: Jura
       source: google
-  base: Inter
-  headings: Inter
+  base: Jura
+  headings: Jura

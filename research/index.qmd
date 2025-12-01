@@ -18,7 +18,7 @@ This section showcases our research activities, projects, and publications in ed
 
 Our research contributes to BeLEARN, the Swiss research network dedicated to advancing the science of learning through interdisciplinary collaboration and innovation.
 
-[**Visit BeLEARN Projects →**](https://belearn.swiss/projekte-belearn/){.btn .btn-primary target="_blank"}
+    [**Visit BeLEARN Projects →**](https://belearn.swiss/projekte-belearn/){.btn .btn-primary target="_blank"}
 :::
 
 ### Current Projects
