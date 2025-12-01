@@ -4,8 +4,7 @@
     "items": [
       "/posts/julia-tidier/index.html",
       "/posts/polars-plotnine/index.html",
-      "/posts/r-code/index.html",
-      "/posts/observable-js/index.html"
+      "/posts/r-code/index.html"
     ]
   }
 ]
