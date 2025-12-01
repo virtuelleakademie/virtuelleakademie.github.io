@@ -2,19 +2,21 @@ color:
   palette:
     black: "#000000"
     white: "#FFFFFF"
-    red: "#E53E3E"
-    maroon: "#800000"
-    light-grey: "#FAFAFA"
+    light-grey: "#F5F5F5"
+    medium-grey: "#666666"
+    dark-grey: "#333333"
+    border-grey: "#E0E0E0"
   background: white
   foreground: black
-  primary: maroon
+  primary: black
+  secondary: medium-grey
 
-# logo: 
+# logo:
 #   large: assets/bfh-logo.png
 
 typography:
   fonts:
-    - family: Inter
+    - family: Nunito
       source: google
-  base: Inter
-  headings: Inter
+  base: Nunito
+  headings: Nunito

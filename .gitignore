@@ -71,3 +71,5 @@ CLAUDE.md
 # MacOS
 .DS_Store
 
+
+**/*.quarto_ipynb

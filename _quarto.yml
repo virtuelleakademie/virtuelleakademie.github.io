@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: docs
+  preview:
+    port: 8800
+    browser: true
   render: 
     - index.qmd
     - research/**/*.qmd
@@ -29,6 +32,7 @@ website:
     type: overlay
 
   navbar:
+    background: light
     left:
       - text: "Research"
         href: research/
@@ -53,6 +57,9 @@ website:
   sidebar:
     - title: "Research"
       href: research/
+      style: "docked"
+      search: true
+      background: light
       contents:
         - research/index.qmd
         - text: "Projects"
@@ -63,6 +70,9 @@ website:
           href: research/collaborations/
     - title: "Teaching"
       href: teaching/
+      style: "docked"
+      search: true
+      background: light
       contents:
         - teaching/index.qmd
         - text: "Courses"
@@ -73,6 +83,9 @@ website:
           href: teaching/philosophy/
     - title: "Workshops"
       href: workshops/
+      style: "docked"
+      search: true
+      background: light
       contents:
         - workshops/index.qmd
 
@@ -89,19 +102,25 @@ page-footer:
 format:
   html:
     theme:
-      light: [simplex, styles/custom.scss]
+      light:
+        - simplex
+        - styles/custom.scss
     toc: true
     link-external-icon: true
     link-external-newwindow: true
     anchor-sections: true
     smooth-scroll: true
-    include-after-body:
-      - navbar-active.js
+    linkcolor: "#000000"
+    # include-after-body:
+    #   - navbar-active.js
 
 execute:
   cache: true
   freeze: auto
   execute-dir: project
+
+editor:
+  render-on-save: true
 
 comments:
   hypothesis:
@@ -113,3 +132,9 @@ revealjs-plugins:
 filters:
   - timer
   - custom-callout
+
+custom-callout:
+  active-processing:
+    icon-symbol: "📝"
+    collapse: false
+    color: "#333333"
