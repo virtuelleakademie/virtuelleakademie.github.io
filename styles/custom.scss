@@ -1,111 +1,252 @@
 /*-- scss:defaults --*/
 
+// =============================================================================
+// DESIGN TOKENS - Change these to customize the entire design
+// =============================================================================
+
+// Typography
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
 
 $font-family-sans-serif: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$font-family-monospace: "JetBrains Mono", "Fira Code", monospace;
 $headings-font-family: "Nunito", sans-serif;
 
-// BFH-inspired minimal color scheme
-$background-color: #FFFFFF;
-$primary: #000000;
-$secondary: #666666;
-$light: #F5F5F5;
-$border-color: #E0E0E0;
-$body-bg: $background-color;
-$body-color: #000000;
+// Font sizes
+$font-size-base: 1rem;
+$font-size-sm: 0.9rem;
+$font-size-xs: 0.85rem;
+$font-size-h1: 2.75rem;
+$font-size-h2: 2rem;
+$font-size-h3: 1.5rem;
+$font-size-h1-mobile: 2rem;
+$font-size-h2-mobile: 1.5rem;
+
+// Font weights
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+// Line heights
+$line-height-base: 1.6;
+$line-height-tight: 1.1;
+$line-height-relaxed: 1.7;
+
+// Colors - Core palette
+$color-black: #000000;
+$color-white: #FFFFFF;
+$color-grey-100: #F5F5F5;  // Light backgrounds
+$color-grey-300: #E0E0E0;  // Subtle borders (unused in current design)
+$color-grey-500: #666666;  // Secondary text
+$color-grey-700: #333333;  // Dark text alternative
+
+// Color assignments
+$color-background: $color-white;
+$color-text: $color-black;
+$color-text-secondary: $color-grey-500;
+$color-text-muted: $color-grey-700;
+$color-primary: $color-black;
+$color-surface: $color-grey-100;
+$color-border: $color-black;
+
+// Quarto theme variables
+$body-bg: $color-background;
+$body-color: $color-text;
+$primary: $color-primary;
+$secondary: $color-text-secondary;
+$light: $color-surface;
+
+// Borders
+$border-width: 2px;
+$border-width-thick: 4px;
+$border-style: solid;
+$border-color: $color-border;
+$border: $border-width $border-style $border-color;
+$border-thick: $border-width-thick $border-style $border-color;
+
+// Spacing
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-2xl: 3rem;
+$spacing-3xl: 4rem;
+
+// Transitions
+$transition-speed: 0.2s;
+$transition-ease: ease;
+$transition-default: all $transition-speed $transition-ease;
+
+// Breakpoints
+$breakpoint-mobile: 900px;
 
 /*-- scss:rules --*/
 
-body {
-  background-color: #FFFFFF;
-  color: #000000;
-  font-family: "Nunito", sans-serif;
-  line-height: 1.6;
-  font-size: 1rem;
-  font-weight: 400;
+// =============================================================================
+// MIXINS - Reusable patterns
+// =============================================================================
+
+@mixin border-bottom {
+  border-bottom: $border;
 }
 
+@mixin border-top {
+  border-top: $border;
+}
+
+@mixin border-left {
+  border-left: $border;
+}
+
+@mixin border-right {
+  border-right: $border;
+}
+
+@mixin border-all {
+  border: $border;
+}
+
+@mixin surface-background {
+  background-color: $color-surface;
+}
+
+@mixin transition-default {
+  transition: $transition-default;
+}
+
+@mixin text-secondary {
+  color: $color-text-secondary;
+  font-size: $font-size-sm;
+}
+
+@mixin active-indicator {
+  border-left: $border-thick;
+  padding-left: calc($spacing-md - $border-width-thick);
+}
+
+// =============================================================================
+// BASE STYLES
+// =============================================================================
+
+body {
+  background-color: $color-background;
+  color: $color-text;
+  font-family: $font-family-sans-serif;
+  line-height: $line-height-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+}
+
+// =============================================================================
+// TYPOGRAPHY
+// =============================================================================
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Nunito", sans-serif;
-  color: #000000;
-  font-weight: 700;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
+  font-family: $headings-font-family;
+  color: $color-text;
+  font-weight: $font-weight-bold;
+  margin-top: $spacing-xl;
+  margin-bottom: $spacing-md;
   letter-spacing: -0.01em;
 }
 
 h1 {
-  color: #000000;
-  font-weight: 800;
-  font-size: 2.75rem;
+  font-weight: $font-weight-extrabold;
+  font-size: $font-size-h1;
   margin-top: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: $spacing-lg;
   letter-spacing: -0.02em;
-  line-height: 1.1;
+  line-height: $line-height-tight;
 }
 
 h2 {
-  font-size: 2rem;
-  margin-top: 3rem;
-  font-weight: 700;
+  font-size: $font-size-h2;
+  margin-top: $spacing-2xl;
 }
 
 h3 {
-  font-size: 1.5rem;
-  margin-top: 2rem;
-  font-weight: 600;
+  font-size: $font-size-h3;
+  margin-top: $spacing-xl;
+  font-weight: $font-weight-semibold;
 }
 
-// Navbar - clean BFH style
+p {
+  margin-bottom: $spacing-lg;
+  font-size: $font-size-base;
+  line-height: $line-height-relaxed;
+  font-weight: $font-weight-normal;
+  color: $color-text;
+}
+
+// =============================================================================
+// LINKS
+// =============================================================================
+
+a {
+  color: $color-text;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  font-weight: $font-weight-medium;
+  @include transition-default;
+}
+
+a:hover {
+  color: $color-text;
+  text-decoration-color: $color-text;
+}
+
+// =============================================================================
+// NAVBAR
+// =============================================================================
+
 .navbar {
-  background-color: #FFFFFF;
-  padding: 1.5rem 0;
-  border-bottom: 2px solid #000000;
+  background-color: $color-background;
+  padding: $spacing-lg 0;
+  @include border-bottom;
   box-shadow: none;
 }
 
 .navbar-brand, .navbar-nav .nav-link {
-  color: #000000 !important;
-  font-family: "Nunito", sans-serif;
-  font-weight: 600;
-  font-size: 0.95rem;
+  color: $color-text !important;
+  font-family: $font-family-sans-serif;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-sm;
 }
 
 .navbar-nav .nav-item {
-  margin: 0 1.5rem;
+  margin: 0 $spacing-lg;
 }
 
 .navbar-nav .nav-link {
-  padding: 0.5rem 0 !important;
+  padding: $spacing-sm 0 !important;
   margin: 0;
-  font-weight: 600;
-  transition: all 0.2s ease;
-  border-bottom: 2px solid transparent;
+  font-weight: $font-weight-semibold;
+  border-bottom: $border-width solid transparent;
   text-decoration: none !important;
+  @include transition-default;
 }
 
-.navbar-nav .nav-link:hover {
-  border-bottom: 2px solid #000000;
-  color: #000000 !important;
-}
-
+.navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link[aria-current="page"] {
-  border-bottom: 2px solid #000000;
-  color: #000000 !important;
+  border-bottom: $border;
+  color: $color-text !important;
 }
 
-// Navbar tools - clean icons
+// Navbar tools
 .quarto-navbar-tools .quarto-navigation-tool {
-  color: #000000 !important;
+  color: $color-text !important;
   font-size: 1.1rem;
-  padding: 0.5rem !important;
-  transition: all 0.2s ease;
+  padding: $spacing-sm !important;
   background: none;
+  @include transition-default;
 }
 
 .quarto-navbar-tools .quarto-navigation-tool:hover {
-  color: #666666 !important;
+  color: $color-text-secondary !important;
   background: none;
 }
 
@@ -113,156 +254,18 @@ h3 {
 #quarto-search .aa-DetachedSearchButtonIcon,
 #quarto-search .aa-DetachedSearchButton .aa-DetachedSearchButtonIcon,
 .navbar #quarto-search .aa-DetachedSearchButtonIcon {
-  color: #000000 !important;
+  color: $color-text !important;
   opacity: 1 !important;
-  fill: #000000 !important;
+  fill: $color-text !important;
 }
 
 #quarto-search:hover .aa-DetachedSearchButtonIcon,
 .navbar #quarto-search:hover .aa-DetachedSearchButtonIcon {
-  color: #666666 !important;
-  fill: #666666 !important;
+  color: $color-text-secondary !important;
+  fill: $color-text-secondary !important;
 }
 
-// Links - clean black with underline on hover
-a {
-  color: #000000;
-  text-decoration: underline;
-  text-decoration-color: transparent;
-  text-underline-offset: 3px;
-  transition: all 0.2s ease;
-  font-weight: 500;
-}
-
-a:hover {
-  color: #000000;
-  text-decoration: underline;
-  text-decoration-color: #000000;
-}
-
-// Buttons - clean minimal style
-.btn-primary {
-  background-color: #000000;
-  border-color: #000000;
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
-  border-radius: 0;
-  transition: all 0.2s ease;
-  font-size: 0.95rem;
-}
-
-.btn-primary:hover {
-  background-color: #333333;
-  border-color: #333333;
-}
-
-// Cards - clean borders
-.card, .feature-card, .section-card {
-  background: #FFFFFF;
-  border-radius: 0;
-  border: 2px solid #000000;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: none;
-  transition: all 0.2s ease;
-}
-
-.card:hover, .feature-card:hover {
-  border-color: #000000;
-  box-shadow: none;
-}
-
-.feature-card h3 {
-  color: #000000;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
-
-// Content grid
-.content-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 3rem 0;
-}
-
-// Paragraphs
-p {
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.7;
-  font-weight: 400;
-  color: #000000;
-}
-
-// Title blocks
-.quarto-title-block {
-  padding-bottom: 2rem;
-  margin-bottom: 2rem;
-  border-bottom: 2px solid #000000;
-}
-
-.quarto-title-block .quarto-title .title {
-  margin-bottom: 1rem;
-  font-weight: 800;
-  color: #000000;
-}
-
-// Meta information
-.meta strong {
-  color: #000000;
-  font-weight: 600;
-}
-
-.meta {
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
-  color: #666666;
-  font-weight: 500;
-}
-
-// Responsive adjustments
-@media (max-width: 900px) {
-  .content-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin: 2rem 0;
-  }
-
-  .card, .feature-card {
-    padding: 1.5rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .navbar-nav .nav-item {
-    margin: 0 0.75rem;
-  }
-}
-
-// Lists - clean bullets
-ul {
-  list-style: disc;
-  padding-left: 1.5rem;
-}
-
-li {
-  margin-bottom: 0.5rem;
-  padding-left: 0.25rem;
-}
-
-li::marker {
-  color: #000000;
-}
-
-// Remove custom list styling from navbar
+// Remove list styling from navbar
 .navbar ul {
   list-style: none;
   padding-left: 0;
@@ -272,43 +275,156 @@ li::marker {
   padding-left: 0;
 }
 
-// Blockquotes - bold left border
-blockquote {
-  border-left: 3px solid #000000;
-  padding-left: 1.5rem;
-  margin: 1.5rem 0;
-  font-style: normal;
-  color: #333333;
-  font-weight: 400;
+// =============================================================================
+// BUTTONS
+// =============================================================================
+
+.btn-primary {
+  background-color: $color-primary;
+  border-color: $color-primary;
+  padding: $spacing-sm $spacing-lg;
+  font-weight: $font-weight-semibold;
+  border-radius: 0;
+  font-size: $font-size-sm;
+  @include transition-default;
 }
 
-// Tables - clean styling
+.btn-primary:hover {
+  background-color: $color-grey-700;
+  border-color: $color-grey-700;
+}
+
+// =============================================================================
+// CARDS
+// =============================================================================
+
+.card, .feature-card, .section-card {
+  background: $color-background;
+  border-radius: 0;
+  @include border-all;
+  padding: $spacing-xl;
+  margin-bottom: $spacing-xl;
+  box-shadow: none;
+  @include transition-default;
+}
+
+.card:hover, .feature-card:hover {
+  border-color: $color-border;
+  box-shadow: none;
+}
+
+.feature-card h3 {
+  color: $color-text;
+  margin-top: 0;
+  margin-bottom: $spacing-md;
+  font-weight: $font-weight-bold;
+}
+
+// =============================================================================
+// CONTENT GRID
+// =============================================================================
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: $spacing-xl;
+  margin: $spacing-2xl 0;
+}
+
+// =============================================================================
+// TITLE BLOCKS
+// =============================================================================
+
+.quarto-title-block {
+  padding-bottom: $spacing-xl;
+  margin-bottom: $spacing-xl;
+  @include border-bottom;
+}
+
+.quarto-title-block .quarto-title .title {
+  margin-bottom: $spacing-md;
+  font-weight: $font-weight-extrabold;
+  color: $color-text;
+}
+
+// =============================================================================
+// META INFORMATION
+// =============================================================================
+
+.meta strong {
+  color: $color-text;
+  font-weight: $font-weight-semibold;
+}
+
+.meta {
+  @include text-secondary;
+  margin-bottom: $spacing-lg;
+  font-weight: $font-weight-medium;
+}
+
+// =============================================================================
+// LISTS
+// =============================================================================
+
+ul {
+  list-style: disc;
+  padding-left: $spacing-lg;
+}
+
+li {
+  margin-bottom: $spacing-sm;
+  padding-left: $spacing-xs;
+}
+
+li::marker {
+  color: $color-text;
+}
+
+// =============================================================================
+// BLOCKQUOTES
+// =============================================================================
+
+blockquote {
+  border-left: 3px $border-style $color-border;
+  padding-left: $spacing-lg;
+  margin: $spacing-lg 0;
+  font-style: normal;
+  color: $color-grey-700;
+  font-weight: $font-weight-normal;
+}
+
+// =============================================================================
+// TABLES
+// =============================================================================
+
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1.5rem 0;
+  margin: $spacing-lg 0;
 }
 
 th, td {
-  padding: 0.75rem 1rem;
+  padding: $spacing-sm $spacing-md;
   text-align: left;
-  border-bottom: 2px solid #000000;
+  @include border-bottom;
 }
 
 th {
-  background-color: #F5F5F5;
-  color: #000000;
-  font-weight: 600;
+  @include surface-background;
+  color: $color-text;
+  font-weight: $font-weight-semibold;
 }
 
-// Sidebar - clean styling
+// =============================================================================
+// SIDEBAR
+// =============================================================================
+
 #quarto-sidebar {
-  background-color: #FFFFFF;
-  border-left: 2px solid #000000;
-  border-right: 2px solid #000000;
+  background-color: $color-background;
+  @include border-left;
+  @include border-right;
 }
 
-// Remove default padding/margin from sidebar containers
 #quarto-sidebar .sidebar-menu-container {
   padding: 0;
 }
@@ -319,100 +435,137 @@ th {
 }
 
 #quarto-sidebar .sidebar-item {
-  border-bottom: 2px solid #000000;
+  @include border-bottom;
   margin: 0;
   padding: 0;
 }
 
 #quarto-sidebar .sidebar-item a {
-  color: #000000;
-  padding: 0.75rem 1rem;
-  font-weight: 500;
-  font-size: 0.95rem;
+  color: $color-text;
+  padding: $spacing-sm $spacing-md;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-sm;
   display: block;
 }
 
 #quarto-sidebar .sidebar-item a:hover {
-  background-color: #F5F5F5;
-  color: #000000;
+  @include surface-background;
+  color: $color-text;
 }
 
 #quarto-sidebar .sidebar-item a.active,
 #quarto-sidebar .sidebar-link.active {
-  background-color: #F5F5F5;
-  color: #000000;
-  font-weight: 600;
-  border-left: 4px solid #000000;
+  @include surface-background;
+  color: $color-text;
+  font-weight: $font-weight-semibold;
+  @include active-indicator;
   margin-left: 0;
-  padding-left: calc(1rem - 4px);
 }
 
-// Blog listing - clean cards
+// =============================================================================
+// BLOG LISTING
+// =============================================================================
+
 .quarto-listing .listing-item {
-  background: #FFFFFF;
-  border: 2px solid #000000;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  transition: all 0.2s ease;
+  background: $color-background;
+  @include border-all;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-lg;
+  @include transition-default;
 }
 
 .quarto-listing .listing-item:hover {
-  border-color: #000000;
+  border-color: $color-border;
 }
 
 .quarto-listing .listing-item .listing-title {
-  color: #000000;
-  font-weight: 700;
+  color: $color-text;
+  font-weight: $font-weight-bold;
   font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: $spacing-sm;
 }
 
 .quarto-listing .listing-item .listing-subtitle {
-  color: #666666;
-  font-size: 0.9rem;
-  margin-bottom: 0.75rem;
+  @include text-secondary;
+  margin-bottom: $spacing-sm;
 }
 
 .quarto-listing .listing-item .listing-description {
-  color: #333333;
-  line-height: 1.6;
+  color: $color-grey-700;
+  line-height: $line-height-base;
 }
 
-// Footer - light clean style
+// =============================================================================
+// FOOTER
+// =============================================================================
+
 .page-footer {
-  background-color: #F5F5F5;
-  color: #000000;
-  padding: 2rem 0;
-  margin-top: 4rem;
-  border-top: 2px solid #000000;
+  @include surface-background;
+  color: $color-text;
+  padding: $spacing-xl 0;
+  margin-top: $spacing-3xl;
+  @include border-top;
 }
 
 .page-footer a {
-  color: #000000;
+  color: $color-text;
   text-decoration: underline;
   text-decoration-color: transparent;
 }
 
 .page-footer a:hover {
-  color: #000000;
-  text-decoration-color: #000000;
+  color: $color-text;
+  text-decoration-color: $color-text;
 }
 
-// Code blocks
+// =============================================================================
+// CODE BLOCKS
+// =============================================================================
+
 pre {
-  background-color: #F5F5F5;
-  border: 2px solid #000000;
-  padding: 1rem;
+  @include surface-background;
+  @include border-all;
+  padding: $spacing-md;
   border-radius: 0;
 }
 
 code {
-  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-family: $font-family-monospace;
   font-size: 0.9em;
 }
 
-// Remove aggressive border-radius override - allow subtle rounding where appropriate
-// but keep cards and buttons sharp
+// =============================================================================
+// UTILITIES
+// =============================================================================
+
 .card, .btn, .navbar, pre, .sidebar {
   border-radius: 0 !important;
+}
+
+// =============================================================================
+// RESPONSIVE
+// =============================================================================
+
+@media (max-width: $breakpoint-mobile) {
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+    margin: $spacing-xl 0;
+  }
+
+  .card, .feature-card {
+    padding: $spacing-lg;
+  }
+
+  h1 {
+    font-size: $font-size-h1-mobile;
+  }
+
+  h2 {
+    font-size: $font-size-h2-mobile;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 0 $spacing-sm;
+  }
 }
