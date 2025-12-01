@@ -13,7 +13,7 @@ Courses and materials for integrating AI into teaching practice.
 A progressive series of courses on AI in education, offered through BFH continuing education. Three levels: Beginner, Intermediate, and Advanced.
 
 
-[**View Courses →**](bfh-weiterbildung/){.btn .btn-primary target="_blank"}
+[**View Courses →**](bfh-weiterbildung/){.btn .btn-primary}
 :::
 
 ::: {.feature-card}
@@ -21,7 +21,7 @@ A progressive series of courses on AI in education, offered through BFH continui
 
 Module 4 of the CAS Hochschuldidaktik program, focusing on AI in higher education teaching.
 
-[**View Program →**](cas-hochschuldidaktik/){.btn .btn-primary target="_blank"}
+[**View Program →**](cas-hochschuldidaktik/){.btn .btn-primary}
 :::
 
 :::
