@@ -11,10 +11,10 @@ Our research focuses on the development and evaluation of intelligent tutoring s
 
 Intelligent tutoring systems represent a convergence of cognitive science, educational psychology, and artificial intelligence. Our work explores how these systems can:
 
-- **Adapt to individual learners** — Dynamically adjust content difficulty, pacing, and instructional strategies based on learner performance and behavior
-- **Provide meaningful feedback** — Deliver timely, specific, and actionable feedback that supports learning rather than simply indicating correctness
-- **Model domain knowledge** — Represent expert knowledge in ways that support effective instruction and diagnosis of learner misconceptions
-- **Support cognitive processes** — Design interactions grounded in theories of learning such as Cognitive Load Theory and the worked example effect
+- **Adapt to individual learners** by dynamically adjusting content difficulty, pacing, and instructional strategies based on learner performance and behavior
+- **Provide meaningful feedback** by delivering timely, specific, and actionable feedback that supports learning rather than simply indicating correctness
+- **Model domain knowledge** by representing expert knowledge in ways that support effective instruction and diagnosis of learner misconceptions
+- **Support cognitive processes** by designing interactions grounded in theories of learning such as Cognitive Load Theory and the worked example effect
 
 ### Current Interests
 

@@ -1,47 +1,39 @@
 ---
-# title: "virtuelleakademie"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: true
-  filter-ui: true
+title: "Virtuelle Akademie"
 page-layout: full
+toc: false
 ---
-<!-- 
-::: {.welcome-headline .gradient-text}
-Welcome to Virtuelle Akademie
+
+::: {.lead}
+We explore how artificial intelligence can enhance teaching and learning in higher education, with a focus on intelligent tutoring systems, adaptive learning, and human-AI collaboration.
 :::
 
-A modern academic platform combining innovative teaching and cutting-edge research. -->
+## What We Do
 
-<!-- ::: {.content-grid}
+::: {.grid}
 
-::: {.feature-card}
-### [Teaching](teaching/)
+::: {.g-col-12 .g-col-md-4}
+### [Research](research/index.qmd)
 
-Explore courses, teaching philosophy, and educational resources designed to foster learning and engagement.
-
-- Current Courses
-- Teaching Philosophy  
-- Student Resources
-- Educational Materials
+Investigating intelligent tutoring systems that adapt to individual learners and provide meaningful feedback grounded in cognitive science.
 :::
 
-::: {.feature-card}
-### [Research](research/)
+::: {.g-col-12 .g-col-md-4}
+### [Teaching](teaching/index.qmd)
 
-Discover ongoing projects, publications, and collaborative research initiatives pushing the boundaries of knowledge.
-
-- Current Projects
-- Publications
-- Collaborations
-- Research Networks
+Courses and programs on AI in education, including continuing education at BFH and the CAS Hochschuldidaktik.
 :::
 
-::: -->
+::: {.g-col-12 .g-col-md-4}
+### [Workshops](workshops/index.qmd)
 
-<!-- ## Latest Posts -->
+Hands-on workshops covering generative AI tools, prompt engineering, and practical applications for educators.
+:::
 
+:::
 
+## About
+
+Virtuelle Akademie is part of [Bern University of Applied Sciences](https://www.bfh.ch/). We are members of the [BeLEARN](https://belearn.swiss/) research network advancing the science of learning through interdisciplinary collaboration.
+
+[Learn more about our team](about/index.qmd)

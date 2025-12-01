@@ -40,6 +40,8 @@ website:
         href: teaching/index.qmd
       - text: "Workshops"
         href: workshops/index.qmd
+      - text: "Blog"
+        href: posts/index.qmd
 
     right:
       - text: "About"
