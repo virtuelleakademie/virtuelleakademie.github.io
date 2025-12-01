@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://virtuelleakademie.github.io/posts/r-code/index.html</loc>
-    <lastmod>2025-06-09T22:47:37.049Z</lastmod>
+    <loc>https://virtuelleakademie.github.io/posts/template/index.html</loc>
+    <lastmod>2025-12-01T22:18:40.686Z</lastmod>
   </url>
   <url>
     <loc>https://virtuelleakademie.github.io/about/stefan-hackstein/index.html</loc>
@@ -13,12 +13,20 @@
     <lastmod>2025-06-06T12:57:48.129Z</lastmod>
   </url>
   <url>
+    <loc>https://virtuelleakademie.github.io/workshops/index.html</loc>
+    <lastmod>2025-12-01T21:47:40.470Z</lastmod>
+  </url>
+  <url>
     <loc>https://virtuelleakademie.github.io/teaching/resources/index.html</loc>
     <lastmod>2025-06-06T12:52:32.578Z</lastmod>
   </url>
   <url>
     <loc>https://virtuelleakademie.github.io/teaching/index.html</loc>
-    <lastmod>2025-06-05T23:43:49.532Z</lastmod>
+    <lastmod>2025-12-01T21:47:08.620Z</lastmod>
+  </url>
+  <url>
+    <loc>https://virtuelleakademie.github.io/teaching/cas-hochschuldidaktik/index.html</loc>
+    <lastmod>2025-12-01T21:45:43.004Z</lastmod>
   </url>
   <url>
     <loc>https://virtuelleakademie.github.io/research/publications/index.html</loc>
@@ -26,11 +34,11 @@
   </url>
   <url>
     <loc>https://virtuelleakademie.github.io/research/index.html</loc>
-    <lastmod>2025-12-01T15:03:36.643Z</lastmod>
+    <lastmod>2025-12-01T22:01:59.877Z</lastmod>
   </url>
   <url>
     <loc>https://virtuelleakademie.github.io/index.html</loc>
-    <lastmod>2025-06-06T15:10:05.853Z</lastmod>
+    <lastmod>2025-12-01T22:07:35.369Z</lastmod>
   </url>
   <url>
     <loc>https://virtuelleakademie.github.io/research/collaborations/index.html</loc>
@@ -41,6 +49,10 @@
     <lastmod>2025-06-05T15:01:02.725Z</lastmod>
   </url>
   <url>
+    <loc>https://virtuelleakademie.github.io/teaching/bfh-weiterbildung/index.html</loc>
+    <lastmod>2025-12-01T21:39:39.357Z</lastmod>
+  </url>
+  <url>
     <loc>https://virtuelleakademie.github.io/teaching/courses/index.html</loc>
     <lastmod>2025-06-05T15:00:50.146Z</lastmod>
   </url>
@@ -49,19 +61,19 @@
     <lastmod>2025-06-05T15:00:58.857Z</lastmod>
   </url>
   <url>
-    <loc>https://virtuelleakademie.github.io/workshops/index.html</loc>
-    <lastmod>2025-06-16T13:34:32.568Z</lastmod>
+    <loc>https://virtuelleakademie.github.io/workshops/bespoke/index.html</loc>
+    <lastmod>2025-12-01T21:35:10.273Z</lastmod>
+  </url>
+  <url>
+    <loc>https://virtuelleakademie.github.io/workshops/special-topics/index.html</loc>
+    <lastmod>2025-12-01T21:35:18.265Z</lastmod>
   </url>
   <url>
     <loc>https://virtuelleakademie.github.io/about/index.html</loc>
-    <lastmod>2025-06-06T17:17:13.077Z</lastmod>
+    <lastmod>2025-12-01T21:20:37.595Z</lastmod>
   </url>
   <url>
-    <loc>https://virtuelleakademie.github.io/posts/julia-tidier/index.html</loc>
-    <lastmod>2025-06-06T17:14:05.389Z</lastmod>
-  </url>
-  <url>
-    <loc>https://virtuelleakademie.github.io/posts/polars-plotnine/index.html</loc>
-    <lastmod>2025-06-06T16:15:18.435Z</lastmod>
+    <loc>https://virtuelleakademie.github.io/posts/index.html</loc>
+    <lastmod>2025-12-01T22:08:40.953Z</lastmod>
   </url>
 </urlset>

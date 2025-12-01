@@ -35,15 +35,17 @@ website:
     background: light
     left:
       - text: "Research"
-        href: research/
+        href: research/index.qmd
       - text: "Teaching"
-        href: teaching/
+        href: teaching/index.qmd
       - text: "Workshops"
-        href: workshops/
+        href: workshops/index.qmd
+      - text: "Blog"
+        href: posts/index.qmd
 
     right:
       - text: "About"
-        href: about/
+        href: about/index.qmd
       
     tools:
       - icon: lightbulb-fill
@@ -55,39 +57,31 @@ website:
         target: _blank
 
   sidebar:
-    - title: "Research"
-      href: research/
+    - id: research
+      title: "Research"
       style: "docked"
       search: true
       background: light
       contents:
         - research/index.qmd
-        - text: "Projects"
-          href: research/projects/
-        - text: "Publications"
-          href: research/publications/
-        - text: "Collaborations"
-          href: research/collaborations/
-    - title: "Teaching"
-      href: teaching/
+    - id: teaching
+      title: "Teaching"
       style: "docked"
       search: true
       background: light
       contents:
         - teaching/index.qmd
-        - text: "Courses"
-          href: teaching/courses/
-        - text: "Resources"
-          href: teaching/resources/
-        - text: "Philosophy"
-          href: teaching/philosophy/
-    - title: "Workshops"
-      href: workshops/
+        - teaching/bfh-weiterbildung/index.qmd
+        - teaching/cas-hochschuldidaktik/index.qmd
+    - id: workshops
+      title: "Workshops"
       style: "docked"
       search: true
       background: light
       contents:
         - workshops/index.qmd
+        - workshops/special-topics/index.qmd
+        - workshops/bespoke/index.qmd
 
 page-footer:
   left: "© 2025 Virtuelle Akademie"
@@ -111,8 +105,6 @@ format:
     anchor-sections: true
     smooth-scroll: true
     linkcolor: "#000000"
-    # include-after-body:
-    #   - navbar-active.js
 
 execute:
   cache: true

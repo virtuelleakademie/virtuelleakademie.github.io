@@ -320,6 +320,54 @@ a:hover {
   font-weight: $font-weight-bold;
 }
 
+// Compact card variant for workshop listings
+.feature-card-compact {
+  background: $color-background;
+  border-radius: 0;
+  @include border-all;
+  padding: $spacing-md $spacing-lg;
+  margin-bottom: $spacing-md;
+  box-shadow: none;
+  @include transition-default;
+
+  h3 {
+    color: $color-text;
+    margin-top: 0;
+    margin-bottom: $spacing-sm;
+    font-weight: $font-weight-bold;
+    font-size: 1.1rem;
+  }
+
+  .meta {
+    margin-bottom: $spacing-sm;
+    font-size: $font-size-xs;
+  }
+
+  p {
+    margin-bottom: $spacing-sm;
+    font-size: $font-size-sm;
+    line-height: $line-height-base;
+  }
+
+  .btn {
+    padding: $spacing-xs $spacing-md;
+    font-size: $font-size-xs;
+  }
+}
+
+.feature-card-compact:hover {
+  border-color: $color-border;
+  box-shadow: none;
+}
+
+// Tighter grid for compact cards
+.content-grid-compact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $spacing-md;
+  margin: $spacing-lg 0;
+}
+
 // =============================================================================
 // CONTENT GRID
 // =============================================================================

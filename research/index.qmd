@@ -3,32 +3,28 @@ title: "Research"
 page-layout: full
 ---
 
-## Welcome to Research
+## Intelligent Tutoring Systems
 
-This section showcases our research activities, projects, and publications in educational technology and AI.
+Our research focuses on the development and evaluation of intelligent tutoring systems (ITS) that leverage artificial intelligence to provide personalized learning experiences.
 
-## Featured Research Program
+### Research Focus
 
-::: {.section-card}
-### BeLEARN - Swiss Research Network
+Intelligent tutoring systems represent a convergence of cognitive science, educational psychology, and artificial intelligence. Our work explores how these systems can:
 
-::: {.meta}
-**Program:** Swiss National Research Network | **Focus:** Learning Sciences | **Partnership:** Multiple Swiss Universities
-:::
+- **Adapt to individual learners** by dynamically adjusting content difficulty, pacing, and instructional strategies based on learner performance and behavior
+- **Provide meaningful feedback** by delivering timely, specific, and actionable feedback that supports learning rather than simply indicating correctness
+- **Model domain knowledge** by representing expert knowledge in ways that support effective instruction and diagnosis of learner misconceptions
+- **Support cognitive processes** by designing interactions grounded in theories of learning such as Cognitive Load Theory and the worked example effect
 
-Our research contributes to BeLEARN, the Swiss research network dedicated to advancing the science of learning through interdisciplinary collaboration and innovation.
+### Current Interests
 
-    [**Visit BeLEARN Projects →**](https://belearn.swiss/projekte-belearn/){.btn .btn-primary target="_blank"}
-:::
+- Generative AI for personalized worked examples
+- Adaptive scaffolding in problem-solving contexts
+- AI-assisted formative assessment
+- Human-AI collaboration in educational settings
 
-### Current Projects
+### BeLEARN Network
 
-Explore our ongoing research initiatives and their progress in AI and educational technology.
+Our research contributes to [BeLEARN](https://belearn.swiss/), the Swiss research network dedicated to advancing the science of learning through interdisciplinary collaboration.
 
-### Publications
-
-Browse our academic publications and scholarly work in learning sciences.
-
-### Collaborations
-
-Learn about research partnerships and collaborative efforts within the Swiss research landscape.
+[**Visit BeLEARN Projects →**](https://belearn.swiss/projekte-belearn/){.btn .btn-primary target="_blank"}
