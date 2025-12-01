@@ -102,13 +102,15 @@ page-footer:
 format:
   html:
     theme:
-      light: simplex
+      light:
+        - simplex
+        - styles/custom.scss
     toc: true
     link-external-icon: true
     link-external-newwindow: true
     anchor-sections: true
     smooth-scroll: true
-    linkcolor: "#9A4665"
+    linkcolor: "#000000"
     # include-after-body:
     #   - navbar-active.js
 
@@ -135,4 +137,4 @@ custom-callout:
   active-processing:
     icon-symbol: "📝"
     collapse: false
-    color: "#9A4665"
+    color: "#333333"

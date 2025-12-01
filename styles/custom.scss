@@ -1,17 +1,16 @@
 /*-- scss:defaults --*/
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
 
-$font-family-sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-$headings-font-family: "Inter", sans-serif;
+$font-family-sans-serif: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$headings-font-family: "Nunito", sans-serif;
 
-// Bauhaus-inspired minimal color scheme
+// BFH-inspired minimal color scheme
 $background-color: #FFFFFF;
-$primary: #E53E3E;
-$secondary: #F7F7F7;
-$accent: #E53E3E;
-$warm: #E53E3E;
-$light: #FAFAFA;
+$primary: #000000;
+$secondary: #666666;
+$light: #F5F5F5;
+$border-color: #E0E0E0;
 $body-bg: $background-color;
 $body-color: #000000;
 
@@ -20,142 +19,100 @@ $body-color: #000000;
 body {
   background-color: #FFFFFF;
   color: #000000;
-  font-family: "Inter", sans-serif;
-  line-height: 1.4;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.6;
   font-size: 1rem;
   font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Inter", sans-serif;
+  font-family: "Nunito", sans-serif;
   color: #000000;
   font-weight: 700;
-  margin-top: 4rem;
+  margin-top: 2.5rem;
   margin-bottom: 1rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
 h1 {
   color: #000000;
   font-weight: 800;
-  font-size: 4rem;
+  font-size: 2.75rem;
   margin-top: 0;
-  margin-bottom: 3rem;
-  letter-spacing: -0.04em;
-  line-height: 0.9;
-}
-
-// Special styling for main page titles only (not blog posts)
-.welcome-headline {
-  color: #E53E3E;
-}
-
-// Homepage and section page titles get red color
-body:not(.quarto-blog-post) .quarto-title-block .quarto-title .title {
-  color: #E53E3E;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 h2 {
-  font-size: 2.5rem;
-  margin-top: 5rem;
+  font-size: 2rem;
+  margin-top: 3rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
 }
 
 h3 {
-  font-size: 1.75rem;
-  margin-top: 3rem;
+  font-size: 1.5rem;
+  margin-top: 2rem;
   font-weight: 600;
-  letter-spacing: -0.01em;
+}
+
+// Navbar - clean BFH style
+.navbar {
+  background-color: #FFFFFF;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #E0E0E0;
+  box-shadow: none;
 }
 
 .navbar-brand, .navbar-nav .nav-link {
   color: #000000 !important;
-  font-family: "Inter", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
 }
 
-.navbar {
-  background-color: #FFFFFF;
-  padding: 2rem 0;
-  border-bottom: 2px solid #000000;
-  box-shadow: none;
-}
-
-
-// Minimal navigation styling
 .navbar-nav .nav-item {
-  margin: 0 2rem;
+  margin: 0 1.5rem;
 }
 
-// Clean geometric nav links
 .navbar-nav .nav-link {
-  padding: 0.75rem 0 !important;
+  padding: 0.5rem 0 !important;
   margin: 0;
   font-weight: 600;
-  letter-spacing: 0.1em;
   transition: all 0.2s ease;
   border-bottom: 2px solid transparent;
   text-decoration: none !important;
-  position: relative;
-}
-
-// Red square accent for all nav items
-.navbar-nav .nav-link::before {
-  content: '';
-  position: absolute;
-  left: -1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 8px;
-  height: 8px;
-  background-color: #E53E3E;
-  display: block;
 }
 
 .navbar-nav .nav-link:hover {
-  border-bottom: 2px solid #E53E3E;
-  color: #E53E3E !important;
+  border-bottom: 2px solid #000000;
+  color: #000000 !important;
 }
 
-// Highlight active navbar items
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link[aria-current="page"] {
-  border-bottom: 2px solid #E53E3E;
-  color: #E53E3E !important;
+  border-bottom: 2px solid #000000;
+  color: #000000 !important;
 }
 
-// Enhanced red square for active items
-.navbar-nav .nav-link.active::before,
-.navbar-nav .nav-link[aria-current="page"]::before {
-  width: 12px;
-  height: 12px;
-}
-
-// Minimal tool icons
+// Navbar tools - clean icons
 .quarto-navbar-tools .quarto-navigation-tool {
   color: #000000 !important;
   font-size: 1.1rem;
   padding: 0.5rem !important;
-  border-radius: 0;
   transition: all 0.2s ease;
   background: none;
 }
 
 .quarto-navbar-tools .quarto-navigation-tool:hover {
-  color: #E53E3E !important;
+  color: #666666 !important;
   background: none;
-  transform: none;
 }
 
-// Clean search styling
+// Search styling
 #quarto-search .aa-DetachedSearchButtonIcon,
 #quarto-search .aa-DetachedSearchButton .aa-DetachedSearchButtonIcon,
-.navbar #quarto-search .aa-DetachedSearchButtonIcon,
-.navbar[data-bs-theme="dark"] #quarto-search .aa-DetachedSearchButtonIcon {
+.navbar #quarto-search .aa-DetachedSearchButtonIcon {
   color: #000000 !important;
   opacity: 1 !important;
   fill: #000000 !important;
@@ -163,322 +120,283 @@ h3 {
 
 #quarto-search:hover .aa-DetachedSearchButtonIcon,
 .navbar #quarto-search:hover .aa-DetachedSearchButtonIcon {
-  color: #E53E3E !important;
-  fill: #E53E3E !important;
+  color: #666666 !important;
+  fill: #666666 !important;
 }
 
+// Links - clean black with underline on hover
 a {
-  color: #E53E3E;
-  text-decoration: none;
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
   transition: all 0.2s ease;
   font-weight: 500;
 }
 
 a:hover {
-  color: #C53030;
-  text-decoration: none;
-  border-bottom: 1px solid #E53E3E;
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-color: #000000;
 }
 
+// Buttons - clean minimal style
 .btn-primary {
-  background-color: #E53E3E;
-  border-color: #E53E3E;
-  padding: 1rem 2.5rem;
+  background-color: #000000;
+  border-color: #000000;
+  padding: 0.75rem 1.5rem;
   font-weight: 600;
   border-radius: 0;
   transition: all 0.2s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 .btn-primary:hover {
-  background-color: #000000;
-  border-color: #000000;
-  transform: none;
+  background-color: #333333;
+  border-color: #333333;
 }
 
+// Cards - subtle borders, clean design
 .card, .feature-card, .section-card {
   background: #FFFFFF;
   border-radius: 0;
-  border: 2px solid #000000;
-  padding: 3rem;
-  margin-bottom: 4rem;
+  border: 1px solid #E0E0E0;
+  padding: 2rem;
+  margin-bottom: 2rem;
   box-shadow: none;
   transition: all 0.2s ease;
 }
 
 .card:hover, .feature-card:hover {
-  transform: none;
-  border-color: #E53E3E;
+  border-color: #000000;
   box-shadow: none;
 }
 
 .feature-card h3 {
-  color: #E53E3E;
+  color: #000000;
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
+// Content grid
 .content-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 3rem;
-  margin: 6rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
 }
 
+// Paragraphs
 p {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.7;
   font-weight: 400;
   color: #000000;
 }
 
-.gradient-text {
-  background: none;
-  color: #E53E3E;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.welcome-headline {
-  font-size: 5rem;
-  text-align: left;
-  margin-bottom: 4rem;
-  line-height: 0.9;
-  font-weight: 900;
-  letter-spacing: -0.04em;
-  text-transform: uppercase;
-}
-
+// Title blocks
 .quarto-title-block {
-  padding-bottom: 3rem;
-  margin-bottom: 4rem;
-  /* border-bottom: 3px solid #000000; */
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #E0E0E0;
 }
 
 .quarto-title-block .quarto-title .title {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
   color: #000000;
-  z-index: 10;
-  position: relative;
 }
 
+// Meta information
 .meta strong {
-  color: #E53E3E;
-  font-weight: 700;
-  text-transform: uppercase;
+  color: #000000;
+  font-weight: 600;
 }
 
 .meta {
   font-size: 0.9rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   color: #666666;
   font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
 }
 
+// Responsive adjustments
 @media (max-width: 900px) {
   .content-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
-    margin: 4rem 0;
+    gap: 1.5rem;
+    margin: 2rem 0;
   }
-  .welcome-headline {
-    font-size: 3rem;
-    text-align: center;
-  }
-  
+
   .card, .feature-card {
-    padding: 2rem;
+    padding: 1.5rem;
   }
-  
+
   h1 {
-    font-size: 3rem;
-  }
-  
-  h2 {
     font-size: 2rem;
   }
-  
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
   .navbar-nav .nav-item {
-    margin: 0 1rem;
+    margin: 0 0.75rem;
   }
 }
 
-// Bauhaus geometric elements (only for specific elements, not titles)
-.geometric-accent {
-  position: relative;
-}
-
-.geometric-accent::before {
-  content: '';
-  position: absolute;
-  top: -1rem;
-  left: 0;
-  width: 60px;
-  height: 4px;
-  background-color: #E53E3E;
-}
-
-// Remove geometric accents from title blocks
-.quarto-title-block .geometric-accent::before {
-  display: none;
-}
-
-// Clean list styling
+// Lists - clean bullets
 ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  padding-left: 0.25rem;
+}
+
+li::marker {
+  color: #000000;
+}
+
+// Remove custom list styling from navbar
+.navbar ul {
   list-style: none;
   padding-left: 0;
 }
 
-li {
-  position: relative;
-  padding-left: 2rem;
-  margin-bottom: 0.75rem;
+.navbar li {
+  padding-left: 0;
 }
 
-li::before {
-  content: '■';
-  position: absolute;
-  left: 0;
-  color: #E53E3E;
-  font-weight: bold;
-}
-
-// Remove default list squares from navbar
-.navbar li::before {
-  display: none;
-}
-
-// Minimal blockquotes
+// Blockquotes - subtle left border
 blockquote {
-  border-left: 4px solid #E53E3E;
-  padding-left: 2rem;
-  margin: 2rem 0;
+  border-left: 3px solid #E0E0E0;
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
   font-style: normal;
-  color: #000000;
-  font-weight: 500;
+  color: #333333;
+  font-weight: 400;
 }
 
-// Clean table styling
+// Tables - clean styling
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 
 th, td {
-  padding: 1rem;
+  padding: 0.75rem 1rem;
   text-align: left;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #E0E0E0;
 }
 
 th {
-  background-color: #000000;
-  color: #FFFFFF;
+  background-color: #F5F5F5;
+  color: #000000;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
 }
 
-// Remove all rounded corners
-* {
-  border-radius: 0 !important;
-}
-
-// Sidebar minimal styling
+// Sidebar - clean styling
 .sidebar {
-  background-color: #FAFAFA;
-  border-right: 2px solid #000000;
+  background-color: #FFFFFF;
+  border-right: 1px solid #E0E0E0;
 }
 
 .sidebar .sidebar-item {
-  border-bottom: 1px solid #E0E0E0;
+  border-bottom: 1px solid #F5F5F5;
 }
 
 .sidebar .sidebar-item a {
   color: #000000;
-  padding: 1rem;
+  padding: 0.75rem 1rem;
   font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 .sidebar .sidebar-item a:hover {
-  background-color: #E53E3E;
-  color: #FFFFFF;
+  background-color: #F5F5F5;
+  color: #000000;
 }
 
-// Active sidebar items highlighting
 .sidebar .sidebar-item a.active,
 .sidebar .sidebar-item .sidebar-link.active {
   background-color: #F5F5F5;
   color: #000000;
-  border-left: 4px solid #E53E3E;
+  border-left: 3px solid #000000;
   font-weight: 600;
 }
 
-
-// Blog listing minimal style
+// Blog listing - clean cards
 .quarto-listing .listing-item {
   background: #FFFFFF;
-  border: 2px solid #000000;
-  padding: 2rem;
-  margin-bottom: 2rem;
+  border: 1px solid #E0E0E0;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
   transition: all 0.2s ease;
 }
 
 .quarto-listing .listing-item:hover {
-  border-color: #E53E3E;
+  border-color: #000000;
 }
 
 .quarto-listing .listing-item .listing-title {
-  color: #E53E3E;
+  color: #000000;
   font-weight: 700;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .quarto-listing .listing-item .listing-subtitle {
   color: #666666;
   font-size: 0.9rem;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
 }
 
 .quarto-listing .listing-item .listing-description {
-  color: #000000;
-  line-height: 1.5;
+  color: #333333;
+  line-height: 1.6;
 }
 
-// Footer styling
+// Footer - light clean style
 .page-footer {
-  background-color: #000000;
-  color: #FFFFFF;
+  background-color: #F5F5F5;
+  color: #000000;
   padding: 2rem 0;
   margin-top: 4rem;
+  border-top: 1px solid #E0E0E0;
 }
 
 .page-footer a {
-  color: #FFFFFF;
-  border-bottom: 1px solid transparent;
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-color: transparent;
 }
 
 .page-footer a:hover {
-  color: #E53E3E;
-  border-bottom: 1px solid #E53E3E;
+  color: #000000;
+  text-decoration-color: #000000;
+}
+
+// Code blocks
+pre {
+  background-color: #F5F5F5;
+  border: 1px solid #E0E0E0;
+  padding: 1rem;
+  border-radius: 0;
+}
+
+code {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 0.9em;
+}
+
+// Remove aggressive border-radius override - allow subtle rounding where appropriate
+// but keep cards and buttons sharp
+.card, .btn, .navbar, pre, .sidebar {
+  border-radius: 0 !important;
 }

@@ -1,17 +1,22 @@
 color:
   palette:
-    dark-grey: "#222222"
-    blue: "#F5F5F5" 
-  background: blue
-  foreground: dark-grey
+    black: "#000000"
+    white: "#FFFFFF"
+    light-grey: "#F5F5F5"
+    medium-grey: "#666666"
+    dark-grey: "#333333"
+    border-grey: "#E0E0E0"
+  background: white
+  foreground: black
   primary: black
+  secondary: medium-grey
 
-# logo: 
+# logo:
 #   large: assets/bfh-logo.png
 
 typography:
   fonts:
-    - family: Jura
+    - family: Nunito
       source: google
-  base: Jura
-  headings: Jura
+  base: Nunito
+  headings: Nunito
