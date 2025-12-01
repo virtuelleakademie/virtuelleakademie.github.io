@@ -1,0 +1,48 @@
+---
+title: "BFH Weiterbildung"
+page-layout: full
+---
+
+## KI in der Lehre
+
+A progressive series of courses on integrating AI into teaching practice, offered through BFH continuing education.
+
+::: {.content-grid-compact}
+
+::: {.feature-card-compact}
+### [KI in der Lehre: Beginner](https://virtuelleakademie.github.io/ki-lehre-beginner/)
+
+::: {.meta}
+**Level:** Beginner | **Duration:** 3 hours
+:::
+
+Introduction to AI in educational settings. Foundational concepts and first steps with AI tools.
+
+[**Launch Beginner course →**](https://virtuelleakademie.github.io/ki-lehre-beginner/){.btn .btn-primary target="_blank"}
+:::
+
+::: {.feature-card-compact}
+### [KI in der Lehre: Intermediate](https://virtuelleakademie.github.io/ki-lehre-intermediate/)
+
+::: {.meta}
+**Level:** Intermediate | **Duration:** Half-day
+:::
+
+Practical AI integration into teaching. Hands-on exploration and implementation strategies.
+
+[**Launch Intermediate course →**](https://virtuelleakademie.github.io/ki-lehre-intermediate/){.btn .btn-primary target="_blank"}
+:::
+
+::: {.feature-card-compact}
+### [KI in der Lehre: Advanced](https://virtuelleakademie.github.io/ki-lehre-advanced/)
+
+::: {.meta}
+**Level:** Advanced | **Duration:** 3 hours
+:::
+
+Build AI-powered educational tools grounded in Cognitive Load Theory.
+
+[**Launch Advanced course →**](https://virtuelleakademie.github.io/ki-lehre-advanced/){.btn .btn-primary target="_blank"}
+:::
+
+:::

@@ -3,54 +3,24 @@ title: "Teaching"
 page-layout: full
 ---
 
-## Welcome to Teaching
-
-This section contains information about courses, teaching philosophy, and educational resources focused on AI in education.
-
-## AI in Education Courses
+Courses and materials for integrating AI into teaching practice.
 
 ::: {.content-grid}
 
 ::: {.feature-card}
-### [KI in der Lehre - Intermediate](https://virtuelleakademie.github.io/ki-lehre-intermediate/)
+### [BFH Weiterbildung](bfh-weiterbildung/)
 
-::: {.meta}
-**Level:** Intermediate | **Format:** Interactive Workshop | **Duration:** Half-day
-:::
+A progressive series of courses on AI in education, offered through BFH continuing education. Three levels: Beginner, Intermediate, and Advanced.
 
-An intermediate-level course exploring practical applications of artificial intelligence in educational settings. Learn how to integrate AI tools effectively into your teaching practice.
-
-- Hands-on AI tool exploration
-- Practical implementation strategies
-- Interactive exercises and examples
-- Real-world case studies
-
-[**Launch Intermediate Course →**](https://virtuelleakademie.github.io/ki-lehre-intermediate/){.btn .btn-primary target="_blank"}
+[**View Courses →**](bfh-weiterbildung/)
 :::
 
 ::: {.feature-card}
-### [KI in der Lehre - Advanced](https://virtuelleakademie.github.io/ki-lehre-advanced/)
+### [CAS Hochschuldidaktik](cas-hochschuldidaktik/)
 
-::: {.meta}
-**Level:** Advanced | **Format:** Interactive Workshop | **Duration:** Half-day
-:::
+Module 4 of the CAS Hochschuldidaktik program, focusing on AI in higher education teaching.
 
-Advanced concepts and implementations of AI technologies in modern educational environments. Deep dive into sophisticated AI applications and pedagogical frameworks.
-
-- Advanced AI integration techniques
-- Ethical considerations and best practices
-- Custom AI workflow development
-- Assessment and evaluation methods
-
-[**Launch Advanced Course →**](https://virtuelleakademie.github.io/ki-lehre-advanced/){.btn .btn-primary target="_blank"}
+[**View Program →**](cas-hochschuldidaktik/)
 :::
 
 :::
-
-### Teaching Philosophy
-
-Learn about our approach to education and student engagement in the digital age.
-
-### Resources
-
-Access helpful resources for students and fellow educators interested in AI applications in education.

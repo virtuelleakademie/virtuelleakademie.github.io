@@ -1,0 +1,22 @@
+---
+title: "CAS Hochschuldidaktik"
+page-layout: full
+---
+
+## KI in der Lehre
+
+::: {.content-grid-compact}
+
+::: {.feature-card-compact}
+### [CAS Hochschuldidaktik: KI in der Lehre](https://virtuelleakademie.github.io/cas-hochschuldidaktik/)
+
+::: {.meta}
+**Program:** Certificate of Advanced Studies | **Format:** Full-day module
+:::
+
+Module 4 of the CAS Hochschuldidaktik program, focusing on AI in higher education teaching.
+
+[**Access →**](https://virtuelleakademie.github.io/cas-hochschuldidaktik/){.btn .btn-primary target="_blank"}
+:::
+
+:::
