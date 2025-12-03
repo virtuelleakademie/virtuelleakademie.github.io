@@ -1,5 +1,7 @@
 ---
 title: "Collaborations"
+lang: en
+translation: /de/research/collaborations/index.html
 ---
 
 ## Current Collaborations
