@@ -15,11 +15,12 @@ project:
     - posts/**/*.qmd
 
 website:
-  title: "Virtuelle Akademie"
+  title: "Virtuelle Akademie | KI in der Lehre"
+  description: "Forschung und Ressourcen zu KI in der Hochschullehre"
 
   site-url: https://virtuelleakademie.github.io/
-  repo-url: https://github.com/virtuelleakademie
-  # repo-actions: [edit, issue]
+  repo-url: https://github.com/virtuelleakademie/virtuelleakademie.github.io
+  repo-actions: [edit, issue]
 
   favicon: /assets/va-logo.png
   open-graph: true
@@ -48,6 +49,10 @@ website:
         href: about/index.qmd
       
     tools:
+      - icon: house-fill
+        text: "Hauptseite virtuelleakademie.ch"
+        href: https://virtuelleakademie.ch
+        target: _blank
       - icon: lightbulb-fill
         text: Knowledge Base
         href: https://virtuelleakademie.ch/knowledge-base/
@@ -84,7 +89,7 @@ website:
         - workshops/bespoke/index.qmd
 
 page-footer:
-  left: "© 2025 Virtuelle Akademie"
+  left: "© 2025 Virtuelle Akademie | Forschung & KI in der Lehre"
   right:
     - icon: github
       href: https://github.com/virtuelleakademie

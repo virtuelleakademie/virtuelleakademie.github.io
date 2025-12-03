@@ -5,7 +5,7 @@ toc: false
 ---
 
 ::: {.lead}
-We explore how artificial intelligence can enhance teaching and learning in higher education, with a focus on intelligent tutoring systems, adaptive learning, and human-AI collaboration.
+This is the research and teaching platform of the Virtuelle Akademie, focusing on **AI in higher education**. We explore how artificial intelligence can enhance teaching and learning, with a focus on intelligent tutoring systems, adaptive learning, and human-AI collaboration. Visit [virtuelleakademie.ch](https://virtuelleakademie.ch) for our main site.
 :::
 
 ## What We Do
