@@ -1,5 +1,7 @@
 ---
 title: "Dr. Andrew Ellis"
+lang: en
+translation: /de/about/andrew-ellis/index.html
 image: "../../assets/va-logo.png"
 about:
   template: trestles

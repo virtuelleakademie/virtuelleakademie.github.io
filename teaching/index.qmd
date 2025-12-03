@@ -1,5 +1,7 @@
 ---
 title: "Teaching"
+lang: en
+translation: /de/teaching/index.html
 page-layout: full
 ---
 
