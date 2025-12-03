@@ -1,5 +1,7 @@
 ---
 title: "Special Topics"
+lang: en
+translation: /de/workshops/special-topics/index.html
 page-layout: full
 ---
 

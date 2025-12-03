@@ -1,0 +1,28 @@
+---
+title: "Workshops"
+lang: de
+translation: /workshops/index.html
+page-layout: full
+---
+
+Workshops zu KI in der Bildung für verschiedene Zielgruppen und Kontexte.
+
+::: {.content-grid}
+
+::: {.feature-card}
+### [Spezialthemen](special-topics/)
+
+Spezialisierte Workshops zu fokussierten Themen wie Faktenüberprüfung und laterales Lesen.
+
+[**Workshops ansehen →**](special-topics/){.btn .btn-primary}
+:::
+
+::: {.feature-card}
+### [Massgeschneiderte Workshops](bespoke/)
+
+Individuelle Workshops, die für spezifische Institutionen entwickelt wurden, darunter UB/HAFL, HKB und Organisationen im Gesundheitswesen.
+
+[**Workshops ansehen →**](bespoke/){.btn .btn-primary}
+:::
+
+:::

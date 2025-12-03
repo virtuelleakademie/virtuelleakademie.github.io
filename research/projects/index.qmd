@@ -1,5 +1,7 @@
 ---
 title: "Research Projects"
+lang: en
+translation: /de/research/projects/index.html
 ---
 
 ## Current Projects

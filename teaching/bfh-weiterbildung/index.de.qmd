@@ -1,0 +1,50 @@
+---
+title: "BFH Weiterbildung"
+lang: de
+translation: /teaching/bfh-weiterbildung/index.html
+page-layout: full
+---
+
+## KI in der Lehre
+
+Eine progressive Kursreihe zur Integration von KI in die Lehrpraxis, angeboten über die BFH-Weiterbildung.
+
+::: {.content-grid-compact}
+
+::: {.feature-card-compact}
+### [KI in der Lehre: Beginner](https://virtuelleakademie.github.io/ki-lehre-beginner/)
+
+::: {.meta}
+**Stufe:** Einsteiger | **Dauer:** 3 Stunden
+:::
+
+Einführung in KI in Bildungskontexten. Grundlegende Konzepte und erste Schritte mit KI-Tools.
+
+[**Beginner-Kurs starten →**](https://virtuelleakademie.github.io/ki-lehre-beginner/){.btn .btn-primary target="_blank"}
+:::
+
+::: {.feature-card-compact}
+### [KI in der Lehre: Intermediate](https://virtuelleakademie.github.io/ki-lehre-intermediate/)
+
+::: {.meta}
+**Stufe:** Fortgeschritten | **Dauer:** Halbtägig
+:::
+
+Praktische KI-Integration in den Unterricht. Hands-on-Erkundung und Implementierungsstrategien.
+
+[**Intermediate-Kurs starten →**](https://virtuelleakademie.github.io/ki-lehre-intermediate/){.btn .btn-primary target="_blank"}
+:::
+
+::: {.feature-card-compact}
+### [KI in der Lehre: Advanced](https://virtuelleakademie.github.io/ki-lehre-advanced/)
+
+::: {.meta}
+**Stufe:** Experten | **Dauer:** 3 Stunden
+:::
+
+Entwicklung von KI-gestützten Bildungswerkzeugen basierend auf der Cognitive Load Theory.
+
+[**Advanced-Kurs starten →**](https://virtuelleakademie.github.io/ki-lehre-advanced/){.btn .btn-primary target="_blank"}
+:::
+
+:::

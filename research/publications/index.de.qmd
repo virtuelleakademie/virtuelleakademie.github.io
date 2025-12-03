@@ -1,0 +1,44 @@
+---
+title: "Publikationen"
+lang: de
+translation: /research/publications/index.html
+---
+
+## Zeitschriftenartikel
+
+### 2024
+
+**Titel des Artikels 1** (2024)
+*Zeitschriftenname*, Bd. X, Ausgabe Y, S. Z-Z
+[DOI-Link] | [PDF]
+
+**Titel des Artikels 2** (2024)
+*Andere Zeitschrift*, Bd. A, Ausgabe B, S. C-C
+[DOI-Link] | [PDF]
+
+### 2023
+
+**Titel des Artikels 3** (2023)
+*Zeitschriftenname*, Bd. X, Ausgabe Y, S. Z-Z
+[DOI-Link] | [PDF]
+
+## Konferenzbeiträge
+
+### 2024
+
+**Titel des Konferenzbeitrags** (2024)
+*Konferenzname*, Ort
+[Link] | [PDF]
+
+### 2023
+
+**Weiterer Konferenzbeitrag** (2023)
+*Andere Konferenz*, Ort
+[Link] | [PDF]
+
+## Buchkapitel
+
+**Kapiteltitel** (2024)
+In: *Buchtitel*, Herausgebername (Hrsg.)
+Verlag, S. X-Y
+[Link]

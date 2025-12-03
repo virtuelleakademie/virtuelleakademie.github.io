@@ -1,5 +1,7 @@
 ---
 title: "Publications"
+lang: en
+translation: /de/research/publications/index.html
 ---
 
 ## Journal Articles

@@ -1,0 +1,56 @@
+# Language configuration for lang-switch extension
+# This file defines the available languages and translations for UI elements
+
+languages:
+  - code: en
+    name: English
+    dir: /
+    default: true
+  - code: de
+    name: Deutsch
+    dir: /de/
+
+# File naming convention
+# English: {name}.qmd
+# German: {name}.de.qmd
+file-pattern: "{name}.{lang}.qmd"
+
+# Navbar translations
+navbar:
+  en:
+    research: Research
+    teaching: Teaching
+    workshops: Workshops
+    blog: Blog
+    about: About
+  de:
+    research: Forschung
+    teaching: Lehre
+    workshops: Workshops
+    blog: Blog
+    about: "Über uns"
+
+# Sidebar translations
+sidebar:
+  en:
+    teaching-title: Teaching
+    workshops-title: Workshops
+    research-title: Research
+  de:
+    teaching-title: Lehre
+    workshops-title: Workshops
+    research-title: Forschung
+
+# Footer translations
+footer:
+  en: "© 2025 Virtuelle Akademie | Research & AI in Teaching"
+  de: "© 2025 Virtuelle Akademie | Forschung & KI in der Lehre"
+
+# Site metadata translations
+site:
+  en:
+    title: "Virtuelle Akademie | AI in Teaching"
+    description: "Research and resources on AI in higher education"
+  de:
+    title: "Virtuelle Akademie | KI in der Lehre"
+    description: "Forschung und Ressourcen zu KI in der Hochschullehre"

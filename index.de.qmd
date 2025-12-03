@@ -1,0 +1,41 @@
+---
+title: "Virtuelle Akademie"
+lang: de
+translation: /index.html
+page-layout: full
+toc: false
+---
+
+::: {.lead}
+Dies ist die Forschungs- und Lehrplattform der Virtuellen Akademie mit Schwerpunkt auf **KI in der Hochschullehre**. Wir erforschen, wie künstliche Intelligenz Lehre und Lernen verbessern kann, mit Fokus auf intelligente Tutorsysteme, adaptives Lernen und Mensch-KI-Kollaboration. Besuchen Sie [virtuelleakademie.ch](https://virtuelleakademie.ch) für unsere Hauptseite.
+:::
+
+## Was wir tun
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+### [Forschung](research/index.qmd)
+
+Untersuchung intelligenter Tutorsysteme, die sich an individuelle Lernende anpassen und bedeutungsvolles Feedback basierend auf kognitionswissenschaftlichen Erkenntnissen geben.
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### [Lehre](teaching/index.qmd)
+
+Kurse und Programme zu KI in der Bildung, einschliesslich Weiterbildung an der BFH und dem CAS Hochschuldidaktik.
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### [Workshops](workshops/index.qmd)
+
+Praxisorientierte Workshops zu generativen KI-Tools, Prompt Engineering und praktischen Anwendungen für Lehrende.
+:::
+
+:::
+
+## Über uns
+
+Die Virtuelle Akademie ist Teil der [Berner Fachhochschule](https://www.bfh.ch/). Wir sind Mitglieder des [BeLEARN](https://belearn.swiss/)-Forschungsnetzwerks, das die Wissenschaft des Lernens durch interdisziplinäre Zusammenarbeit vorantreibt.
+
+[Mehr über unser Team erfahren](about/index.qmd)

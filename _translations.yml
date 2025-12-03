@@ -1,0 +1,79 @@
+generated: 2025-12-03 15:39:36
+total_pages: 25
+translated: 15
+translations:
+  /404.html:
+    en: /404.html
+    de: .na.character
+  /_extensions/r-wasm/live/_gradethis.html:
+    en: /_extensions/r-wasm/live/_gradethis.html
+    de: .na.character
+  /_extensions/r-wasm/live/_knitr.html:
+    en: /_extensions/r-wasm/live/_knitr.html
+    de: .na.character
+  /about/andrew-ellis/:
+    en: /about/andrew-ellis/
+    de: /de/about/andrew-ellis/
+  /about/:
+    en: /about/
+    de: /de/about/
+  /about/stefan-hackstein/:
+    en: /about/stefan-hackstein/
+    de: /de/about/stefan-hackstein/
+  /:
+    en: /
+    de: /de/
+  /posts/_archive/julia-tidier/:
+    en: /posts/_archive/julia-tidier/
+    de: .na.character
+  /posts/_archive/observable-js/:
+    en: /posts/_archive/observable-js/
+    de: .na.character
+  /posts/_archive/polars-plotnine/:
+    en: /posts/_archive/polars-plotnine/
+    de: .na.character
+  /posts/_archive/r-code/:
+    en: /posts/_archive/r-code/
+    de: .na.character
+  /posts/:
+    en: /posts/
+    de: /de/posts/
+  /research/collaborations/:
+    en: /research/collaborations/
+    de: /de/research/collaborations/
+  /research/:
+    en: /research/
+    de: /de/research/
+  /research/projects/:
+    en: /research/projects/
+    de: /de/research/projects/
+  /research/publications/:
+    en: /research/publications/
+    de: /de/research/publications/
+  /teaching/bfh-weiterbildung/:
+    en: /teaching/bfh-weiterbildung/
+    de: /de/teaching/bfh-weiterbildung/
+  /teaching/cas-hochschuldidaktik/:
+    en: /teaching/cas-hochschuldidaktik/
+    de: /de/teaching/cas-hochschuldidaktik/
+  /teaching/courses/:
+    en: /teaching/courses/
+    de: .na.character
+  /teaching/:
+    en: /teaching/
+    de: /de/teaching/
+  /teaching/philosophy/:
+    en: /teaching/philosophy/
+    de: .na.character
+  /teaching/resources/:
+    en: /teaching/resources/
+    de: .na.character
+  /workshops/bespoke/:
+    en: /workshops/bespoke/
+    de: /de/workshops/bespoke/
+  /workshops/:
+    en: /workshops/
+    de: /de/workshops/
+  /workshops/special-topics/:
+    en: /workshops/special-topics/
+    de: /de/workshops/special-topics/

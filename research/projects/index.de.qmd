@@ -1,0 +1,49 @@
+---
+title: "Forschungsprojekte"
+lang: de
+translation: /research/projects/index.html
+---
+
+## Aktuelle Projekte
+
+::: {.section-card}
+### Projekt 1
+
+::: {.meta}
+**Laufzeit:** 2024-2025 | **Finanzierung:** [Förderquelle] | **Partner:** [Namen]
+:::
+
+Kurze Beschreibung der Projektziele und Methodik. Diese Forschung untersucht innovative Ansätze der Bildungstechnologie und deren Auswirkungen auf Lernergebnisse.
+:::
+
+::: {.section-card}
+### Projekt 2
+
+::: {.meta}
+**Laufzeit:** 2023-2024 | **Status:** Laufend
+:::
+
+Beschreibung eines weiteren aktuellen Forschungsprojekts mit Fokus auf Anwendungen Künstlicher Intelligenz in Bildungskontexten.
+:::
+
+## Abgeschlossene Projekte
+
+::: {.section-card}
+### Früheres Projekt 1
+
+::: {.meta}
+**Laufzeit:** 2022-2023 | **Status:** Abgeschlossen
+:::
+
+Zusammenfassung eines abgeschlossenen Forschungsprojekts und dessen Ergebnisse. Dieses Projekt lieferte wichtige Erkenntnisse zu digitalen Lernmethoden.
+:::
+
+::: {.section-card}
+### Früheres Projekt 2
+
+::: {.meta}
+**Laufzeit:** 2021-2022 | **Status:** Publiziert
+:::
+
+Beschreibung eines weiteren abgeschlossenen Projekts, das zu mehreren begutachteten Publikationen in Fachzeitschriften für Bildungstechnologie führte.
+:::

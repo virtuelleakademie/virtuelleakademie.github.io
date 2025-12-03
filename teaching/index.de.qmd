@@ -1,0 +1,28 @@
+---
+title: "Lehre"
+lang: de
+translation: /teaching/index.html
+page-layout: full
+---
+
+Kurse und Materialien zur Integration von KI in die Lehrpraxis.
+
+::: {.content-grid}
+
+::: {.feature-card}
+### [BFH Weiterbildung](bfh-weiterbildung/)
+
+Eine progressive Kursreihe zu KI in der Bildung, angeboten über die BFH-Weiterbildung. Drei Stufen: Einsteiger, Fortgeschritten und Experten.
+
+[**Kurse ansehen →**](bfh-weiterbildung/){.btn .btn-primary}
+:::
+
+::: {.feature-card}
+### [CAS Hochschuldidaktik](cas-hochschuldidaktik/)
+
+Modul 4 des CAS Hochschuldidaktik-Programms mit Fokus auf KI in der Hochschullehre.
+
+[**Programm ansehen →**](cas-hochschuldidaktik/){.btn .btn-primary}
+:::
+
+:::

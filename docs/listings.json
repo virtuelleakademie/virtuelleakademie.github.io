@@ -1,7 +1,15 @@
 [
   {
+    "listing": "/posts/index.de.html",
+    "items": [
+      "/posts/index.html",
+      "/posts/template/index.html"
+    ]
+  },
+  {
     "listing": "/posts/index.html",
     "items": [
+      "/posts/index.de.html",
       "/posts/template/index.html"
     ]
   }
