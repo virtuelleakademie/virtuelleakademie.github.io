@@ -2,12 +2,76 @@
  * Styles for the language switcher dropdown
  */
 
-/* Dropdown container */
+/* ================================================
+   Navbar Tools Style (primary - next to icons)
+   ================================================ */
+
+.lang-switch-tool {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
+.lang-switch-tool .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.lang-switch-tool .nav-link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.lang-switch-tool .nav-link .bi-translate {
+  font-size: 1.1rem;
+}
+
+.lang-switch-tool .lang-switch-current {
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.lang-switch-tool .dropdown-menu {
+  min-width: 120px;
+  padding: 0.25rem 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.lang-switch-tool .dropdown-item {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  transition: background-color 0.15s ease;
+}
+
+.lang-switch-tool .dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.lang-switch-tool .dropdown-item.active {
+  background-color: var(--bs-primary, #0d6efd);
+  color: white;
+}
+
+.lang-switch-tool .dropdown-item.active:hover {
+  background-color: var(--bs-primary, #0d6efd);
+  filter: brightness(0.9);
+}
+
+/* ================================================
+   Navbar Nav Style (fallback - next to About)
+   ================================================ */
+
 .lang-switch-dropdown {
   margin-left: 0.5rem;
 }
 
-/* Dropdown toggle button */
 .lang-switch-dropdown .nav-link {
   display: flex;
   align-items: center;
@@ -21,20 +85,12 @@
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* Globe icon */
-.lang-switch-icon {
-  font-size: 1rem;
-  line-height: 1;
-}
-
-/* Current language code (e.g., "EN") */
-.lang-switch-current {
+.lang-switch-dropdown .lang-switch-current {
   font-weight: 500;
   font-size: 0.875rem;
   letter-spacing: 0.025em;
 }
 
-/* Dropdown menu */
 .lang-switch-dropdown .dropdown-menu {
   min-width: 120px;
   padding: 0.25rem 0;
@@ -42,7 +98,6 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Dropdown items */
 .lang-switch-dropdown .dropdown-item {
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
@@ -53,7 +108,6 @@
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* Active language indicator */
 .lang-switch-dropdown .dropdown-item.active {
   background-color: var(--bs-primary, #0d6efd);
   color: white;
@@ -63,6 +117,10 @@
   background-color: var(--bs-primary, #0d6efd);
   filter: brightness(0.9);
 }
+
+/* ================================================
+   Shared Styles
+   ================================================ */
 
 /* Hide the config script element */
 #lang-switch-config {
@@ -105,21 +163,30 @@
   }
 }
 
-/* Responsive adjustments */
+/* ================================================
+   Responsive Adjustments
+   ================================================ */
+
 @media (max-width: 991.98px) {
+  .lang-switch-tool {
+    margin-right: 0;
+  }
+
   .lang-switch-dropdown {
     margin-left: 0;
     margin-top: 0.5rem;
   }
 
-  .lang-switch-dropdown .dropdown-menu {
+  .lang-switch-dropdown .dropdown-menu,
+  .lang-switch-tool .dropdown-menu {
     position: static;
     box-shadow: none;
     border: none;
     background-color: transparent;
   }
 
-  .lang-switch-dropdown .dropdown-item {
+  .lang-switch-dropdown .dropdown-item,
+  .lang-switch-tool .dropdown-item {
     padding-left: 1.5rem;
   }
 }
