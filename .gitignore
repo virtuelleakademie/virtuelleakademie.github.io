@@ -73,3 +73,5 @@ CLAUDE.md
 
 
 **/*.quarto_ipynb
+
+/.luarc.json

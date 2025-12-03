@@ -12,6 +12,25 @@ docs/%.pdf: pages/%.qmd
 	echo $< $@
 	quarto render $< --to pdf
 
+# Bilingual site rendering
+render:  ## Render the full bilingual site (EN + DE)
+	Rscript scripts/build-translations.R
+	quarto render
+	Rscript scripts/render-german.R
+
+render-en:  ## Render English content only
+	quarto render
+
+render-de:  ## Render German content only (to docs/de/)
+	Rscript scripts/render-german.R
+
+preview: ## Preview site (builds translation registry first)
+	Rscript scripts/build-translations.R
+	quarto preview
+
+translations:  ## Build the translation registry (_translations.yml)
+	Rscript scripts/build-translations.R
+
 clean:   ## clean up
 	rm -rf pages/tex2pdf.-*
 

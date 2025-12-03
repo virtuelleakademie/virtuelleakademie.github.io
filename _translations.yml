@@ -1,0 +1,79 @@
+generated: 2025-12-03 14:59:16
+total_pages: 25
+translated: 1
+translations:
+  /404.html:
+    en: /404.html
+    de: .na.character
+  /_extensions/r-wasm/live/_gradethis.html:
+    en: /_extensions/r-wasm/live/_gradethis.html
+    de: .na.character
+  /_extensions/r-wasm/live/_knitr.html:
+    en: /_extensions/r-wasm/live/_knitr.html
+    de: .na.character
+  /about/andrew-ellis/:
+    en: /about/andrew-ellis/
+    de: .na.character
+  /about/:
+    en: /about/
+    de: .na.character
+  /about/stefan-hackstein/:
+    en: /about/stefan-hackstein/
+    de: .na.character
+  /:
+    en: /
+    de: /de/
+  /posts/_archive/julia-tidier/:
+    en: /posts/_archive/julia-tidier/
+    de: .na.character
+  /posts/_archive/observable-js/:
+    en: /posts/_archive/observable-js/
+    de: .na.character
+  /posts/_archive/polars-plotnine/:
+    en: /posts/_archive/polars-plotnine/
+    de: .na.character
+  /posts/_archive/r-code/:
+    en: /posts/_archive/r-code/
+    de: .na.character
+  /posts/:
+    en: /posts/
+    de: .na.character
+  /research/collaborations/:
+    en: /research/collaborations/
+    de: .na.character
+  /research/:
+    en: /research/
+    de: .na.character
+  /research/projects/:
+    en: /research/projects/
+    de: .na.character
+  /research/publications/:
+    en: /research/publications/
+    de: .na.character
+  /teaching/bfh-weiterbildung/:
+    en: /teaching/bfh-weiterbildung/
+    de: .na.character
+  /teaching/cas-hochschuldidaktik/:
+    en: /teaching/cas-hochschuldidaktik/
+    de: .na.character
+  /teaching/courses/:
+    en: /teaching/courses/
+    de: .na.character
+  /teaching/:
+    en: /teaching/
+    de: .na.character
+  /teaching/philosophy/:
+    en: /teaching/philosophy/
+    de: .na.character
+  /teaching/resources/:
+    en: /teaching/resources/
+    de: .na.character
+  /workshops/bespoke/:
+    en: /workshops/bespoke/
+    de: .na.character
+  /workshops/:
+    en: /workshops/
+    de: .na.character
+  /workshops/special-topics/:
+    en: /workshops/special-topics/
+    de: .na.character

@@ -4,8 +4,9 @@ project:
   preview:
     port: 8803
     browser: true
-  render: 
+  render:
     - index.qmd
+    - "*.de.qmd"
     - research/**/*.qmd
     - teaching/**/*.ipynb
     - research/**/*.ipynb
@@ -13,6 +14,9 @@ project:
     - workshops/**/*.qmd
     - about/**/*.qmd
     - posts/**/*.qmd
+    - "**/*.de.qmd"
+
+lang: en
 
 website:
   title: "Virtuelle Akademie | KI in der Lehre"
@@ -129,6 +133,7 @@ revealjs-plugins:
 filters:
   - timer
   - custom-callout
+  - lang-switch
 
 custom-callout:
   active-processing:

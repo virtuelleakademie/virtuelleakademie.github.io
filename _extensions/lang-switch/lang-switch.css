@@ -1,0 +1,125 @@
+/* lang-switch.css
+ * Styles for the language switcher dropdown
+ */
+
+/* Dropdown container */
+.lang-switch-dropdown {
+  margin-left: 0.5rem;
+}
+
+/* Dropdown toggle button */
+.lang-switch-dropdown .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.lang-switch-dropdown .nav-link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Globe icon */
+.lang-switch-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* Current language code (e.g., "EN") */
+.lang-switch-current {
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.025em;
+}
+
+/* Dropdown menu */
+.lang-switch-dropdown .dropdown-menu {
+  min-width: 120px;
+  padding: 0.25rem 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Dropdown items */
+.lang-switch-dropdown .dropdown-item {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  transition: background-color 0.15s ease;
+}
+
+.lang-switch-dropdown .dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Active language indicator */
+.lang-switch-dropdown .dropdown-item.active {
+  background-color: var(--bs-primary, #0d6efd);
+  color: white;
+}
+
+.lang-switch-dropdown .dropdown-item.active:hover {
+  background-color: var(--bs-primary, #0d6efd);
+  filter: brightness(0.9);
+}
+
+/* Hide the config script element */
+#lang-switch-config {
+  display: none !important;
+}
+
+/* Toast notification */
+.lang-switch-toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: langSwitchFadeInOut 3s ease forwards;
+}
+
+/* Toast animation */
+@keyframes langSwitchFadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  85% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .lang-switch-dropdown {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+
+  .lang-switch-dropdown .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+  }
+
+  .lang-switch-dropdown .dropdown-item {
+    padding-left: 1.5rem;
+  }
+}
