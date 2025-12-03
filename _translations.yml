@@ -1,6 +1,6 @@
-generated: 2025-12-03 15:09:21
+generated: 2025-12-03 15:39:36
 total_pages: 25
-translated: 1
+translated: 15
 translations:
   /404.html:
     en: /404.html
@@ -13,13 +13,13 @@ translations:
     de: .na.character
   /about/andrew-ellis/:
     en: /about/andrew-ellis/
-    de: .na.character
+    de: /de/about/andrew-ellis/
   /about/:
     en: /about/
-    de: .na.character
+    de: /de/about/
   /about/stefan-hackstein/:
     en: /about/stefan-hackstein/
-    de: .na.character
+    de: /de/about/stefan-hackstein/
   /:
     en: /
     de: /de/
@@ -37,31 +37,31 @@ translations:
     de: .na.character
   /posts/:
     en: /posts/
-    de: .na.character
+    de: /de/posts/
   /research/collaborations/:
     en: /research/collaborations/
-    de: .na.character
+    de: /de/research/collaborations/
   /research/:
     en: /research/
-    de: .na.character
+    de: /de/research/
   /research/projects/:
     en: /research/projects/
-    de: .na.character
+    de: /de/research/projects/
   /research/publications/:
     en: /research/publications/
-    de: .na.character
+    de: /de/research/publications/
   /teaching/bfh-weiterbildung/:
     en: /teaching/bfh-weiterbildung/
-    de: .na.character
+    de: /de/teaching/bfh-weiterbildung/
   /teaching/cas-hochschuldidaktik/:
     en: /teaching/cas-hochschuldidaktik/
-    de: .na.character
+    de: /de/teaching/cas-hochschuldidaktik/
   /teaching/courses/:
     en: /teaching/courses/
     de: .na.character
   /teaching/:
     en: /teaching/
-    de: .na.character
+    de: /de/teaching/
   /teaching/philosophy/:
     en: /teaching/philosophy/
     de: .na.character
@@ -70,10 +70,10 @@ translations:
     de: .na.character
   /workshops/bespoke/:
     en: /workshops/bespoke/
-    de: .na.character
+    de: /de/workshops/bespoke/
   /workshops/:
     en: /workshops/
-    de: .na.character
+    de: /de/workshops/
   /workshops/special-topics/:
     en: /workshops/special-topics/
-    de: .na.character
+    de: /de/workshops/special-topics/

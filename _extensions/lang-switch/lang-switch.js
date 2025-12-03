@@ -1,5 +1,5 @@
 // lang-switch.js
-// Injects language switcher into Quarto navbar tools
+// Injects language switcher into Quarto navbar tools and handles navbar translation
 
 document.addEventListener("DOMContentLoaded", function() {
   // Read configuration from injected script tag
@@ -15,6 +15,11 @@ document.addEventListener("DOMContentLoaded", function() {
   } catch (e) {
     console.error("lang-switch: Failed to parse configuration", e);
     return;
+  }
+
+  // Translate navbar for German pages
+  if (config.currentLang === "de") {
+    translateNavbar(config);
   }
 
   // Find the navbar tools container (where GitHub icon, etc. are)
@@ -33,6 +38,79 @@ document.addEventListener("DOMContentLoaded", function() {
 
   console.warn("lang-switch: No suitable navbar container found");
 });
+
+// Translate navbar labels and fix links for German pages
+function translateNavbar(config) {
+  const translations = {
+    "Research": "Forschung",
+    "Teaching": "Lehre",
+    "Workshops": "Workshops",
+    "Blog": "Blog",
+    "About": "Über uns"
+  };
+
+  // Translate navbar menu items
+  const navLinks = document.querySelectorAll(".navbar-nav .nav-link .menu-text");
+  navLinks.forEach(function(menuText) {
+    const text = menuText.textContent.trim();
+    if (translations[text]) {
+      menuText.textContent = translations[text];
+    }
+  });
+
+  // Fix navbar links to point to German versions
+  const allNavLinks = document.querySelectorAll(".navbar-nav .nav-link");
+  allNavLinks.forEach(function(link) {
+    const href = link.getAttribute("href");
+    if (href && !href.startsWith("#") && !href.startsWith("http")) {
+      // Convert relative paths like ../research/index.html to /de/research/index.html
+      let newHref = href;
+
+      // Handle relative paths from /de/ subfolder
+      if (href.startsWith("../")) {
+        // ../research/index.html -> /de/research/index.html
+        newHref = "/de/" + href.replace(/^\.\.\//, "");
+      } else if (href.startsWith("./")) {
+        // ./something.html -> /de/current-path/something.html
+        newHref = href; // Keep relative
+      } else if (!href.startsWith("/de/")) {
+        // Absolute paths not already in /de/
+        newHref = "/de" + (href.startsWith("/") ? href : "/" + href);
+      }
+
+      link.setAttribute("href", newHref);
+    }
+  });
+
+  // Fix sidebar links if present
+  const sidebarLinks = document.querySelectorAll(".sidebar-navigation a");
+  sidebarLinks.forEach(function(link) {
+    const href = link.getAttribute("href");
+    if (href && !href.startsWith("#") && !href.startsWith("http") && !href.includes("/de/")) {
+      let newHref = href;
+      if (href.startsWith("../")) {
+        newHref = "/de/" + href.replace(/^(\.\.\/)+/, "");
+      } else if (!href.startsWith("/de/")) {
+        newHref = "/de" + (href.startsWith("/") ? href : "/" + href);
+      }
+      link.setAttribute("href", newHref);
+    }
+  });
+
+  // Translate sidebar titles if present
+  const sidebarTitles = {
+    "Teaching": "Lehre",
+    "Workshops": "Workshops",
+    "Research": "Forschung"
+  };
+
+  document.querySelectorAll(".sidebar-title").forEach(function(title) {
+    const text = title.textContent.trim();
+    if (sidebarTitles[text]) {
+      title.textContent = sidebarTitles[text];
+    }
+  });
+}
 
 function insertToolsSwitcher(container, config) {
   // Create language switcher as a navbar tool (dropdown style)
