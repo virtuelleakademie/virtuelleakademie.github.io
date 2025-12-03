@@ -37,25 +37,39 @@ cat(sprintf("Found %d German content files to organize\n\n", length(de_files)))
 # When moving from docs/X/file.html to docs/de/X/file.html,
 # all relative paths need one more ../ prefix because we're one level deeper
 fix_relative_paths <- function(html_content) {
-  # Simple approach: add ../ prefix to all relative paths starting with ../
-  # This handles href="...", src="...", and other attributes
+  # IMPORTANT: Process paths that already have ../ FIRST, before adding new ../
+  # Otherwise we'd double-process paths we just modified
 
-  # Match href or src attributes with relative paths starting with ../
-  # Replace "../ with "../../ (add one more level)
+  # Fix paths that already start with ../ - add one more ../
   html_content <- gsub(
     '(href|src)="(\\.\\./)',
     '\\1="../\\2',
     html_content
   )
 
+  # Fix paths that start with site_libs/ (no prefix) - add ../
+  # This handles root-level files like index.de.html
+  html_content <- gsub(
+    '(href|src)="(site_libs/)',
+    '\\1="../\\2',
+    html_content
+  )
+
+  # Fix paths that start with ./ - replace with ../
+  html_content <- gsub(
+    '(href|src)="\\./([^"]*)"',
+    '\\1="../\\2"',
+    html_content
+  )
+
   # Also fix paths in JSON (like search.json references)
   html_content <- gsub(
-    '"(\\.\\./)+search\\.json"',
+    '"(\\.\\./)*search\\.json"',
     '"../\\1search.json"',
     html_content
   )
 
-  # Fix offset in quarto config
+  # Fix offset in quarto config (empty or with ../)
   html_content <- gsub(
     '"quarto:offset" content="(\\.\\./)*"',
     '"quarto:offset" content="../\\1"',
