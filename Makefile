@@ -24,7 +24,13 @@ render-en:  ## Render English content only
 render-de:  ## Render German content only (to docs/de/)
 	Rscript scripts/render-german.R
 
-preview: ## Preview site (builds translation registry first)
+preview: ## Preview site with full bilingual support (renders then serves)
+	@echo "Rendering site..."
+	quarto render
+	@echo "Starting preview server at http://localhost:8803"
+	@cd docs && python3 -m http.server 8803
+
+preview-en: ## Preview English only (fast, no German processing)
 	Rscript scripts/build-translations.R
 	quarto preview
 
