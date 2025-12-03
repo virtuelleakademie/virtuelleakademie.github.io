@@ -4,6 +4,8 @@ project:
   preview:
     port: 8803
     browser: true
+  post-render:
+    - Rscript scripts/render-german.R
   render:
     - index.qmd
     - "*.de.qmd"

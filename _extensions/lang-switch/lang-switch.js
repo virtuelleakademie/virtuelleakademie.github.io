@@ -63,16 +63,17 @@ function translateNavbar(config) {
   allNavLinks.forEach(function(link) {
     const href = link.getAttribute("href");
     if (href && !href.startsWith("#") && !href.startsWith("http")) {
-      // Convert relative paths like ../research/index.html to /de/research/index.html
+      // Convert relative paths like ../../research/index.html to /de/research/index.html
       let newHref = href;
 
       // Handle relative paths from /de/ subfolder
       if (href.startsWith("../")) {
-        // ../research/index.html -> /de/research/index.html
-        newHref = "/de/" + href.replace(/^\.\.\//, "");
+        // Strip ALL ../ prefixes, then prepend /de/
+        // ../../research/index.html -> research/index.html -> /de/research/index.html
+        newHref = "/de/" + href.replace(/^(\.\.\/)+/, "");
       } else if (href.startsWith("./")) {
-        // ./something.html -> /de/current-path/something.html
-        newHref = href; // Keep relative
+        // ./something.html -> keep relative
+        newHref = href;
       } else if (!href.startsWith("/de/")) {
         // Absolute paths not already in /de/
         newHref = "/de" + (href.startsWith("/") ? href : "/" + href);

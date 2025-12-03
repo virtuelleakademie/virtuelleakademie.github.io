@@ -1,6 +1,6 @@
-generated: 2025-12-03 15:39:36
-total_pages: 25
-translated: 15
+generated: 2025-12-03 19:32:39
+total_pages: 24
+translated: 14
 translations:
   /404.html:
     en: /404.html
@@ -17,9 +17,6 @@ translations:
   /about/:
     en: /about/
     de: /de/about/
-  /about/stefan-hackstein/:
-    en: /about/stefan-hackstein/
-    de: /de/about/stefan-hackstein/
   /:
     en: /
     de: /de/

@@ -62,7 +62,76 @@ fix_relative_paths <- function(html_content) {
     html_content
   )
 
-  return(html_content)
+  html_content
+}
+
+# Function to translate navbar and fix links for German pages
+translate_navbar <- function(html_content) {
+  # Translate navbar labels
+  html_content <- gsub(
+    '<span class="menu-text">Research</span>',
+    '<span class="menu-text">Forschung</span>',
+    html_content
+  )
+  html_content <- gsub(
+    '<span class="menu-text">Teaching</span>',
+    '<span class="menu-text">Lehre</span>',
+    html_content
+  )
+  html_content <- gsub(
+    '<span class="menu-text">About</span>',
+    '<span class="menu-text">Über uns</span>',
+    html_content
+  )
+
+  # Fix navbar links to point to German versions
+
+  # Pattern: href="../../research/index.html" -> href="/de/research/index.html"
+  # We need to convert relative paths to absolute /de/ paths for navbar links
+
+  # Fix research link
+  html_content <- gsub(
+    'href="(\\.\\./)+research/index\\.html"',
+    'href="/de/research/index.html"',
+    html_content
+  )
+
+  # Fix teaching link
+  html_content <- gsub(
+    'href="(\\.\\./)+teaching/index\\.html"',
+    'href="/de/teaching/index.html"',
+    html_content
+  )
+
+  # Fix workshops link
+  html_content <- gsub(
+    'href="(\\.\\./)+workshops/index\\.html"',
+    'href="/de/workshops/index.html"',
+    html_content
+  )
+
+  # Fix posts/blog link
+  html_content <- gsub(
+    'href="(\\.\\./)+posts/index\\.html"',
+    'href="/de/posts/index.html"',
+    html_content
+  )
+
+  # Fix about link
+  html_content <- gsub(
+    'href="(\\.\\./)+about/index\\.html"',
+    'href="/de/about/index.html"',
+    html_content
+  )
+
+  # Fix home/index link (navbar brand)
+  html_content <- gsub(
+    'href="(\\.\\./)+index\\.html"',
+    'href="/de/index.html"',
+    html_content
+  )
+
+  html_content
 }
 
 # Track results
@@ -94,7 +163,10 @@ for (f in de_files) {
     html_content <- readLines(f, warn = FALSE)
     html_content <- paste(html_content, collapse = "\n")
 
-    # Fix relative paths
+    # Translate navbar labels and fix navbar links
+    html_content <- translate_navbar(html_content)
+
+    # Fix relative paths for assets (CSS, JS, images)
     html_content <- fix_relative_paths(html_content)
 
     # Write to destination
