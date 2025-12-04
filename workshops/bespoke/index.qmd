@@ -36,7 +36,7 @@ Practical AI applications for administrative tasks at the Hochschule der Künste
 :::
 
 ::: {.feature-card-compact}
-### [AI-Enhanced Journal Club](https://virtuelleakademie.github.io/ai-enhanced-journal-club/)
+### [AI-Enhanced Journal Club](https://awellis.github.io/ai-enhanced-journal-club/)
 
 ::: {.meta}
 **Format:** Workshop | **Focus:** Academic reading with AI
@@ -44,7 +44,7 @@ Practical AI applications for administrative tasks at the Hochschule der Künste
 
 Strategies for using AI assistants to engage with scientific literature more effectively.
 
-[**Access →**](https://virtuelleakademie.github.io/ai-enhanced-journal-club/){.btn .btn-primary target="_blank"}
+[**Access →**](https://awellis.github.io/ai-enhanced-journal-club/){.btn .btn-primary target="_blank"}
 :::
 
 ::: {.feature-card-compact}
