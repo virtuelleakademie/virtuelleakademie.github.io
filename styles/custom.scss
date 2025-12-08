@@ -360,12 +360,17 @@ a:hover {
   box-shadow: none;
 }
 
-// Tighter grid for compact cards
+// Tighter grid for compact cards - fixed 2 columns for consistent layout
 .content-grid-compact {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: $spacing-md;
   margin: $spacing-lg 0;
+
+  // Stack to single column on mobile
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 // =============================================================================

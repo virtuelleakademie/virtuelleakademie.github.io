@@ -64,7 +64,7 @@ Generated files go to `docs/` for GitHub Pages:
 
 1. Create `section/page.qmd` (English) and `section/page.de.qmd` (German)
 2. Add YAML frontmatter with `translation:` field pointing to the other version
-3. Add both files to the sidebar in `_quarto.yml`
+3. Add English file to its sidebar and German file to the `-de` sidebar in `_quarto.yml`
 4. Run `quarto render`
 
 ### New Workshop
