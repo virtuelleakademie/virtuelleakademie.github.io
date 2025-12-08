@@ -68,6 +68,7 @@ website:
         target: _blank
 
   sidebar:
+    # English sidebars
     - id: research
       title: "Research"
       style: "docked"
@@ -75,7 +76,6 @@ website:
       background: light
       contents:
         - research/index.qmd
-        - research/index.de.qmd
     - id: teaching
       title: "Teaching"
       style: "docked"
@@ -83,11 +83,8 @@ website:
       background: light
       contents:
         - teaching/index.qmd
-        - teaching/index.de.qmd
         - teaching/bfh-weiterbildung/index.qmd
-        - teaching/bfh-weiterbildung/index.de.qmd
         - teaching/cas-hochschuldidaktik/index.qmd
-        - teaching/cas-hochschuldidaktik/index.de.qmd
     - id: workshops
       title: "Workshops"
       style: "docked"
@@ -95,10 +92,34 @@ website:
       background: light
       contents:
         - workshops/index.qmd
-        - workshops/index.de.qmd
         - workshops/special-topics/index.qmd
-        - workshops/special-topics/index.de.qmd
         - workshops/bespoke/index.qmd
+
+    # German sidebars
+    - id: research-de
+      title: "Forschung"
+      style: "docked"
+      search: true
+      background: light
+      contents:
+        - research/index.de.qmd
+    - id: teaching-de
+      title: "Lehre"
+      style: "docked"
+      search: true
+      background: light
+      contents:
+        - teaching/index.de.qmd
+        - teaching/bfh-weiterbildung/index.de.qmd
+        - teaching/cas-hochschuldidaktik/index.de.qmd
+    - id: workshops-de
+      title: "Workshops"
+      style: "docked"
+      search: true
+      background: light
+      contents:
+        - workshops/index.de.qmd
+        - workshops/special-topics/index.de.qmd
         - workshops/bespoke/index.de.qmd
 
 page-footer:
