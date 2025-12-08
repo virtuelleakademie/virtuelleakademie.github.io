@@ -47,4 +47,16 @@ Entwicklung von KI-gestützten Bildungswerkzeugen basierend auf der Cognitive Lo
 [**Advanced-Kurs starten →**](https://virtuelleakademie.github.io/ki-lehre-advanced/){.btn .btn-primary target="_blank"}
 :::
 
+::: {.feature-card-compact}
+### [KI in der Lehre: Refresher](https://virtuelleakademie.github.io/ki-lehre-refresher/)
+
+::: {.meta}
+**Format:** 1 Stunde (30 Min. Input + 30 Min. Q&A)
+:::
+
+Ein kompakter Refresher zu KI in der Lehre für alle, die auf dem neuesten Stand bleiben möchten.
+
+[**Refresher starten →**](https://virtuelleakademie.github.io/ki-lehre-refresher/){.btn .btn-primary target="_blank"}
+:::
+
 :::

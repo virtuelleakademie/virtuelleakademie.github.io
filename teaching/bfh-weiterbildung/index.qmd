@@ -47,4 +47,16 @@ Build AI-powered educational tools grounded in Cognitive Load Theory.
 [**Launch Advanced course →**](https://virtuelleakademie.github.io/ki-lehre-advanced/){.btn .btn-primary target="_blank"}
 :::
 
+::: {.feature-card-compact}
+### [KI in der Lehre: Refresher](https://virtuelleakademie.github.io/ki-lehre-refresher/)
+
+::: {.meta}
+**Format:** 1 hour (30 min input + 30 min Q&A)
+:::
+
+A compact refresher on AI in teaching for those who want to stay current with the latest developments.
+
+[**Launch Refresher →**](https://virtuelleakademie.github.io/ki-lehre-refresher/){.btn .btn-primary target="_blank"}
+:::
+
 :::

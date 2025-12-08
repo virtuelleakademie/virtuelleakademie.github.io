@@ -75,6 +75,7 @@ website:
       background: light
       contents:
         - research/index.qmd
+        - research/index.de.qmd
     - id: teaching
       title: "Teaching"
       style: "docked"
@@ -82,8 +83,11 @@ website:
       background: light
       contents:
         - teaching/index.qmd
+        - teaching/index.de.qmd
         - teaching/bfh-weiterbildung/index.qmd
+        - teaching/bfh-weiterbildung/index.de.qmd
         - teaching/cas-hochschuldidaktik/index.qmd
+        - teaching/cas-hochschuldidaktik/index.de.qmd
     - id: workshops
       title: "Workshops"
       style: "docked"
@@ -91,8 +95,11 @@ website:
       background: light
       contents:
         - workshops/index.qmd
+        - workshops/index.de.qmd
         - workshops/special-topics/index.qmd
+        - workshops/special-topics/index.de.qmd
         - workshops/bespoke/index.qmd
+        - workshops/bespoke/index.de.qmd
 
 page-footer:
   left: "© 2025 Virtuelle Akademie | Forschung & KI in der Lehre"

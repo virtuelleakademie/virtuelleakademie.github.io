@@ -111,7 +111,7 @@
     "href": "teaching/bfh-weiterbildung/index.html",
     "title": "BFH Weiterbildung",
     "section": "",
-    "text": "A progressive series of courses on integrating AI into teaching practice, offered through BFH continuing education.\n\n\n\n\nLevel: Beginner | Duration: 3 hours\n\nIntroduction to AI in educational settings. Foundational concepts and first steps with AI tools.\nLaunch Beginner course →\n\n\n\n\nLevel: Intermediate | Duration: Half-day\n\nPractical AI integration into teaching. Hands-on exploration and implementation strategies.\nLaunch Intermediate course →\n\n\n\n\nLevel: Advanced | Duration: 3 hours\n\nBuild AI-powered educational tools grounded in Cognitive Load Theory.\nLaunch Advanced course →",
+    "text": "A progressive series of courses on integrating AI into teaching practice, offered through BFH continuing education.\n\n\n\n\nLevel: Beginner | Duration: 3 hours\n\nIntroduction to AI in educational settings. Foundational concepts and first steps with AI tools.\nLaunch Beginner course →\n\n\n\n\nLevel: Intermediate | Duration: Half-day\n\nPractical AI integration into teaching. Hands-on exploration and implementation strategies.\nLaunch Intermediate course →\n\n\n\n\nLevel: Advanced | Duration: 3 hours\n\nBuild AI-powered educational tools grounded in Cognitive Load Theory.\nLaunch Advanced course →\n\n\n\n\nFormat: 1 hour (30 min input + 30 min Q&A)\n\nA compact refresher on AI in teaching for those who want to stay current with the latest developments.\nLaunch Refresher →",
     "crumbs": [
       "Teaching",
       "BFH Weiterbildung"
@@ -122,7 +122,7 @@
     "href": "teaching/bfh-weiterbildung/index.html#ki-in-der-lehre",
     "title": "BFH Weiterbildung",
     "section": "",
-    "text": "A progressive series of courses on integrating AI into teaching practice, offered through BFH continuing education.\n\n\n\n\nLevel: Beginner | Duration: 3 hours\n\nIntroduction to AI in educational settings. Foundational concepts and first steps with AI tools.\nLaunch Beginner course →\n\n\n\n\nLevel: Intermediate | Duration: Half-day\n\nPractical AI integration into teaching. Hands-on exploration and implementation strategies.\nLaunch Intermediate course →\n\n\n\n\nLevel: Advanced | Duration: 3 hours\n\nBuild AI-powered educational tools grounded in Cognitive Load Theory.\nLaunch Advanced course →",
+    "text": "A progressive series of courses on integrating AI into teaching practice, offered through BFH continuing education.\n\n\n\n\nLevel: Beginner | Duration: 3 hours\n\nIntroduction to AI in educational settings. Foundational concepts and first steps with AI tools.\nLaunch Beginner course →\n\n\n\n\nLevel: Intermediate | Duration: Half-day\n\nPractical AI integration into teaching. Hands-on exploration and implementation strategies.\nLaunch Intermediate course →\n\n\n\n\nLevel: Advanced | Duration: 3 hours\n\nBuild AI-powered educational tools grounded in Cognitive Load Theory.\nLaunch Advanced course →\n\n\n\n\nFormat: 1 hour (30 min input + 30 min Q&A)\n\nA compact refresher on AI in teaching for those who want to stay current with the latest developments.\nLaunch Refresher →",
     "crumbs": [
       "Teaching",
       "BFH Weiterbildung"
@@ -182,28 +182,43 @@
     "href": "workshops/index.de.html",
     "title": "Workshops",
     "section": "",
-    "text": "Workshops zu KI in der Bildung für verschiedene Zielgruppen und Kontexte.\n\n\nSpezialthemen\nSpezialisierte Workshops zu fokussierten Themen wie Faktenüberprüfung und laterales Lesen.\nWorkshops ansehen →\n\n\nMassgeschneiderte Workshops\nIndividuelle Workshops, die für spezifische Institutionen entwickelt wurden, darunter UB/HAFL, HKB und Organisationen im Gesundheitswesen.\nWorkshops ansehen →\n\n\n\n\n\n Zurück nach oben"
+    "text": "Workshops zu KI in der Bildung für verschiedene Zielgruppen und Kontexte.\n\n\nSpezialthemen\nSpezialisierte Workshops zu fokussierten Themen wie Faktenüberprüfung und laterales Lesen.\nWorkshops ansehen →\n\n\nMassgeschneiderte Workshops\nIndividuelle Workshops, die für spezifische Institutionen entwickelt wurden, darunter UB/HAFL, HKB und Organisationen im Gesundheitswesen.\nWorkshops ansehen →\n\n\n\n\n\n Zurück nach oben",
+    "crumbs": [
+      "Workshops"
+    ]
   },
   {
     "objectID": "teaching/index.de.html",
     "href": "teaching/index.de.html",
     "title": "Lehre",
     "section": "",
-    "text": "Kurse und Materialien zur Integration von KI in die Lehrpraxis.\n\n\nBFH Weiterbildung\nEine progressive Kursreihe zu KI in der Bildung, angeboten über die BFH-Weiterbildung. Drei Stufen: Einsteiger, Fortgeschritten und Experten.\nKurse ansehen →\n\n\nCAS Hochschuldidaktik\nModul 4 des CAS Hochschuldidaktik-Programms mit Fokus auf KI in der Hochschullehre.\nProgramm ansehen →\n\n\n\n\n\n Zurück nach oben"
+    "text": "Kurse und Materialien zur Integration von KI in die Lehrpraxis.\n\n\nBFH Weiterbildung\nEine progressive Kursreihe zu KI in der Bildung, angeboten über die BFH-Weiterbildung. Drei Stufen: Einsteiger, Fortgeschritten und Experten.\nKurse ansehen →\n\n\nCAS Hochschuldidaktik\nModul 4 des CAS Hochschuldidaktik-Programms mit Fokus auf KI in der Hochschullehre.\nProgramm ansehen →\n\n\n\n\n\n Zurück nach oben",
+    "crumbs": [
+      "Teaching",
+      "Lehre"
+    ]
   },
   {
     "objectID": "teaching/bfh-weiterbildung/index.de.html",
     "href": "teaching/bfh-weiterbildung/index.de.html",
     "title": "BFH Weiterbildung",
     "section": "",
-    "text": "Eine progressive Kursreihe zur Integration von KI in die Lehrpraxis, angeboten über die BFH-Weiterbildung.\n\n\n\n\nStufe: Einsteiger | Dauer: 3 Stunden\n\nEinführung in KI in Bildungskontexten. Grundlegende Konzepte und erste Schritte mit KI-Tools.\nBeginner-Kurs starten →\n\n\n\n\nStufe: Fortgeschritten | Dauer: Halbtägig\n\nPraktische KI-Integration in den Unterricht. Hands-on-Erkundung und Implementierungsstrategien.\nIntermediate-Kurs starten →\n\n\n\n\nStufe: Experten | Dauer: 3 Stunden\n\nEntwicklung von KI-gestützten Bildungswerkzeugen basierend auf der Cognitive Load Theory.\nAdvanced-Kurs starten →"
+    "text": "Eine progressive Kursreihe zur Integration von KI in die Lehrpraxis, angeboten über die BFH-Weiterbildung.\n\n\n\n\nStufe: Einsteiger | Dauer: 3 Stunden\n\nEinführung in KI in Bildungskontexten. Grundlegende Konzepte und erste Schritte mit KI-Tools.\nBeginner-Kurs starten →\n\n\n\n\nStufe: Fortgeschritten | Dauer: Halbtägig\n\nPraktische KI-Integration in den Unterricht. Hands-on-Erkundung und Implementierungsstrategien.\nIntermediate-Kurs starten →\n\n\n\n\nStufe: Experten | Dauer: 3 Stunden\n\nEntwicklung von KI-gestützten Bildungswerkzeugen basierend auf der Cognitive Load Theory.\nAdvanced-Kurs starten →\n\n\n\n\nFormat: 1 Stunde (30 Min. Input + 30 Min. Q&A)\n\nEin kompakter Refresher zu KI in der Lehre für alle, die auf dem neuesten Stand bleiben möchten.\nRefresher starten →",
+    "crumbs": [
+      "Teaching",
+      "BFH Weiterbildung"
+    ]
   },
   {
     "objectID": "teaching/bfh-weiterbildung/index.de.html#ki-in-der-lehre",
     "href": "teaching/bfh-weiterbildung/index.de.html#ki-in-der-lehre",
     "title": "BFH Weiterbildung",
     "section": "",
-    "text": "Eine progressive Kursreihe zur Integration von KI in die Lehrpraxis, angeboten über die BFH-Weiterbildung.\n\n\n\n\nStufe: Einsteiger | Dauer: 3 Stunden\n\nEinführung in KI in Bildungskontexten. Grundlegende Konzepte und erste Schritte mit KI-Tools.\nBeginner-Kurs starten →\n\n\n\n\nStufe: Fortgeschritten | Dauer: Halbtägig\n\nPraktische KI-Integration in den Unterricht. Hands-on-Erkundung und Implementierungsstrategien.\nIntermediate-Kurs starten →\n\n\n\n\nStufe: Experten | Dauer: 3 Stunden\n\nEntwicklung von KI-gestützten Bildungswerkzeugen basierend auf der Cognitive Load Theory.\nAdvanced-Kurs starten →"
+    "text": "Eine progressive Kursreihe zur Integration von KI in die Lehrpraxis, angeboten über die BFH-Weiterbildung.\n\n\n\n\nStufe: Einsteiger | Dauer: 3 Stunden\n\nEinführung in KI in Bildungskontexten. Grundlegende Konzepte und erste Schritte mit KI-Tools.\nBeginner-Kurs starten →\n\n\n\n\nStufe: Fortgeschritten | Dauer: Halbtägig\n\nPraktische KI-Integration in den Unterricht. Hands-on-Erkundung und Implementierungsstrategien.\nIntermediate-Kurs starten →\n\n\n\n\nStufe: Experten | Dauer: 3 Stunden\n\nEntwicklung von KI-gestützten Bildungswerkzeugen basierend auf der Cognitive Load Theory.\nAdvanced-Kurs starten →\n\n\n\n\nFormat: 1 Stunde (30 Min. Input + 30 Min. Q&A)\n\nEin kompakter Refresher zu KI in der Lehre für alle, die auf dem neuesten Stand bleiben möchten.\nRefresher starten →",
+    "crumbs": [
+      "Teaching",
+      "BFH Weiterbildung"
+    ]
   },
   {
     "objectID": "research/projects/index.de.html",
@@ -378,14 +393,22 @@
     "href": "research/index.de.html",
     "title": "Forschung",
     "section": "",
-    "text": "Unsere Forschung konzentriert sich auf die Entwicklung und Evaluation intelligenter Tutorsysteme (ITS), die künstliche Intelligenz nutzen, um personalisierte Lernerfahrungen zu ermöglichen.\n\n\nIntelligente Tutorsysteme stellen eine Verbindung von Kognitionswissenschaft, pädagogischer Psychologie und künstlicher Intelligenz dar. Unsere Arbeit untersucht, wie diese Systeme:\n\nSich an individuelle Lernende anpassen durch dynamische Anpassung von Inhaltsschwierigkeit, Tempo und Lehrstrategien basierend auf Leistung und Verhalten der Lernenden\nSinnvolles Feedback geben durch zeitnahes, spezifisches und handlungsorientiertes Feedback, das das Lernen unterstützt, anstatt nur Richtigkeit anzuzeigen\nDomänenwissen modellieren durch Darstellung von Expertenwissen auf Weisen, die effektiven Unterricht und die Diagnose von Fehlvorstellungen unterstützen\nKognitive Prozesse unterstützen durch Gestaltung von Interaktionen, die auf Lerntheorien wie der Cognitive Load Theory und dem Worked-Example-Effekt basieren\n\n\n\n\n\nGenerative KI für personalisierte ausgearbeitete Beispiele\nAdaptives Scaffolding in Problemlösungskontexten\nKI-unterstützte formative Bewertung\nMensch-KI-Zusammenarbeit in Bildungskontexten\n\n\n\n\nUnsere Forschung trägt zu BeLEARN bei, dem Schweizer Forschungsnetzwerk, das sich der Förderung der Lernwissenschaft durch interdisziplinäre Zusammenarbeit widmet.\nBeLEARN-Projekte besuchen →"
+    "text": "Unsere Forschung konzentriert sich auf die Entwicklung und Evaluation intelligenter Tutorsysteme (ITS), die künstliche Intelligenz nutzen, um personalisierte Lernerfahrungen zu ermöglichen.\n\n\nIntelligente Tutorsysteme stellen eine Verbindung von Kognitionswissenschaft, pädagogischer Psychologie und künstlicher Intelligenz dar. Unsere Arbeit untersucht, wie diese Systeme:\n\nSich an individuelle Lernende anpassen durch dynamische Anpassung von Inhaltsschwierigkeit, Tempo und Lehrstrategien basierend auf Leistung und Verhalten der Lernenden\nSinnvolles Feedback geben durch zeitnahes, spezifisches und handlungsorientiertes Feedback, das das Lernen unterstützt, anstatt nur Richtigkeit anzuzeigen\nDomänenwissen modellieren durch Darstellung von Expertenwissen auf Weisen, die effektiven Unterricht und die Diagnose von Fehlvorstellungen unterstützen\nKognitive Prozesse unterstützen durch Gestaltung von Interaktionen, die auf Lerntheorien wie der Cognitive Load Theory und dem Worked-Example-Effekt basieren\n\n\n\n\n\nGenerative KI für personalisierte ausgearbeitete Beispiele\nAdaptives Scaffolding in Problemlösungskontexten\nKI-unterstützte formative Bewertung\nMensch-KI-Zusammenarbeit in Bildungskontexten\n\n\n\n\nUnsere Forschung trägt zu BeLEARN bei, dem Schweizer Forschungsnetzwerk, das sich der Förderung der Lernwissenschaft durch interdisziplinäre Zusammenarbeit widmet.\nBeLEARN-Projekte besuchen →",
+    "crumbs": [
+      "Research",
+      "Forschung"
+    ]
   },
   {
     "objectID": "research/index.de.html#intelligente-tutorsysteme",
     "href": "research/index.de.html#intelligente-tutorsysteme",
     "title": "Forschung",
     "section": "",
-    "text": "Unsere Forschung konzentriert sich auf die Entwicklung und Evaluation intelligenter Tutorsysteme (ITS), die künstliche Intelligenz nutzen, um personalisierte Lernerfahrungen zu ermöglichen.\n\n\nIntelligente Tutorsysteme stellen eine Verbindung von Kognitionswissenschaft, pädagogischer Psychologie und künstlicher Intelligenz dar. Unsere Arbeit untersucht, wie diese Systeme:\n\nSich an individuelle Lernende anpassen durch dynamische Anpassung von Inhaltsschwierigkeit, Tempo und Lehrstrategien basierend auf Leistung und Verhalten der Lernenden\nSinnvolles Feedback geben durch zeitnahes, spezifisches und handlungsorientiertes Feedback, das das Lernen unterstützt, anstatt nur Richtigkeit anzuzeigen\nDomänenwissen modellieren durch Darstellung von Expertenwissen auf Weisen, die effektiven Unterricht und die Diagnose von Fehlvorstellungen unterstützen\nKognitive Prozesse unterstützen durch Gestaltung von Interaktionen, die auf Lerntheorien wie der Cognitive Load Theory und dem Worked-Example-Effekt basieren\n\n\n\n\n\nGenerative KI für personalisierte ausgearbeitete Beispiele\nAdaptives Scaffolding in Problemlösungskontexten\nKI-unterstützte formative Bewertung\nMensch-KI-Zusammenarbeit in Bildungskontexten\n\n\n\n\nUnsere Forschung trägt zu BeLEARN bei, dem Schweizer Forschungsnetzwerk, das sich der Förderung der Lernwissenschaft durch interdisziplinäre Zusammenarbeit widmet.\nBeLEARN-Projekte besuchen →"
+    "text": "Unsere Forschung konzentriert sich auf die Entwicklung und Evaluation intelligenter Tutorsysteme (ITS), die künstliche Intelligenz nutzen, um personalisierte Lernerfahrungen zu ermöglichen.\n\n\nIntelligente Tutorsysteme stellen eine Verbindung von Kognitionswissenschaft, pädagogischer Psychologie und künstlicher Intelligenz dar. Unsere Arbeit untersucht, wie diese Systeme:\n\nSich an individuelle Lernende anpassen durch dynamische Anpassung von Inhaltsschwierigkeit, Tempo und Lehrstrategien basierend auf Leistung und Verhalten der Lernenden\nSinnvolles Feedback geben durch zeitnahes, spezifisches und handlungsorientiertes Feedback, das das Lernen unterstützt, anstatt nur Richtigkeit anzuzeigen\nDomänenwissen modellieren durch Darstellung von Expertenwissen auf Weisen, die effektiven Unterricht und die Diagnose von Fehlvorstellungen unterstützen\nKognitive Prozesse unterstützen durch Gestaltung von Interaktionen, die auf Lerntheorien wie der Cognitive Load Theory und dem Worked-Example-Effekt basieren\n\n\n\n\n\nGenerative KI für personalisierte ausgearbeitete Beispiele\nAdaptives Scaffolding in Problemlösungskontexten\nKI-unterstützte formative Bewertung\nMensch-KI-Zusammenarbeit in Bildungskontexten\n\n\n\n\nUnsere Forschung trägt zu BeLEARN bei, dem Schweizer Forschungsnetzwerk, das sich der Förderung der Lernwissenschaft durch interdisziplinäre Zusammenarbeit widmet.\nBeLEARN-Projekte besuchen →",
+    "crumbs": [
+      "Research",
+      "Forschung"
+    ]
   },
   {
     "objectID": "research/publications/index.de.html",
@@ -420,42 +443,66 @@
     "href": "teaching/cas-hochschuldidaktik/index.de.html",
     "title": "CAS Hochschuldidaktik",
     "section": "",
-    "text": "Programm: Certificate of Advanced Studies | Format: Ganztägiges Modul\n\nModul 4 des CAS Hochschuldidaktik-Programms mit Fokus auf KI in der Hochschullehre.\nCAS-Modul starten →"
+    "text": "Programm: Certificate of Advanced Studies | Format: Ganztägiges Modul\n\nModul 4 des CAS Hochschuldidaktik-Programms mit Fokus auf KI in der Hochschullehre.\nCAS-Modul starten →",
+    "crumbs": [
+      "Teaching",
+      "CAS Hochschuldidaktik"
+    ]
   },
   {
     "objectID": "teaching/cas-hochschuldidaktik/index.de.html#ki-in-der-lehre",
     "href": "teaching/cas-hochschuldidaktik/index.de.html#ki-in-der-lehre",
     "title": "CAS Hochschuldidaktik",
     "section": "",
-    "text": "Programm: Certificate of Advanced Studies | Format: Ganztägiges Modul\n\nModul 4 des CAS Hochschuldidaktik-Programms mit Fokus auf KI in der Hochschullehre.\nCAS-Modul starten →"
+    "text": "Programm: Certificate of Advanced Studies | Format: Ganztägiges Modul\n\nModul 4 des CAS Hochschuldidaktik-Programms mit Fokus auf KI in der Hochschullehre.\nCAS-Modul starten →",
+    "crumbs": [
+      "Teaching",
+      "CAS Hochschuldidaktik"
+    ]
   },
   {
     "objectID": "workshops/bespoke/index.de.html",
     "href": "workshops/bespoke/index.de.html",
     "title": "Massgeschneiderte Workshops",
     "section": "",
-    "text": "Workshops, die für spezifische Institutionen und Kontexte entwickelt wurden.\n\n\n\n\nFormat: Zwei halbtägige Sitzungen | Zielgruppe: UB/HAFL-Mitarbeitende\n\nKI-Schulung für die Universitätsbibliothek und HAFL mit Grundlagen, praktischen Anwendungen und Integration in die Beratungsarbeit.\nZugriff →\n\n\n\n\nFormat: Interaktiver Workshop | Zielgruppe: HKB-Administration\n\nPraktische KI-Anwendungen für administrative Aufgaben an der Hochschule der Künste Bern.\nZugriff →\n\n\n\n\nFormat: Workshop | Fokus: Akademisches Lesen mit KI\n\nStrategien zur Nutzung von KI-Assistenten für eine effektivere Auseinandersetzung mit wissenschaftlicher Literatur.\nZugriff →\n\n\n\n\nFormat: Workshop | Zielgruppe: Fachpersonen im Gesundheitswesen\n\nKI-Anwendungen in der Gesundheitsbildung und -praxis für Fachpersonen im Gesundheitswesen.\nZugriff →"
+    "text": "Workshops, die für spezifische Institutionen und Kontexte entwickelt wurden.\n\n\n\n\nFormat: Zwei halbtägige Sitzungen | Zielgruppe: UB/HAFL-Mitarbeitende\n\nKI-Schulung für die Universitätsbibliothek und HAFL mit Grundlagen, praktischen Anwendungen und Integration in die Beratungsarbeit.\nZugriff →\n\n\n\n\nFormat: Interaktiver Workshop | Zielgruppe: HKB-Administration\n\nPraktische KI-Anwendungen für administrative Aufgaben an der Hochschule der Künste Bern.\nZugriff →\n\n\n\n\nFormat: Workshop | Fokus: Akademisches Lesen mit KI\n\nStrategien zur Nutzung von KI-Assistenten für eine effektivere Auseinandersetzung mit wissenschaftlicher Literatur.\nZugriff →\n\n\n\n\nFormat: Workshop | Zielgruppe: Fachpersonen im Gesundheitswesen\n\nKI-Anwendungen in der Gesundheitsbildung und -praxis für Fachpersonen im Gesundheitswesen.\nZugriff →",
+    "crumbs": [
+      "Workshops",
+      "Massgeschneiderte Workshops"
+    ]
   },
   {
     "objectID": "workshops/bespoke/index.de.html#individuelle-workshops",
     "href": "workshops/bespoke/index.de.html#individuelle-workshops",
     "title": "Massgeschneiderte Workshops",
     "section": "",
-    "text": "Workshops, die für spezifische Institutionen und Kontexte entwickelt wurden.\n\n\n\n\nFormat: Zwei halbtägige Sitzungen | Zielgruppe: UB/HAFL-Mitarbeitende\n\nKI-Schulung für die Universitätsbibliothek und HAFL mit Grundlagen, praktischen Anwendungen und Integration in die Beratungsarbeit.\nZugriff →\n\n\n\n\nFormat: Interaktiver Workshop | Zielgruppe: HKB-Administration\n\nPraktische KI-Anwendungen für administrative Aufgaben an der Hochschule der Künste Bern.\nZugriff →\n\n\n\n\nFormat: Workshop | Fokus: Akademisches Lesen mit KI\n\nStrategien zur Nutzung von KI-Assistenten für eine effektivere Auseinandersetzung mit wissenschaftlicher Literatur.\nZugriff →\n\n\n\n\nFormat: Workshop | Zielgruppe: Fachpersonen im Gesundheitswesen\n\nKI-Anwendungen in der Gesundheitsbildung und -praxis für Fachpersonen im Gesundheitswesen.\nZugriff →"
+    "text": "Workshops, die für spezifische Institutionen und Kontexte entwickelt wurden.\n\n\n\n\nFormat: Zwei halbtägige Sitzungen | Zielgruppe: UB/HAFL-Mitarbeitende\n\nKI-Schulung für die Universitätsbibliothek und HAFL mit Grundlagen, praktischen Anwendungen und Integration in die Beratungsarbeit.\nZugriff →\n\n\n\n\nFormat: Interaktiver Workshop | Zielgruppe: HKB-Administration\n\nPraktische KI-Anwendungen für administrative Aufgaben an der Hochschule der Künste Bern.\nZugriff →\n\n\n\n\nFormat: Workshop | Fokus: Akademisches Lesen mit KI\n\nStrategien zur Nutzung von KI-Assistenten für eine effektivere Auseinandersetzung mit wissenschaftlicher Literatur.\nZugriff →\n\n\n\n\nFormat: Workshop | Zielgruppe: Fachpersonen im Gesundheitswesen\n\nKI-Anwendungen in der Gesundheitsbildung und -praxis für Fachpersonen im Gesundheitswesen.\nZugriff →",
+    "crumbs": [
+      "Workshops",
+      "Massgeschneiderte Workshops"
+    ]
   },
   {
     "objectID": "workshops/special-topics/index.de.html",
     "href": "workshops/special-topics/index.de.html",
     "title": "Spezialthemen",
     "section": "",
-    "text": "Format: 3-stündiger Workshop | Fokus: Laterales Lesen\n\nErlernen Sie Laterales Lesen: eine praktische Technik zur schnellen und zuverlässigen Überprüfung von KI-Antworten.\nZugriff →"
+    "text": "Format: 3-stündiger Workshop | Fokus: Laterales Lesen\n\nErlernen Sie Laterales Lesen: eine praktische Technik zur schnellen und zuverlässigen Überprüfung von KI-Antworten.\nZugriff →",
+    "crumbs": [
+      "Workshops",
+      "Spezialthemen"
+    ]
   },
   {
     "objectID": "workshops/special-topics/index.de.html#spezialisierte-workshops",
     "href": "workshops/special-topics/index.de.html#spezialisierte-workshops",
     "title": "Spezialthemen",
     "section": "",
-    "text": "Format: 3-stündiger Workshop | Fokus: Laterales Lesen\n\nErlernen Sie Laterales Lesen: eine praktische Technik zur schnellen und zuverlässigen Überprüfung von KI-Antworten.\nZugriff →"
+    "text": "Format: 3-stündiger Workshop | Fokus: Laterales Lesen\n\nErlernen Sie Laterales Lesen: eine praktische Technik zur schnellen und zuverlässigen Überprüfung von KI-Antworten.\nZugriff →",
+    "crumbs": [
+      "Workshops",
+      "Spezialthemen"
+    ]
   },
   {
     "objectID": "research/index.html",
