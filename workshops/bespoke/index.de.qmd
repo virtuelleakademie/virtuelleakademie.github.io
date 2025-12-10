@@ -1,7 +1,6 @@
 ---
 title: "Massgeschneiderte Workshops"
 lang: de
-translation: /workshops/bespoke/index.html
 page-layout: full
 ---
 

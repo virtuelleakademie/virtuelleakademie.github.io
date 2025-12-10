@@ -6,7 +6,7 @@ Academic website for Virtuelle Akademie - Research and resources on AI in higher
 
 ## Overview
 
-This is a bilingual (EN/DE) Quarto-based static website hosted on GitHub Pages. The site covers:
+This is a bilingual (EN/DE) Quarto-based static website hosted on GitHub Pages, using babelquarto for multilingual support. The site covers:
 
 - **Research**: Publications, projects, and collaborations
 - **Teaching**: BFH Weiterbildung courses, CAS Hochschuldidaktik
@@ -18,20 +18,26 @@ This is a bilingual (EN/DE) Quarto-based static website hosted on GitHub Pages. 
 ### Prerequisites
 
 - [Quarto](https://quarto.org/docs/get-started/) (v1.4+)
-- [R](https://www.r-project.org/) (for post-render scripts)
-- R package: `fs` (`install.packages("fs")`)
+- [R](https://www.r-project.org/)
+- R package: babelquarto
+
+```r
+install.packages('babelquarto', repos = c('https://ropensci.r-universe.dev', 'https://cloud.r-project.org'))
+```
 
 ### Build the Site
 
 ```bash
-# Full build (renders EN + DE, runs post-render script)
-quarto render
+# Full bilingual build (EN + DE)
+make render
+# or
+Rscript -e "babelquarto::render_website()"
 
-# Preview with live reload
-quarto preview
+# Preview (render then serve)
+make preview
 
-# Clean build (removes cached files)
-quarto render --clean
+# Just serve docs/ without rendering
+make serve
 ```
 
 ### Output
@@ -45,7 +51,8 @@ Generated files go to `docs/` for GitHub Pages:
 
 ```text
 .
-├── _quarto.yml          # Main site configuration
+├── _quarto.yml          # Main config (English + babelquarto settings)
+├── _quarto-de.yml       # German language profile
 ├── index.qmd            # Homepage (EN)
 ├── index.de.qmd         # Homepage (DE)
 ├── teaching/            # Teaching section
@@ -54,7 +61,6 @@ Generated files go to `docs/` for GitHub Pages:
 ├── posts/               # Blog posts
 ├── about/               # About section
 ├── styles/              # Custom SCSS styling
-├── scripts/             # Build scripts (render-german.R)
 └── docs/                # Generated output (don't edit)
 ```
 
@@ -63,9 +69,9 @@ Generated files go to `docs/` for GitHub Pages:
 ### New Page (Bilingual)
 
 1. Create `section/page.qmd` (English) and `section/page.de.qmd` (German)
-2. Add YAML frontmatter with `translation:` field pointing to the other version
-3. Add English file to its sidebar and German file to the `-de` sidebar in `_quarto.yml`
-4. Run `quarto render`
+2. Add English file to sidebar in `_quarto.yml`
+3. Add German file to sidebar in `_quarto-de.yml`
+4. Run `make render`
 
 ### New Workshop
 
@@ -90,3 +96,6 @@ make merge                       # Merge to main (admin)
 - [ki-lehre-advanced](https://github.com/virtuelleakademie/ki-lehre-advanced)
 - [ki-lehre-refresher](https://github.com/virtuelleakademie/ki-lehre-refresher)
 
+## License
+
+Content is provided for educational purposes by Virtuelle Akademie, BFH.

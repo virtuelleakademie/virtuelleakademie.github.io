@@ -1,6 +1,6 @@
 ---
+title: "Über uns"
 lang: de
-translation: /about/index.html
 about:
   template: marquee
   links:

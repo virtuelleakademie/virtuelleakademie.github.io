@@ -1,7 +1,6 @@
 ---
 title: "Kooperationen"
 lang: de
-translation: /research/collaborations/index.html
 ---
 
 ## Aktuelle Kooperationen

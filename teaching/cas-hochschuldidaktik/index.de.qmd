@@ -1,7 +1,6 @@
 ---
 title: "CAS Hochschuldidaktik"
 lang: de
-translation: /teaching/cas-hochschuldidaktik/index.html
 page-layout: full
 ---
 

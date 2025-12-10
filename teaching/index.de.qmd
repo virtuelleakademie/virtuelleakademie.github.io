@@ -1,7 +1,6 @@
 ---
 title: "Lehre"
 lang: de
-translation: /teaching/index.html
 page-layout: full
 ---
 

@@ -4,19 +4,16 @@ project:
   preview:
     port: 8803
     browser: true
-  post-render:
-    - Rscript scripts/render-german.R
-  render:
-    - index.qmd
-    - "*.de.qmd"
-    - research/**/*.qmd
-    - teaching/**/*.ipynb
-    - research/**/*.ipynb
-    - teaching/**/*.qmd
-    - workshops/**/*.qmd
-    - about/**/*.qmd
-    - posts/**/*.qmd
-    - "**/*.de.qmd"
+
+babelquarto:
+  mainlanguage: 'en'
+  languages: ['de']
+  languagelinks: 'navbar'
+  languagecodes:
+    - name: en
+      text: "EN"
+    - name: de
+      text: "DE"
 
 lang: en
 
@@ -41,19 +38,14 @@ website:
   navbar:
     background: light
     left:
-      - text: "Research"
-        href: research/index.qmd
-      - text: "Teaching"
-        href: teaching/index.qmd
-      - text: "Workshops"
-        href: workshops/index.qmd
-      - text: "Blog"
-        href: posts/index.qmd
+      - research/index.qmd
+      - teaching/index.qmd
+      - workshops/index.qmd
+      - posts/index.qmd
 
     right:
-      - text: "About"
-        href: about/index.qmd
-      
+      - about/index.qmd
+
     tools:
       - icon: house-fill
         text: "Hauptseite virtuelleakademie.ch"
@@ -68,7 +60,6 @@ website:
         target: _blank
 
   sidebar:
-    # English sidebars
     - id: research
       title: "Research"
       style: "docked"
@@ -94,33 +85,6 @@ website:
         - workshops/index.qmd
         - workshops/special-topics/index.qmd
         - workshops/bespoke/index.qmd
-
-    # German sidebars
-    - id: research-de
-      title: "Forschung"
-      style: "docked"
-      search: true
-      background: light
-      contents:
-        - research/index.de.qmd
-    - id: teaching-de
-      title: "Lehre"
-      style: "docked"
-      search: true
-      background: light
-      contents:
-        - teaching/index.de.qmd
-        - teaching/bfh-weiterbildung/index.de.qmd
-        - teaching/cas-hochschuldidaktik/index.de.qmd
-    - id: workshops-de
-      title: "Workshops"
-      style: "docked"
-      search: true
-      background: light
-      contents:
-        - workshops/index.de.qmd
-        - workshops/special-topics/index.de.qmd
-        - workshops/bespoke/index.de.qmd
 
 page-footer:
   left: "© 2025 Virtuelle Akademie | Forschung & KI in der Lehre"
@@ -163,7 +127,6 @@ revealjs-plugins:
 filters:
   - timer
   - custom-callout
-  - lang-switch
 
 custom-callout:
   active-processing:

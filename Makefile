@@ -12,30 +12,19 @@ docs/%.pdf: pages/%.qmd
 	echo $< $@
 	quarto render $< --to pdf
 
-# Bilingual site rendering
+# Bilingual site rendering (using babelquarto)
 render:  ## Render the full bilingual site (EN + DE)
-	Rscript scripts/build-translations.R
-	quarto render
-	Rscript scripts/render-german.R
+	Rscript -e "babelquarto::render_website()"
 
-render-en:  ## Render English content only
-	quarto render
-
-render-de:  ## Render German content only (to docs/de/)
-	Rscript scripts/render-german.R
-
-preview: ## Preview site with full bilingual support (renders then serves)
+preview: ## Preview site (render then serve)
 	@echo "Rendering site..."
-	quarto render
+	Rscript -e "babelquarto::render_website()"
 	@echo "Starting preview server at http://localhost:8803"
 	@cd docs && python3 -m http.server 8803
 
-preview-en: ## Preview English only (fast, no German processing)
-	Rscript scripts/build-translations.R
-	quarto preview
-
-translations:  ## Build the translation registry (_translations.yml)
-	Rscript scripts/build-translations.R
+serve: ## Serve the docs folder (without rendering)
+	@echo "Starting server at http://localhost:8803"
+	@cd docs && python3 -m http.server 8803
 
 clean:   ## clean up
 	rm -rf pages/tex2pdf.-*

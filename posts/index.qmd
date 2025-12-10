@@ -1,7 +1,6 @@
 ---
 title: "Posts"
 lang: en
-translation: /de/posts/index.html
 listing:
   contents:
     - "**/*.qmd"
