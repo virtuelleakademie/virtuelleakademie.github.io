@@ -1,7 +1,6 @@
 ---
 title: "Virtuelle Akademie"
 lang: de
-translation: /index.html
 page-layout: full
 toc: false
 ---

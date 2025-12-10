@@ -1,7 +1,6 @@
 ---
 title: "Bespoke Workshops"
 lang: en
-translation: /de/workshops/bespoke/index.html
 page-layout: full
 ---
 

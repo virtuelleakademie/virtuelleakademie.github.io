@@ -295,6 +295,50 @@ a:hover {
 }
 
 // =============================================================================
+// LANGUAGE SWITCHER (babelquarto)
+// =============================================================================
+
+#languages-button {
+  background: transparent !important;
+  border: none !important;
+  color: $color-text !important;
+
+  &:hover {
+    color: $color-primary !important;
+    background: transparent !important;
+  }
+
+  &:focus {
+    box-shadow: none !important;
+  }
+
+  // Hide the Bootstrap globe icon
+  .bi-globe2 {
+    display: none;
+  }
+
+  // Add FontAwesome language icon
+  &::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f1ab"; // fa-language
+    margin-right: 0.3rem;
+  }
+}
+
+// Style the dropdown menu
+#languages-links {
+  min-width: auto;
+  border-radius: 0;
+  @include border-all;
+  box-shadow: none;
+
+  .dropdown-item:hover {
+    background-color: $color-grey-100;
+  }
+}
+
+// =============================================================================
 // CARDS
 // =============================================================================
 

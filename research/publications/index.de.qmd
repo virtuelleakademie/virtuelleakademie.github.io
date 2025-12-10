@@ -1,7 +1,6 @@
 ---
 title: "Publikationen"
 lang: de
-translation: /research/publications/index.html
 ---
 
 ## Zeitschriftenartikel

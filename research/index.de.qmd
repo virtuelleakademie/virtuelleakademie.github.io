@@ -1,7 +1,6 @@
 ---
 title: "Forschung"
 lang: de
-translation: /research/index.html
 page-layout: full
 ---
 

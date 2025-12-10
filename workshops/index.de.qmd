@@ -1,7 +1,6 @@
 ---
 title: "Workshops"
 lang: de
-translation: /workshops/index.html
 page-layout: full
 ---
 

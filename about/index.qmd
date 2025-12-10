@@ -1,8 +1,6 @@
 ---
-# title: "About"
-# image: "../assets/va-logo.png"
+title: "About"
 lang: en
-translation: /de/about/index.html
 about:
   template: marquee
   links:

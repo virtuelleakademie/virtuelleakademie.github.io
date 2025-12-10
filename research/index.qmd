@@ -1,7 +1,6 @@
 ---
 title: "Research"
 lang: en
-translation: /de/research/index.html
 page-layout: full
 ---
 

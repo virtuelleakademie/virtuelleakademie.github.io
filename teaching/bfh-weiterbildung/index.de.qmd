@@ -1,7 +1,6 @@
 ---
 title: "BFH Weiterbildung"
 lang: de
-translation: /teaching/bfh-weiterbildung/index.html
 page-layout: full
 ---
 
