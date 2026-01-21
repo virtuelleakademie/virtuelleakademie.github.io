@@ -190,95 +190,36 @@
     "text": "This is a template for creating blog posts on the Virtual Academy website. You can customize the title, date, author information, categories, and content as needed.\n\n\n\n\n\n Back to topReuseCC BY 4.0"
   },
   {
-    "objectID": "workshops/special-topics/index.html",
-    "href": "workshops/special-topics/index.html",
-    "title": "Special Topics",
+    "objectID": "workshops/bespoke/index.html",
+    "href": "workshops/bespoke/index.html",
+    "title": "Bespoke Workshops",
     "section": "",
-    "text": "Format: 3-hour Workshop | Focus: Lateral Reading\n\nLearn Lateral Reading: a practical technique to quickly and reliably verify AI responses.\nAccess →",
+    "text": "Workshops developed for specific institutions and contexts.\n\n\n\n\nFormat: Two half-day sessions | Audience: UB/HAFL staff\n\nAI training for the University Library and HAFL covering fundamentals, practical applications, and integration into advisory work.\nAccess →\n\n\n\n\nFormat: Interactive Workshop | Audience: HKB Administration\n\nPractical AI applications for administrative tasks at the Hochschule der Künste Bern.\nAccess →\n\n\n\n\nFormat: Workshop | Focus: Academic reading with AI\n\nStrategies for using AI assistants to engage with scientific literature more effectively.\nAccess →\n\n\n\n\nFormat: Workshop | Audience: Health sector professionals\n\nAI applications in healthcare education and practice for health sector professionals.\nAccess →",
     "crumbs": [
       "Workshops",
-      "Special Topics"
+      "Bespoke Workshops"
     ]
   },
   {
-    "objectID": "workshops/special-topics/index.html#specialized-workshops",
-    "href": "workshops/special-topics/index.html#specialized-workshops",
-    "title": "Special Topics",
+    "objectID": "workshops/bespoke/index.html#custom-workshops",
+    "href": "workshops/bespoke/index.html#custom-workshops",
+    "title": "Bespoke Workshops",
     "section": "",
-    "text": "Format: 3-hour Workshop | Focus: Lateral Reading\n\nLearn Lateral Reading: a practical technique to quickly and reliably verify AI responses.\nAccess →",
+    "text": "Workshops developed for specific institutions and contexts.\n\n\n\n\nFormat: Two half-day sessions | Audience: UB/HAFL staff\n\nAI training for the University Library and HAFL covering fundamentals, practical applications, and integration into advisory work.\nAccess →\n\n\n\n\nFormat: Interactive Workshop | Audience: HKB Administration\n\nPractical AI applications for administrative tasks at the Hochschule der Künste Bern.\nAccess →\n\n\n\n\nFormat: Workshop | Focus: Academic reading with AI\n\nStrategies for using AI assistants to engage with scientific literature more effectively.\nAccess →\n\n\n\n\nFormat: Workshop | Audience: Health sector professionals\n\nAI applications in healthcare education and practice for health sector professionals.\nAccess →",
     "crumbs": [
       "Workshops",
-      "Special Topics"
+      "Bespoke Workshops"
     ]
   },
   {
-    "objectID": "research/index.html",
-    "href": "research/index.html",
-    "title": "Research",
+    "objectID": "workshops/index.html",
+    "href": "workshops/index.html",
+    "title": "Workshops",
     "section": "",
-    "text": "Our research focuses on the development and evaluation of intelligent tutoring systems (ITS) that leverage artificial intelligence to provide personalized learning experiences.\n\n\nIntelligent tutoring systems represent a convergence of cognitive science, educational psychology, and artificial intelligence. Our work explores how these systems can:\n\nAdapt to individual learners by dynamically adjusting content difficulty, pacing, and instructional strategies based on learner performance and behavior\nProvide meaningful feedback by delivering timely, specific, and actionable feedback that supports learning rather than simply indicating correctness\nModel domain knowledge by representing expert knowledge in ways that support effective instruction and diagnosis of learner misconceptions\nSupport cognitive processes by designing interactions grounded in theories of learning such as Cognitive Load Theory and the worked example effect\n\n\n\n\n\nGenerative AI for personalized worked examples\nAdaptive scaffolding in problem-solving contexts\nAI-assisted formative assessment\nHuman-AI collaboration in educational settings\n\n\n\n\nOur research contributes to BeLEARN, the Swiss research network dedicated to advancing the science of learning through interdisciplinary collaboration.\nVisit BeLEARN Projects →",
+    "text": "Workshops on AI in education for various audiences and contexts.\n\n\nSpecial Topics\nSpecialized workshops on focused topics such as fact-checking and lateral reading.\nView Workshops →\n\n\nBespoke Workshops\nCustom workshops developed for specific institutions including UB/HAFL, HKB, and health sector organizations.\nView Workshops →\n\n\n\n\n\n Back to top",
     "crumbs": [
-      "Research"
+      "Workshops"
     ]
-  },
-  {
-    "objectID": "research/index.html#intelligent-tutoring-systems",
-    "href": "research/index.html#intelligent-tutoring-systems",
-    "title": "Research",
-    "section": "",
-    "text": "Our research focuses on the development and evaluation of intelligent tutoring systems (ITS) that leverage artificial intelligence to provide personalized learning experiences.\n\n\nIntelligent tutoring systems represent a convergence of cognitive science, educational psychology, and artificial intelligence. Our work explores how these systems can:\n\nAdapt to individual learners by dynamically adjusting content difficulty, pacing, and instructional strategies based on learner performance and behavior\nProvide meaningful feedback by delivering timely, specific, and actionable feedback that supports learning rather than simply indicating correctness\nModel domain knowledge by representing expert knowledge in ways that support effective instruction and diagnosis of learner misconceptions\nSupport cognitive processes by designing interactions grounded in theories of learning such as Cognitive Load Theory and the worked example effect\n\n\n\n\n\nGenerative AI for personalized worked examples\nAdaptive scaffolding in problem-solving contexts\nAI-assisted formative assessment\nHuman-AI collaboration in educational settings\n\n\n\n\nOur research contributes to BeLEARN, the Swiss research network dedicated to advancing the science of learning through interdisciplinary collaboration.\nVisit BeLEARN Projects →",
-    "crumbs": [
-      "Research"
-    ]
-  },
-  {
-    "objectID": "research/projects/index.html",
-    "href": "research/projects/index.html",
-    "title": "Research Projects",
-    "section": "",
-    "text": "Duration: 2024-2025 | Funding: [Funding source] | Collaborators: [Names]\n\nBrief description of the project objectives and methodology. This research explores innovative approaches to educational technology and its impact on learning outcomes.\n\n\n\n\nDuration: 2023-2024 | Status: Ongoing\n\nDescription of another current research project focused on artificial intelligence applications in educational contexts."
-  },
-  {
-    "objectID": "research/projects/index.html#current-projects",
-    "href": "research/projects/index.html#current-projects",
-    "title": "Research Projects",
-    "section": "",
-    "text": "Duration: 2024-2025 | Funding: [Funding source] | Collaborators: [Names]\n\nBrief description of the project objectives and methodology. This research explores innovative approaches to educational technology and its impact on learning outcomes.\n\n\n\n\nDuration: 2023-2024 | Status: Ongoing\n\nDescription of another current research project focused on artificial intelligence applications in educational contexts."
-  },
-  {
-    "objectID": "research/projects/index.html#completed-projects",
-    "href": "research/projects/index.html#completed-projects",
-    "title": "Research Projects",
-    "section": "Completed Projects",
-    "text": "Completed Projects\n\nPrevious Project 1\n\nDuration: 2022-2023 | Status: Completed\n\nSummary of a completed research project and its outcomes. This project resulted in significant insights into digital learning methodologies.\n\n\nPrevious Project 2\n\nDuration: 2021-2022 | Status: Published\n\nDescription of another completed project that led to several peer-reviewed publications in educational technology journals."
-  },
-  {
-    "objectID": "research/publications/index.html",
-    "href": "research/publications/index.html",
-    "title": "Publications",
-    "section": "",
-    "text": "Title of Paper 1 (2024)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]\nTitle of Paper 2 (2024)\nAnother Journal, Vol. A, Issue B, pp. C-C\n[DOI link] | [PDF]\n\n\n\nTitle of Paper 3 (2023)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]"
-  },
-  {
-    "objectID": "research/publications/index.html#journal-articles",
-    "href": "research/publications/index.html#journal-articles",
-    "title": "Publications",
-    "section": "",
-    "text": "Title of Paper 1 (2024)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]\nTitle of Paper 2 (2024)\nAnother Journal, Vol. A, Issue B, pp. C-C\n[DOI link] | [PDF]\n\n\n\nTitle of Paper 3 (2023)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]"
-  },
-  {
-    "objectID": "research/publications/index.html#conference-proceedings",
-    "href": "research/publications/index.html#conference-proceedings",
-    "title": "Publications",
-    "section": "Conference Proceedings",
-    "text": "Conference Proceedings\n\n2024\nConference Paper Title (2024)\nConference Name, Location\n[Link] | [PDF]\n\n\n2023\nAnother Conference Paper (2023)\nAnother Conference, Location\n[Link] | [PDF]"
-  },
-  {
-    "objectID": "research/publications/index.html#book-chapters",
-    "href": "research/publications/index.html#book-chapters",
-    "title": "Publications",
-    "section": "Book Chapters",
-    "text": "Book Chapters\nChapter Title (2024)\nIn: Book Title, Editor Name (Ed.)\nPublisher, pp. X-Y\n[Link]"
   },
   {
     "objectID": "research/collaborations/index.html",
@@ -309,43 +250,151 @@
     "text": "International Networks\n\nNetwork 1\nDescription of involvement in international research networks.\n\n\nProfessional Associations\n\nAssociation 1\nAssociation 2\nCommittee memberships"
   },
   {
-    "objectID": "workshops/index.html",
-    "href": "workshops/index.html",
-    "title": "Workshops",
+    "objectID": "research/publications/index.html",
+    "href": "research/publications/index.html",
+    "title": "Publications",
     "section": "",
-    "text": "Workshops on AI in education for various audiences and contexts.\n\n\nSpecial Topics\nSpecialized workshops on focused topics such as fact-checking and lateral reading.\nView Workshops →\n\n\nBespoke Workshops\nCustom workshops developed for specific institutions including UB/HAFL, HKB, and health sector organizations.\nView Workshops →\n\n\n\n\n\n Back to top",
+    "text": "Title of Paper 1 (2024)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]\nTitle of Paper 2 (2024)\nAnother Journal, Vol. A, Issue B, pp. C-C\n[DOI link] | [PDF]\n\n\n\nTitle of Paper 3 (2023)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]"
+  },
+  {
+    "objectID": "research/publications/index.html#journal-articles",
+    "href": "research/publications/index.html#journal-articles",
+    "title": "Publications",
+    "section": "",
+    "text": "Title of Paper 1 (2024)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]\nTitle of Paper 2 (2024)\nAnother Journal, Vol. A, Issue B, pp. C-C\n[DOI link] | [PDF]\n\n\n\nTitle of Paper 3 (2023)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]"
+  },
+  {
+    "objectID": "research/publications/index.html#conference-proceedings",
+    "href": "research/publications/index.html#conference-proceedings",
+    "title": "Publications",
+    "section": "Conference Proceedings",
+    "text": "Conference Proceedings\n\n2024\nConference Paper Title (2024)\nConference Name, Location\n[Link] | [PDF]\n\n\n2023\nAnother Conference Paper (2023)\nAnother Conference, Location\n[Link] | [PDF]"
+  },
+  {
+    "objectID": "research/publications/index.html#book-chapters",
+    "href": "research/publications/index.html#book-chapters",
+    "title": "Publications",
+    "section": "Book Chapters",
+    "text": "Book Chapters\nChapter Title (2024)\nIn: Book Title, Editor Name (Ed.)\nPublisher, pp. X-Y\n[Link]"
+  },
+  {
+    "objectID": "research/projects/index.html",
+    "href": "research/projects/index.html",
+    "title": "Research Projects",
+    "section": "",
+    "text": "Duration: 2024-2025 | Funding: [Funding source] | Collaborators: [Names]\n\nBrief description of the project objectives and methodology. This research explores innovative approaches to educational technology and its impact on learning outcomes.\n\n\n\n\nDuration: 2023-2024 | Status: Ongoing\n\nDescription of another current research project focused on artificial intelligence applications in educational contexts."
+  },
+  {
+    "objectID": "research/projects/index.html#current-projects",
+    "href": "research/projects/index.html#current-projects",
+    "title": "Research Projects",
+    "section": "",
+    "text": "Duration: 2024-2025 | Funding: [Funding source] | Collaborators: [Names]\n\nBrief description of the project objectives and methodology. This research explores innovative approaches to educational technology and its impact on learning outcomes.\n\n\n\n\nDuration: 2023-2024 | Status: Ongoing\n\nDescription of another current research project focused on artificial intelligence applications in educational contexts."
+  },
+  {
+    "objectID": "research/projects/index.html#completed-projects",
+    "href": "research/projects/index.html#completed-projects",
+    "title": "Research Projects",
+    "section": "Completed Projects",
+    "text": "Completed Projects\n\nPrevious Project 1\n\nDuration: 2022-2023 | Status: Completed\n\nSummary of a completed research project and its outcomes. This project resulted in significant insights into digital learning methodologies.\n\n\nPrevious Project 2\n\nDuration: 2021-2022 | Status: Published\n\nDescription of another completed project that led to several peer-reviewed publications in educational technology journals."
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research",
+    "section": "",
+    "text": "Our research focuses on the development and evaluation of intelligent tutoring systems (ITS) that leverage artificial intelligence to provide personalized learning experiences.\n\n\nIntelligent tutoring systems represent a convergence of cognitive science, educational psychology, and artificial intelligence. Our work explores how these systems can:\n\nAdapt to individual learners by dynamically adjusting content difficulty, pacing, and instructional strategies based on learner performance and behavior\nProvide meaningful feedback by delivering timely, specific, and actionable feedback that supports learning rather than simply indicating correctness\nModel domain knowledge by representing expert knowledge in ways that support effective instruction and diagnosis of learner misconceptions\nSupport cognitive processes by designing interactions grounded in theories of learning such as Cognitive Load Theory and the worked example effect\n\n\n\n\n\nGenerative AI for personalized worked examples\nAdaptive scaffolding in problem-solving contexts\nAI-assisted formative assessment\nHuman-AI collaboration in educational settings\n\n\n\n\nOur research contributes to BeLEARN, the Swiss research network dedicated to advancing the science of learning through interdisciplinary collaboration.\nVisit BeLEARN Projects →",
     "crumbs": [
-      "Workshops"
+      "Research"
     ]
   },
   {
-    "objectID": "workshops/bespoke/index.html",
-    "href": "workshops/bespoke/index.html",
-    "title": "Bespoke Workshops",
+    "objectID": "research/index.html#intelligent-tutoring-systems",
+    "href": "research/index.html#intelligent-tutoring-systems",
+    "title": "Research",
     "section": "",
-    "text": "Workshops developed for specific institutions and contexts.\n\n\n\n\nFormat: Two half-day sessions | Audience: UB/HAFL staff\n\nAI training for the University Library and HAFL covering fundamentals, practical applications, and integration into advisory work.\nAccess →\n\n\n\n\nFormat: Interactive Workshop | Audience: HKB Administration\n\nPractical AI applications for administrative tasks at the Hochschule der Künste Bern.\nAccess →\n\n\n\n\nFormat: Workshop | Focus: Academic reading with AI\n\nStrategies for using AI assistants to engage with scientific literature more effectively.\nAccess →\n\n\n\n\nFormat: Workshop | Audience: Health sector professionals\n\nAI applications in healthcare education and practice for health sector professionals.\nAccess →",
+    "text": "Our research focuses on the development and evaluation of intelligent tutoring systems (ITS) that leverage artificial intelligence to provide personalized learning experiences.\n\n\nIntelligent tutoring systems represent a convergence of cognitive science, educational psychology, and artificial intelligence. Our work explores how these systems can:\n\nAdapt to individual learners by dynamically adjusting content difficulty, pacing, and instructional strategies based on learner performance and behavior\nProvide meaningful feedback by delivering timely, specific, and actionable feedback that supports learning rather than simply indicating correctness\nModel domain knowledge by representing expert knowledge in ways that support effective instruction and diagnosis of learner misconceptions\nSupport cognitive processes by designing interactions grounded in theories of learning such as Cognitive Load Theory and the worked example effect\n\n\n\n\n\nGenerative AI for personalized worked examples\nAdaptive scaffolding in problem-solving contexts\nAI-assisted formative assessment\nHuman-AI collaboration in educational settings\n\n\n\n\nOur research contributes to BeLEARN, the Swiss research network dedicated to advancing the science of learning through interdisciplinary collaboration.\nVisit BeLEARN Projects →",
     "crumbs": [
-      "Workshops",
-      "Bespoke Workshops"
+      "Research"
     ]
   },
   {
-    "objectID": "workshops/bespoke/index.html#custom-workshops",
-    "href": "workshops/bespoke/index.html#custom-workshops",
-    "title": "Bespoke Workshops",
+    "objectID": "workshops/special-topics/index.html",
+    "href": "workshops/special-topics/index.html",
+    "title": "Special Topics",
     "section": "",
-    "text": "Workshops developed for specific institutions and contexts.\n\n\n\n\nFormat: Two half-day sessions | Audience: UB/HAFL staff\n\nAI training for the University Library and HAFL covering fundamentals, practical applications, and integration into advisory work.\nAccess →\n\n\n\n\nFormat: Interactive Workshop | Audience: HKB Administration\n\nPractical AI applications for administrative tasks at the Hochschule der Künste Bern.\nAccess →\n\n\n\n\nFormat: Workshop | Focus: Academic reading with AI\n\nStrategies for using AI assistants to engage with scientific literature more effectively.\nAccess →\n\n\n\n\nFormat: Workshop | Audience: Health sector professionals\n\nAI applications in healthcare education and practice for health sector professionals.\nAccess →",
+    "text": "Format: 3-hour Workshop | Focus: Lateral Reading\n\nLearn Lateral Reading: a practical technique to quickly and reliably verify AI responses.\nAccess →",
     "crumbs": [
       "Workshops",
-      "Bespoke Workshops"
+      "Special Topics"
     ]
+  },
+  {
+    "objectID": "workshops/special-topics/index.html#specialized-workshops",
+    "href": "workshops/special-topics/index.html#specialized-workshops",
+    "title": "Special Topics",
+    "section": "",
+    "text": "Format: 3-hour Workshop | Focus: Lateral Reading\n\nLearn Lateral Reading: a practical technique to quickly and reliably verify AI responses.\nAccess →",
+    "crumbs": [
+      "Workshops",
+      "Special Topics"
+    ]
+  },
+  {
+    "objectID": "posts/writing-as-sampling/index.html",
+    "href": "posts/writing-as-sampling/index.html",
+    "title": "Writing as Sampling: A Computational Account of Why Writing is Thinking",
+    "section": "",
+    "text": "“Writing is thinking” is a commonplace in composition studies. But what does it actually mean? The weak interpretation is that writing supports thinking: externalizing ideas frees working memory, allows review and revision, and creates a persistent record. This is uncontroversial but undersells the claim.\nThe strong interpretation is that writing is constitutive of thinking: the cognitive work happens, at least partly, in and through the act of writing itself. Writers don’t transcribe pre-formed thoughts; they generate thoughts they couldn’t have had without writing. This is a bolder claim, and it requires a mechanistic account. What is it about writing that makes it generative rather than merely expressive?"
+  },
+  {
+    "objectID": "posts/writing-as-sampling/index.html#the-claim",
+    "href": "posts/writing-as-sampling/index.html#the-claim",
+    "title": "Writing as Sampling: A Computational Account of Why Writing is Thinking",
+    "section": "",
+    "text": "“Writing is thinking” is a commonplace in composition studies. But what does it actually mean? The weak interpretation is that writing supports thinking: externalizing ideas frees working memory, allows review and revision, and creates a persistent record. This is uncontroversial but undersells the claim.\nThe strong interpretation is that writing is constitutive of thinking: the cognitive work happens, at least partly, in and through the act of writing itself. Writers don’t transcribe pre-formed thoughts; they generate thoughts they couldn’t have had without writing. This is a bolder claim, and it requires a mechanistic account. What is it about writing that makes it generative rather than merely expressive?"
+  },
+  {
+    "objectID": "posts/writing-as-sampling/index.html#the-sampling-argument",
+    "href": "posts/writing-as-sampling/index.html#the-sampling-argument",
+    "title": "Writing as Sampling: A Computational Account of Why Writing is Thinking",
+    "section": "The sampling argument",
+    "text": "The sampling argument\nConsider the cognitive state before writing. You have some topic, some goal, perhaps some fragmentary ideas. But the space of possible things you could write is vast. Multiple framings, entry points, argumentative structures, and word choices are all latent possibilities. None is yet concrete.\nThe act of writing forces you to sample from this possibility space. You must commit to specific words, a specific sequence, a specific path through the argument. This sampling is lossy: choosing one formulation forecloses others. The infinite-dimensional space of possibilities collapses to a single trajectory.\nHere is the key insight: once sampled, that concrete output becomes part of your context. Your subsequent thinking is conditioned on what you actually wrote, not on the full distribution of what you could have written. The written text enters the feedback loop as strong evidence, shaping the probability distribution over your next thoughts.\nThis is why writing feels generative. The sampling process itself produces information that wasn’t fully determined beforehand. Before you wrote the sentence, multiple continuations were available. After writing it, one path is actual and the others are counterfactual. You’ve collapsed a probability distribution into a specific realization, and that realization now constrains everything that follows."
+  },
+  {
+    "objectID": "posts/writing-as-sampling/index.html#evidence-for-the-constitutive-view",
+    "href": "posts/writing-as-sampling/index.html#evidence-for-the-constitutive-view",
+    "title": "Writing as Sampling: A Computational Account of Why Writing is Thinking",
+    "section": "Evidence for the constitutive view",
+    "text": "Evidence for the constitutive view\nSeveral lines of research support this account.\n\nKnowledge transformation\nBereiter and Scardamalia (1987) distinguished between knowledge-telling and knowledge-transforming writing strategies. Knowledge-telling is the novice approach: retrieve relevant content from memory and transcribe it in sequence. Knowledge-transforming is the expert approach: use the constraints of writing (genre conventions, audience expectations, logical coherence) to actively restructure ideas during composition.\nCritically, knowledge-transforming writers report that ideas emerge during writing that they did not have beforehand. The writing process creates cognitive products, not just records of cognition. This aligns with the sampling account: the act of committing to specific formulations generates new constraints and new possibilities that weren’t available before sampling began.\n\n\nSelf-explanation effects\nChi and colleagues demonstrated that generating explanations produces deeper learning than passive review (Chi et al. 1994). The act of articulating ideas in words forces elaboration, reveals gaps in understanding, and creates connections that wouldn’t otherwise form. Writing is a powerful form of self-explanation: it requires translating vague intuitions into precise language, and that translation is itself cognitive work.\nThe sampling framing clarifies why self-explanation works. Generating an explanation requires sampling specific formulations from a space of possibilities. Each formulation commits you to certain conceptual relationships, which then constrain subsequent elaboration. The explanation that emerges reflects not just prior knowledge but the specific path taken through the sampling process.\n\n\nExtended cognition\nClark and Chalmers (1998) argued that cognitive processes can extend beyond the brain to include external representations. If an external artifact plays the same functional role as an internal cognitive state, it should be considered part of the cognitive system. The written text isn’t just a record of thought; it’s part of the machinery of thinking.\nThe sampling account provides a concrete mechanism for extended cognition in writing. The written text serves as high-fidelity, persistent context that shapes subsequent cognitive processing. It’s not merely stored externally; it’s an active component of the generative process. Remove the text and the thinking proceeds differently, just as it would if you removed or altered an internal representation.\n\n\nWorking memory constraints\nWriting redistributes cognitive load across internal and external resources. The written text holds information that would otherwise compete for limited working memory capacity. But this isn’t just offloading in the sense of storage: the external text also provides retrieval cues, constrains search processes, and enables operations (like comparison and revision) that would be impossible with purely internal representations.\nThe sampling framing adds precision here. Working memory limitations mean that internal “samples” are ephemeral: held briefly, then lost or distorted. Writing creates stable external traces that persist across time, maintain precision, and become mandatory context for subsequent processing. The conditioning signal from written text is stronger and more reliable than the conditioning signal from fleeting internal states."
+  },
+  {
+    "objectID": "posts/writing-as-sampling/index.html#why-the-blank-page-is-hard",
+    "href": "posts/writing-as-sampling/index.html#why-the-blank-page-is-hard",
+    "title": "Writing as Sampling: A Computational Account of Why Writing is Thinking",
+    "section": "Why the blank page is hard",
+    "text": "Why the blank page is hard\nThis account explains the phenomenology of writing. The blank page presents a high-entropy state: many possibilities, weak conditioning signals, little to constrain the sampling process. Beginning is difficult because you must make commitments without strong evidence about which commitments are best.\nOnce you begin, momentum builds. Each word conditions the next. The growing text provides increasingly strong context, reducing entropy and making subsequent sampling easier. This is why writers often report that starting is the hardest part: not because of motivational failure, but because the computational problem is genuinely harder when context is sparse.\nIt also explains why brainstorming and freewriting help. These techniques generate multiple low-commitment samples, exploring the possibility space before committing to a single trajectory. They reduce the cost of early sampling errors by treating initial outputs as provisional."
+  },
+  {
+    "objectID": "posts/writing-as-sampling/index.html#implications-for-ai-assisted-writing",
+    "href": "posts/writing-as-sampling/index.html#implications-for-ai-assisted-writing",
+    "title": "Writing as Sampling: A Computational Account of Why Writing is Thinking",
+    "section": "Implications for AI-assisted writing",
+    "text": "Implications for AI-assisted writing\nIf writing is constitutive of thinking via sampling, then having AI generate text raises questions about where the cognitive work is located.\nWhen a human writes, they sample from their own probability distribution, conditioned on their knowledge, goals, and the emerging text. Each sampling decision is a cognitive act that creates new constraints and possibilities.\nWhen AI generates text, it samples from its distribution. The human then reads the output, which becomes part of their context. But the human didn’t do the sampling work. They receive the product without undergoing the process.\nThis distinction matters for learning. Bereiter and Scardamalia’s (1987) knowledge-transforming writing works because the writer actively struggles with the constraints of composition. That struggle is where ideas get restructured and new understanding emerges. If AI handles the sampling, the struggle is outsourced, and the cognitive benefits may be lost.\nHowever, the picture is not entirely bleak. The human can still engage in knowledge-transforming work during revision: reading AI-generated text critically, restructuring arguments, and generating new samples to replace unsatisfying passages. The question is whether this revised workflow provides sufficient cognitive engagement, or whether something important is lost when the initial sampling is delegated.\nFor experts who have already internalized the relevant schemas, AI-assisted drafting may be relatively benign. They’ve done the sampling work many times before; the marginal benefit of doing it again is lower. For novices who need to develop those schemas, delegating the sampling may impede the learning that writing is supposed to produce."
+  },
+  {
+    "objectID": "posts/writing-as-sampling/index.html#conclusion",
+    "href": "posts/writing-as-sampling/index.html#conclusion",
+    "title": "Writing as Sampling: A Computational Account of Why Writing is Thinking",
+    "section": "Conclusion",
+    "text": "Conclusion\n“Writing is thinking” is not merely a slogan. Writing forces sampling from a high-dimensional possibility space, and those samples become conditioning context for subsequent cognition. The written text is not a transcript of thought but an active component of the thinking process. This account explains why writing feels generative, why blank pages are hard, and why AI-assisted writing raises questions about the location of cognitive work.\nThe practical implication is that the struggle of writing is not incidental to its cognitive value. The difficulty of sampling, committing, and revising is where thinking happens. Making writing easier may, paradoxically, make thinking shallower, at least for those who haven’t yet developed the internal resources that writing is supposed to build."
   },
   {
     "objectID": "posts/index.html",
     "href": "posts/index.html",
     "title": "Posts",
     "section": "",
-    "text": "A template for blog posts\n\n\n\nAI\n\nteaching\n\ntutorial\n\ntemplate\n\n\n\n\n\n\n\n\n\nDec 1, 2025\n\n\nAndrew Ellis\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY 4.0"
+    "text": "A template for blog posts\n\n\n\nAI\n\nteaching\n\ntutorial\n\ntemplate\n\n\n\n\n\n\n\n\n\nDec 1, 2025\n\n\nAndrew Ellis\n\n\n\n\n\n\n\n\n\n\n\n\nWriting as Sampling: A Computational Account of Why Writing is Thinking\n\n\n\nAI\n\nwriting\n\ncognition\n\nextended cognition\n\n\n\n\n\n\n\n\n\nJan 21, 2025\n\n\nAndrew Ellis\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY 4.0"
   },
   {
     "objectID": "about/index.html",

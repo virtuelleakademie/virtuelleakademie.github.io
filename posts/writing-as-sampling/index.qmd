@@ -1,0 +1,89 @@
+---
+title: "Writing as Sampling: A Computational Account of Why Writing is Thinking"
+date: 21 Jan, 2025
+date-format: "DD MMM, YYYY"
+
+author:
+  - name: Andrew Ellis
+    url: https://github.com/awellis
+    affiliation: Virtual Academy, Bern University of Applied Sciences
+    affiliation-url: https://virtuelleakademie.ch
+    orcid: 0000-0002-2788-936X
+
+categories: [AI, writing, cognition, extended cognition]
+bibliography: ../../bibliography.bib
+---
+
+## The claim
+
+"Writing is thinking" is a commonplace in composition studies. But what does it actually mean? The weak interpretation is that writing *supports* thinking: externalizing ideas frees working memory, allows review and revision, and creates a persistent record. This is uncontroversial but undersells the claim.
+
+The strong interpretation is that writing is *constitutive* of thinking: the cognitive work happens, at least partly, in and through the act of writing itself. Writers don't transcribe pre-formed thoughts; they generate thoughts they couldn't have had without writing. This is a bolder claim, and it requires a mechanistic account. What is it about writing that makes it generative rather than merely expressive?
+
+## The sampling argument
+
+Consider the cognitive state before writing. You have some topic, some goal, perhaps some fragmentary ideas. But the space of possible things you could write is vast. Multiple framings, entry points, argumentative structures, and word choices are all latent possibilities. None is yet concrete.
+
+The act of writing forces you to *sample* from this possibility space. You must commit to specific words, a specific sequence, a specific path through the argument. This sampling is lossy: choosing one formulation forecloses others. The infinite-dimensional space of possibilities collapses to a single trajectory.
+
+Here is the key insight: once sampled, that concrete output becomes part of your context. Your subsequent thinking is conditioned on what you actually wrote, not on the full distribution of what you could have written. The written text enters the feedback loop as strong evidence, shaping the probability distribution over your next thoughts.
+
+This is why writing feels generative. The sampling process itself produces information that wasn't fully determined beforehand. Before you wrote the sentence, multiple continuations were available. After writing it, one path is actual and the others are counterfactual. You've collapsed a probability distribution into a specific realization, and that realization now constrains everything that follows.
+
+## Evidence for the constitutive view
+
+Several lines of research support this account.
+
+### Knowledge transformation
+
+@bereiterPsychologyWrittenComposition1987 distinguished between *knowledge-telling* and *knowledge-transforming* writing strategies. Knowledge-telling is the novice approach: retrieve relevant content from memory and transcribe it in sequence. Knowledge-transforming is the expert approach: use the constraints of writing (genre conventions, audience expectations, logical coherence) to actively restructure ideas during composition.
+
+Critically, knowledge-transforming writers report that ideas emerge during writing that they did not have beforehand. The writing process creates cognitive products, not just records of cognition. This aligns with the sampling account: the act of committing to specific formulations generates new constraints and new possibilities that weren't available before sampling began.
+
+### Self-explanation effects
+
+Chi and colleagues demonstrated that generating explanations produces deeper learning than passive review [@chiElicitingSelfExplanationsImproves1994]. The act of articulating ideas in words forces elaboration, reveals gaps in understanding, and creates connections that wouldn't otherwise form. Writing is a powerful form of self-explanation: it requires translating vague intuitions into precise language, and that translation is itself cognitive work.
+
+The sampling framing clarifies why self-explanation works. Generating an explanation requires sampling specific formulations from a space of possibilities. Each formulation commits you to certain conceptual relationships, which then constrain subsequent elaboration. The explanation that emerges reflects not just prior knowledge but the specific path taken through the sampling process.
+
+### Extended cognition
+
+@clarkExtendedMind1998 argued that cognitive processes can extend beyond the brain to include external representations. If an external artifact plays the same functional role as an internal cognitive state, it should be considered part of the cognitive system. The written text isn't just a record of thought; it's part of the machinery of thinking.
+
+The sampling account provides a concrete mechanism for extended cognition in writing. The written text serves as high-fidelity, persistent context that shapes subsequent cognitive processing. It's not merely stored externally; it's an active component of the generative process. Remove the text and the thinking proceeds differently, just as it would if you removed or altered an internal representation.
+
+### Working memory constraints
+
+Writing redistributes cognitive load across internal and external resources. The written text holds information that would otherwise compete for limited working memory capacity. But this isn't just offloading in the sense of storage: the external text also provides retrieval cues, constrains search processes, and enables operations (like comparison and revision) that would be impossible with purely internal representations.
+
+The sampling framing adds precision here. Working memory limitations mean that internal "samples" are ephemeral: held briefly, then lost or distorted. Writing creates stable external traces that persist across time, maintain precision, and become mandatory context for subsequent processing. The conditioning signal from written text is stronger and more reliable than the conditioning signal from fleeting internal states.
+
+## Why the blank page is hard
+
+This account explains the phenomenology of writing. The blank page presents a high-entropy state: many possibilities, weak conditioning signals, little to constrain the sampling process. Beginning is difficult because you must make commitments without strong evidence about which commitments are best.
+
+Once you begin, momentum builds. Each word conditions the next. The growing text provides increasingly strong context, reducing entropy and making subsequent sampling easier. This is why writers often report that starting is the hardest part: not because of motivational failure, but because the computational problem is genuinely harder when context is sparse.
+
+It also explains why brainstorming and freewriting help. These techniques generate multiple low-commitment samples, exploring the possibility space before committing to a single trajectory. They reduce the cost of early sampling errors by treating initial outputs as provisional.
+
+## Implications for AI-assisted writing
+
+If writing is constitutive of thinking via sampling, then having AI generate text raises questions about where the cognitive work is located.
+
+When a human writes, they sample from their own probability distribution, conditioned on their knowledge, goals, and the emerging text. Each sampling decision is a cognitive act that creates new constraints and possibilities.
+
+When AI generates text, it samples from its distribution. The human then reads the output, which becomes part of *their* context. But the human didn't do the sampling work. They receive the product without undergoing the process.
+
+This distinction matters for learning. Bereiter and Scardamalia's [-@bereiterPsychologyWrittenComposition1987] knowledge-transforming writing works because the writer actively struggles with the constraints of composition. That struggle is where ideas get restructured and new understanding emerges. If AI handles the sampling, the struggle is outsourced, and the cognitive benefits may be lost.
+
+However, the picture is not entirely bleak. The human can still engage in knowledge-transforming work during revision: reading AI-generated text critically, restructuring arguments, and generating new samples to replace unsatisfying passages. The question is whether this revised workflow provides sufficient cognitive engagement, or whether something important is lost when the initial sampling is delegated.
+
+For experts who have already internalized the relevant schemas, AI-assisted drafting may be relatively benign. They've done the sampling work many times before; the marginal benefit of doing it again is lower. For novices who need to develop those schemas, delegating the sampling may impede the learning that writing is supposed to produce.
+
+## Conclusion
+
+"Writing is thinking" is not merely a slogan. Writing forces sampling from a high-dimensional possibility space, and those samples become conditioning context for subsequent cognition. The written text is not a transcript of thought but an active component of the thinking process. This account explains why writing feels generative, why blank pages are hard, and why AI-assisted writing raises questions about the location of cognitive work.
+
+The practical implication is that the struggle of writing is not incidental to its cognitive value. The difficulty of sampling, committing, and revising is where thinking happens. Making writing easier may, paradoxically, make thinking shallower, at least for those who haven't yet developed the internal resources that writing is supposed to build.
+
+## References

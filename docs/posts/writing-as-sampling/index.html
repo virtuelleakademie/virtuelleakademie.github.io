@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<link rel="alternate" hreflang="en" href="https://virtuelleakademie.github.io/teaching/courses/index.html" />
-<link rel="alternate" hreflang="de" href="https://virtuelleakademie.github.io/de/teaching/courses/index.de.html" />
+<link rel="alternate" hreflang="en" href="https://virtuelleakademie.github.io/posts/writing-as-sampling/index.html" />
+<link rel="alternate" hreflang="de" href="https://virtuelleakademie.github.io/de/posts/writing-as-sampling/index.de.html" />
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Andrew Ellis">
 
-<title>Courses – Virtuelle Akademie | KI in der Lehre</title>
+<title>Writing as Sampling: A Computational Account of Why Writing is Thinking – Virtuelle Akademie | KI in der Lehre</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +23,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -103,7 +124,10 @@ div.callout-active-processing.callout-style-default .callout-icon::before, div.c
 </style>
 
 
-<meta property="og:title" content="Courses – Virtuelle Akademie | KI in der Lehre">
+<link rel="stylesheet" href="../../styles/blog-posts.scss">
+<meta property="og:title" content="Writing as Sampling: A Computational Account of Why Writing is Thinking – Virtuelle Akademie | KI in der Lehre">
+<meta property="og:description" content="Forschung und Ressourcen zu KI in der Hochschullehre">
+<meta property="og:image" content="https://virtuelleakademie.github.io/posts/writing-as-sampling/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta property="og:site_name" content="Virtuelle Akademie | KI in der Lehre">
 </head>
 
@@ -165,32 +189,62 @@ div.callout-active-processing.callout-style-default .callout-icon::before, div.c
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#current-courses" id="toc-current-courses" class="nav-link active" data-scroll-target="#current-courses">Current Courses</a>
+  <li><a href="#the-claim" id="toc-the-claim" class="nav-link active" data-scroll-target="#the-claim">The claim</a></li>
+  <li><a href="#the-sampling-argument" id="toc-the-sampling-argument" class="nav-link" data-scroll-target="#the-sampling-argument">The sampling argument</a></li>
+  <li><a href="#evidence-for-the-constitutive-view" id="toc-evidence-for-the-constitutive-view" class="nav-link" data-scroll-target="#evidence-for-the-constitutive-view">Evidence for the constitutive view</a>
   <ul class="collapse">
-  <li><a href="#advanced-ai-in-education" id="toc-advanced-ai-in-education" class="nav-link" data-scroll-target="#advanced-ai-in-education">Advanced AI in Education</a></li>
-  <li><a href="#digital-learning-design" id="toc-digital-learning-design" class="nav-link" data-scroll-target="#digital-learning-design">Digital Learning Design</a></li>
+  <li><a href="#knowledge-transformation" id="toc-knowledge-transformation" class="nav-link" data-scroll-target="#knowledge-transformation">Knowledge transformation</a></li>
+  <li><a href="#self-explanation-effects" id="toc-self-explanation-effects" class="nav-link" data-scroll-target="#self-explanation-effects">Self-explanation effects</a></li>
+  <li><a href="#extended-cognition" id="toc-extended-cognition" class="nav-link" data-scroll-target="#extended-cognition">Extended cognition</a></li>
+  <li><a href="#working-memory-constraints" id="toc-working-memory-constraints" class="nav-link" data-scroll-target="#working-memory-constraints">Working memory constraints</a></li>
   </ul></li>
-  <li><a href="#past-courses" id="toc-past-courses" class="nav-link" data-scroll-target="#past-courses">Past Courses</a>
-  <ul class="collapse">
-  <li><a href="#educational-technology-foundations" id="toc-educational-technology-foundations" class="nav-link" data-scroll-target="#educational-technology-foundations">Educational Technology Foundations</a></li>
-  <li><a href="#research-methods-in-education" id="toc-research-methods-in-education" class="nav-link" data-scroll-target="#research-methods-in-education">Research Methods in Education</a></li>
-  </ul></li>
+  <li><a href="#why-the-blank-page-is-hard" id="toc-why-the-blank-page-is-hard" class="nav-link" data-scroll-target="#why-the-blank-page-is-hard">Why the blank page is hard</a></li>
+  <li><a href="#implications-for-ai-assisted-writing" id="toc-implications-for-ai-assisted-writing" class="nav-link" data-scroll-target="#implications-for-ai-assisted-writing">Implications for AI-assisted writing</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/virtuelleakademie/virtuelleakademie.github.io/edit/main/teaching/courses/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/virtuelleakademie/virtuelleakademie.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/virtuelleakademie/virtuelleakademie.github.io/edit/main/posts/writing-as-sampling/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/virtuelleakademie/virtuelleakademie.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Courses</h1>
-</div>
+<h1 class="title">Writing as Sampling: A Computational Account of Why Writing is Thinking</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">AI</div>
+    <div class="quarto-category">writing</div>
+    <div class="quarto-category">cognition</div>
+    <div class="quarto-category">extended cognition</div>
+  </div>
+  </div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author"><a href="https://github.com/awellis">Andrew Ellis</a> <a href="https://orcid.org/0000-0002-2788-936X" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            <a href="https://virtuelleakademie.ch">
+            Virtual Academy, Bern University of Applied Sciences
+            </a>
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">21 Jan, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -200,44 +254,80 @@ div.callout-active-processing.callout-style-default .callout-icon::before, div.c
 </header>
 
 
-<section id="current-courses" class="level2">
-<h2 class="anchored" data-anchor-id="current-courses">Current Courses</h2>
-<section id="advanced-ai-in-education" class="level3 section-card">
-<h3 class="anchored" data-anchor-id="advanced-ai-in-education">Advanced AI in Education</h3>
-<div class="meta">
-<p><strong>Semester:</strong> Spring 2024 | <strong>Level:</strong> Graduate | <strong>Credits:</strong> 3</p>
-</div>
-<p>An advanced course exploring the integration of artificial intelligence technologies in educational systems, covering machine learning applications, personalized learning, and ethical considerations.</p>
+<section id="the-claim" class="level2">
+<h2 class="anchored" data-anchor-id="the-claim">The claim</h2>
+<p>“Writing is thinking” is a commonplace in composition studies. But what does it actually mean? The weak interpretation is that writing <em>supports</em> thinking: externalizing ideas frees working memory, allows review and revision, and creates a persistent record. This is uncontroversial but undersells the claim.</p>
+<p>The strong interpretation is that writing is <em>constitutive</em> of thinking: the cognitive work happens, at least partly, in and through the act of writing itself. Writers don’t transcribe pre-formed thoughts; they generate thoughts they couldn’t have had without writing. This is a bolder claim, and it requires a mechanistic account. What is it about writing that makes it generative rather than merely expressive?</p>
 </section>
-<section id="digital-learning-design" class="level3 section-card">
-<h3 class="anchored" data-anchor-id="digital-learning-design">Digital Learning Design</h3>
-<div class="meta">
-<p><strong>Semester:</strong> Fall 2024 | <strong>Level:</strong> Undergraduate | <strong>Credits:</strong> 4</p>
-</div>
-<p>Introduction to designing effective digital learning experiences, including user experience principles, multimedia design, and assessment strategies for online environments.</p>
+<section id="the-sampling-argument" class="level2">
+<h2 class="anchored" data-anchor-id="the-sampling-argument">The sampling argument</h2>
+<p>Consider the cognitive state before writing. You have some topic, some goal, perhaps some fragmentary ideas. But the space of possible things you could write is vast. Multiple framings, entry points, argumentative structures, and word choices are all latent possibilities. None is yet concrete.</p>
+<p>The act of writing forces you to <em>sample</em> from this possibility space. You must commit to specific words, a specific sequence, a specific path through the argument. This sampling is lossy: choosing one formulation forecloses others. The infinite-dimensional space of possibilities collapses to a single trajectory.</p>
+<p>Here is the key insight: once sampled, that concrete output becomes part of your context. Your subsequent thinking is conditioned on what you actually wrote, not on the full distribution of what you could have written. The written text enters the feedback loop as strong evidence, shaping the probability distribution over your next thoughts.</p>
+<p>This is why writing feels generative. The sampling process itself produces information that wasn’t fully determined beforehand. Before you wrote the sentence, multiple continuations were available. After writing it, one path is actual and the others are counterfactual. You’ve collapsed a probability distribution into a specific realization, and that realization now constrains everything that follows.</p>
+</section>
+<section id="evidence-for-the-constitutive-view" class="level2">
+<h2 class="anchored" data-anchor-id="evidence-for-the-constitutive-view">Evidence for the constitutive view</h2>
+<p>Several lines of research support this account.</p>
+<section id="knowledge-transformation" class="level3">
+<h3 class="anchored" data-anchor-id="knowledge-transformation">Knowledge transformation</h3>
+<p><span class="citation" data-cites="bereiterPsychologyWrittenComposition1987">Bereiter and Scardamalia (<a href="#ref-bereiterPsychologyWrittenComposition1987" role="doc-biblioref">1987</a>)</span> distinguished between <em>knowledge-telling</em> and <em>knowledge-transforming</em> writing strategies. Knowledge-telling is the novice approach: retrieve relevant content from memory and transcribe it in sequence. Knowledge-transforming is the expert approach: use the constraints of writing (genre conventions, audience expectations, logical coherence) to actively restructure ideas during composition.</p>
+<p>Critically, knowledge-transforming writers report that ideas emerge during writing that they did not have beforehand. The writing process creates cognitive products, not just records of cognition. This aligns with the sampling account: the act of committing to specific formulations generates new constraints and new possibilities that weren’t available before sampling began.</p>
+</section>
+<section id="self-explanation-effects" class="level3">
+<h3 class="anchored" data-anchor-id="self-explanation-effects">Self-explanation effects</h3>
+<p>Chi and colleagues demonstrated that generating explanations produces deeper learning than passive review <span class="citation" data-cites="chiElicitingSelfExplanationsImproves1994">(<a href="#ref-chiElicitingSelfExplanationsImproves1994" role="doc-biblioref">Chi et al. 1994</a>)</span>. The act of articulating ideas in words forces elaboration, reveals gaps in understanding, and creates connections that wouldn’t otherwise form. Writing is a powerful form of self-explanation: it requires translating vague intuitions into precise language, and that translation is itself cognitive work.</p>
+<p>The sampling framing clarifies why self-explanation works. Generating an explanation requires sampling specific formulations from a space of possibilities. Each formulation commits you to certain conceptual relationships, which then constrain subsequent elaboration. The explanation that emerges reflects not just prior knowledge but the specific path taken through the sampling process.</p>
+</section>
+<section id="extended-cognition" class="level3">
+<h3 class="anchored" data-anchor-id="extended-cognition">Extended cognition</h3>
+<p><span class="citation" data-cites="clarkExtendedMind1998">Clark and Chalmers (<a href="#ref-clarkExtendedMind1998" role="doc-biblioref">1998</a>)</span> argued that cognitive processes can extend beyond the brain to include external representations. If an external artifact plays the same functional role as an internal cognitive state, it should be considered part of the cognitive system. The written text isn’t just a record of thought; it’s part of the machinery of thinking.</p>
+<p>The sampling account provides a concrete mechanism for extended cognition in writing. The written text serves as high-fidelity, persistent context that shapes subsequent cognitive processing. It’s not merely stored externally; it’s an active component of the generative process. Remove the text and the thinking proceeds differently, just as it would if you removed or altered an internal representation.</p>
+</section>
+<section id="working-memory-constraints" class="level3">
+<h3 class="anchored" data-anchor-id="working-memory-constraints">Working memory constraints</h3>
+<p>Writing redistributes cognitive load across internal and external resources. The written text holds information that would otherwise compete for limited working memory capacity. But this isn’t just offloading in the sense of storage: the external text also provides retrieval cues, constrains search processes, and enables operations (like comparison and revision) that would be impossible with purely internal representations.</p>
+<p>The sampling framing adds precision here. Working memory limitations mean that internal “samples” are ephemeral: held briefly, then lost or distorted. Writing creates stable external traces that persist across time, maintain precision, and become mandatory context for subsequent processing. The conditioning signal from written text is stronger and more reliable than the conditioning signal from fleeting internal states.</p>
 </section>
 </section>
-<section id="past-courses" class="level2">
-<h2 class="anchored" data-anchor-id="past-courses">Past Courses</h2>
-<section id="educational-technology-foundations" class="level3 section-card">
-<h3 class="anchored" data-anchor-id="educational-technology-foundations">Educational Technology Foundations</h3>
-<div class="meta">
-<p><strong>Semester:</strong> Spring 2023 | <strong>Level:</strong> Graduate | <strong>Enrollment:</strong> 45 students</p>
-</div>
-<p>Foundational course covering the history, theory, and practice of educational technology in modern learning environments.</p>
+<section id="why-the-blank-page-is-hard" class="level2">
+<h2 class="anchored" data-anchor-id="why-the-blank-page-is-hard">Why the blank page is hard</h2>
+<p>This account explains the phenomenology of writing. The blank page presents a high-entropy state: many possibilities, weak conditioning signals, little to constrain the sampling process. Beginning is difficult because you must make commitments without strong evidence about which commitments are best.</p>
+<p>Once you begin, momentum builds. Each word conditions the next. The growing text provides increasingly strong context, reducing entropy and making subsequent sampling easier. This is why writers often report that starting is the hardest part: not because of motivational failure, but because the computational problem is genuinely harder when context is sparse.</p>
+<p>It also explains why brainstorming and freewriting help. These techniques generate multiple low-commitment samples, exploring the possibility space before committing to a single trajectory. They reduce the cost of early sampling errors by treating initial outputs as provisional.</p>
 </section>
-<section id="research-methods-in-education" class="level3 section-card">
-<h3 class="anchored" data-anchor-id="research-methods-in-education">Research Methods in Education</h3>
-<div class="meta">
-<p><strong>Semester:</strong> Fall 2023 | <strong>Level:</strong> Graduate | <strong>Enrollment:</strong> 32 students</p>
-</div>
-<p>Comprehensive introduction to quantitative and qualitative research methodologies specifically applied to educational research contexts.</p>
+<section id="implications-for-ai-assisted-writing" class="level2">
+<h2 class="anchored" data-anchor-id="implications-for-ai-assisted-writing">Implications for AI-assisted writing</h2>
+<p>If writing is constitutive of thinking via sampling, then having AI generate text raises questions about where the cognitive work is located.</p>
+<p>When a human writes, they sample from their own probability distribution, conditioned on their knowledge, goals, and the emerging text. Each sampling decision is a cognitive act that creates new constraints and possibilities.</p>
+<p>When AI generates text, it samples from its distribution. The human then reads the output, which becomes part of <em>their</em> context. But the human didn’t do the sampling work. They receive the product without undergoing the process.</p>
+<p>This distinction matters for learning. Bereiter and Scardamalia’s <span class="citation" data-cites="bereiterPsychologyWrittenComposition1987">(<a href="#ref-bereiterPsychologyWrittenComposition1987" role="doc-biblioref">1987</a>)</span> knowledge-transforming writing works because the writer actively struggles with the constraints of composition. That struggle is where ideas get restructured and new understanding emerges. If AI handles the sampling, the struggle is outsourced, and the cognitive benefits may be lost.</p>
+<p>However, the picture is not entirely bleak. The human can still engage in knowledge-transforming work during revision: reading AI-generated text critically, restructuring arguments, and generating new samples to replace unsatisfying passages. The question is whether this revised workflow provides sufficient cognitive engagement, or whether something important is lost when the initial sampling is delegated.</p>
+<p>For experts who have already internalized the relevant schemas, AI-assisted drafting may be relatively benign. They’ve done the sampling work many times before; the marginal benefit of doing it again is lower. For novices who need to develop those schemas, delegating the sampling may impede the learning that writing is supposed to produce.</p>
 </section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>“Writing is thinking” is not merely a slogan. Writing forces sampling from a high-dimensional possibility space, and those samples become conditioning context for subsequent cognition. The written text is not a transcript of thought but an active component of the thinking process. This account explains why writing feels generative, why blank pages are hard, and why AI-assisted writing raises questions about the location of cognitive work.</p>
+<p>The practical implication is that the struggle of writing is not incidental to its cognitive value. The difficulty of sampling, committing, and revising is where thinking happens. Making writing easier may, paradoxically, make thinking shallower, at least for those who haven’t yet developed the internal resources that writing is supposed to build.</p>
+</section>
+<section id="references" class="level2">
+
+
 
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-bereiterPsychologyWrittenComposition1987" class="csl-entry" role="listitem">
+Bereiter, Carl, and Marlene Scardamalia. 1987. <em>The <span>Psychology</span> of <span>Written Composition</span></em>. The Psychology of Written Composition. Hillsdale, NJ, US: Lawrence Erlbaum Associates, Inc.
+</div>
+<div id="ref-chiElicitingSelfExplanationsImproves1994" class="csl-entry" role="listitem">
+Chi, Michelene T. H., Nicholas De Leeuw, Mei-Hung Chiu, and Christian Lavancher. 1994. <span>“Eliciting <span>Self-Explanations Improves Understanding</span>.”</span> <em>Cognitive Science</em> 18 (3): 439–77. <a href="https://doi.org/10.1207/s15516709cog1803_3">https://doi.org/10.1207/s15516709cog1803_3</a>.
+</div>
+<div id="ref-clarkExtendedMind1998" class="csl-entry" role="listitem">
+Clark, Andy, and David Chalmers. 1998. <span>“The <span>Extended Mind</span>.”</span> <em>Analysis</em> 58 (1): 7–19. <a href="https://www.jstor.org/stable/3328150">https://www.jstor.org/stable/3328150</a>.
+</div>
+</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -650,5 +740,5 @@ div.callout-active-processing.callout-style-default .callout-icon::before, div.c
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/virtuelleakademie/virtuelleakademie.github.io/edit/main/teaching/courses/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/virtuelleakademie/virtuelleakademie.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/virtuelleakademie/virtuelleakademie.github.io/edit/main/posts/writing-as-sampling/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/virtuelleakademie/virtuelleakademie.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
