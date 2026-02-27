@@ -3,8 +3,9 @@ title: "Posts"
 lang: en
 listing:
   contents:
-    - "**/*.qmd"
+    - "*/index.qmd"
     - "!_archive/**"
+    - "!template/**"
   sort: "date desc"
   type: default
   categories: true
