@@ -1,11 +1,11 @@
 ---
-title: "Posts"
+title: "Blog"
 lang: en
 listing:
   contents:
-    - "*/index.qmd"
-    - "!_archive/**"
-    - "!template/**"
+    - "."
+    - "!_archive"
+    - "!template"
   sort: "date desc"
   type: default
   categories: true
