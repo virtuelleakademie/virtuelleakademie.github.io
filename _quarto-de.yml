@@ -4,6 +4,19 @@ website:
   title: "Virtuelle Akademie | KI in der Lehre"
   description: "Forschung und Ressourcen zu KI in der Hochschullehre"
 
+  navbar:
+    left:
+      - research/index.qmd
+      - text: Lehre
+        menu:
+          - text: Kurse
+            href: teaching/index.qmd
+          - text: Workshops
+            href: workshops/index.qmd
+      - posts/index.qmd
+    right:
+      - about/index.qmd
+
   sidebar:
     - id: research
       title: "Forschung"

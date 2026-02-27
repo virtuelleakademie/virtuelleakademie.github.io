@@ -16,6 +16,7 @@ babelquarto:
       text: "DE"
 
 lang: en
+license: "CC BY-SA 4.0"
 
 website:
   title: "Virtuelle Akademie | KI in der Lehre"
@@ -39,8 +40,12 @@ website:
     background: light
     left:
       - research/index.qmd
-      - teaching/index.qmd
-      - workshops/index.qmd
+      - text: Teaching
+        menu:
+          - text: Courses
+            href: teaching/index.qmd
+          - text: Workshops
+            href: workshops/index.qmd
       - posts/index.qmd
 
     right:
@@ -87,7 +92,7 @@ website:
         - workshops/bespoke/index.qmd
 
 page-footer:
-  left: "© 2025 Virtuelle Akademie | Forschung & KI in der Lehre"
+  left: "© 2026 Virtuelle Akademie | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)"
   right:
     - icon: github
       href: https://github.com/virtuelleakademie
@@ -107,7 +112,7 @@ format:
     link-external-newwindow: true
     anchor-sections: true
     smooth-scroll: true
-    linkcolor: "#000000"
+    linkcolor: "#9A4665"
 
 execute:
   cache: true

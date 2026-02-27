@@ -5,11 +5,12 @@
 // =============================================================================
 
 // Typography
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
 
-$font-family-sans-serif: "Urbanist", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$font-family-base: "Source Serif 4", Georgia, "Times New Roman", serif;
+$font-family-sans-serif: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 $font-family-monospace: "JetBrains Mono", "Fira Code", monospace;
-$headings-font-family: "Urbanist", sans-serif;
+$headings-font-family: "Source Sans 3", sans-serif;
 
 // Font sizes
 $font-size-base: 1rem;
@@ -41,6 +42,12 @@ $color-grey-300: #E0E0E0;  // Subtle borders (unused in current design)
 $color-grey-500: #666666;  // Secondary text
 $color-grey-700: #333333;  // Dark text alternative
 
+// Accent colors - Burgundy + Gold
+// NOTE: Keep in sync with _brand.yml and _quarto.yml
+$color-accent-burgundy: #9A4665;    // Active states, links
+$color-accent-burgundy-dark: #7a3552; // Darker variant for hover
+$color-accent-gold: #D4A03E;        // Hover accents
+
 // Color assignments
 $color-background: $color-white;
 $color-text: $color-black;
@@ -56,6 +63,7 @@ $body-color: $color-text;
 $primary: $color-primary;
 $secondary: $color-text-secondary;
 $light: $color-surface;
+$link-color: $color-accent-burgundy;
 
 // Borders
 $border-width: 2px;
@@ -122,7 +130,7 @@ $breakpoint-mobile: 900px;
 }
 
 @mixin active-indicator {
-  border-left: $border-thick;
+  border-left: $border-width-thick solid $color-accent-burgundy;
   padding-left: calc($spacing-md - $border-width-thick);
 }
 
@@ -133,7 +141,7 @@ $breakpoint-mobile: 900px;
 body {
   background-color: $color-background;
   color: $color-text;
-  font-family: $font-family-sans-serif;
+  font-family: $font-family-base;
   line-height: $line-height-base;
   font-size: $font-size-base;
   font-weight: $font-weight-normal;
@@ -185,17 +193,14 @@ p {
 // =============================================================================
 
 a {
-  color: $color-text;
-  text-decoration: underline;
-  text-decoration-color: transparent;
-  text-underline-offset: 3px;
+  color: $color-accent-burgundy;
+  text-decoration: none;
   font-weight: $font-weight-medium;
   @include transition-default;
 }
 
 a:hover {
-  color: $color-text;
-  text-decoration-color: $color-text;
+  color: $color-accent-burgundy-dark;
 }
 
 // =============================================================================
@@ -606,13 +611,11 @@ th {
 
 .page-footer a {
   color: $color-text;
-  text-decoration: underline;
-  text-decoration-color: transparent;
+  text-decoration: none;
 }
 
 .page-footer a:hover {
-  color: $color-text;
-  text-decoration-color: $color-text;
+  color: $color-accent-burgundy;
 }
 
 // =============================================================================

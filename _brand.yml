@@ -1,11 +1,14 @@
 color:
   palette:
+    # Core palette
     black: "#000000"
     white: "#FFFFFF"
     light-grey: "#F5F5F5"
     medium-grey: "#666666"
     dark-grey: "#333333"
-    border-grey: "#E0E0E0"
+    # Accent colors (also update in custom.scss, _quarto.yml)
+    accent-burgundy: "#9A4665"   # Active states, links
+    accent-gold: "#D4A03E"       # Hover accents
   background: white
   foreground: black
   primary: black
@@ -16,7 +19,9 @@ color:
 
 typography:
   fonts:
-    - family: Urbanist
+    - family: Source Serif 4
       source: google
-  base: Urbanist
-  headings: Urbanist
+    - family: Source Sans 3
+      source: google
+  base: Source Serif 4
+  headings: Source Sans 3
