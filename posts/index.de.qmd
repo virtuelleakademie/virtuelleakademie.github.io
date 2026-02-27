@@ -1,10 +1,11 @@
 ---
-title: "Beiträge"
+title: "Blog"
 lang: de
 listing:
   contents:
-    - "**/*.qmd"
-    - "!_archive/**"
+    - "."
+    - "!_archive"
+    - "!template"
   sort: "date desc"
   type: default
   categories: true

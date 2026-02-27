@@ -4,6 +4,8 @@ lang: en
 page-layout: full
 ---
 
+## Courses
+
 Courses and materials for integrating AI into teaching practice.
 
 ::: {.content-grid}
@@ -27,3 +29,26 @@ Module 4 of the CAS Hochschuldidaktik program, focusing on AI in higher educatio
 
 :::
 
+## Workshops
+
+Workshops on AI in education for various audiences and contexts.
+
+::: {.content-grid}
+
+::: {.feature-card}
+### [Special Topics](/workshops/special-topics/)
+
+Specialized workshops on focused topics such as fact-checking and lateral reading.
+
+[**View Workshops →**](/workshops/special-topics/){.btn .btn-primary}
+:::
+
+::: {.feature-card}
+### [Bespoke Workshops](/workshops/bespoke/)
+
+Custom workshops developed for specific institutions including UB/HAFL, HKB, and health sector organizations.
+
+[**View Workshops →**](/workshops/bespoke/){.btn .btn-primary}
+:::
+
+:::

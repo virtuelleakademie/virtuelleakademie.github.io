@@ -4,6 +4,8 @@ lang: de
 page-layout: full
 ---
 
+## Kurse
+
 Kurse und Materialien zur Integration von KI in die Lehrpraxis.
 
 ::: {.content-grid}
@@ -22,6 +24,30 @@ Eine progressive Kursreihe zu KI in der Bildung, angeboten über die BFH-Weiterb
 Modul 4 des CAS Hochschuldidaktik-Programms mit Fokus auf KI in der Hochschullehre.
 
 [**Programm ansehen →**](cas-hochschuldidaktik/){.btn .btn-primary}
+:::
+
+:::
+
+## Workshops
+
+Workshops zu KI in der Bildung für verschiedene Zielgruppen und Kontexte.
+
+::: {.content-grid}
+
+::: {.feature-card}
+### [Spezialthemen](/workshops/special-topics/)
+
+Spezialisierte Workshops zu fokussierten Themen wie Faktenüberprüfung und laterales Lesen.
+
+[**Workshops ansehen →**](/workshops/special-topics/){.btn .btn-primary}
+:::
+
+::: {.feature-card}
+### [Massgeschneiderte Workshops](/workshops/bespoke/)
+
+Individuelle Workshops, die für spezifische Institutionen entwickelt wurden, darunter UB/HAFL, HKB und Organisationen im Gesundheitswesen.
+
+[**Workshops ansehen →**](/workshops/bespoke/){.btn .btn-primary}
 :::
 
 :::

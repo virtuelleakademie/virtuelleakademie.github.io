@@ -40,12 +40,7 @@ website:
     background: light
     left:
       - research/index.qmd
-      - text: Teaching
-        menu:
-          - text: Courses
-            href: teaching/index.qmd
-          - text: Workshops
-            href: workshops/index.qmd
+      - teaching/index.qmd
       - posts/index.qmd
 
     right:
@@ -78,18 +73,16 @@ website:
       search: true
       background: light
       contents:
-        - teaching/index.qmd
-        - teaching/bfh-weiterbildung/index.qmd
-        - teaching/cas-hochschuldidaktik/index.qmd
-    - id: workshops
-      title: "Workshops"
-      style: "docked"
-      search: true
-      background: light
-      contents:
-        - workshops/index.qmd
-        - workshops/special-topics/index.qmd
-        - workshops/bespoke/index.qmd
+        - section: "Courses"
+          contents:
+            - teaching/index.qmd
+            - teaching/bfh-weiterbildung/index.qmd
+            - teaching/cas-hochschuldidaktik/index.qmd
+        - section: "Workshops"
+          contents:
+            - workshops/index.qmd
+            - workshops/special-topics/index.qmd
+            - workshops/bespoke/index.qmd
 
 page-footer:
   left: "© 2026 Virtuelle Akademie | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)"
