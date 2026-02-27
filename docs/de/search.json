@@ -76,6 +76,8 @@
     "section": "",
     "text": "Eine progressive Kursreihe zur Integration von KI in die Lehrpraxis, angeboten über die BFH-Weiterbildung.\n\n\n\n\nStufe: Einsteiger | Dauer: 3 Stunden\n\nEinführung in KI in Bildungskontexten. Grundlegende Konzepte und erste Schritte mit KI-Tools.\nBeginner-Kurs starten →\n\n\n\n\nStufe: Fortgeschritten | Dauer: Halbtägig\n\nPraktische KI-Integration in den Unterricht. Hands-on-Erkundung und Implementierungsstrategien.\nIntermediate-Kurs starten →\n\n\n\n\nStufe: Experten | Dauer: 3 Stunden\n\nEntwicklung von KI-gestützten Bildungswerkzeugen basierend auf der Cognitive Load Theory.\nAdvanced-Kurs starten →\n\n\n\n\nFormat: 1 Stunde (30 Min. Input + 30 Min. Q&A)\n\nEin kompakter Refresher zu KI in der Lehre für alle, die auf dem neuesten Stand bleiben möchten.\nRefresher starten →",
     "crumbs": [
+      "Lehre",
+      "Courses",
       "BFH Weiterbildung"
     ]
   },
@@ -86,6 +88,8 @@
     "section": "",
     "text": "Eine progressive Kursreihe zur Integration von KI in die Lehrpraxis, angeboten über die BFH-Weiterbildung.\n\n\n\n\nStufe: Einsteiger | Dauer: 3 Stunden\n\nEinführung in KI in Bildungskontexten. Grundlegende Konzepte und erste Schritte mit KI-Tools.\nBeginner-Kurs starten →\n\n\n\n\nStufe: Fortgeschritten | Dauer: Halbtägig\n\nPraktische KI-Integration in den Unterricht. Hands-on-Erkundung und Implementierungsstrategien.\nIntermediate-Kurs starten →\n\n\n\n\nStufe: Experten | Dauer: 3 Stunden\n\nEntwicklung von KI-gestützten Bildungswerkzeugen basierend auf der Cognitive Load Theory.\nAdvanced-Kurs starten →\n\n\n\n\nFormat: 1 Stunde (30 Min. Input + 30 Min. Q&A)\n\nEin kompakter Refresher zu KI in der Lehre für alle, die auf dem neuesten Stand bleiben möchten.\nRefresher starten →",
     "crumbs": [
+      "Lehre",
+      "Courses",
       "BFH Weiterbildung"
     ]
   },
@@ -132,62 +136,69 @@
     "text": "Team\n\n\nDr. Andrew Ellis\nForscher mit Schwerpunkt auf KI-Anwendungen in der Bildungstechnologie, intelligenten Tutorsystemen und Lernanalytik.\n Kontakt |  Profil"
   },
   {
-    "objectID": "workshops/bespoke/index.html",
-    "href": "workshops/bespoke/index.html",
-    "title": "Massgeschneiderte Workshops",
+    "objectID": "workshops/special-topics/index.html",
+    "href": "workshops/special-topics/index.html",
+    "title": "Spezialthemen",
     "section": "",
-    "text": "Workshops, die für spezifische Institutionen und Kontexte entwickelt wurden.\n\n\n\n\nFormat: Zwei halbtägige Sitzungen | Zielgruppe: UB/HAFL-Mitarbeitende\n\nKI-Schulung für die Universitätsbibliothek und HAFL mit Grundlagen, praktischen Anwendungen und Integration in die Beratungsarbeit.\nZugriff →\n\n\n\n\nFormat: Interaktiver Workshop | Zielgruppe: HKB-Administration\n\nPraktische KI-Anwendungen für administrative Aufgaben an der Hochschule der Künste Bern.\nZugriff →\n\n\n\n\nFormat: Workshop | Fokus: Akademisches Lesen mit KI\n\nStrategien zur Nutzung von KI-Assistenten für eine effektivere Auseinandersetzung mit wissenschaftlicher Literatur.\nZugriff →\n\n\n\n\nFormat: Workshop | Zielgruppe: Fachpersonen im Gesundheitswesen\n\nKI-Anwendungen in der Gesundheitsbildung und -praxis für Fachpersonen im Gesundheitswesen.\nZugriff →",
+    "text": "Format: 3-stündiger Workshop | Fokus: Laterales Lesen\n\nErlernen Sie Laterales Lesen: eine praktische Technik zur schnellen und zuverlässigen Überprüfung von KI-Antworten.\nZugriff →",
     "crumbs": [
-      "Massgeschneiderte Workshops"
+      "Lehre",
+      "Workshops",
+      "Spezialthemen"
     ]
   },
   {
-    "objectID": "workshops/bespoke/index.html#individuelle-workshops",
-    "href": "workshops/bespoke/index.html#individuelle-workshops",
-    "title": "Massgeschneiderte Workshops",
+    "objectID": "workshops/special-topics/index.html#spezialisierte-workshops",
+    "href": "workshops/special-topics/index.html#spezialisierte-workshops",
+    "title": "Spezialthemen",
     "section": "",
-    "text": "Workshops, die für spezifische Institutionen und Kontexte entwickelt wurden.\n\n\n\n\nFormat: Zwei halbtägige Sitzungen | Zielgruppe: UB/HAFL-Mitarbeitende\n\nKI-Schulung für die Universitätsbibliothek und HAFL mit Grundlagen, praktischen Anwendungen und Integration in die Beratungsarbeit.\nZugriff →\n\n\n\n\nFormat: Interaktiver Workshop | Zielgruppe: HKB-Administration\n\nPraktische KI-Anwendungen für administrative Aufgaben an der Hochschule der Künste Bern.\nZugriff →\n\n\n\n\nFormat: Workshop | Fokus: Akademisches Lesen mit KI\n\nStrategien zur Nutzung von KI-Assistenten für eine effektivere Auseinandersetzung mit wissenschaftlicher Literatur.\nZugriff →\n\n\n\n\nFormat: Workshop | Zielgruppe: Fachpersonen im Gesundheitswesen\n\nKI-Anwendungen in der Gesundheitsbildung und -praxis für Fachpersonen im Gesundheitswesen.\nZugriff →",
+    "text": "Format: 3-stündiger Workshop | Fokus: Laterales Lesen\n\nErlernen Sie Laterales Lesen: eine praktische Technik zur schnellen und zuverlässigen Überprüfung von KI-Antworten.\nZugriff →",
     "crumbs": [
-      "Massgeschneiderte Workshops"
+      "Lehre",
+      "Workshops",
+      "Spezialthemen"
     ]
   },
   {
-    "objectID": "workshops/index.html",
-    "href": "workshops/index.html",
-    "title": "Workshops",
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Forschung",
     "section": "",
-    "text": "Workshops zu KI in der Bildung für verschiedene Zielgruppen und Kontexte.\n\n\nSpezialthemen\nSpezialisierte Workshops zu fokussierten Themen wie Faktenüberprüfung und laterales Lesen.\nWorkshops ansehen →\n\n\nMassgeschneiderte Workshops\nIndividuelle Workshops, die für spezifische Institutionen entwickelt wurden, darunter UB/HAFL, HKB und Organisationen im Gesundheitswesen.\nWorkshops ansehen →\n\n\n\n\n\n Zurück nach obenWiederverwendungCC BY-SA 4.0",
+    "text": "Unsere Forschung konzentriert sich auf die Entwicklung und Evaluation intelligenter Tutorsysteme (ITS), die künstliche Intelligenz nutzen, um personalisierte Lernerfahrungen zu ermöglichen.\n\n\nIntelligente Tutorsysteme stellen eine Verbindung von Kognitionswissenschaft, pädagogischer Psychologie und künstlicher Intelligenz dar. Unsere Arbeit untersucht, wie diese Systeme:\n\nSich an individuelle Lernende anpassen durch dynamische Anpassung von Inhaltsschwierigkeit, Tempo und Lehrstrategien basierend auf Leistung und Verhalten der Lernenden\nSinnvolles Feedback geben durch zeitnahes, spezifisches und handlungsorientiertes Feedback, das das Lernen unterstützt, anstatt nur Richtigkeit anzuzeigen\nDomänenwissen modellieren durch Darstellung von Expertenwissen auf Weisen, die effektiven Unterricht und die Diagnose von Fehlvorstellungen unterstützen\nKognitive Prozesse unterstützen durch Gestaltung von Interaktionen, die auf Lerntheorien wie der Cognitive Load Theory und dem Worked-Example-Effekt basieren\n\n\n\n\n\nGenerative KI für personalisierte ausgearbeitete Beispiele\nAdaptives Scaffolding in Problemlösungskontexten\nKI-unterstützte formative Bewertung\nMensch-KI-Zusammenarbeit in Bildungskontexten\n\n\n\n\nUnsere Forschung trägt zu BeLEARN bei, dem Schweizer Forschungsnetzwerk, das sich der Förderung der Lernwissenschaft durch interdisziplinäre Zusammenarbeit widmet.\nBeLEARN-Projekte besuchen →",
     "crumbs": [
-      "Workshops"
+      "Forschung"
     ]
   },
   {
-    "objectID": "research/collaborations/index.html",
-    "href": "research/collaborations/index.html",
-    "title": "Kooperationen",
+    "objectID": "research/index.html#intelligente-tutorsysteme",
+    "href": "research/index.html#intelligente-tutorsysteme",
+    "title": "Forschung",
     "section": "",
-    "text": "Partner: [Namen] Projekt: [Projektname] Laufzeit: [Zeitraum]\nBeschreibung der gemeinsamen Forschungsarbeit.\n\n\n\nPartner: [Namen] Fokus: [Forschungsbereich] Laufzeit: [Zeitraum]\nDetails zu einer weiteren laufenden Kooperation."
+    "text": "Unsere Forschung konzentriert sich auf die Entwicklung und Evaluation intelligenter Tutorsysteme (ITS), die künstliche Intelligenz nutzen, um personalisierte Lernerfahrungen zu ermöglichen.\n\n\nIntelligente Tutorsysteme stellen eine Verbindung von Kognitionswissenschaft, pädagogischer Psychologie und künstlicher Intelligenz dar. Unsere Arbeit untersucht, wie diese Systeme:\n\nSich an individuelle Lernende anpassen durch dynamische Anpassung von Inhaltsschwierigkeit, Tempo und Lehrstrategien basierend auf Leistung und Verhalten der Lernenden\nSinnvolles Feedback geben durch zeitnahes, spezifisches und handlungsorientiertes Feedback, das das Lernen unterstützt, anstatt nur Richtigkeit anzuzeigen\nDomänenwissen modellieren durch Darstellung von Expertenwissen auf Weisen, die effektiven Unterricht und die Diagnose von Fehlvorstellungen unterstützen\nKognitive Prozesse unterstützen durch Gestaltung von Interaktionen, die auf Lerntheorien wie der Cognitive Load Theory und dem Worked-Example-Effekt basieren\n\n\n\n\n\nGenerative KI für personalisierte ausgearbeitete Beispiele\nAdaptives Scaffolding in Problemlösungskontexten\nKI-unterstützte formative Bewertung\nMensch-KI-Zusammenarbeit in Bildungskontexten\n\n\n\n\nUnsere Forschung trägt zu BeLEARN bei, dem Schweizer Forschungsnetzwerk, das sich der Förderung der Lernwissenschaft durch interdisziplinäre Zusammenarbeit widmet.\nBeLEARN-Projekte besuchen →",
+    "crumbs": [
+      "Forschung"
+    ]
   },
   {
-    "objectID": "research/collaborations/index.html#aktuelle-kooperationen",
-    "href": "research/collaborations/index.html#aktuelle-kooperationen",
-    "title": "Kooperationen",
+    "objectID": "research/projects/index.html",
+    "href": "research/projects/index.html",
+    "title": "Forschungsprojekte",
     "section": "",
-    "text": "Partner: [Namen] Projekt: [Projektname] Laufzeit: [Zeitraum]\nBeschreibung der gemeinsamen Forschungsarbeit.\n\n\n\nPartner: [Namen] Fokus: [Forschungsbereich] Laufzeit: [Zeitraum]\nDetails zu einer weiteren laufenden Kooperation."
+    "text": "Laufzeit: 2024-2025 | Finanzierung: [Förderquelle] | Partner: [Namen]\n\nKurze Beschreibung der Projektziele und Methodik. Diese Forschung untersucht innovative Ansätze der Bildungstechnologie und deren Auswirkungen auf Lernergebnisse.\n\n\n\n\nLaufzeit: 2023-2024 | Status: Laufend\n\nBeschreibung eines weiteren aktuellen Forschungsprojekts mit Fokus auf Anwendungen Künstlicher Intelligenz in Bildungskontexten."
   },
   {
-    "objectID": "research/collaborations/index.html#vergangene-kooperationen",
-    "href": "research/collaborations/index.html#vergangene-kooperationen",
-    "title": "Kooperationen",
-    "section": "Vergangene Kooperationen",
-    "text": "Vergangene Kooperationen\n\nFrühere Institution 1\nProjekt: [Abgeschlossenes Projekt] Laufzeit: [Vergangener Zeitraum] Ergebnis: [Resultate/Publikationen]\nZusammenfassung eines abgeschlossenen Kooperationsprojekts."
+    "objectID": "research/projects/index.html#aktuelle-projekte",
+    "href": "research/projects/index.html#aktuelle-projekte",
+    "title": "Forschungsprojekte",
+    "section": "",
+    "text": "Laufzeit: 2024-2025 | Finanzierung: [Förderquelle] | Partner: [Namen]\n\nKurze Beschreibung der Projektziele und Methodik. Diese Forschung untersucht innovative Ansätze der Bildungstechnologie und deren Auswirkungen auf Lernergebnisse.\n\n\n\n\nLaufzeit: 2023-2024 | Status: Laufend\n\nBeschreibung eines weiteren aktuellen Forschungsprojekts mit Fokus auf Anwendungen Künstlicher Intelligenz in Bildungskontexten."
   },
   {
-    "objectID": "research/collaborations/index.html#internationale-netzwerke",
-    "href": "research/collaborations/index.html#internationale-netzwerke",
-    "title": "Kooperationen",
-    "section": "Internationale Netzwerke",
-    "text": "Internationale Netzwerke\n\nNetzwerk 1\nBeschreibung der Beteiligung an internationalen Forschungsnetzwerken.\n\n\nFachverbände\n\nVerband 1\nVerband 2\nAusschussmitgliedschaften"
+    "objectID": "research/projects/index.html#abgeschlossene-projekte",
+    "href": "research/projects/index.html#abgeschlossene-projekte",
+    "title": "Forschungsprojekte",
+    "section": "Abgeschlossene Projekte",
+    "text": "Abgeschlossene Projekte\n\nFrüheres Projekt 1\n\nLaufzeit: 2022-2023 | Status: Abgeschlossen\n\nZusammenfassung eines abgeschlossenen Forschungsprojekts und dessen Ergebnisse. Dieses Projekt lieferte wichtige Erkenntnisse zu digitalen Lernmethoden.\n\n\nFrüheres Projekt 2\n\nLaufzeit: 2021-2022 | Status: Publiziert\n\nBeschreibung eines weiteren abgeschlossenen Projekts, das zu mehreren begutachteten Publikationen in Fachzeitschriften für Bildungstechnologie führte."
   },
   {
     "objectID": "research/publications/index.html",
@@ -218,72 +229,68 @@
     "text": "Buchkapitel\nKapiteltitel (2024) In: Buchtitel, Herausgebername (Hrsg.) Verlag, S. X-Y [Link]"
   },
   {
-    "objectID": "research/projects/index.html",
-    "href": "research/projects/index.html",
-    "title": "Forschungsprojekte",
+    "objectID": "research/collaborations/index.html",
+    "href": "research/collaborations/index.html",
+    "title": "Kooperationen",
     "section": "",
-    "text": "Laufzeit: 2024-2025 | Finanzierung: [Förderquelle] | Partner: [Namen]\n\nKurze Beschreibung der Projektziele und Methodik. Diese Forschung untersucht innovative Ansätze der Bildungstechnologie und deren Auswirkungen auf Lernergebnisse.\n\n\n\n\nLaufzeit: 2023-2024 | Status: Laufend\n\nBeschreibung eines weiteren aktuellen Forschungsprojekts mit Fokus auf Anwendungen Künstlicher Intelligenz in Bildungskontexten."
+    "text": "Partner: [Namen] Projekt: [Projektname] Laufzeit: [Zeitraum]\nBeschreibung der gemeinsamen Forschungsarbeit.\n\n\n\nPartner: [Namen] Fokus: [Forschungsbereich] Laufzeit: [Zeitraum]\nDetails zu einer weiteren laufenden Kooperation."
   },
   {
-    "objectID": "research/projects/index.html#aktuelle-projekte",
-    "href": "research/projects/index.html#aktuelle-projekte",
-    "title": "Forschungsprojekte",
+    "objectID": "research/collaborations/index.html#aktuelle-kooperationen",
+    "href": "research/collaborations/index.html#aktuelle-kooperationen",
+    "title": "Kooperationen",
     "section": "",
-    "text": "Laufzeit: 2024-2025 | Finanzierung: [Förderquelle] | Partner: [Namen]\n\nKurze Beschreibung der Projektziele und Methodik. Diese Forschung untersucht innovative Ansätze der Bildungstechnologie und deren Auswirkungen auf Lernergebnisse.\n\n\n\n\nLaufzeit: 2023-2024 | Status: Laufend\n\nBeschreibung eines weiteren aktuellen Forschungsprojekts mit Fokus auf Anwendungen Künstlicher Intelligenz in Bildungskontexten."
+    "text": "Partner: [Namen] Projekt: [Projektname] Laufzeit: [Zeitraum]\nBeschreibung der gemeinsamen Forschungsarbeit.\n\n\n\nPartner: [Namen] Fokus: [Forschungsbereich] Laufzeit: [Zeitraum]\nDetails zu einer weiteren laufenden Kooperation."
   },
   {
-    "objectID": "research/projects/index.html#abgeschlossene-projekte",
-    "href": "research/projects/index.html#abgeschlossene-projekte",
-    "title": "Forschungsprojekte",
-    "section": "Abgeschlossene Projekte",
-    "text": "Abgeschlossene Projekte\n\nFrüheres Projekt 1\n\nLaufzeit: 2022-2023 | Status: Abgeschlossen\n\nZusammenfassung eines abgeschlossenen Forschungsprojekts und dessen Ergebnisse. Dieses Projekt lieferte wichtige Erkenntnisse zu digitalen Lernmethoden.\n\n\nFrüheres Projekt 2\n\nLaufzeit: 2021-2022 | Status: Publiziert\n\nBeschreibung eines weiteren abgeschlossenen Projekts, das zu mehreren begutachteten Publikationen in Fachzeitschriften für Bildungstechnologie führte."
+    "objectID": "research/collaborations/index.html#vergangene-kooperationen",
+    "href": "research/collaborations/index.html#vergangene-kooperationen",
+    "title": "Kooperationen",
+    "section": "Vergangene Kooperationen",
+    "text": "Vergangene Kooperationen\n\nFrühere Institution 1\nProjekt: [Abgeschlossenes Projekt] Laufzeit: [Vergangener Zeitraum] Ergebnis: [Resultate/Publikationen]\nZusammenfassung eines abgeschlossenen Kooperationsprojekts."
   },
   {
-    "objectID": "research/index.html",
-    "href": "research/index.html",
-    "title": "Forschung",
+    "objectID": "research/collaborations/index.html#internationale-netzwerke",
+    "href": "research/collaborations/index.html#internationale-netzwerke",
+    "title": "Kooperationen",
+    "section": "Internationale Netzwerke",
+    "text": "Internationale Netzwerke\n\nNetzwerk 1\nBeschreibung der Beteiligung an internationalen Forschungsnetzwerken.\n\n\nFachverbände\n\nVerband 1\nVerband 2\nAusschussmitgliedschaften"
+  },
+  {
+    "objectID": "workshops/index.html",
+    "href": "workshops/index.html",
+    "title": "Workshops",
     "section": "",
-    "text": "Unsere Forschung konzentriert sich auf die Entwicklung und Evaluation intelligenter Tutorsysteme (ITS), die künstliche Intelligenz nutzen, um personalisierte Lernerfahrungen zu ermöglichen.\n\n\nIntelligente Tutorsysteme stellen eine Verbindung von Kognitionswissenschaft, pädagogischer Psychologie und künstlicher Intelligenz dar. Unsere Arbeit untersucht, wie diese Systeme:\n\nSich an individuelle Lernende anpassen durch dynamische Anpassung von Inhaltsschwierigkeit, Tempo und Lehrstrategien basierend auf Leistung und Verhalten der Lernenden\nSinnvolles Feedback geben durch zeitnahes, spezifisches und handlungsorientiertes Feedback, das das Lernen unterstützt, anstatt nur Richtigkeit anzuzeigen\nDomänenwissen modellieren durch Darstellung von Expertenwissen auf Weisen, die effektiven Unterricht und die Diagnose von Fehlvorstellungen unterstützen\nKognitive Prozesse unterstützen durch Gestaltung von Interaktionen, die auf Lerntheorien wie der Cognitive Load Theory und dem Worked-Example-Effekt basieren\n\n\n\n\n\nGenerative KI für personalisierte ausgearbeitete Beispiele\nAdaptives Scaffolding in Problemlösungskontexten\nKI-unterstützte formative Bewertung\nMensch-KI-Zusammenarbeit in Bildungskontexten\n\n\n\n\nUnsere Forschung trägt zu BeLEARN bei, dem Schweizer Forschungsnetzwerk, das sich der Förderung der Lernwissenschaft durch interdisziplinäre Zusammenarbeit widmet.\nBeLEARN-Projekte besuchen →",
+    "text": "Workshops zu KI in der Bildung für verschiedene Zielgruppen und Kontexte.\n\n\nSpezialthemen\nSpezialisierte Workshops zu fokussierten Themen wie Faktenüberprüfung und laterales Lesen.\nWorkshops ansehen →\n\n\nMassgeschneiderte Workshops\nIndividuelle Workshops, die für spezifische Institutionen entwickelt wurden, darunter UB/HAFL, HKB und Organisationen im Gesundheitswesen.\nWorkshops ansehen →\n\n\n\n\n\n Zurück nach obenWiederverwendungCC BY-SA 4.0",
     "crumbs": [
-      "Forschung"
+      "Lehre",
+      "Workshops",
+      "Workshops"
     ]
   },
   {
-    "objectID": "research/index.html#intelligente-tutorsysteme",
-    "href": "research/index.html#intelligente-tutorsysteme",
-    "title": "Forschung",
+    "objectID": "workshops/bespoke/index.html",
+    "href": "workshops/bespoke/index.html",
+    "title": "Massgeschneiderte Workshops",
     "section": "",
-    "text": "Unsere Forschung konzentriert sich auf die Entwicklung und Evaluation intelligenter Tutorsysteme (ITS), die künstliche Intelligenz nutzen, um personalisierte Lernerfahrungen zu ermöglichen.\n\n\nIntelligente Tutorsysteme stellen eine Verbindung von Kognitionswissenschaft, pädagogischer Psychologie und künstlicher Intelligenz dar. Unsere Arbeit untersucht, wie diese Systeme:\n\nSich an individuelle Lernende anpassen durch dynamische Anpassung von Inhaltsschwierigkeit, Tempo und Lehrstrategien basierend auf Leistung und Verhalten der Lernenden\nSinnvolles Feedback geben durch zeitnahes, spezifisches und handlungsorientiertes Feedback, das das Lernen unterstützt, anstatt nur Richtigkeit anzuzeigen\nDomänenwissen modellieren durch Darstellung von Expertenwissen auf Weisen, die effektiven Unterricht und die Diagnose von Fehlvorstellungen unterstützen\nKognitive Prozesse unterstützen durch Gestaltung von Interaktionen, die auf Lerntheorien wie der Cognitive Load Theory und dem Worked-Example-Effekt basieren\n\n\n\n\n\nGenerative KI für personalisierte ausgearbeitete Beispiele\nAdaptives Scaffolding in Problemlösungskontexten\nKI-unterstützte formative Bewertung\nMensch-KI-Zusammenarbeit in Bildungskontexten\n\n\n\n\nUnsere Forschung trägt zu BeLEARN bei, dem Schweizer Forschungsnetzwerk, das sich der Förderung der Lernwissenschaft durch interdisziplinäre Zusammenarbeit widmet.\nBeLEARN-Projekte besuchen →",
+    "text": "Workshops, die für spezifische Institutionen und Kontexte entwickelt wurden.\n\n\n\n\nFormat: Zwei halbtägige Sitzungen | Zielgruppe: UB/HAFL-Mitarbeitende\n\nKI-Schulung für die Universitätsbibliothek und HAFL mit Grundlagen, praktischen Anwendungen und Integration in die Beratungsarbeit.\nZugriff →\n\n\n\n\nFormat: Interaktiver Workshop | Zielgruppe: HKB-Administration\n\nPraktische KI-Anwendungen für administrative Aufgaben an der Hochschule der Künste Bern.\nZugriff →\n\n\n\n\nFormat: Workshop | Fokus: Akademisches Lesen mit KI\n\nStrategien zur Nutzung von KI-Assistenten für eine effektivere Auseinandersetzung mit wissenschaftlicher Literatur.\nZugriff →\n\n\n\n\nFormat: Workshop | Zielgruppe: Fachpersonen im Gesundheitswesen\n\nKI-Anwendungen in der Gesundheitsbildung und -praxis für Fachpersonen im Gesundheitswesen.\nZugriff →",
     "crumbs": [
-      "Forschung"
+      "Lehre",
+      "Workshops",
+      "Massgeschneiderte Workshops"
     ]
   },
   {
-    "objectID": "workshops/special-topics/index.html",
-    "href": "workshops/special-topics/index.html",
-    "title": "Spezialthemen",
+    "objectID": "workshops/bespoke/index.html#individuelle-workshops",
+    "href": "workshops/bespoke/index.html#individuelle-workshops",
+    "title": "Massgeschneiderte Workshops",
     "section": "",
-    "text": "Format: 3-stündiger Workshop | Fokus: Laterales Lesen\n\nErlernen Sie Laterales Lesen: eine praktische Technik zur schnellen und zuverlässigen Überprüfung von KI-Antworten.\nZugriff →",
+    "text": "Workshops, die für spezifische Institutionen und Kontexte entwickelt wurden.\n\n\n\n\nFormat: Zwei halbtägige Sitzungen | Zielgruppe: UB/HAFL-Mitarbeitende\n\nKI-Schulung für die Universitätsbibliothek und HAFL mit Grundlagen, praktischen Anwendungen und Integration in die Beratungsarbeit.\nZugriff →\n\n\n\n\nFormat: Interaktiver Workshop | Zielgruppe: HKB-Administration\n\nPraktische KI-Anwendungen für administrative Aufgaben an der Hochschule der Künste Bern.\nZugriff →\n\n\n\n\nFormat: Workshop | Fokus: Akademisches Lesen mit KI\n\nStrategien zur Nutzung von KI-Assistenten für eine effektivere Auseinandersetzung mit wissenschaftlicher Literatur.\nZugriff →\n\n\n\n\nFormat: Workshop | Zielgruppe: Fachpersonen im Gesundheitswesen\n\nKI-Anwendungen in der Gesundheitsbildung und -praxis für Fachpersonen im Gesundheitswesen.\nZugriff →",
     "crumbs": [
-      "Spezialthemen"
+      "Lehre",
+      "Workshops",
+      "Massgeschneiderte Workshops"
     ]
-  },
-  {
-    "objectID": "workshops/special-topics/index.html#spezialisierte-workshops",
-    "href": "workshops/special-topics/index.html#spezialisierte-workshops",
-    "title": "Spezialthemen",
-    "section": "",
-    "text": "Format: 3-stündiger Workshop | Fokus: Laterales Lesen\n\nErlernen Sie Laterales Lesen: eine praktische Technik zur schnellen und zuverlässigen Überprüfung von KI-Antworten.\nZugriff →",
-    "crumbs": [
-      "Spezialthemen"
-    ]
-  },
-  {
-    "objectID": "posts/index.html",
-    "href": "posts/index.html",
-    "title": "Beiträge",
-    "section": "",
-    "text": "Keine Treffer\n Zurück nach obenWiederverwendungCC BY 4.0"
   },
   {
     "objectID": "about/andrew-ellis/index.html",
@@ -339,8 +346,34 @@
     "href": "teaching/index.html",
     "title": "Lehre",
     "section": "",
-    "text": "Kurse und Materialien zur Integration von KI in die Lehrpraxis.\n\n\nBFH Weiterbildung\nEine progressive Kursreihe zu KI in der Bildung, angeboten über die BFH-Weiterbildung. Drei Stufen: Einsteiger, Fortgeschritten und Experten.\nKurse ansehen →\n\n\nCAS Hochschuldidaktik\nModul 4 des CAS Hochschuldidaktik-Programms mit Fokus auf KI in der Hochschullehre.\nProgramm ansehen →\n\n\n\n\n\n Zurück nach obenWiederverwendungCC BY-SA 4.0",
+    "text": "Kurse und Materialien zur Integration von KI in die Lehrpraxis.\n\n\n\nEine progressive Kursreihe zu KI in der Bildung, angeboten über die BFH-Weiterbildung. Drei Stufen: Einsteiger, Fortgeschritten und Experten.\nKurse ansehen →\n\n\n\nModul 4 des CAS Hochschuldidaktik-Programms mit Fokus auf KI in der Hochschullehre.\nProgramm ansehen →",
     "crumbs": [
+      "Lehre",
+      "Courses",
+      "Lehre"
+    ]
+  },
+  {
+    "objectID": "teaching/index.html#kurse",
+    "href": "teaching/index.html#kurse",
+    "title": "Lehre",
+    "section": "",
+    "text": "Kurse und Materialien zur Integration von KI in die Lehrpraxis.\n\n\n\nEine progressive Kursreihe zu KI in der Bildung, angeboten über die BFH-Weiterbildung. Drei Stufen: Einsteiger, Fortgeschritten und Experten.\nKurse ansehen →\n\n\n\nModul 4 des CAS Hochschuldidaktik-Programms mit Fokus auf KI in der Hochschullehre.\nProgramm ansehen →",
+    "crumbs": [
+      "Lehre",
+      "Courses",
+      "Lehre"
+    ]
+  },
+  {
+    "objectID": "teaching/index.html#workshops",
+    "href": "teaching/index.html#workshops",
+    "title": "Lehre",
+    "section": "Workshops",
+    "text": "Workshops\nWorkshops zu KI in der Bildung für verschiedene Zielgruppen und Kontexte.\n\n\nSpezialthemen\nSpezialisierte Workshops zu fokussierten Themen wie Faktenüberprüfung und laterales Lesen.\nWorkshops ansehen →\n\n\nMassgeschneiderte Workshops\nIndividuelle Workshops, die für spezifische Institutionen entwickelt wurden, darunter UB/HAFL, HKB und Organisationen im Gesundheitswesen.\nWorkshops ansehen →",
+    "crumbs": [
+      "Lehre",
+      "Courses",
       "Lehre"
     ]
   },
@@ -351,6 +384,8 @@
     "section": "",
     "text": "Programm: Certificate of Advanced Studies | Format: Ganztägiges Modul\n\nModul 4 des CAS Hochschuldidaktik-Programms mit Fokus auf KI in der Hochschullehre.\nCAS-Modul starten →",
     "crumbs": [
+      "Lehre",
+      "Courses",
       "CAS Hochschuldidaktik"
     ]
   },
@@ -361,6 +396,8 @@
     "section": "",
     "text": "Programm: Certificate of Advanced Studies | Format: Ganztägiges Modul\n\nModul 4 des CAS Hochschuldidaktik-Programms mit Fokus auf KI in der Hochschullehre.\nCAS-Modul starten →",
     "crumbs": [
+      "Lehre",
+      "Courses",
       "CAS Hochschuldidaktik"
     ]
   }
