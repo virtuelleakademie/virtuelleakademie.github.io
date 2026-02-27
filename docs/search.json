@@ -183,162 +183,11 @@
     "text": "Contact\nFor research collaborations, inquiries, or more information about ongoing projects, please reach out via email."
   },
   {
-    "objectID": "posts/template/index.html",
-    "href": "posts/template/index.html",
-    "title": "A template for blog posts",
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "Posts",
     "section": "",
-    "text": "This is a template for creating blog posts on the Virtual Academy website. You can customize the title, date, author information, categories, and content as needed.\n\n\n\n\n\n Back to topReuseCC BY 4.0"
-  },
-  {
-    "objectID": "workshops/bespoke/index.html",
-    "href": "workshops/bespoke/index.html",
-    "title": "Bespoke Workshops",
-    "section": "",
-    "text": "Workshops developed for specific institutions and contexts.\n\n\n\n\nFormat: Two half-day sessions | Audience: UB/HAFL staff\n\nAI training for the University Library and HAFL covering fundamentals, practical applications, and integration into advisory work.\nAccess →\n\n\n\n\nFormat: Interactive Workshop | Audience: HKB Administration\n\nPractical AI applications for administrative tasks at the Hochschule der Künste Bern.\nAccess →\n\n\n\n\nFormat: Workshop | Focus: Academic reading with AI\n\nStrategies for using AI assistants to engage with scientific literature more effectively.\nAccess →\n\n\n\n\nFormat: Workshop | Audience: Health sector professionals\n\nAI applications in healthcare education and practice for health sector professionals.\nAccess →",
-    "crumbs": [
-      "Workshops",
-      "Bespoke Workshops"
-    ]
-  },
-  {
-    "objectID": "workshops/bespoke/index.html#custom-workshops",
-    "href": "workshops/bespoke/index.html#custom-workshops",
-    "title": "Bespoke Workshops",
-    "section": "",
-    "text": "Workshops developed for specific institutions and contexts.\n\n\n\n\nFormat: Two half-day sessions | Audience: UB/HAFL staff\n\nAI training for the University Library and HAFL covering fundamentals, practical applications, and integration into advisory work.\nAccess →\n\n\n\n\nFormat: Interactive Workshop | Audience: HKB Administration\n\nPractical AI applications for administrative tasks at the Hochschule der Künste Bern.\nAccess →\n\n\n\n\nFormat: Workshop | Focus: Academic reading with AI\n\nStrategies for using AI assistants to engage with scientific literature more effectively.\nAccess →\n\n\n\n\nFormat: Workshop | Audience: Health sector professionals\n\nAI applications in healthcare education and practice for health sector professionals.\nAccess →",
-    "crumbs": [
-      "Workshops",
-      "Bespoke Workshops"
-    ]
-  },
-  {
-    "objectID": "workshops/index.html",
-    "href": "workshops/index.html",
-    "title": "Workshops",
-    "section": "",
-    "text": "Workshops on AI in education for various audiences and contexts.\n\n\nSpecial Topics\nSpecialized workshops on focused topics such as fact-checking and lateral reading.\nView Workshops →\n\n\nBespoke Workshops\nCustom workshops developed for specific institutions including UB/HAFL, HKB, and health sector organizations.\nView Workshops →\n\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Workshops"
-    ]
-  },
-  {
-    "objectID": "research/collaborations/index.html",
-    "href": "research/collaborations/index.html",
-    "title": "Collaborations",
-    "section": "",
-    "text": "Partners: [Names]\nProject: [Project name]\nDuration: [Time period]\nDescription of the collaborative research effort.\n\n\n\nPartners: [Names]\nFocus: [Research area]\nDuration: [Time period]\nDetails about another ongoing collaboration."
-  },
-  {
-    "objectID": "research/collaborations/index.html#current-collaborations",
-    "href": "research/collaborations/index.html#current-collaborations",
-    "title": "Collaborations",
-    "section": "",
-    "text": "Partners: [Names]\nProject: [Project name]\nDuration: [Time period]\nDescription of the collaborative research effort.\n\n\n\nPartners: [Names]\nFocus: [Research area]\nDuration: [Time period]\nDetails about another ongoing collaboration."
-  },
-  {
-    "objectID": "research/collaborations/index.html#past-collaborations",
-    "href": "research/collaborations/index.html#past-collaborations",
-    "title": "Collaborations",
-    "section": "Past Collaborations",
-    "text": "Past Collaborations\n\nPrevious Institution 1\nProject: [Completed project]\nDuration: [Past time period]\nOutcome: [Results/publications]\nSummary of a completed collaborative project."
-  },
-  {
-    "objectID": "research/collaborations/index.html#international-networks",
-    "href": "research/collaborations/index.html#international-networks",
-    "title": "Collaborations",
-    "section": "International Networks",
-    "text": "International Networks\n\nNetwork 1\nDescription of involvement in international research networks.\n\n\nProfessional Associations\n\nAssociation 1\nAssociation 2\nCommittee memberships"
-  },
-  {
-    "objectID": "research/publications/index.html",
-    "href": "research/publications/index.html",
-    "title": "Publications",
-    "section": "",
-    "text": "Title of Paper 1 (2024)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]\nTitle of Paper 2 (2024)\nAnother Journal, Vol. A, Issue B, pp. C-C\n[DOI link] | [PDF]\n\n\n\nTitle of Paper 3 (2023)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]"
-  },
-  {
-    "objectID": "research/publications/index.html#journal-articles",
-    "href": "research/publications/index.html#journal-articles",
-    "title": "Publications",
-    "section": "",
-    "text": "Title of Paper 1 (2024)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]\nTitle of Paper 2 (2024)\nAnother Journal, Vol. A, Issue B, pp. C-C\n[DOI link] | [PDF]\n\n\n\nTitle of Paper 3 (2023)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]"
-  },
-  {
-    "objectID": "research/publications/index.html#conference-proceedings",
-    "href": "research/publications/index.html#conference-proceedings",
-    "title": "Publications",
-    "section": "Conference Proceedings",
-    "text": "Conference Proceedings\n\n2024\nConference Paper Title (2024)\nConference Name, Location\n[Link] | [PDF]\n\n\n2023\nAnother Conference Paper (2023)\nAnother Conference, Location\n[Link] | [PDF]"
-  },
-  {
-    "objectID": "research/publications/index.html#book-chapters",
-    "href": "research/publications/index.html#book-chapters",
-    "title": "Publications",
-    "section": "Book Chapters",
-    "text": "Book Chapters\nChapter Title (2024)\nIn: Book Title, Editor Name (Ed.)\nPublisher, pp. X-Y\n[Link]"
-  },
-  {
-    "objectID": "research/projects/index.html",
-    "href": "research/projects/index.html",
-    "title": "Research Projects",
-    "section": "",
-    "text": "Duration: 2024-2025 | Funding: [Funding source] | Collaborators: [Names]\n\nBrief description of the project objectives and methodology. This research explores innovative approaches to educational technology and its impact on learning outcomes.\n\n\n\n\nDuration: 2023-2024 | Status: Ongoing\n\nDescription of another current research project focused on artificial intelligence applications in educational contexts."
-  },
-  {
-    "objectID": "research/projects/index.html#current-projects",
-    "href": "research/projects/index.html#current-projects",
-    "title": "Research Projects",
-    "section": "",
-    "text": "Duration: 2024-2025 | Funding: [Funding source] | Collaborators: [Names]\n\nBrief description of the project objectives and methodology. This research explores innovative approaches to educational technology and its impact on learning outcomes.\n\n\n\n\nDuration: 2023-2024 | Status: Ongoing\n\nDescription of another current research project focused on artificial intelligence applications in educational contexts."
-  },
-  {
-    "objectID": "research/projects/index.html#completed-projects",
-    "href": "research/projects/index.html#completed-projects",
-    "title": "Research Projects",
-    "section": "Completed Projects",
-    "text": "Completed Projects\n\nPrevious Project 1\n\nDuration: 2022-2023 | Status: Completed\n\nSummary of a completed research project and its outcomes. This project resulted in significant insights into digital learning methodologies.\n\n\nPrevious Project 2\n\nDuration: 2021-2022 | Status: Published\n\nDescription of another completed project that led to several peer-reviewed publications in educational technology journals."
-  },
-  {
-    "objectID": "research/index.html",
-    "href": "research/index.html",
-    "title": "Research",
-    "section": "",
-    "text": "Our research focuses on the development and evaluation of intelligent tutoring systems (ITS) that leverage artificial intelligence to provide personalized learning experiences.\n\n\nIntelligent tutoring systems represent a convergence of cognitive science, educational psychology, and artificial intelligence. Our work explores how these systems can:\n\nAdapt to individual learners by dynamically adjusting content difficulty, pacing, and instructional strategies based on learner performance and behavior\nProvide meaningful feedback by delivering timely, specific, and actionable feedback that supports learning rather than simply indicating correctness\nModel domain knowledge by representing expert knowledge in ways that support effective instruction and diagnosis of learner misconceptions\nSupport cognitive processes by designing interactions grounded in theories of learning such as Cognitive Load Theory and the worked example effect\n\n\n\n\n\nGenerative AI for personalized worked examples\nAdaptive scaffolding in problem-solving contexts\nAI-assisted formative assessment\nHuman-AI collaboration in educational settings\n\n\n\n\nOur research contributes to BeLEARN, the Swiss research network dedicated to advancing the science of learning through interdisciplinary collaboration.\nVisit BeLEARN Projects →",
-    "crumbs": [
-      "Research"
-    ]
-  },
-  {
-    "objectID": "research/index.html#intelligent-tutoring-systems",
-    "href": "research/index.html#intelligent-tutoring-systems",
-    "title": "Research",
-    "section": "",
-    "text": "Our research focuses on the development and evaluation of intelligent tutoring systems (ITS) that leverage artificial intelligence to provide personalized learning experiences.\n\n\nIntelligent tutoring systems represent a convergence of cognitive science, educational psychology, and artificial intelligence. Our work explores how these systems can:\n\nAdapt to individual learners by dynamically adjusting content difficulty, pacing, and instructional strategies based on learner performance and behavior\nProvide meaningful feedback by delivering timely, specific, and actionable feedback that supports learning rather than simply indicating correctness\nModel domain knowledge by representing expert knowledge in ways that support effective instruction and diagnosis of learner misconceptions\nSupport cognitive processes by designing interactions grounded in theories of learning such as Cognitive Load Theory and the worked example effect\n\n\n\n\n\nGenerative AI for personalized worked examples\nAdaptive scaffolding in problem-solving contexts\nAI-assisted formative assessment\nHuman-AI collaboration in educational settings\n\n\n\n\nOur research contributes to BeLEARN, the Swiss research network dedicated to advancing the science of learning through interdisciplinary collaboration.\nVisit BeLEARN Projects →",
-    "crumbs": [
-      "Research"
-    ]
-  },
-  {
-    "objectID": "workshops/special-topics/index.html",
-    "href": "workshops/special-topics/index.html",
-    "title": "Special Topics",
-    "section": "",
-    "text": "Format: 3-hour Workshop | Focus: Lateral Reading\n\nLearn Lateral Reading: a practical technique to quickly and reliably verify AI responses.\nAccess →",
-    "crumbs": [
-      "Workshops",
-      "Special Topics"
-    ]
-  },
-  {
-    "objectID": "workshops/special-topics/index.html#specialized-workshops",
-    "href": "workshops/special-topics/index.html#specialized-workshops",
-    "title": "Special Topics",
-    "section": "",
-    "text": "Format: 3-hour Workshop | Focus: Lateral Reading\n\nLearn Lateral Reading: a practical technique to quickly and reliably verify AI responses.\nAccess →",
-    "crumbs": [
-      "Workshops",
-      "Special Topics"
-    ]
+    "text": "Knowledge Is Not Information\n\n\nWhy cognitive science resists the claim that knowledge matters less in the age of AI\n\n\n\ncognition\n\nAI\n\neducation\n\nmetacognition\n\n\n\n\n\n\n\n\n\nFeb 27, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nA template for blog posts\n\n\n\n\n\n\nAI\n\nteaching\n\ntutorial\n\ntemplate\n\n\n\n\n\n\n\n\n\nDec 1, 2025\n\n\nAndrew Ellis\n\n\n\n\n\n\n\n\n\n\n\n\nWriting as Sampling: A Computational Account of Why Writing is Thinking\n\n\n\n\n\n\nAI\n\nwriting\n\ncognition\n\nextended cognition\n\n\n\n\n\n\n\n\n\nJan 21, 2025\n\n\nAndrew Ellis\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY 4.0"
   },
   {
     "objectID": "posts/writing-as-sampling/index.html",
@@ -390,11 +239,218 @@
     "text": "Conclusion\n“Writing is thinking” is not merely a slogan. Writing forces sampling from a high-dimensional possibility space, and those samples become conditioning context for subsequent cognition. The written text is not a transcript of thought but an active component of the thinking process. This account explains why writing feels generative, why blank pages are hard, and why AI-assisted writing raises questions about the location of cognitive work.\nThe practical implication is that the struggle of writing is not incidental to its cognitive value. The difficulty of sampling, committing, and revising is where thinking happens. Making writing easier may, paradoxically, make thinking shallower, at least for those who haven’t yet developed the internal resources that writing is supposed to build."
   },
   {
-    "objectID": "posts/index.html",
-    "href": "posts/index.html",
-    "title": "Posts",
+    "objectID": "workshops/special-topics/index.html",
+    "href": "workshops/special-topics/index.html",
+    "title": "Special Topics",
     "section": "",
-    "text": "A template for blog posts\n\n\n\nAI\n\nteaching\n\ntutorial\n\ntemplate\n\n\n\n\n\n\n\n\n\nDec 1, 2025\n\n\nAndrew Ellis\n\n\n\n\n\n\n\n\n\n\n\n\nWriting as Sampling: A Computational Account of Why Writing is Thinking\n\n\n\nAI\n\nwriting\n\ncognition\n\nextended cognition\n\n\n\n\n\n\n\n\n\nJan 21, 2025\n\n\nAndrew Ellis\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY 4.0"
+    "text": "Format: 3-hour Workshop | Focus: Lateral Reading\n\nLearn Lateral Reading: a practical technique to quickly and reliably verify AI responses.\nAccess →",
+    "crumbs": [
+      "Workshops",
+      "Special Topics"
+    ]
+  },
+  {
+    "objectID": "workshops/special-topics/index.html#specialized-workshops",
+    "href": "workshops/special-topics/index.html#specialized-workshops",
+    "title": "Special Topics",
+    "section": "",
+    "text": "Format: 3-hour Workshop | Focus: Lateral Reading\n\nLearn Lateral Reading: a practical technique to quickly and reliably verify AI responses.\nAccess →",
+    "crumbs": [
+      "Workshops",
+      "Special Topics"
+    ]
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research",
+    "section": "",
+    "text": "Our research focuses on the development and evaluation of intelligent tutoring systems (ITS) that leverage artificial intelligence to provide personalized learning experiences.\n\n\nIntelligent tutoring systems represent a convergence of cognitive science, educational psychology, and artificial intelligence. Our work explores how these systems can:\n\nAdapt to individual learners by dynamically adjusting content difficulty, pacing, and instructional strategies based on learner performance and behavior\nProvide meaningful feedback by delivering timely, specific, and actionable feedback that supports learning rather than simply indicating correctness\nModel domain knowledge by representing expert knowledge in ways that support effective instruction and diagnosis of learner misconceptions\nSupport cognitive processes by designing interactions grounded in theories of learning such as Cognitive Load Theory and the worked example effect\n\n\n\n\n\nGenerative AI for personalized worked examples\nAdaptive scaffolding in problem-solving contexts\nAI-assisted formative assessment\nHuman-AI collaboration in educational settings\n\n\n\n\nOur research contributes to BeLEARN, the Swiss research network dedicated to advancing the science of learning through interdisciplinary collaboration.\nVisit BeLEARN Projects →",
+    "crumbs": [
+      "Research"
+    ]
+  },
+  {
+    "objectID": "research/index.html#intelligent-tutoring-systems",
+    "href": "research/index.html#intelligent-tutoring-systems",
+    "title": "Research",
+    "section": "",
+    "text": "Our research focuses on the development and evaluation of intelligent tutoring systems (ITS) that leverage artificial intelligence to provide personalized learning experiences.\n\n\nIntelligent tutoring systems represent a convergence of cognitive science, educational psychology, and artificial intelligence. Our work explores how these systems can:\n\nAdapt to individual learners by dynamically adjusting content difficulty, pacing, and instructional strategies based on learner performance and behavior\nProvide meaningful feedback by delivering timely, specific, and actionable feedback that supports learning rather than simply indicating correctness\nModel domain knowledge by representing expert knowledge in ways that support effective instruction and diagnosis of learner misconceptions\nSupport cognitive processes by designing interactions grounded in theories of learning such as Cognitive Load Theory and the worked example effect\n\n\n\n\n\nGenerative AI for personalized worked examples\nAdaptive scaffolding in problem-solving contexts\nAI-assisted formative assessment\nHuman-AI collaboration in educational settings\n\n\n\n\nOur research contributes to BeLEARN, the Swiss research network dedicated to advancing the science of learning through interdisciplinary collaboration.\nVisit BeLEARN Projects →",
+    "crumbs": [
+      "Research"
+    ]
+  },
+  {
+    "objectID": "research/projects/index.html",
+    "href": "research/projects/index.html",
+    "title": "Research Projects",
+    "section": "",
+    "text": "Duration: 2024-2025 | Funding: [Funding source] | Collaborators: [Names]\n\nBrief description of the project objectives and methodology. This research explores innovative approaches to educational technology and its impact on learning outcomes.\n\n\n\n\nDuration: 2023-2024 | Status: Ongoing\n\nDescription of another current research project focused on artificial intelligence applications in educational contexts."
+  },
+  {
+    "objectID": "research/projects/index.html#current-projects",
+    "href": "research/projects/index.html#current-projects",
+    "title": "Research Projects",
+    "section": "",
+    "text": "Duration: 2024-2025 | Funding: [Funding source] | Collaborators: [Names]\n\nBrief description of the project objectives and methodology. This research explores innovative approaches to educational technology and its impact on learning outcomes.\n\n\n\n\nDuration: 2023-2024 | Status: Ongoing\n\nDescription of another current research project focused on artificial intelligence applications in educational contexts."
+  },
+  {
+    "objectID": "research/projects/index.html#completed-projects",
+    "href": "research/projects/index.html#completed-projects",
+    "title": "Research Projects",
+    "section": "Completed Projects",
+    "text": "Completed Projects\n\nPrevious Project 1\n\nDuration: 2022-2023 | Status: Completed\n\nSummary of a completed research project and its outcomes. This project resulted in significant insights into digital learning methodologies.\n\n\nPrevious Project 2\n\nDuration: 2021-2022 | Status: Published\n\nDescription of another completed project that led to several peer-reviewed publications in educational technology journals."
+  },
+  {
+    "objectID": "research/publications/index.html",
+    "href": "research/publications/index.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Title of Paper 1 (2024)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]\nTitle of Paper 2 (2024)\nAnother Journal, Vol. A, Issue B, pp. C-C\n[DOI link] | [PDF]\n\n\n\nTitle of Paper 3 (2023)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]"
+  },
+  {
+    "objectID": "research/publications/index.html#journal-articles",
+    "href": "research/publications/index.html#journal-articles",
+    "title": "Publications",
+    "section": "",
+    "text": "Title of Paper 1 (2024)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]\nTitle of Paper 2 (2024)\nAnother Journal, Vol. A, Issue B, pp. C-C\n[DOI link] | [PDF]\n\n\n\nTitle of Paper 3 (2023)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]"
+  },
+  {
+    "objectID": "research/publications/index.html#conference-proceedings",
+    "href": "research/publications/index.html#conference-proceedings",
+    "title": "Publications",
+    "section": "Conference Proceedings",
+    "text": "Conference Proceedings\n\n2024\nConference Paper Title (2024)\nConference Name, Location\n[Link] | [PDF]\n\n\n2023\nAnother Conference Paper (2023)\nAnother Conference, Location\n[Link] | [PDF]"
+  },
+  {
+    "objectID": "research/publications/index.html#book-chapters",
+    "href": "research/publications/index.html#book-chapters",
+    "title": "Publications",
+    "section": "Book Chapters",
+    "text": "Book Chapters\nChapter Title (2024)\nIn: Book Title, Editor Name (Ed.)\nPublisher, pp. X-Y\n[Link]"
+  },
+  {
+    "objectID": "research/collaborations/index.html",
+    "href": "research/collaborations/index.html",
+    "title": "Collaborations",
+    "section": "",
+    "text": "Partners: [Names]\nProject: [Project name]\nDuration: [Time period]\nDescription of the collaborative research effort.\n\n\n\nPartners: [Names]\nFocus: [Research area]\nDuration: [Time period]\nDetails about another ongoing collaboration."
+  },
+  {
+    "objectID": "research/collaborations/index.html#current-collaborations",
+    "href": "research/collaborations/index.html#current-collaborations",
+    "title": "Collaborations",
+    "section": "",
+    "text": "Partners: [Names]\nProject: [Project name]\nDuration: [Time period]\nDescription of the collaborative research effort.\n\n\n\nPartners: [Names]\nFocus: [Research area]\nDuration: [Time period]\nDetails about another ongoing collaboration."
+  },
+  {
+    "objectID": "research/collaborations/index.html#past-collaborations",
+    "href": "research/collaborations/index.html#past-collaborations",
+    "title": "Collaborations",
+    "section": "Past Collaborations",
+    "text": "Past Collaborations\n\nPrevious Institution 1\nProject: [Completed project]\nDuration: [Past time period]\nOutcome: [Results/publications]\nSummary of a completed collaborative project."
+  },
+  {
+    "objectID": "research/collaborations/index.html#international-networks",
+    "href": "research/collaborations/index.html#international-networks",
+    "title": "Collaborations",
+    "section": "International Networks",
+    "text": "International Networks\n\nNetwork 1\nDescription of involvement in international research networks.\n\n\nProfessional Associations\n\nAssociation 1\nAssociation 2\nCommittee memberships"
+  },
+  {
+    "objectID": "workshops/index.html",
+    "href": "workshops/index.html",
+    "title": "Workshops",
+    "section": "",
+    "text": "Workshops on AI in education for various audiences and contexts.\n\n\nSpecial Topics\nSpecialized workshops on focused topics such as fact-checking and lateral reading.\nView Workshops →\n\n\nBespoke Workshops\nCustom workshops developed for specific institutions including UB/HAFL, HKB, and health sector organizations.\nView Workshops →\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Workshops"
+    ]
+  },
+  {
+    "objectID": "workshops/bespoke/index.html",
+    "href": "workshops/bespoke/index.html",
+    "title": "Bespoke Workshops",
+    "section": "",
+    "text": "Workshops developed for specific institutions and contexts.\n\n\n\n\nFormat: Two half-day sessions | Audience: UB/HAFL staff\n\nAI training for the University Library and HAFL covering fundamentals, practical applications, and integration into advisory work.\nAccess →\n\n\n\n\nFormat: Interactive Workshop | Audience: HKB Administration\n\nPractical AI applications for administrative tasks at the Hochschule der Künste Bern.\nAccess →\n\n\n\n\nFormat: Workshop | Focus: Academic reading with AI\n\nStrategies for using AI assistants to engage with scientific literature more effectively.\nAccess →\n\n\n\n\nFormat: Workshop | Audience: Health sector professionals\n\nAI applications in healthcare education and practice for health sector professionals.\nAccess →",
+    "crumbs": [
+      "Workshops",
+      "Bespoke Workshops"
+    ]
+  },
+  {
+    "objectID": "workshops/bespoke/index.html#custom-workshops",
+    "href": "workshops/bespoke/index.html#custom-workshops",
+    "title": "Bespoke Workshops",
+    "section": "",
+    "text": "Workshops developed for specific institutions and contexts.\n\n\n\n\nFormat: Two half-day sessions | Audience: UB/HAFL staff\n\nAI training for the University Library and HAFL covering fundamentals, practical applications, and integration into advisory work.\nAccess →\n\n\n\n\nFormat: Interactive Workshop | Audience: HKB Administration\n\nPractical AI applications for administrative tasks at the Hochschule der Künste Bern.\nAccess →\n\n\n\n\nFormat: Workshop | Focus: Academic reading with AI\n\nStrategies for using AI assistants to engage with scientific literature more effectively.\nAccess →\n\n\n\n\nFormat: Workshop | Audience: Health sector professionals\n\nAI applications in healthcare education and practice for health sector professionals.\nAccess →",
+    "crumbs": [
+      "Workshops",
+      "Bespoke Workshops"
+    ]
+  },
+  {
+    "objectID": "posts/template/index.html",
+    "href": "posts/template/index.html",
+    "title": "A template for blog posts",
+    "section": "",
+    "text": "This is a template for creating blog posts on the Virtual Academy website. You can customize the title, date, author information, categories, and content as needed.\n\n\n\n\n\n Back to topReuseCC BY 4.0"
+  },
+  {
+    "objectID": "posts/knowledge-information/index.html",
+    "href": "posts/knowledge-information/index.html",
+    "title": "Knowledge Is Not Information",
+    "section": "",
+    "text": "A recurring claim in discussions about the future of education goes something like this: because AI makes knowledge universally accessible, having knowledge will become less important, and education should pivot toward “future skills” such as creativity, critical thinking, and collaboration. The argument sounds plausible. It is also, from the perspective of cognitive science, deeply confused.\nThe confusion rests on a conflation of two very different things: knowledge integrated into long-term memory, and information available in an external system. These are not interchangeable. Knowledge stored in a human mind restructures how that mind perceives, reasons, and acts. Information sitting in an AI system does none of that until a person retrieves it, comprehends it, and integrates it, all of which require prior knowledge.\nWhat follows is a cognitive science perspective on why knowledge does not become less important when information becomes more available."
+  },
+  {
+    "objectID": "posts/knowledge-information/index.html#expertise-is-not-a-collection-of-facts",
+    "href": "posts/knowledge-information/index.html#expertise-is-not-a-collection-of-facts",
+    "title": "Knowledge Is Not Information",
+    "section": "Expertise is not a collection of facts",
+    "text": "Expertise is not a collection of facts\nDecades of expertise research have demonstrated that experts do not simply “know more” than novices. They have richly organized knowledge structures, typically called schemas, that allow them to recognise patterns, chunk information efficiently, reason by analogy, and generate solutions to novel problems.\nThe classic demonstration comes from @chasePerceptionChess1973, who showed that chess masters could reconstruct meaningful board positions from brief exposure far better than novices, but showed no advantage for random arrangements. The expertise resided not in superior memory per se, but in the ability to perceive meaningful structure, an ability that depends entirely on deep domain knowledge.\n@chiCategorizationRepresentationPhysics1981 found the same pattern in physics: experts categorised problems by underlying principles (e.g. conservation of energy), while novices categorised by surface features (e.g. “problems with inclined planes”). This structural understanding cannot be offloaded. An AI can provide the answer to a specific question, but it cannot provide the cognitive architecture that allows a person to ask the right question, notice when an answer is wrong, or see connections across domains."
+  },
+  {
+    "objectID": "posts/knowledge-information/index.html#the-effort-of-learning-is-not-an-inefficiency",
+    "href": "posts/knowledge-information/index.html#the-effort-of-learning-is-not-an-inefficiency",
+    "title": "Knowledge Is Not Information",
+    "section": "The effort of learning is not an inefficiency",
+    "text": "The effort of learning is not an inefficiency\nA natural response to the availability of AI is to treat the effort of acquiring knowledge as a cost to be minimised. If the answer is one prompt away, why spend hours working through the material yourself?\nThe answer comes from research on desirable difficulties [@bjorkNewTheoryDisuse1992]. Encoding, retrieving, and elaborating knowledge is effortful precisely because that effort is what produces durable, flexible learning. Testing yourself is harder than rereading, but produces better retention. Spacing practice over time feels less efficient than massing it, but leads to more robust memory. Generating an answer before being told the correct one requires more cognitive work, but strengthens understanding.\nWhen a student outsources cognitive work to AI, they receive the output but skip the process that would have produced learning. The deliverable arrives; the competence does not. This is not a side effect of AI use, it is a structural consequence of bypassing the cognitive operations that give rise to learning. The process of struggling with material is not overhead to be optimised away. It is the mechanism of cognitive development."
+  },
+  {
+    "objectID": "posts/knowledge-information/index.html#you-need-knowledge-to-evaluate-knowledge",
+    "href": "posts/knowledge-information/index.html#you-need-knowledge-to-evaluate-knowledge",
+    "title": "Knowledge Is Not Information",
+    "section": "You need knowledge to evaluate knowledge",
+    "text": "You need knowledge to evaluate knowledge\nOne of the more consequential implications of AI-assisted work concerns metacognitive calibration: the ability to monitor and evaluate one’s own understanding. Effective use of AI-generated content requires judging whether that content is accurate, relevant, and complete. This judgement depends on domain knowledge.\nThe problem is circular, and well documented. @krugerUnskilledUnawareIt1999 showed that people with less competence in a domain are also less able to recognise their own incompetence. Applied to AI use, this means that the people least equipped to evaluate AI output are precisely those who would benefit most from doing so. Without a foundation of domain knowledge, a student cannot distinguish a correct AI response from a plausible but wrong one, and cannot calibrate their confidence accordingly.\nFar from making knowledge less important, AI tools make the metacognitive functions that depend on knowledge more important."
+  },
+  {
+    "objectID": "posts/knowledge-information/index.html#cognition-is-inference-not-search",
+    "href": "posts/knowledge-information/index.html#cognition-is-inference-not-search",
+    "title": "Knowledge Is Not Information",
+    "section": "Cognition is inference, not search",
+    "text": "Cognition is inference, not search\nThe “knowledge is less important” framing implicitly models cognition as search: you need a fact, you look it up. But this gets the computational nature of cognition wrong. The mind does not work by searching a database. It works by maintaining an internal model of the world, generating predictions from that model, and updating when those predictions fail.\nSchemas, the knowledge structures that decades of expertise research have documented, function as hierarchical generative models: structured prior knowledge that constrains the space of hypotheses a person entertains [@tenenbaumHowGrowMind2011; @kempLearningOverhypothesesHierarchical2007]. When an experienced physician examines a radiograph, their perceptual system does not search memory for matching patterns. It generates a prediction, shaped by thousands of prior cases, before conscious deliberation begins. The chess master’s advantage in @chasePerceptionChess1973 is not superior recall; it is a generative model of meaningful board positions that makes random arrangements no more memorable than they are for anyone else. The physicist’s deep categorisation in @chiCategorizationRepresentationPhysics1981 reflects priors over causal structure, not a filing system organised by surface features.\nLearning, in this framing, is driven by prediction error: the mismatch between what the model expected and what actually occurred. That signal only exists if you had a prediction in the first place, which requires prior knowledge. No prior knowledge, no predictions. No predictions, no prediction errors. No prediction errors, no learning. The entire mechanism depends on already knowing something.\nThis is why access to an external information source is not a substitute for knowledge in the mind. A search engine or a language model can return an answer, but it cannot restructure the prior distributions that shape how a person perceives, predicts, and reasons. These are not retrieval operations that can be delegated. They are consequences of having knowledge woven into a generative model of the world."
+  },
+  {
+    "objectID": "posts/knowledge-information/index.html#the-stronger-objection",
+    "href": "posts/knowledge-information/index.html#the-stronger-objection",
+    "title": "Knowledge Is Not Information",
+    "section": "The stronger objection",
+    "text": "The stronger objection\nThere is a version of the argument that this analysis does not touch, and it deserves an honest answer. The claim is not that humans can look things up faster, but that the entire cognitive loop, retrieval, comprehension, evaluation, action, can be automated. If one AI system produces information and another AI system consumes, evaluates, and acts on it, the human is no longer a bottleneck. The human is no longer in the loop at all.\nThis is a coherent position, but it is a different argument. It is not claiming that knowledge matters less for humans. It is claiming that humans matter less. And whatever its merits as a prediction about the economy or the labour market, it is not an argument about education. The educational discourse this post is responding to still assumes that students should become competent professionals, thoughtful citizens, people capable of independent judgement. It simply asserts, wrongly, that they can become these things without building knowledge.\nIf someone wants to argue that human competence itself is becoming obsolete, that is a conversation worth having. But it is not a conversation that helps a teacher design a course, a curriculum developer choose learning objectives, or a student decide how to spend their afternoon. For anyone still operating on the premise that human understanding matters, the rest of the argument stands."
+  },
+  {
+    "objectID": "posts/knowledge-information/index.html#what-actually-changes",
+    "href": "posts/knowledge-information/index.html#what-actually-changes",
+    "title": "Knowledge Is Not Information",
+    "section": "What actually changes",
+    "text": "What actually changes\nThis is not to say that AI changes nothing about the value of knowledge. But the common move of distinguishing “mere rote recall” from “higher-order thinking” and then dismissing the former is too hasty. Much of what looks like rote memorisation is actually cognitive infrastructure. A child who has automated the times table is not simply recalling facts; they have freed working memory for algebra, estimation, and mathematical reasoning. A person who knows the chronology of the French Revolution is not hoarding trivia; they have a temporal scaffold on which to hang causal explanations. The distinction that matters is not between memorised knowledge and conceptual understanding, because the former is often the substrate of the latter.\nWhat does shift is the return on different types of knowledge. Genuinely isolated facts, the kind that serve no further cognitive function, were arguably never the most important educational outcome. Conceptual understanding, the ability to frame problems, to integrate information across domains, to evaluate and critique, these become more important when AI handles routine lookup and generation. But the path to conceptual understanding runs through a large body of well-organised, readily accessible knowledge. There are no shortcuts.\nThe implication for education is not that we should teach less knowledge, but that we should be more thoughtful about which knowledge we prioritise and how we help students build it. The goal is not to compete with AI on information retrieval, but to develop the deep, structured understanding that makes AI tools genuinely useful rather than superficially convenient."
+  },
+  {
+    "objectID": "posts/knowledge-information/index.html#the-container-is-not-the-cognition",
+    "href": "posts/knowledge-information/index.html#the-container-is-not-the-cognition",
+    "title": "Knowledge Is Not Information",
+    "section": "The container is not the cognition",
+    "text": "The container is not the cognition\nThe claim that knowledge matters less in the age of AI mistakes the container for the cognition. AI changes where information is stored and how fast it can be retrieved. It does not change the fact that human thinking, understanding, judgement, and learning are constitutively dependent on knowledge organised in human minds.\nA future in which people have less knowledge is not a future in which knowledge matters less. It is a future in which people are less capable of using the tools available to them. The very instruments designed to make cognition easier may, if used naively, undermine the knowledge base required to use them well. Recognising this paradox is the first step toward designing educational environments that harness AI without hollowing out the learning it is meant to support."
   },
   {
     "objectID": "about/index.html",

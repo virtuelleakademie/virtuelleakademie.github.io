@@ -1,0 +1,75 @@
+---
+title: "Knowledge Is Not Information"
+subtitle: "Why cognitive science resists the claim that knowledge matters less in the age of AI"
+date: 2026-02-27
+categories: [cognition, AI, education, metacognition]
+---
+
+A recurring claim in discussions about the future of education goes something like this: because AI makes knowledge universally accessible, *having* knowledge will become less important, and education should pivot toward "future skills" such as creativity, critical thinking, and collaboration. The argument sounds plausible. It is also, from the perspective of cognitive science, deeply confused.
+
+The confusion rests on a conflation of two very different things: knowledge integrated into long-term memory, and information available in an external system. These are not interchangeable. Knowledge stored in a human mind restructures how that mind perceives, reasons, and acts. Information sitting in an AI system does none of that until a person retrieves it, comprehends it, and integrates it, all of which require prior knowledge.
+
+What follows is a cognitive science perspective on why knowledge does not become less important when information becomes more available.
+
+
+## Expertise is not a collection of facts
+
+Decades of expertise research have demonstrated that experts do not simply "know more" than novices. They have richly organized knowledge structures, typically called *schemas*, that allow them to recognise patterns, chunk information efficiently, reason by analogy, and generate solutions to novel problems.
+
+The classic demonstration comes from @chasePerceptionChess1973, who showed that chess masters could reconstruct meaningful board positions from brief exposure far better than novices, but showed no advantage for random arrangements. The expertise resided not in superior memory *per se*, but in the ability to perceive meaningful structure, an ability that depends entirely on deep domain knowledge.
+
+@chiCategorizationRepresentationPhysics1981 found the same pattern in physics: experts categorised problems by underlying principles (e.g. conservation of energy), while novices categorised by surface features (e.g. "problems with inclined planes"). This structural understanding cannot be offloaded. An AI can provide the answer to a specific question, but it cannot provide the cognitive architecture that allows a person to ask the right question, notice when an answer is wrong, or see connections across domains.
+
+
+## The effort of learning is not an inefficiency
+
+A natural response to the availability of AI is to treat the effort of acquiring knowledge as a cost to be minimised. If the answer is one prompt away, why spend hours working through the material yourself?
+
+The answer comes from research on *desirable difficulties* [@bjorkNewTheoryDisuse1992]. Encoding, retrieving, and elaborating knowledge is effortful precisely because that effort is what produces durable, flexible learning. Testing yourself is harder than rereading, but produces better retention. Spacing practice over time feels less efficient than massing it, but leads to more robust memory. Generating an answer before being told the correct one requires more cognitive work, but strengthens understanding.
+
+When a student outsources cognitive work to AI, they receive the output but skip the process that would have produced learning. The deliverable arrives; the competence does not. This is not a side effect of AI use, it is a structural consequence of bypassing the cognitive operations that give rise to learning. The process of struggling with material is not overhead to be optimised away. It *is* the mechanism of cognitive development.
+
+
+## You need knowledge to evaluate knowledge
+
+One of the more consequential implications of AI-assisted work concerns metacognitive calibration: the ability to monitor and evaluate one's own understanding. Effective use of AI-generated content requires judging whether that content is accurate, relevant, and complete. This judgement depends on domain knowledge.
+
+The problem is circular, and well documented. @krugerUnskilledUnawareIt1999 showed that people with less competence in a domain are also less able to recognise their own incompetence. Applied to AI use, this means that the people least equipped to evaluate AI output are precisely those who would benefit most from doing so. Without a foundation of domain knowledge, a student cannot distinguish a correct AI response from a plausible but wrong one, and cannot calibrate their confidence accordingly.
+
+Far from making knowledge less important, AI tools make the metacognitive functions that depend on knowledge *more* important.
+
+
+## Cognition is inference, not search
+
+The "knowledge is less important" framing implicitly models cognition as search: you need a fact, you look it up. But this gets the computational nature of cognition wrong. The mind does not work by searching a database. It works by maintaining an internal model of the world, generating predictions from that model, and updating when those predictions fail.
+
+Schemas, the knowledge structures that decades of expertise research have documented, function as *hierarchical generative models*: structured prior knowledge that constrains the space of hypotheses a person entertains [@tenenbaumHowGrowMind2011; @kempLearningOverhypothesesHierarchical2007]. When an experienced physician examines a radiograph, their perceptual system does not search memory for matching patterns. It generates a prediction, shaped by thousands of prior cases, before conscious deliberation begins. The chess master's advantage in @chasePerceptionChess1973 is not superior recall; it is a generative model of meaningful board positions that makes random arrangements no more memorable than they are for anyone else. The physicist's deep categorisation in @chiCategorizationRepresentationPhysics1981 reflects priors over causal structure, not a filing system organised by surface features.
+
+Learning, in this framing, is driven by *prediction error*: the mismatch between what the model expected and what actually occurred. That signal only exists if you had a prediction in the first place, which requires prior knowledge. No prior knowledge, no predictions. No predictions, no prediction errors. No prediction errors, no learning. The entire mechanism depends on already knowing something.
+
+This is why access to an external information source is not a substitute for knowledge in the mind. A search engine or a language model can return an answer, but it cannot restructure the prior distributions that shape how a person perceives, predicts, and reasons. These are not retrieval operations that can be delegated. They are consequences of having knowledge woven into a generative model of the world.
+
+
+## The stronger objection
+
+There is a version of the argument that this analysis does not touch, and it deserves an honest answer. The claim is not that humans can look things up faster, but that the entire cognitive loop, retrieval, comprehension, evaluation, action, can be automated. If one AI system produces information and another AI system consumes, evaluates, and acts on it, the human is no longer a bottleneck. The human is no longer in the loop at all.
+
+This is a coherent position, but it is a different argument. It is not claiming that knowledge matters less for humans. It is claiming that humans matter less. And whatever its merits as a prediction about the economy or the labour market, it is not an argument about education. The educational discourse this post is responding to still assumes that students should become competent professionals, thoughtful citizens, people capable of independent judgement. It simply asserts, wrongly, that they can become these things without building knowledge.
+
+If someone wants to argue that human competence itself is becoming obsolete, that is a conversation worth having. But it is not a conversation that helps a teacher design a course, a curriculum developer choose learning objectives, or a student decide how to spend their afternoon. For anyone still operating on the premise that human understanding matters, the rest of the argument stands.
+
+
+## What actually changes
+
+This is not to say that AI changes nothing about the value of knowledge. But the common move of distinguishing "mere rote recall" from "higher-order thinking" and then dismissing the former is too hasty. Much of what looks like rote memorisation is actually cognitive infrastructure. A child who has automated the times table is not simply recalling facts; they have freed working memory for algebra, estimation, and mathematical reasoning. A person who knows the chronology of the French Revolution is not hoarding trivia; they have a temporal scaffold on which to hang causal explanations. The distinction that matters is not between memorised knowledge and conceptual understanding, because the former is often the substrate of the latter.
+
+What does shift is the *return on different types of knowledge*. Genuinely isolated facts, the kind that serve no further cognitive function, were arguably never the most important educational outcome. Conceptual understanding, the ability to frame problems, to integrate information across domains, to evaluate and critique, these become *more* important when AI handles routine lookup and generation. But the path to conceptual understanding runs through a large body of well-organised, readily accessible knowledge. There are no shortcuts.
+
+The implication for education is not that we should teach less knowledge, but that we should be more thoughtful about *which* knowledge we prioritise and *how* we help students build it. The goal is not to compete with AI on information retrieval, but to develop the deep, structured understanding that makes AI tools genuinely useful rather than superficially convenient.
+
+
+## The container is not the cognition
+
+The claim that knowledge matters less in the age of AI mistakes the *container* for the *cognition*. AI changes where information is stored and how fast it can be retrieved. It does not change the fact that human thinking, understanding, judgement, and learning are constitutively dependent on knowledge organised in human minds.
+
+A future in which people have less knowledge is not a future in which knowledge matters less. It is a future in which people are less capable of using the tools available to them. The very instruments designed to make cognition easier may, if used naively, undermine the knowledge base required to use them well. Recognising this paradox is the first step toward designing educational environments that harness AI without hollowing out the learning it is meant to support.

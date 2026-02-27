@@ -67,9 +67,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -191,13 +191,17 @@ window.Quarto = {
         
     <h5 class="quarto-listing-category-title">Categories</h5>
 <div class="quarto-listing-category category-default">
-<div class="category" data-category="">All <span class="quarto-category-count">(2)</span>
+<div class="category" data-category="">All <span class="quarto-category-count">(3)</span>
 </div>
-<div class="category" data-category="QUk=">AI <span class="quarto-category-count">(2)</span>
+<div class="category" data-category="QUk=">AI <span class="quarto-category-count">(3)</span>
 </div>
-<div class="category" data-category="Y29nbml0aW9u">cognition <span class="quarto-category-count">(1)</span>
+<div class="category" data-category="Y29nbml0aW9u">cognition <span class="quarto-category-count">(2)</span>
+</div>
+<div class="category" data-category="ZWR1Y2F0aW9u">education <span class="quarto-category-count">(1)</span>
 </div>
 <div class="category" data-category="ZXh0ZW5kZWQlMjBjb2duaXRpb24=">extended cognition <span class="quarto-category-count">(1)</span>
+</div>
+<div class="category" data-category="bWV0YWNvZ25pdGlvbg==">metacognition <span class="quarto-category-count">(1)</span>
 </div>
 <div class="category" data-category="dGVhY2hpbmc=">teaching <span class="quarto-category-count">(1)</span>
 </div>
@@ -227,7 +231,43 @@ window.Quarto = {
 
 </header><div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="QUklMkN0ZWFjaGluZyUyQ3R1dG9yaWFsJTJDdGVtcGxhdGU=" data-listing-date-sort="1764543600000" data-listing-file-modified-sort="1769035025745" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26">
+<div class="quarto-post image-right" data-index="0" data-categories="Y29nbml0aW9uJTJDQUklMkNlZHVjYXRpb24lMkNtZXRhY29nbml0aW9u" data-listing-date-sort="1772146800000" data-listing-file-modified-sort="1772224082906" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1538">
+<div class="thumbnail"><a href="../posts/knowledge-information/index.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top"> </div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../posts/knowledge-information/index.html" class="no-external">Knowledge Is Not Information</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../posts/knowledge-information/index.html" class="no-external">Why cognitive science resists the claim that knowledge matters less in the age of AI</a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y29nbml0aW9u'); return false;">cognition</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('QUk='); return false;">AI</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZWR1Y2F0aW9u'); return false;">education</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bWV0YWNvZ25pdGlvbg=='); return false;">metacognition</div>
+
+</div>
+<div class="delink listing-description"><a href="../posts/knowledge-information/index.html" class="no-external">
+A recurring claim in discussions about the future of education goes something like this: because AI makes knowledge universally accessible, <em>having</em> knowledge will become less…
+</a></div>
+</div>
+<div class="metadata">
+<a href="../posts/knowledge-information/index.html" class="no-external">
+<div class="listing-date">
+Feb 27, 2026
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="QUklMkN0ZWFjaGluZyUyQ3R1dG9yaWFsJTJDdGVtcGxhdGU=" data-listing-date-sort="1764543600000" data-listing-file-modified-sort="1772224082906" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26">
 <div class="thumbnail"><a href="../posts/template/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top"> </div>
@@ -237,6 +277,9 @@ window.Quarto = {
 <h3 class="no-anchor listing-title">
 <a href="../posts/template/index.html" class="no-external">A template for blog posts</a>
 </h3>
+<div class="listing-subtitle">
+<a href="../posts/template/index.html" class="no-external"></a>
+</div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('QUk='); return false;">AI</div>
@@ -263,7 +306,7 @@ Andrew Ellis
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="QUklMkN3cml0aW5nJTJDY29nbml0aW9uJTJDZXh0ZW5kZWQlMjBjb2duaXRpb24=" data-listing-date-sort="1737414000000" data-listing-file-modified-sort="1769035025745" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1244">
+<div class="quarto-post image-right" data-index="2" data-categories="QUklMkN3cml0aW5nJTJDY29nbml0aW9uJTJDZXh0ZW5kZWQlMjBjb2duaXRpb24=" data-listing-date-sort="1737414000000" data-listing-file-modified-sort="1772224082907" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1244">
 <div class="thumbnail"><a href="../posts/writing-as-sampling/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top"> </div>
@@ -273,6 +316,9 @@ Andrew Ellis
 <h3 class="no-anchor listing-title">
 <a href="../posts/writing-as-sampling/index.html" class="no-external">Writing as Sampling: A Computational Account of Why Writing is Thinking</a>
 </h3>
+<div class="listing-subtitle">
+<a href="../posts/writing-as-sampling/index.html" class="no-external"></a>
+</div>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('QUk='); return false;">AI</div>
