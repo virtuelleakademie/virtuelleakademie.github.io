@@ -2,6 +2,12 @@
 title: "Knowledge Is Not Information"
 subtitle: "Why cognitive science resists the claim that knowledge matters less in the age of AI"
 date: 2026-02-27
+author:
+  - name: Andrew Ellis
+    url: https://github.com/awellis
+    affiliation: Virtual Academy, Bern University of Applied Sciences
+    affiliation-url: https://virtuelleakademie.ch
+    orcid: 0000-0002-2788-936X
 categories: [cognition, AI, education, metacognition]
 ---
 
@@ -32,7 +38,7 @@ When a student outsources cognitive work to AI, they receive the output but skip
 
 One of the more consequential implications of AI-assisted work concerns metacognitive calibration: the ability to monitor and evaluate one's own understanding. Effective use of AI-generated content requires judging whether that content is accurate, relevant, and complete. This judgement depends on domain knowledge.
 
-The problem is circular, and well documented. @krugerUnskilledUnawareIt1999 showed that people with less competence in a domain are also less able to recognise their own incompetence. Applied to AI use, this means that the people least equipped to evaluate AI output are precisely those who would benefit most from doing so. Without a foundation of domain knowledge, a student cannot distinguish a correct AI response from a plausible but wrong one, and cannot calibrate their confidence accordingly.
+The problem is circular. @bjorkMemoryMetamemoryConsiderations1994 documented how learners systematically misread their own progress and current state of knowledge, confusing familiarity with understanding and fluency with competence. Metacognitive monitoring is not a general-purpose skill that operates independently of what one knows. It is itself a knowledge-dependent inference: the accuracy of a person's self-assessment tracks the depth of their domain understanding [@flemingSelfevaluationDecisionmakingGeneral2017a]. Applied to AI use, this means that the people least equipped to evaluate AI output are precisely those who would benefit most from doing so. Without a foundation of domain knowledge, a student cannot distinguish a correct AI response from a plausible but wrong one, and cannot calibrate their confidence accordingly.
 
 Far from making knowledge less important, AI tools make the metacognitive functions that depend on knowledge *more* important.
 
