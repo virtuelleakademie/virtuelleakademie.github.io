@@ -11,3 +11,5 @@ listing:
   categories: true
 page-layout: full
 ---
+
+Unsere Blog-Beiträge sind auf Englisch verfasst.
