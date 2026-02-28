@@ -12,13 +12,12 @@ docs/%.pdf: pages/%.qmd
 	echo $< $@
 	quarto render $< --to pdf
 
-# Bilingual site rendering (using babelquarto)
-render:  ## Render the full bilingual site (EN + DE)
-	Rscript -e "babelquarto::render_website()"
+render:  ## Render the site
+	quarto render
 
 preview: ## Preview site (render then serve)
 	@echo "Rendering site..."
-	Rscript -e "babelquarto::render_website()"
+	quarto render
 	@echo "Starting preview server at http://localhost:8803"
 	@cd docs && python3 -m http.server 8803
 

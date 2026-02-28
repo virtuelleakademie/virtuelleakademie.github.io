@@ -60,7 +60,7 @@ $color-border: $color-black;
 // Quarto theme variables
 $body-bg: $color-background;
 $body-color: $color-text;
-$primary: $color-primary;
+$primary: $color-accent-burgundy;
 $secondary: $color-text-secondary;
 $light: $color-surface;
 $link-color: $color-accent-burgundy;
@@ -172,6 +172,8 @@ h1 {
 h2 {
   font-size: $font-size-h2;
   margin-top: $spacing-2xl;
+  padding-bottom: $spacing-sm;
+  border-bottom: 1px solid $color-accent-burgundy;
 }
 
 h3 {
@@ -200,7 +202,7 @@ a {
 }
 
 a:hover {
-  color: $color-accent-burgundy-dark;
+  color: $color-accent-gold;
 }
 
 // =============================================================================
@@ -210,7 +212,6 @@ a:hover {
 .navbar {
   background-color: $color-background;
   padding: $spacing-lg 0;
-  @include border-bottom;
   box-shadow: none;
 }
 
@@ -229,7 +230,6 @@ a:hover {
   padding: $spacing-sm 0 !important;
   margin: 0;
   font-weight: $font-weight-semibold;
-  border-bottom: $border-width solid transparent;
   text-decoration: none !important;
   @include transition-default;
 }
@@ -237,8 +237,7 @@ a:hover {
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link[aria-current="page"] {
-  border-bottom: $border;
-  color: $color-text !important;
+  color: $color-accent-burgundy !important;
 }
 
 // Navbar tools
@@ -255,19 +254,30 @@ a:hover {
   background: none;
 }
 
-// Search styling
-#quarto-search .aa-DetachedSearchButtonIcon,
-#quarto-search .aa-DetachedSearchButton .aa-DetachedSearchButtonIcon,
-.navbar #quarto-search .aa-DetachedSearchButtonIcon {
-  color: $color-text !important;
-  opacity: 1 !important;
-  fill: $color-text !important;
+// Search
+#quarto-search .aa-DetachedSearchButtonIcon {
+  color: $color-accent-burgundy !important;
 }
 
-#quarto-search:hover .aa-DetachedSearchButtonIcon,
-.navbar #quarto-search:hover .aa-DetachedSearchButtonIcon {
-  color: $color-text-secondary !important;
-  fill: $color-text-secondary !important;
+#quarto-search:hover .aa-DetachedSearchButtonIcon {
+  color: $color-accent-gold !important;
+}
+
+.aa-DetachedOverlay .aa-DetachedContainer {
+  border-radius: 0;
+}
+
+// Search result selected/hovered state — subtle tint instead of solid $primary
+.aa-Item[aria-selected="true"] {
+  background-color: rgba($color-accent-burgundy, 0.08) !important;
+}
+
+.aa-Item[aria-selected="true"] .search-result-text {
+  color: $color-text;
+}
+
+.aa-Item[aria-selected="true"] mark {
+  color: $color-accent-burgundy;
 }
 
 // Remove list styling from navbar
@@ -285,8 +295,9 @@ a:hover {
 // =============================================================================
 
 .btn-primary {
-  background-color: $color-primary;
-  border-color: $color-primary;
+  background-color: $color-accent-burgundy;
+  border-color: $color-accent-burgundy;
+  color: $color-white;
   padding: $spacing-sm $spacing-lg;
   font-weight: $font-weight-semibold;
   border-radius: 0;
@@ -295,62 +306,20 @@ a:hover {
 }
 
 .btn-primary:hover {
-  background-color: $color-grey-700;
-  border-color: $color-grey-700;
+  background-color: $color-accent-burgundy-dark;
+  border-color: $color-accent-burgundy-dark;
+  color: $color-white;
 }
 
-// =============================================================================
-// LANGUAGE SWITCHER (babelquarto)
-// =============================================================================
-
-#languages-button {
-  background: transparent !important;
-  border: none !important;
-  color: $color-text !important;
-
-  &:hover {
-    color: $color-primary !important;
-    background: transparent !important;
-  }
-
-  &:focus {
-    box-shadow: none !important;
-  }
-
-  // Hide the Bootstrap globe icon
-  .bi-globe2 {
-    display: none;
-  }
-
-  // Add FontAwesome language icon
-  &::before {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    content: "\f1ab"; // fa-language
-    margin-right: 0.3rem;
-  }
-}
-
-// Style the dropdown menu
-#languages-links {
-  min-width: auto;
-  border-radius: 0;
-  @include border-all;
-  box-shadow: none;
-
-  .dropdown-item:hover {
-    background-color: $color-grey-100;
-  }
-}
 
 // =============================================================================
 // CARDS
 // =============================================================================
 
 .card, .feature-card, .section-card {
-  background: $color-background;
+  @include surface-background;
   border-radius: 0;
-  @include border-all;
+  border-left: 3px solid transparent;
   padding: $spacing-xl;
   margin-bottom: $spacing-xl;
   box-shadow: none;
@@ -358,7 +327,7 @@ a:hover {
 }
 
 .card:hover, .feature-card:hover {
-  border-color: $color-border;
+  border-left: 3px solid $color-accent-burgundy;
   box-shadow: none;
 }
 
@@ -371,9 +340,9 @@ a:hover {
 
 // Compact card variant for workshop listings
 .feature-card-compact {
-  background: $color-background;
+  @include surface-background;
   border-radius: 0;
-  @include border-all;
+  border-left: 3px solid transparent;
   padding: $spacing-md $spacing-lg;
   margin-bottom: $spacing-md;
   box-shadow: none;
@@ -405,7 +374,7 @@ a:hover {
 }
 
 .feature-card-compact:hover {
-  border-color: $color-border;
+  border-left: 3px solid $color-accent-burgundy;
   box-shadow: none;
 }
 
@@ -440,7 +409,6 @@ a:hover {
 .quarto-title-block {
   padding-bottom: $spacing-xl;
   margin-bottom: $spacing-xl;
-  @include border-bottom;
 }
 
 .quarto-title-block .quarto-title .title {
@@ -487,7 +455,7 @@ li::marker {
 // =============================================================================
 
 blockquote {
-  border-left: 3px $border-style $color-border;
+  border-left: 3px $border-style $color-accent-burgundy;
   padding-left: $spacing-lg;
   margin: $spacing-lg 0;
   font-style: normal;
@@ -508,7 +476,6 @@ table {
 th, td {
   padding: $spacing-sm $spacing-md;
   text-align: left;
-  @include border-bottom;
 }
 
 th {
@@ -523,8 +490,6 @@ th {
 
 #quarto-sidebar {
   background-color: $color-background;
-  @include border-left;
-  @include border-right;
 }
 
 #quarto-sidebar .sidebar-menu-container {
@@ -537,7 +502,6 @@ th {
 }
 
 #quarto-sidebar .sidebar-item {
-  @include border-bottom;
   margin: 0;
   padding: 0;
 }
@@ -568,16 +532,23 @@ th {
 // BLOG LISTING
 // =============================================================================
 
+// Blog post listing separators
+div.quarto-post {
+  border-bottom: 1px solid $color-grey-300 !important;
+}
+
 .quarto-listing .listing-item {
   background: $color-background;
-  @include border-all;
-  padding: $spacing-lg;
-  margin-bottom: $spacing-lg;
+  padding: $spacing-lg 0;
+  margin-bottom: $spacing-md;
   @include transition-default;
 }
 
-.quarto-listing .listing-item:hover {
-  border-color: $color-border;
+// Category tags with burgundy accent
+div.quarto-post .listing-categories .listing-category {
+  border: 1px solid $color-accent-burgundy !important;
+  color: $color-accent-burgundy;
+  @include surface-background;
 }
 
 .quarto-listing .listing-item .listing-title {
@@ -603,10 +574,10 @@ th {
 
 .page-footer {
   @include surface-background;
+  border-top: 2px solid $color-accent-burgundy;
   color: $color-text;
   padding: $spacing-xl 0;
   margin-top: $spacing-3xl;
-  @include border-top;
 }
 
 .page-footer a {
@@ -624,7 +595,7 @@ th {
 
 pre {
   @include surface-background;
-  @include border-all;
+  border: none;
   padding: $spacing-md;
   border-radius: 0;
 }
@@ -632,6 +603,82 @@ pre {
 code {
   font-family: $font-family-monospace;
   font-size: 0.9em;
+}
+
+// =============================================================================
+// HORIZONTAL RULES
+// =============================================================================
+
+hr {
+  border: none;
+  border-top: 1px solid $color-accent-burgundy;
+  margin: $spacing-3xl 0;
+}
+
+// =============================================================================
+// LANDING PAGE
+// =============================================================================
+
+.landing-hero {
+  min-height: calc(100vh - 80px); // full viewport minus navbar
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: $spacing-3xl $spacing-xl;
+  border-bottom: 2px solid $color-accent-burgundy;
+
+  h1 {
+    font-size: 3.5rem;
+    letter-spacing: -0.03em;
+    margin-bottom: $spacing-lg;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: $color-text-secondary;
+    max-width: 38em;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: $line-height-relaxed;
+  }
+}
+
+
+// =============================================================================
+// BLOG POST TITLE BLOCK
+// =============================================================================
+
+.quarto-title .title {
+  font-size: 2.25rem !important;
+  line-height: 1.2 !important;
+  font-weight: $font-weight-extrabold !important;
+  color: $color-text !important;
+}
+
+.quarto-title-block {
+  margin-bottom: $spacing-xl;
+  padding-bottom: $spacing-lg;
+  border-bottom: $border;
+}
+
+.quarto-title-meta {
+  color: $color-text-secondary;
+  font-size: $font-size-sm;
+}
+
+.quarto-categories {
+  margin-top: $spacing-md;
+}
+
+.quarto-categories .quarto-category {
+  @include surface-background;
+  color: $color-accent-burgundy;
+  border: 1px solid $color-accent-burgundy;
+  padding: $spacing-xs 0.75rem;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
 }
 
 // =============================================================================
@@ -667,5 +714,13 @@ code {
 
   .navbar-nav .nav-item {
     margin: 0 $spacing-sm;
+  }
+
+  .landing-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .landing-hero p {
+    font-size: 1.05rem;
   }
 }

@@ -1,10 +1,9 @@
 ---
-title: "CAS Hochschuldidaktik"
-lang: en
+title: "CAS University Didactics"
 page-layout: full
 ---
 
-## KI in der Lehre
+## AI in Teaching (KI in der Lehre)
 
 ::: {.content-grid-compact}
 

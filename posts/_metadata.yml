@@ -1,5 +1,5 @@
 
-
+bibliography: ../bibliography.bib
 # date: 5 December, 2024
 # date-format: "DD MMM, YYYY"
 # author: 
@@ -18,7 +18,6 @@ title-block-banner: false
 
 format:
     html:
-      css: ../styles/blog-posts.scss
       toc: true
       code-fold: false
       code-link: true

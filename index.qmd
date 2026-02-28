@@ -1,40 +1,60 @@
 ---
 title: "Virtuelle Akademie"
-lang: en
 page-layout: full
 toc: false
+include-in-header:
+  text: '<style>.quarto-title-block { display: none; }</style>'
+listing:
+  id: recent-posts
+  contents:
+    - "posts/*/index.qmd"
+    - "!posts/_archive/"
+  sort: "date desc"
+  type: default
+  max-items: 5
+  categories: false
+  fields: [title, date, categories, description]
 ---
 
-::: {.lead}
-This is the research and teaching platform of the Virtuelle Akademie, focusing on **AI in higher education**. We explore how artificial intelligence can enhance teaching and learning, with a focus on intelligent tutoring systems, adaptive learning, and human-AI collaboration. Visit [virtuelleakademie.ch](https://virtuelleakademie.ch) for our main site.
+::: {.landing-hero}
+# Virtuelle Akademie
+
+Research and teaching at the intersection of AI and higher education, from the [Bern University of Applied Sciences](https://www.bfh.ch/).
 :::
 
-## What We Do
+## Recent Posts
 
-::: {.grid}
-
-::: {.g-col-12 .g-col-md-4}
-### [Research](research/index.qmd)
-
-Investigating intelligent tutoring systems that adapt to individual learners and provide meaningful feedback grounded in cognitive science.
+::: {#recent-posts}
 :::
 
-::: {.g-col-12 .g-col-md-4}
+[View all posts &rarr;](posts/index.qmd)
+
+## Explore
+
+::: {.content-grid}
+
+::: {.feature-card}
 ### [Teaching](teaching/index.qmd)
 
-Courses and programs on AI in education, including continuing education at BFH and the CAS Hochschuldidaktik.
+::: {.meta}
+**Courses** | **Workshops** | **Continuing Education**
 :::
 
-::: {.g-col-12 .g-col-md-4}
-### [Workshops](workshops/index.qmd)
+A progressive series of courses on AI in higher education through BFH continuing education, the CAS in university didactics, and bespoke workshops for institutions across Switzerland.
 
-Hands-on workshops covering generative AI tools, prompt engineering, and practical applications for educators.
+[**Explore courses &rarr;**](teaching/index.qmd){.btn .btn-primary}
+:::
+
+::: {.feature-card}
+### [Research](research/index.qmd)
+
+::: {.meta}
+**Intelligent Tutoring Systems** | **BeLEARN Network**
+:::
+
+Development and evaluation of intelligent tutoring systems that leverage AI for personalized learning. Adaptive scaffolding, formative assessment, and human-AI collaboration.
+
+[**Learn more &rarr;**](research/index.qmd){.btn .btn-primary}
 :::
 
 :::
-
-## About
-
-Virtuelle Akademie is part of [Bern University of Applied Sciences](https://www.bfh.ch/). We are members of the [BeLEARN](https://belearn.swiss/) research network advancing the science of learning through interdisciplinary collaboration.
-
-[Learn more about our team](about/index.qmd)

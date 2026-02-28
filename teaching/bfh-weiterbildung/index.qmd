@@ -1,10 +1,9 @@
 ---
-title: "BFH Weiterbildung"
-lang: en
+title: "BFH Continuing Education"
 page-layout: full
 ---
 
-## KI in der Lehre
+## AI in Teaching (KI in der Lehre)
 
 A progressive series of courses on integrating AI into teaching practice, offered through BFH continuing education.
 

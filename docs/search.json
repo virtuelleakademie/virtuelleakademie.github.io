@@ -4,192 +4,182 @@
     "href": "CLAUDE.html",
     "title": "CLAUDE.md",
     "section": "",
-    "text": "This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.\n\n\nThis is a Quarto-based academic website for Virtuelle Akademie, built as a static site generator that outputs to GitHub Pages. The site is bilingual (EN/DE) using the babelquarto package.\n\n\n\nThe project uses Quarto’s website format with these key components:\n\nMain site: Academic website with Teaching, Research, and About sections\nBilingual: Uses babelquarto for native EN/DE support\nOutput: Static HTML generated to docs/ directory for GitHub Pages\nStyling: Custom SCSS themes with Nunito Sans/Inter fonts and purple branding (#4b2e83)\nExtensions: Multiple Quarto extensions including timer, custom-callout, fontawesome, etc.\n\n\n\n\n\n_quarto.yml: Main site configuration (English default)\n_quarto-de.yml: German language profile (navbar, sidebar translations)\nstyles/: SCSS files for custom styling and themes\nposts/: Blog posts with metadata\nteaching/, research/, about/, workshops/: Main content sections\ndocs/: Generated output directory (do not edit directly)\n\n\n\n\n\n\nmake render\n# or\nRscript -e \"babelquarto::render_website()\"\n\n\n\nmake preview   # Render then serve\nmake serve     # Just serve docs/ (no render)\n\n\n\nmake branch name=feature-name    # Create new branch\nmake commit msg=\"Description\"    # Add and commit changes\nmake push                        # Push current branch\nmake merge                       # Admin: merge to main\n\n\n\n\nThe site uses babelquarto for native multilingual support.\n\n\n\nEnglish files (main language): index.qmd, teaching/index.qmd\nGerman files (translation): index.de.qmd, teaching/index.de.qmd\n\nThe main language has no suffix; only translations have language codes (.de.qmd).\n\n\n\n\n_quarto.yml: Main config with babelquarto settings + English navbar/sidebar\n_quarto-de.yml: German language profile with translated navbar/sidebar\n\n\n\n\n\nbabelquarto reads both config files\nRenders each language version separately\nOutputs to docs/ (EN) and docs/de/ (DE)\nAutomatically adds language switcher to navbar\n\n\n\n\n\nCreate section/page.qmd (English) and section/page.de.qmd (German)\nAdd English file to sidebar in _quarto.yml\nAdd German file to sidebar in _quarto-de.yml\nRun make render\n\n\n\n\nEnglish sidebars are defined in _quarto.yml, German in _quarto-de.yml:\n# _quarto.yml (English)\nsidebar:\n  - id: teaching\n    title: \"Teaching\"\n    contents:\n      - teaching/index.qmd\n\n# _quarto-de.yml (German)\nsidebar:\n  - id: teaching\n    title: \"Lehre\"\n    contents:\n      - teaching/index.de.qmd\n\n\n\n\n\nNew blog posts go in posts/ directory as .qmd and .de.qmd files\nTeaching content uses sidebar navigation\nResearch sections follow the same pattern\nAll content uses Quarto markdown format with YAML frontmatter\n\n\n\n\nThe site uses a custom purple theme (#4b2e83) with sophisticated typography and animations. The main stylesheet is styles/custom.scss which defines:\n\nTypography hierarchy with Inter/Nunito Sans fonts\nCard-based layouts with hover effects\nGradient animations and smooth transitions\nResponsive grid systems (.content-grid, .content-grid-compact)\n\n\n\n\nThe site uses Quarto extensions for enhanced functionality:\n\ntimer: Interactive timers for presentations\ncustom-callout: Enhanced callout boxes\nfontawesome: Icon support\n\n\n\n\n\nThe Makefile provides convenient git workflow and build commands\nThe site outputs to docs/ for GitHub Pages hosting\nExternal workshops are hosted in separate repositories (e.g., ki-lehre-beginner, ki-lehre-refresher)\nRequires R with babelquarto package: install.packages('babelquarto', repos = c('https://ropensci.r-universe.dev', 'https://cloud.r-project.org'))"
+    "text": "This file provides guidance to Claude Code when working with this repository.\n\n\nQuarto-based academic website for Virtuelle Akademie (Bern University of Applied Sciences), focusing on AI in higher education. Blog-focused design with a modern landing page, plus Teaching and Research sections. English only (no bilingual system).\n\n\n\n\nStatic site: Quarto website format, output to docs/ for GitHub Pages\nBlog-focused: Blog is the primary content; landing page features recent posts prominently\nLanding page: Modern long-scroll homepage with hero, recent posts, teaching/research sections\nStyling: Custom SCSS with Source Serif 4 / Source Sans 3 fonts, burgundy (#9A4665) accent, gold (#D4A03E) hover states\nDesign: Editorial minimalism with burgundy accent lines as structural dividers, no rounded corners\n\n\n\n\n\n_quarto.yml: Main config (navbar, format settings)\n_brand.yml: Brand colors and typography tokens\nstyles/custom.scss: Single stylesheet (all styles including blog post styles)\nposts/: Blog posts\nteaching/: Teaching hub + course sub-pages (includes workshops)\nresearch/: Research page (single page)\nabout/: About page + team profile\ndocs/: Generated output (do not edit)\n\n\n\n\nmake render          # Render site with quarto\nmake preview         # Render then serve at localhost:8803\nmake serve           # Serve docs/ without rendering\n\n\n\n\nCreate posts/my-post/index.qmd with YAML frontmatter (title, date, categories, description)\nPosts inherit settings from posts/_metadata.yml\nHomepage automatically shows recent posts via Quarto listing\nRun make render\n\n\n\n\nBurgundy (#9A4665) accent with editorial minimalism. Gold (#D4A03E) for hover states.\n\nSource Serif 4 (body), Source Sans 3 (headings), JetBrains Mono (code)\nHorizontal lines used as structural dividers: burgundy h2 borders, post separators, &lt;hr&gt; rules\nCard-based layouts with burgundy left-border hover accent, no rounded corners, no shadows\nResponsive grid via .content-grid and .content-grid-compact\nLanding page sections via .landing-hero, .landing-section, .landing-section-alt\n\n\n\n\n\nThe Makefile provides build commands and git workflow shortcuts\nThe site outputs to docs/ for GitHub Pages hosting\nTeaching content links to external microsites hosted in separate repos (e.g., ki-lehre-beginner, ki-lehre-refresher)\nTeaching and Research will eventually become separate microsites in their own repos"
   },
   {
     "objectID": "CLAUDE.html#project-overview",
     "href": "CLAUDE.html#project-overview",
     "title": "CLAUDE.md",
     "section": "",
-    "text": "This is a Quarto-based academic website for Virtuelle Akademie, built as a static site generator that outputs to GitHub Pages. The site is bilingual (EN/DE) using the babelquarto package."
+    "text": "Quarto-based academic website for Virtuelle Akademie (Bern University of Applied Sciences), focusing on AI in higher education. Blog-focused design with a modern landing page, plus Teaching and Research sections. English only (no bilingual system)."
   },
   {
     "objectID": "CLAUDE.html#architecture",
     "href": "CLAUDE.html#architecture",
     "title": "CLAUDE.md",
     "section": "",
-    "text": "The project uses Quarto’s website format with these key components:\n\nMain site: Academic website with Teaching, Research, and About sections\nBilingual: Uses babelquarto for native EN/DE support\nOutput: Static HTML generated to docs/ directory for GitHub Pages\nStyling: Custom SCSS themes with Nunito Sans/Inter fonts and purple branding (#4b2e83)\nExtensions: Multiple Quarto extensions including timer, custom-callout, fontawesome, etc."
+    "text": "Static site: Quarto website format, output to docs/ for GitHub Pages\nBlog-focused: Blog is the primary content; landing page features recent posts prominently\nLanding page: Modern long-scroll homepage with hero, recent posts, teaching/research sections\nStyling: Custom SCSS with Source Serif 4 / Source Sans 3 fonts, burgundy (#9A4665) accent, gold (#D4A03E) hover states\nDesign: Editorial minimalism with burgundy accent lines as structural dividers, no rounded corners"
   },
   {
     "objectID": "CLAUDE.html#file-structure",
     "href": "CLAUDE.html#file-structure",
     "title": "CLAUDE.md",
     "section": "",
-    "text": "_quarto.yml: Main site configuration (English default)\n_quarto-de.yml: German language profile (navbar, sidebar translations)\nstyles/: SCSS files for custom styling and themes\nposts/: Blog posts with metadata\nteaching/, research/, about/, workshops/: Main content sections\ndocs/: Generated output directory (do not edit directly)"
+    "text": "_quarto.yml: Main config (navbar, format settings)\n_brand.yml: Brand colors and typography tokens\nstyles/custom.scss: Single stylesheet (all styles including blog post styles)\nposts/: Blog posts\nteaching/: Teaching hub + course sub-pages (includes workshops)\nresearch/: Research page (single page)\nabout/: About page + team profile\ndocs/: Generated output (do not edit)"
   },
   {
     "objectID": "CLAUDE.html#common-commands",
     "href": "CLAUDE.html#common-commands",
     "title": "CLAUDE.md",
     "section": "",
-    "text": "make render\n# or\nRscript -e \"babelquarto::render_website()\"\n\n\n\nmake preview   # Render then serve\nmake serve     # Just serve docs/ (no render)\n\n\n\nmake branch name=feature-name    # Create new branch\nmake commit msg=\"Description\"    # Add and commit changes\nmake push                        # Push current branch\nmake merge                       # Admin: merge to main"
+    "text": "make render          # Render site with quarto\nmake preview         # Render then serve at localhost:8803\nmake serve           # Serve docs/ without rendering"
   },
   {
-    "objectID": "CLAUDE.html#bilingual-system-babelquarto",
-    "href": "CLAUDE.html#bilingual-system-babelquarto",
+    "objectID": "CLAUDE.html#adding-a-blog-post",
+    "href": "CLAUDE.html#adding-a-blog-post",
     "title": "CLAUDE.md",
     "section": "",
-    "text": "The site uses babelquarto for native multilingual support.\n\n\n\nEnglish files (main language): index.qmd, teaching/index.qmd\nGerman files (translation): index.de.qmd, teaching/index.de.qmd\n\nThe main language has no suffix; only translations have language codes (.de.qmd).\n\n\n\n\n_quarto.yml: Main config with babelquarto settings + English navbar/sidebar\n_quarto-de.yml: German language profile with translated navbar/sidebar\n\n\n\n\n\nbabelquarto reads both config files\nRenders each language version separately\nOutputs to docs/ (EN) and docs/de/ (DE)\nAutomatically adds language switcher to navbar\n\n\n\n\n\nCreate section/page.qmd (English) and section/page.de.qmd (German)\nAdd English file to sidebar in _quarto.yml\nAdd German file to sidebar in _quarto-de.yml\nRun make render\n\n\n\n\nEnglish sidebars are defined in _quarto.yml, German in _quarto-de.yml:\n# _quarto.yml (English)\nsidebar:\n  - id: teaching\n    title: \"Teaching\"\n    contents:\n      - teaching/index.qmd\n\n# _quarto-de.yml (German)\nsidebar:\n  - id: teaching\n    title: \"Lehre\"\n    contents:\n      - teaching/index.de.qmd"
-  },
-  {
-    "objectID": "CLAUDE.html#content-management",
-    "href": "CLAUDE.html#content-management",
-    "title": "CLAUDE.md",
-    "section": "",
-    "text": "New blog posts go in posts/ directory as .qmd and .de.qmd files\nTeaching content uses sidebar navigation\nResearch sections follow the same pattern\nAll content uses Quarto markdown format with YAML frontmatter"
+    "text": "Create posts/my-post/index.qmd with YAML frontmatter (title, date, categories, description)\nPosts inherit settings from posts/_metadata.yml\nHomepage automatically shows recent posts via Quarto listing\nRun make render"
   },
   {
     "objectID": "CLAUDE.html#styling",
     "href": "CLAUDE.html#styling",
     "title": "CLAUDE.md",
     "section": "",
-    "text": "The site uses a custom purple theme (#4b2e83) with sophisticated typography and animations. The main stylesheet is styles/custom.scss which defines:\n\nTypography hierarchy with Inter/Nunito Sans fonts\nCard-based layouts with hover effects\nGradient animations and smooth transitions\nResponsive grid systems (.content-grid, .content-grid-compact)"
-  },
-  {
-    "objectID": "CLAUDE.html#extensions",
-    "href": "CLAUDE.html#extensions",
-    "title": "CLAUDE.md",
-    "section": "",
-    "text": "The site uses Quarto extensions for enhanced functionality:\n\ntimer: Interactive timers for presentations\ncustom-callout: Enhanced callout boxes\nfontawesome: Icon support"
+    "text": "Burgundy (#9A4665) accent with editorial minimalism. Gold (#D4A03E) for hover states.\n\nSource Serif 4 (body), Source Sans 3 (headings), JetBrains Mono (code)\nHorizontal lines used as structural dividers: burgundy h2 borders, post separators, &lt;hr&gt; rules\nCard-based layouts with burgundy left-border hover accent, no rounded corners, no shadows\nResponsive grid via .content-grid and .content-grid-compact\nLanding page sections via .landing-hero, .landing-section, .landing-section-alt"
   },
   {
     "objectID": "CLAUDE.html#development-notes",
     "href": "CLAUDE.html#development-notes",
     "title": "CLAUDE.md",
     "section": "",
-    "text": "The Makefile provides convenient git workflow and build commands\nThe site outputs to docs/ for GitHub Pages hosting\nExternal workshops are hosted in separate repositories (e.g., ki-lehre-beginner, ki-lehre-refresher)\nRequires R with babelquarto package: install.packages('babelquarto', repos = c('https://ropensci.r-universe.dev', 'https://cloud.r-project.org'))"
+    "text": "The Makefile provides build commands and git workflow shortcuts\nThe site outputs to docs/ for GitHub Pages hosting\nTeaching content links to external microsites hosted in separate repos (e.g., ki-lehre-beginner, ki-lehre-refresher)\nTeaching and Research will eventually become separate microsites in their own repos"
   },
   {
     "objectID": "teaching/bfh-weiterbildung/index.html",
     "href": "teaching/bfh-weiterbildung/index.html",
-    "title": "BFH Weiterbildung",
+    "title": "BFH Continuing Education",
     "section": "",
-    "text": "A progressive series of courses on integrating AI into teaching practice, offered through BFH continuing education.\n\n\n\n\nLevel: Beginner | Duration: 3 hours\n\nIntroduction to AI in educational settings. Foundational concepts and first steps with AI tools.\nLaunch Beginner course →\n\n\n\n\nLevel: Intermediate | Duration: Half-day\n\nPractical AI integration into teaching. Hands-on exploration and implementation strategies.\nLaunch Intermediate course →\n\n\n\n\nLevel: Advanced | Duration: 3 hours\n\nBuild AI-powered educational tools grounded in Cognitive Load Theory.\nLaunch Advanced course →\n\n\n\n\nFormat: 1 hour (30 min input + 30 min Q&A)\n\nA compact refresher on AI in teaching for those who want to stay current with the latest developments.\nLaunch Refresher →",
-    "crumbs": [
-      "Teaching",
-      "Courses",
-      "BFH Weiterbildung"
-    ]
+    "text": "A progressive series of courses on integrating AI into teaching practice, offered through BFH continuing education.\n\n\n\n\nLevel: Beginner | Duration: 3 hours\n\nIntroduction to AI in educational settings. Foundational concepts and first steps with AI tools.\nLaunch Beginner course →\n\n\n\n\nLevel: Intermediate | Duration: Half-day\n\nPractical AI integration into teaching. Hands-on exploration and implementation strategies.\nLaunch Intermediate course →\n\n\n\n\nLevel: Advanced | Duration: 3 hours\n\nBuild AI-powered educational tools grounded in Cognitive Load Theory.\nLaunch Advanced course →\n\n\n\n\nFormat: 1 hour (30 min input + 30 min Q&A)\n\nA compact refresher on AI in teaching for those who want to stay current with the latest developments.\nLaunch Refresher →"
   },
   {
-    "objectID": "teaching/bfh-weiterbildung/index.html#ki-in-der-lehre",
-    "href": "teaching/bfh-weiterbildung/index.html#ki-in-der-lehre",
-    "title": "BFH Weiterbildung",
+    "objectID": "teaching/bfh-weiterbildung/index.html#ai-in-teaching-ki-in-der-lehre",
+    "href": "teaching/bfh-weiterbildung/index.html#ai-in-teaching-ki-in-der-lehre",
+    "title": "BFH Continuing Education",
     "section": "",
-    "text": "A progressive series of courses on integrating AI into teaching practice, offered through BFH continuing education.\n\n\n\n\nLevel: Beginner | Duration: 3 hours\n\nIntroduction to AI in educational settings. Foundational concepts and first steps with AI tools.\nLaunch Beginner course →\n\n\n\n\nLevel: Intermediate | Duration: Half-day\n\nPractical AI integration into teaching. Hands-on exploration and implementation strategies.\nLaunch Intermediate course →\n\n\n\n\nLevel: Advanced | Duration: 3 hours\n\nBuild AI-powered educational tools grounded in Cognitive Load Theory.\nLaunch Advanced course →\n\n\n\n\nFormat: 1 hour (30 min input + 30 min Q&A)\n\nA compact refresher on AI in teaching for those who want to stay current with the latest developments.\nLaunch Refresher →",
-    "crumbs": [
-      "Teaching",
-      "Courses",
-      "BFH Weiterbildung"
-    ]
+    "text": "A progressive series of courses on integrating AI into teaching practice, offered through BFH continuing education.\n\n\n\n\nLevel: Beginner | Duration: 3 hours\n\nIntroduction to AI in educational settings. Foundational concepts and first steps with AI tools.\nLaunch Beginner course →\n\n\n\n\nLevel: Intermediate | Duration: Half-day\n\nPractical AI integration into teaching. Hands-on exploration and implementation strategies.\nLaunch Intermediate course →\n\n\n\n\nLevel: Advanced | Duration: 3 hours\n\nBuild AI-powered educational tools grounded in Cognitive Load Theory.\nLaunch Advanced course →\n\n\n\n\nFormat: 1 hour (30 min input + 30 min Q&A)\n\nA compact refresher on AI in teaching for those who want to stay current with the latest developments.\nLaunch Refresher →"
   },
   {
-    "objectID": "teaching/courses/index.html",
-    "href": "teaching/courses/index.html",
-    "title": "Courses",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Virtuelle Akademie",
     "section": "",
-    "text": "Semester: Spring 2024 | Level: Graduate | Credits: 3\n\nAn advanced course exploring the integration of artificial intelligence technologies in educational systems, covering machine learning applications, personalized learning, and ethical considerations.\n\n\n\n\nSemester: Fall 2024 | Level: Undergraduate | Credits: 4\n\nIntroduction to designing effective digital learning experiences, including user experience principles, multimedia design, and assessment strategies for online environments."
+    "text": "Research and teaching at the intersection of AI and higher education, from the Bern University of Applied Sciences."
   },
   {
-    "objectID": "teaching/courses/index.html#current-courses",
-    "href": "teaching/courses/index.html#current-courses",
-    "title": "Courses",
+    "objectID": "index.html#recent-posts",
+    "href": "index.html#recent-posts",
+    "title": "Virtuelle Akademie",
+    "section": "Recent Posts",
+    "text": "Recent Posts\n\n\n\n\n\nKnowledge Is Not Information\n\n\n\ncognition\n\nAI\n\neducation\n\nmetacognition\n\n\n\n\n\n\n\n\n\nFeb 27, 2026\n\n\n\n\n\n\n\nWriting as Sampling: A Computational Account of Why Writing is Thinking\n\n\n\nAI\n\nwriting\n\ncognition\n\nextended cognition\n\n\n\n\n\n\n\n\n\nJan 21, 2025\n\n\n\n\n\nNo matching items\n\nView all posts →"
+  },
+  {
+    "objectID": "index.html#explore",
+    "href": "index.html#explore",
+    "title": "Virtuelle Akademie",
+    "section": "Explore",
+    "text": "Explore\n\n\nTeaching\n\nCourses | Workshops | Continuing Education\n\nA progressive series of courses on AI in higher education through BFH continuing education, the CAS in university didactics, and bespoke workshops for institutions across Switzerland.\nExplore courses →\n\n\nResearch\n\nIntelligent Tutoring Systems | BeLEARN Network\n\nDevelopment and evaluation of intelligent tutoring systems that leverage AI for personalized learning. Adaptive scaffolding, formative assessment, and human-AI collaboration.\nLearn more →"
+  },
+  {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "About",
     "section": "",
-    "text": "Semester: Spring 2024 | Level: Graduate | Credits: 3\n\nAn advanced course exploring the integration of artificial intelligence technologies in educational systems, covering machine learning applications, personalized learning, and ethical considerations.\n\n\n\n\nSemester: Fall 2024 | Level: Undergraduate | Credits: 4\n\nIntroduction to designing effective digital learning experiences, including user experience principles, multimedia design, and assessment strategies for online environments."
+    "text": "The Virtual Academy (Virtuelle Akademie) is a research and development unit at the Bern University of Applied Sciences, focused on the intersection of technology and education."
   },
   {
-    "objectID": "teaching/courses/index.html#past-courses",
-    "href": "teaching/courses/index.html#past-courses",
-    "title": "Courses",
-    "section": "Past Courses",
-    "text": "Past Courses\n\nEducational Technology Foundations\n\nSemester: Spring 2023 | Level: Graduate | Enrollment: 45 students\n\nFoundational course covering the history, theory, and practice of educational technology in modern learning environments.\n\n\nResearch Methods in Education\n\nSemester: Fall 2023 | Level: Graduate | Enrollment: 32 students\n\nComprehensive introduction to quantitative and qualitative research methodologies specifically applied to educational research contexts."
-  },
-  {
-    "objectID": "teaching/resources/index.html",
-    "href": "teaching/resources/index.html",
-    "title": "Resources",
+    "objectID": "about/index.html#about-the-virtual-academy",
+    "href": "about/index.html#about-the-virtual-academy",
+    "title": "About",
     "section": "",
-    "text": "Lecture notes\nPractice exercises\nReading lists\n\n\n\n\n\nRecommended software\nOnline platforms\nUseful websites"
+    "text": "The Virtual Academy (Virtuelle Akademie) is a research and development unit at the Bern University of Applied Sciences, focused on the intersection of technology and education."
   },
   {
-    "objectID": "teaching/resources/index.html#student-resources",
-    "href": "teaching/resources/index.html#student-resources",
-    "title": "Resources",
+    "objectID": "about/index.html#team",
+    "href": "about/index.html#team",
+    "title": "About",
+    "section": "Team",
+    "text": "Team\n\n\nDr. Andrew Ellis\nResearcher specializing in AI applications in educational technology, intelligent tutoring systems, and learning analytics.\n Contact |  Profile"
+  },
+  {
+    "objectID": "posts/knowledge-information/index.html",
+    "href": "posts/knowledge-information/index.html",
+    "title": "Knowledge Is Not Information",
     "section": "",
-    "text": "Lecture notes\nPractice exercises\nReading lists\n\n\n\n\n\nRecommended software\nOnline platforms\nUseful websites"
+    "text": "A recurring claim in discussions about the future of education goes something like this: because AI makes knowledge universally accessible, having knowledge will become less important, and education should pivot toward “future skills” such as creativity, critical thinking, and collaboration. The argument sounds plausible. It is also deeply confused.\nThe confusion rests on a conflation of two very different things: knowledge integrated into long-term memory, and information available in an external system. These are not interchangeable. Knowledge stored in a human mind restructures how that mind perceives, reasons, and acts. Information sitting in an AI system does none of that until a person retrieves it, comprehends it, and integrates it, all of which require prior knowledge."
   },
   {
-    "objectID": "teaching/resources/index.html#teaching-resources",
-    "href": "teaching/resources/index.html#teaching-resources",
-    "title": "Resources",
-    "section": "Teaching Resources",
-    "text": "Teaching Resources\n\nPedagogy\n\nTeaching methods\nAssessment strategies\nClassroom management\n\n\n\nProfessional Development\n\nConferences\nWorkshops\nPublications"
+    "objectID": "posts/knowledge-information/index.html#expertise-is-not-a-collection-of-facts",
+    "href": "posts/knowledge-information/index.html#expertise-is-not-a-collection-of-facts",
+    "title": "Knowledge Is Not Information",
+    "section": "Expertise is not a collection of facts",
+    "text": "Expertise is not a collection of facts\nDecades of expertise research have demonstrated that experts do not simply “know more” than novices. They have richly organized knowledge structures, typically called schemas, that allow them to recognise patterns, chunk information efficiently, reason by analogy, and generate solutions to novel problems.\nThe classic demonstration comes from Chase and Simon (1973), who showed that chess masters could reconstruct meaningful board positions from brief exposure far better than novices, but showed no advantage for random arrangements. The expertise resided not in superior memory per se, but in the ability to perceive meaningful structure, an ability that depends entirely on deep domain knowledge.\nChi, Feltovich, and Glaser (1981) found the same pattern in physics: experts categorised problems by underlying principles (e.g. conservation of energy), while novices categorised by surface features (e.g. “problems with inclined planes”). This structural understanding cannot be offloaded. An AI can provide the answer to a specific question, but it cannot provide the cognitive architecture that allows a person to ask the right question, notice when an answer is wrong, or see connections across domains."
   },
   {
-    "objectID": "about/andrew-ellis/index.html",
-    "href": "about/andrew-ellis/index.html",
-    "title": "Dr. Andrew Ellis",
-    "section": "",
-    "text": "Dr. Andrew Ellis is a researcher at the Virtual Academy of the Bern University of Applied Sciences. His research focuses on how artificial intelligence can be used effectively in educational systems."
+    "objectID": "posts/knowledge-information/index.html#the-effort-of-learning-is-not-an-inefficiency",
+    "href": "posts/knowledge-information/index.html#the-effort-of-learning-is-not-an-inefficiency",
+    "title": "Knowledge Is Not Information",
+    "section": "The effort of learning is not an inefficiency",
+    "text": "The effort of learning is not an inefficiency\nA natural response to the availability of AI is to treat the effort of acquiring knowledge as a cost to be minimised. If the answer is one prompt away, why spend hours working through the material yourself?\nThe answer comes from research on desirable difficulties (R. Bjork and Bjork 1992). Encoding, retrieving, and elaborating knowledge is effortful precisely because that effort is what produces durable, flexible learning. Testing yourself is harder than rereading, but produces better retention. Spacing practice over time feels less efficient than massing it, but leads to more robust memory. Generating an answer before being told the correct one requires more cognitive work, but strengthens understanding.\nWhen a student outsources cognitive work to AI, they receive the output but skip the process that would have produced learning. The deliverable arrives; the competence does not. This is not a side effect of AI use. It is a structural consequence of bypassing the cognitive operations that give rise to learning. The process of struggling with material is not overhead to be optimised away. It is the mechanism of cognitive development."
   },
   {
-    "objectID": "about/andrew-ellis/index.html#about",
-    "href": "about/andrew-ellis/index.html#about",
-    "title": "Dr. Andrew Ellis",
-    "section": "",
-    "text": "Dr. Andrew Ellis is a researcher at the Virtual Academy of the Bern University of Applied Sciences. His research focuses on how artificial intelligence can be used effectively in educational systems."
+    "objectID": "posts/knowledge-information/index.html#you-need-knowledge-to-evaluate-knowledge",
+    "href": "posts/knowledge-information/index.html#you-need-knowledge-to-evaluate-knowledge",
+    "title": "Knowledge Is Not Information",
+    "section": "You need knowledge to evaluate knowledge",
+    "text": "You need knowledge to evaluate knowledge\nOne of the more consequential implications of AI-assisted work concerns metacognitive calibration: the ability to monitor and evaluate one’s own understanding. Effective use of AI-generated content requires judging whether that content is accurate, relevant, and complete. This judgement depends on domain knowledge.\nThe problem is circular. R. A. Bjork (1994) documented how learners systematically misread their own progress and current state of knowledge, confusing familiarity with understanding and fluency with competence. Metacognitive monitoring is not a general-purpose skill that operates independently of what one knows. It is itself a knowledge-dependent inference: the accuracy of a person’s self-assessment tracks the depth of their domain understanding (Fleming and Daw 2017). Applied to AI use, this means that the people least equipped to evaluate AI output are precisely those who would benefit most from doing so. Without a foundation of domain knowledge, a student cannot distinguish a correct AI response from a plausible but wrong one, and cannot calibrate their confidence accordingly.\nFar from making knowledge less important, AI tools make the metacognitive functions that depend on knowledge more important."
   },
   {
-    "objectID": "about/andrew-ellis/index.html#research-interests",
-    "href": "about/andrew-ellis/index.html#research-interests",
-    "title": "Dr. Andrew Ellis",
-    "section": "Research Interests",
-    "text": "Research Interests\n\nArtificial Intelligence in Education\nEducational Technology\nLearning Analytics\nAdaptive Learning Systems\nHuman-Computer Interaction in Educational Contexts"
+    "objectID": "posts/knowledge-information/index.html#cognition-is-inference-not-search",
+    "href": "posts/knowledge-information/index.html#cognition-is-inference-not-search",
+    "title": "Knowledge Is Not Information",
+    "section": "Cognition is inference, not search",
+    "text": "Cognition is inference, not search\nThe “knowledge is less important” framing implicitly models cognition as search: you need a fact, you look it up. But this gets the computational nature of cognition wrong. The mind does not work by searching a database. It works by maintaining an internal model of the world, generating predictions from that model, and updating when those predictions fail.\nSchemas, the knowledge structures that decades of expertise research have documented, function as hierarchical generative models: structured prior knowledge that constrains the space of hypotheses a person entertains (Tenenbaum et al. 2011; Kemp, Perfors, and Tenenbaum 2007). When an experienced physician examines a radiograph, their perceptual system does not search memory for matching patterns. It generates a prediction, shaped by thousands of prior cases, before conscious deliberation begins. The chess master’s advantage in Chase and Simon (1973) is not superior recall; it is a generative model of meaningful board positions that makes random arrangements no more memorable than they are for anyone else. The physicist’s deep categorisation in Chi, Feltovich, and Glaser (1981) reflects priors over causal structure, not a filing system organised by surface features.\nLearning, in this framing, is driven by prediction error: the mismatch between what the model expected and what actually occurred. That signal only exists if you had a prediction in the first place, which requires prior knowledge. No prior knowledge, no predictions. No predictions, no prediction errors. No prediction errors, no learning. The entire mechanism depends on already knowing something.\nThere is a further point. Knowledge does not merely provide content that can be retrieved. It determines the hypothesis space: the set of possible explanations a person can entertain. A physician who has learned pathophysiology does not simply have more facts available than a layperson. They have a different space of diagnostic possibilities, organised by causal and mechanistic relationships, that determines what they can even consider when looking at a radiograph. No amount of searching will give the layperson that hypothesis space, because it is not a set of facts. It is a structured set of possible explanations that constrains what counts as a relevant observation in the first place.\nAccess to an external information source is not a substitute for knowledge in the mind. A search engine or a language model can return an answer, but it cannot restructure the prior distributions that shape how a person perceives, predicts, and reasons. These are not retrieval operations that can be delegated. They are consequences of having knowledge woven into a generative model of the world."
   },
   {
-    "objectID": "about/andrew-ellis/index.html#background",
-    "href": "about/andrew-ellis/index.html#background",
-    "title": "Dr. Andrew Ellis",
-    "section": "Background",
-    "text": "Background\nDr. Ellis brings extensive experience in educational technology research, with a particular focus on the practical implementation of AI tools in learning environments. His work bridges the gap between theoretical AI research and real-world educational applications."
+    "objectID": "posts/knowledge-information/index.html#knowing-and-thinking-are-not-separable",
+    "href": "posts/knowledge-information/index.html#knowing-and-thinking-are-not-separable",
+    "title": "Knowledge Is Not Information",
+    "section": "Knowing and thinking are not separable",
+    "text": "Knowing and thinking are not separable\nThe preceding sections might seem to invite a compromise: concede that domain knowledge matters, but argue that what education should really prioritise is the capacity for flexible thinking, reasoning, creativity, the “higher-order” skills that knowledge merely serves. This is the move that treats knowing and thinking as separable faculties, one dispensable, the other essential. But the separation does not hold up.\nSummerfield (2022) makes the case precisely. What distinguishes human intelligence is not the ability to store vast quantities of information, nor the ability to retrieve it quickly, but compositional generalisation: the capacity to recombine known elements in novel configurations to handle situations never previously encountered. A child who has learned “red” and has learned “square” can immediately recognise a red square without ever having seen one. This is so natural that we barely notice it. It is also something that current artificial neural networks struggle with, despite their advantages in pattern recognition and retrieval at scale.\nThe crucial point is that compositional generalisation requires structured representations to compose over. You cannot recombine elements you have not represented as separable, abstract components in the first place. This is exactly what distinguishes the expert from the novice in the studies discussed above. The physicist in Chi, Feltovich, and Glaser (1981) who categorises problems by “conservation of energy” has decomposed the problem space into abstract structural components that can transfer across superficially different situations. The novice who categorises by “inclined plane” is bound to surface features; there is nothing to recombine. The chess master in Chase and Simon (1973) perceives board positions in terms of meaningful configurations, chunks that can be flexibly redeployed. The novice sees individual pieces.\nThis closes an important escape route. Someone might accept that schemas matter but still claim that “reasoning ability” is the transferable, domain-general skill that education should focus on, independent of any particular body of knowledge. Summerfield’s framework says otherwise. Reasoning is the flexible deployment of domain-structured knowledge. The compositional operations that constitute thinking are operations over representations; without the representations, there is nothing for the operations to work on. Knowing is the substrate of thinking, not a separate input to it.\nThere is a further consequence worth drawing out. Human knowledge, when deeply integrated, is generative rather than merely reproductive. A person with a thorough understanding of music theory does not simply replay compositions they have heard. They can compose new ones, constrained but not determined by the structural regularities they have internalised. The physicist who understands conservation laws can reason about systems they have never encountered, because the abstract components of their knowledge recombine to generate new predictions. This generativity is precisely what makes human cognition different from retrieval. AI systems are, at present, arguably better at retrieval and statistical pattern-matching; humans are better at the flexible compositional reasoning that depends on deeply integrated knowledge. The division of labour between humans and AI is therefore not “AI knows, humans think.” It is that both knowing and thinking are intertwined in human cognition, and the kind of knowing that supports compositional generalisation is exactly what cannot be offloaded."
   },
   {
-    "objectID": "about/andrew-ellis/index.html#current-projects",
-    "href": "about/andrew-ellis/index.html#current-projects",
-    "title": "Dr. Andrew Ellis",
-    "section": "Current Projects",
-    "text": "Current Projects\n\nDevelopment of AI-powered learning assessment tools\nIntegration of machine learning algorithms in educational platforms\nResearch on personalized learning pathways using AI\nCollaboration on innovative teaching methodologies"
+    "objectID": "posts/knowledge-information/index.html#the-logic-of-offloading",
+    "href": "posts/knowledge-information/index.html#the-logic-of-offloading",
+    "title": "Knowledge Is Not Information",
+    "section": "The logic of offloading",
+    "text": "The logic of offloading\nNone of this implies that externalising cognitive work is inherently harmful. Cognitive offloading, the use of physical actions or external tools to alter information-processing demands, is a normal and pervasive feature of human cognition (Risko and Gilbert 2016). We write things down, draw diagrams, count on our fingers, and use calculators. The question is not whether offloading is acceptable but when it helps and when it does damage.\nOffloading makes sense when working memory is the bottleneck and the person already possesses the relevant knowledge. A surgeon using a checklist frees attentional resources for judgement. An expert programmer using a linter offloads routine error detection to focus on architecture. In both cases, the underlying competence is intact; the tool relieves a performance constraint, not a knowledge gap. The competence determines how the tool is used, and the tool amplifies what the competence can achieve. This is the extended mind in the sense that Clark and Chalmers (1998) intended: cognitive processes genuinely distributed across brain and environment, but with the internal contribution doing indispensable structural work.\nThe critical asymmetry is between performance bottlenecks and learning bottlenecks. Offloading is beneficial when it relieves a performance constraint — working memory limits, attentional capacity, processing speed — while preserving the underlying competence. It becomes harmful when it relieves a learning bottleneck, when the cognitive effort being avoided was itself the mechanism that would have built competence. A calculator extends the mathematician’s mind. The same calculator in the hands of someone who does not understand what division means is not extending anything; it is producing outputs the person cannot evaluate.\nThe empirical evidence confirms this asymmetry. Grinschgl, Papenmeier, and Meyerhoff (2021) found that cognitive offloading boosts immediate performance but diminishes subsequent memory for the offloaded information. The gain in the moment comes at the cost of learning that would have occurred through internal processing. Hu, Luo, and Fleming (2019) showed that metamemory, awareness of what one does and does not know, plays a mediating role: people who offload habitually may also lose the metacognitive signal that tells them what they still need to learn. The offloading does not merely bypass one instance of encoding. It can erode the self-monitoring that would have prompted further study.\nThe connection to compositional generalisation is direct. What matters, as argued above, is whether knowledge is represented in a way that supports flexible recombination (Summerfield 2022). Offloading that preserves this structure is unproblematic: externalising intermediate results while working through a proof frees working memory for the compositional operations that matter. Offloading that prevents this structure from forming in the first place is where the damage occurs. If a student never works through the intermediate steps of a derivation, the abstract structural components that would have supported transfer to new problems are never acquired. The deliverable is produced, but the generative capacity is not.\nThe convergence point across these literatures is straightforward. What matters is not whether a person has access to knowledge, but whether knowledge is integrated into their cognitive architecture in a way that supports flexible thinking and effective tool use. Offloading works when there is a rich internal model to offload from. It fails when it prevents that model from being built in the first place. The question that educators should be asking is not “can the student look this up?” but “does the student have the internal structure that makes looking it up useful?”"
   },
   {
-    "objectID": "about/andrew-ellis/index.html#publications",
-    "href": "about/andrew-ellis/index.html#publications",
-    "title": "Dr. Andrew Ellis",
-    "section": "Publications",
-    "text": "Publications\nPublications and research outputs will be updated regularly."
+    "objectID": "posts/knowledge-information/index.html#the-stronger-objection",
+    "href": "posts/knowledge-information/index.html#the-stronger-objection",
+    "title": "Knowledge Is Not Information",
+    "section": "The stronger objection",
+    "text": "The stronger objection\nThere is a version of the argument that this analysis does not touch, and it deserves an honest answer. The claim is not that humans can look things up faster, but that the entire cognitive loop, from retrieval through comprehension and evaluation to action, can be automated. If one AI system produces information and another AI system consumes, evaluates, and acts on it, the human is no longer a bottleneck. The human is no longer in the loop at all.\nThis is a coherent position, but it is a different argument. It is not claiming that knowledge matters less for humans. It is claiming that humans matter less. And whatever its merits as a prediction about the economy or the labour market, it is not an argument about education. The educational discourse this post is responding to still assumes that students should become competent professionals, thoughtful citizens, people capable of independent judgement. It simply asserts, wrongly, that they can become these things without building knowledge.\nIf someone wants to argue that human competence itself is becoming obsolete, that is a conversation worth having. But it is not a conversation that helps a teacher design a course, a curriculum developer choose learning objectives, or a student decide how to spend their afternoon. For anyone still operating on the premise that human understanding matters, the rest of the argument stands."
   },
   {
-    "objectID": "about/andrew-ellis/index.html#contact",
-    "href": "about/andrew-ellis/index.html#contact",
-    "title": "Dr. Andrew Ellis",
-    "section": "Contact",
-    "text": "Contact\nFor research collaborations, inquiries, or more information about ongoing projects, please reach out via email."
+    "objectID": "posts/knowledge-information/index.html#what-actually-changes",
+    "href": "posts/knowledge-information/index.html#what-actually-changes",
+    "title": "Knowledge Is Not Information",
+    "section": "What actually changes",
+    "text": "What actually changes\nThis is not to say that AI changes nothing about the value of knowledge. But the common move of distinguishing “mere rote recall” from “higher-order thinking” and then dismissing the former is too hasty. Much of what looks like rote memorisation is actually cognitive infrastructure. A child who has automated the times table is not simply recalling facts; they have freed working memory for algebra, estimation, and mathematical reasoning. A person who knows the chronology of the French Revolution is not hoarding trivia. That chronology gives them a temporal scaffold on which to hang causal explanations. The distinction that matters is not between memorised knowledge and conceptual understanding, because the former is often the substrate of the latter.\nWhat does shift is the return on different types of knowledge. Genuinely isolated facts, the kind that serve no further cognitive function, were arguably never the most important educational outcome. Conceptual understanding, the ability to frame problems, to integrate information across domains, to evaluate and critique, these become more important when AI handles routine lookup and generation. But the path to conceptual understanding runs through a large body of well-organised, readily accessible knowledge. There are no shortcuts.\nThe implication for education is not that we should teach less knowledge, but that we should be more thoughtful about which knowledge we prioritise and how we help students build it. The goal is not to compete with AI on information retrieval, but to develop the deep, structured understanding that makes AI tools genuinely useful rather than superficially convenient."
   },
   {
-    "objectID": "posts/index.html",
-    "href": "posts/index.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Knowledge Is Not Information\n\n\nWhy cognitive science resists the claim that knowledge matters less in the age of AI\n\n\n\ncognition\n\nAI\n\neducation\n\nmetacognition\n\n\n\n\n\n\n\n\n\nFeb 27, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nWriting as Sampling: A Computational Account of Why Writing is Thinking\n\n\n\n\n\n\nAI\n\nwriting\n\ncognition\n\nextended cognition\n\n\n\n\n\n\n\n\n\nJan 21, 2025\n\n\nAndrew Ellis\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY 4.0"
+    "objectID": "posts/knowledge-information/index.html#the-container-is-not-the-cognition",
+    "href": "posts/knowledge-information/index.html#the-container-is-not-the-cognition",
+    "title": "Knowledge Is Not Information",
+    "section": "The container is not the cognition",
+    "text": "The container is not the cognition\nThe claim that knowledge matters less in the age of AI mistakes the container for the cognition. AI changes where information is stored and how fast it can be retrieved. It does not change the fact that human thinking, understanding, judgement, and learning are constitutively dependent on knowledge organised in human minds.\nA future in which people have less knowledge is not a future in which knowledge matters less. It is a future in which people are less capable of using the tools available to them. The very instruments designed to make cognition easier may, if used naively, undermine the knowledge base required to use them well."
   },
   {
     "objectID": "posts/writing-as-sampling/index.html",
@@ -241,339 +231,115 @@
     "text": "Conclusion\n“Writing is thinking” is not merely a slogan. Writing forces sampling from a high-dimensional possibility space, and those samples become conditioning context for subsequent cognition. The written text is not a transcript of thought but an active component of the thinking process. This account explains why writing feels generative, why blank pages are hard, and why AI-assisted writing raises questions about the location of cognitive work.\nThe practical implication is that the struggle of writing is not incidental to its cognitive value. The difficulty of sampling, committing, and revising is where thinking happens. Making writing easier may, paradoxically, make thinking shallower, at least for those who haven’t yet developed the internal resources that writing is supposed to build."
   },
   {
-    "objectID": "workshops/special-topics/index.html",
-    "href": "workshops/special-topics/index.html",
-    "title": "Special Topics",
-    "section": "",
-    "text": "Format: 3-hour Workshop | Focus: Lateral Reading\n\nLearn Lateral Reading: a practical technique to quickly and reliably verify AI responses.\nAccess →",
-    "crumbs": [
-      "Teaching",
-      "Workshops",
-      "Special Topics"
-    ]
-  },
-  {
-    "objectID": "workshops/special-topics/index.html#specialized-workshops",
-    "href": "workshops/special-topics/index.html#specialized-workshops",
-    "title": "Special Topics",
-    "section": "",
-    "text": "Format: 3-hour Workshop | Focus: Lateral Reading\n\nLearn Lateral Reading: a practical technique to quickly and reliably verify AI responses.\nAccess →",
-    "crumbs": [
-      "Teaching",
-      "Workshops",
-      "Special Topics"
-    ]
-  },
-  {
     "objectID": "research/index.html",
     "href": "research/index.html",
     "title": "Research",
     "section": "",
-    "text": "Our research focuses on the development and evaluation of intelligent tutoring systems (ITS) that leverage artificial intelligence to provide personalized learning experiences.\n\n\nIntelligent tutoring systems represent a convergence of cognitive science, educational psychology, and artificial intelligence. Our work explores how these systems can:\n\nAdapt to individual learners by dynamically adjusting content difficulty, pacing, and instructional strategies based on learner performance and behavior\nProvide meaningful feedback by delivering timely, specific, and actionable feedback that supports learning rather than simply indicating correctness\nModel domain knowledge by representing expert knowledge in ways that support effective instruction and diagnosis of learner misconceptions\nSupport cognitive processes by designing interactions grounded in theories of learning such as Cognitive Load Theory and the worked example effect\n\n\n\n\n\nGenerative AI for personalized worked examples\nAdaptive scaffolding in problem-solving contexts\nAI-assisted formative assessment\nHuman-AI collaboration in educational settings\n\n\n\n\nOur research contributes to BeLEARN, the Swiss research network dedicated to advancing the science of learning through interdisciplinary collaboration.\nVisit BeLEARN Projects →",
-    "crumbs": [
-      "Research"
-    ]
+    "text": "Our research focuses on the development and evaluation of intelligent tutoring systems (ITS) that leverage artificial intelligence to provide personalized learning experiences.\n\n\nIntelligent tutoring systems represent a convergence of cognitive science, educational psychology, and artificial intelligence. Our work explores how these systems can:\n\nAdapt to individual learners by dynamically adjusting content difficulty, pacing, and instructional strategies based on learner performance and behavior\nProvide meaningful feedback by delivering timely, specific, and actionable feedback that supports learning rather than simply indicating correctness\nModel domain knowledge by representing expert knowledge in ways that support effective instruction and diagnosis of learner misconceptions\nSupport cognitive processes by designing interactions grounded in theories of learning such as Cognitive Load Theory and the worked example effect\n\n\n\n\n\nGenerative AI for personalized worked examples\nAdaptive scaffolding in problem-solving contexts\nAI-assisted formative assessment\nHuman-AI collaboration in educational settings\n\n\n\n\nOur research contributes to BeLEARN, the Swiss research network dedicated to advancing the science of learning through interdisciplinary collaboration.\nVisit BeLEARN Projects →"
   },
   {
     "objectID": "research/index.html#intelligent-tutoring-systems",
     "href": "research/index.html#intelligent-tutoring-systems",
     "title": "Research",
     "section": "",
-    "text": "Our research focuses on the development and evaluation of intelligent tutoring systems (ITS) that leverage artificial intelligence to provide personalized learning experiences.\n\n\nIntelligent tutoring systems represent a convergence of cognitive science, educational psychology, and artificial intelligence. Our work explores how these systems can:\n\nAdapt to individual learners by dynamically adjusting content difficulty, pacing, and instructional strategies based on learner performance and behavior\nProvide meaningful feedback by delivering timely, specific, and actionable feedback that supports learning rather than simply indicating correctness\nModel domain knowledge by representing expert knowledge in ways that support effective instruction and diagnosis of learner misconceptions\nSupport cognitive processes by designing interactions grounded in theories of learning such as Cognitive Load Theory and the worked example effect\n\n\n\n\n\nGenerative AI for personalized worked examples\nAdaptive scaffolding in problem-solving contexts\nAI-assisted formative assessment\nHuman-AI collaboration in educational settings\n\n\n\n\nOur research contributes to BeLEARN, the Swiss research network dedicated to advancing the science of learning through interdisciplinary collaboration.\nVisit BeLEARN Projects →",
-    "crumbs": [
-      "Research"
-    ]
+    "text": "Our research focuses on the development and evaluation of intelligent tutoring systems (ITS) that leverage artificial intelligence to provide personalized learning experiences.\n\n\nIntelligent tutoring systems represent a convergence of cognitive science, educational psychology, and artificial intelligence. Our work explores how these systems can:\n\nAdapt to individual learners by dynamically adjusting content difficulty, pacing, and instructional strategies based on learner performance and behavior\nProvide meaningful feedback by delivering timely, specific, and actionable feedback that supports learning rather than simply indicating correctness\nModel domain knowledge by representing expert knowledge in ways that support effective instruction and diagnosis of learner misconceptions\nSupport cognitive processes by designing interactions grounded in theories of learning such as Cognitive Load Theory and the worked example effect\n\n\n\n\n\nGenerative AI for personalized worked examples\nAdaptive scaffolding in problem-solving contexts\nAI-assisted formative assessment\nHuman-AI collaboration in educational settings\n\n\n\n\nOur research contributes to BeLEARN, the Swiss research network dedicated to advancing the science of learning through interdisciplinary collaboration.\nVisit BeLEARN Projects →"
   },
   {
-    "objectID": "research/projects/index.html",
-    "href": "research/projects/index.html",
-    "title": "Research Projects",
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "Blog",
     "section": "",
-    "text": "Duration: 2024-2025 | Funding: [Funding source] | Collaborators: [Names]\n\nBrief description of the project objectives and methodology. This research explores innovative approaches to educational technology and its impact on learning outcomes.\n\n\n\n\nDuration: 2023-2024 | Status: Ongoing\n\nDescription of another current research project focused on artificial intelligence applications in educational contexts."
+    "text": "Knowledge Is Not Information\n\n\nWhy cognitive science resists the claim that knowledge matters less in the age of AI\n\n\n\ncognition\n\nAI\n\neducation\n\nmetacognition\n\n\n\n\n\n\n\n\n\nFeb 27, 2026\n\n\nAndrew Ellis\n\n\n\n\n\n\n\n\n\n\n\n\nWriting as Sampling: A Computational Account of Why Writing is Thinking\n\n\n\n\n\n\nAI\n\nwriting\n\ncognition\n\nextended cognition\n\n\n\n\n\n\n\n\n\nJan 21, 2025\n\n\nAndrew Ellis\n\n\n\n\n\nNo matching items\n Back to topReuseCC BY 4.0"
   },
   {
-    "objectID": "research/projects/index.html#current-projects",
-    "href": "research/projects/index.html#current-projects",
-    "title": "Research Projects",
+    "objectID": "about/andrew-ellis/index.html",
+    "href": "about/andrew-ellis/index.html",
+    "title": "Dr. Andrew Ellis",
     "section": "",
-    "text": "Duration: 2024-2025 | Funding: [Funding source] | Collaborators: [Names]\n\nBrief description of the project objectives and methodology. This research explores innovative approaches to educational technology and its impact on learning outcomes.\n\n\n\n\nDuration: 2023-2024 | Status: Ongoing\n\nDescription of another current research project focused on artificial intelligence applications in educational contexts."
+    "text": "Dr. Andrew Ellis is a researcher at the Virtual Academy of the Bern University of Applied Sciences. His research focuses on how artificial intelligence can be used effectively in educational systems."
   },
   {
-    "objectID": "research/projects/index.html#completed-projects",
-    "href": "research/projects/index.html#completed-projects",
-    "title": "Research Projects",
-    "section": "Completed Projects",
-    "text": "Completed Projects\n\nPrevious Project 1\n\nDuration: 2022-2023 | Status: Completed\n\nSummary of a completed research project and its outcomes. This project resulted in significant insights into digital learning methodologies.\n\n\nPrevious Project 2\n\nDuration: 2021-2022 | Status: Published\n\nDescription of another completed project that led to several peer-reviewed publications in educational technology journals."
-  },
-  {
-    "objectID": "research/publications/index.html",
-    "href": "research/publications/index.html",
-    "title": "Publications",
+    "objectID": "about/andrew-ellis/index.html#about",
+    "href": "about/andrew-ellis/index.html#about",
+    "title": "Dr. Andrew Ellis",
     "section": "",
-    "text": "Title of Paper 1 (2024)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]\nTitle of Paper 2 (2024)\nAnother Journal, Vol. A, Issue B, pp. C-C\n[DOI link] | [PDF]\n\n\n\nTitle of Paper 3 (2023)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]"
+    "text": "Dr. Andrew Ellis is a researcher at the Virtual Academy of the Bern University of Applied Sciences. His research focuses on how artificial intelligence can be used effectively in educational systems."
   },
   {
-    "objectID": "research/publications/index.html#journal-articles",
-    "href": "research/publications/index.html#journal-articles",
-    "title": "Publications",
-    "section": "",
-    "text": "Title of Paper 1 (2024)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]\nTitle of Paper 2 (2024)\nAnother Journal, Vol. A, Issue B, pp. C-C\n[DOI link] | [PDF]\n\n\n\nTitle of Paper 3 (2023)\nJournal Name, Vol. X, Issue Y, pp. Z-Z\n[DOI link] | [PDF]"
+    "objectID": "about/andrew-ellis/index.html#research-interests",
+    "href": "about/andrew-ellis/index.html#research-interests",
+    "title": "Dr. Andrew Ellis",
+    "section": "Research Interests",
+    "text": "Research Interests\n\nArtificial Intelligence in Education\nEducational Technology\nLearning Analytics\nAdaptive Learning Systems\nHuman-Computer Interaction in Educational Contexts"
   },
   {
-    "objectID": "research/publications/index.html#conference-proceedings",
-    "href": "research/publications/index.html#conference-proceedings",
-    "title": "Publications",
-    "section": "Conference Proceedings",
-    "text": "Conference Proceedings\n\n2024\nConference Paper Title (2024)\nConference Name, Location\n[Link] | [PDF]\n\n\n2023\nAnother Conference Paper (2023)\nAnother Conference, Location\n[Link] | [PDF]"
+    "objectID": "about/andrew-ellis/index.html#background",
+    "href": "about/andrew-ellis/index.html#background",
+    "title": "Dr. Andrew Ellis",
+    "section": "Background",
+    "text": "Background\nDr. Ellis brings extensive experience in educational technology research, with a particular focus on the practical implementation of AI tools in learning environments. His work bridges the gap between theoretical AI research and real-world educational applications."
   },
   {
-    "objectID": "research/publications/index.html#book-chapters",
-    "href": "research/publications/index.html#book-chapters",
-    "title": "Publications",
-    "section": "Book Chapters",
-    "text": "Book Chapters\nChapter Title (2024)\nIn: Book Title, Editor Name (Ed.)\nPublisher, pp. X-Y\n[Link]"
+    "objectID": "about/andrew-ellis/index.html#current-projects",
+    "href": "about/andrew-ellis/index.html#current-projects",
+    "title": "Dr. Andrew Ellis",
+    "section": "Current Projects",
+    "text": "Current Projects\n\nDevelopment of AI-powered learning assessment tools\nIntegration of machine learning algorithms in educational platforms\nResearch on personalized learning pathways using AI\nCollaboration on innovative teaching methodologies"
   },
   {
-    "objectID": "research/collaborations/index.html",
-    "href": "research/collaborations/index.html",
-    "title": "Collaborations",
-    "section": "",
-    "text": "Partners: [Names]\nProject: [Project name]\nDuration: [Time period]\nDescription of the collaborative research effort.\n\n\n\nPartners: [Names]\nFocus: [Research area]\nDuration: [Time period]\nDetails about another ongoing collaboration."
+    "objectID": "about/andrew-ellis/index.html#publications",
+    "href": "about/andrew-ellis/index.html#publications",
+    "title": "Dr. Andrew Ellis",
+    "section": "Publications",
+    "text": "Publications\nPublications and research outputs will be updated regularly."
   },
   {
-    "objectID": "research/collaborations/index.html#current-collaborations",
-    "href": "research/collaborations/index.html#current-collaborations",
-    "title": "Collaborations",
-    "section": "",
-    "text": "Partners: [Names]\nProject: [Project name]\nDuration: [Time period]\nDescription of the collaborative research effort.\n\n\n\nPartners: [Names]\nFocus: [Research area]\nDuration: [Time period]\nDetails about another ongoing collaboration."
-  },
-  {
-    "objectID": "research/collaborations/index.html#past-collaborations",
-    "href": "research/collaborations/index.html#past-collaborations",
-    "title": "Collaborations",
-    "section": "Past Collaborations",
-    "text": "Past Collaborations\n\nPrevious Institution 1\nProject: [Completed project]\nDuration: [Past time period]\nOutcome: [Results/publications]\nSummary of a completed collaborative project."
-  },
-  {
-    "objectID": "research/collaborations/index.html#international-networks",
-    "href": "research/collaborations/index.html#international-networks",
-    "title": "Collaborations",
-    "section": "International Networks",
-    "text": "International Networks\n\nNetwork 1\nDescription of involvement in international research networks.\n\n\nProfessional Associations\n\nAssociation 1\nAssociation 2\nCommittee memberships"
-  },
-  {
-    "objectID": "workshops/index.html",
-    "href": "workshops/index.html",
-    "title": "Workshops",
-    "section": "",
-    "text": "Workshops on AI in education for various audiences and contexts.\n\n\nSpecial Topics\nSpecialized workshops on focused topics such as fact-checking and lateral reading.\nView Workshops →\n\n\nBespoke Workshops\nCustom workshops developed for specific institutions including UB/HAFL, HKB, and health sector organizations.\nView Workshops →\n\n\n\n\n\n Back to topReuseCC BY-SA 4.0",
-    "crumbs": [
-      "Teaching",
-      "Workshops",
-      "Workshops"
-    ]
-  },
-  {
-    "objectID": "workshops/bespoke/index.html",
-    "href": "workshops/bespoke/index.html",
-    "title": "Bespoke Workshops",
-    "section": "",
-    "text": "Workshops developed for specific institutions and contexts.\n\n\n\n\nFormat: Two half-day sessions | Audience: UB/HAFL staff\n\nAI training for the University Library and HAFL covering fundamentals, practical applications, and integration into advisory work.\nAccess →\n\n\n\n\nFormat: Interactive Workshop | Audience: HKB Administration\n\nPractical AI applications for administrative tasks at the Hochschule der Künste Bern.\nAccess →\n\n\n\n\nFormat: Workshop | Focus: Academic reading with AI\n\nStrategies for using AI assistants to engage with scientific literature more effectively.\nAccess →\n\n\n\n\nFormat: Workshop | Audience: Health sector professionals\n\nAI applications in healthcare education and practice for health sector professionals.\nAccess →",
-    "crumbs": [
-      "Teaching",
-      "Workshops",
-      "Bespoke Workshops"
-    ]
-  },
-  {
-    "objectID": "workshops/bespoke/index.html#custom-workshops",
-    "href": "workshops/bespoke/index.html#custom-workshops",
-    "title": "Bespoke Workshops",
-    "section": "",
-    "text": "Workshops developed for specific institutions and contexts.\n\n\n\n\nFormat: Two half-day sessions | Audience: UB/HAFL staff\n\nAI training for the University Library and HAFL covering fundamentals, practical applications, and integration into advisory work.\nAccess →\n\n\n\n\nFormat: Interactive Workshop | Audience: HKB Administration\n\nPractical AI applications for administrative tasks at the Hochschule der Künste Bern.\nAccess →\n\n\n\n\nFormat: Workshop | Focus: Academic reading with AI\n\nStrategies for using AI assistants to engage with scientific literature more effectively.\nAccess →\n\n\n\n\nFormat: Workshop | Audience: Health sector professionals\n\nAI applications in healthcare education and practice for health sector professionals.\nAccess →",
-    "crumbs": [
-      "Teaching",
-      "Workshops",
-      "Bespoke Workshops"
-    ]
-  },
-  {
-    "objectID": "posts/template/index.html",
-    "href": "posts/template/index.html",
-    "title": "A template for blog posts",
-    "section": "",
-    "text": "This is a template for creating blog posts on the Virtual Academy website. You can customize the title, date, author information, categories, and content as needed.\n\n\n\n\n\n Back to topReuseCC BY 4.0"
-  },
-  {
-    "objectID": "posts/knowledge-information/index.html",
-    "href": "posts/knowledge-information/index.html",
-    "title": "Knowledge Is Not Information",
-    "section": "",
-    "text": "A recurring claim in discussions about the future of education goes something like this: because AI makes knowledge universally accessible, having knowledge will become less important, and education should pivot toward “future skills” such as creativity, critical thinking, and collaboration. The argument sounds plausible. It is also, from the perspective of cognitive science, deeply confused.\nThe confusion rests on a conflation of two very different things: knowledge integrated into long-term memory, and information available in an external system. These are not interchangeable. Knowledge stored in a human mind restructures how that mind perceives, reasons, and acts. Information sitting in an AI system does none of that until a person retrieves it, comprehends it, and integrates it, all of which require prior knowledge.\nWhat follows is a cognitive science perspective on why knowledge does not become less important when information becomes more available."
-  },
-  {
-    "objectID": "posts/knowledge-information/index.html#expertise-is-not-a-collection-of-facts",
-    "href": "posts/knowledge-information/index.html#expertise-is-not-a-collection-of-facts",
-    "title": "Knowledge Is Not Information",
-    "section": "Expertise is not a collection of facts",
-    "text": "Expertise is not a collection of facts\nDecades of expertise research have demonstrated that experts do not simply “know more” than novices. They have richly organized knowledge structures, typically called schemas, that allow them to recognise patterns, chunk information efficiently, reason by analogy, and generate solutions to novel problems.\nThe classic demonstration comes from @chasePerceptionChess1973, who showed that chess masters could reconstruct meaningful board positions from brief exposure far better than novices, but showed no advantage for random arrangements. The expertise resided not in superior memory per se, but in the ability to perceive meaningful structure, an ability that depends entirely on deep domain knowledge.\n@chiCategorizationRepresentationPhysics1981 found the same pattern in physics: experts categorised problems by underlying principles (e.g. conservation of energy), while novices categorised by surface features (e.g. “problems with inclined planes”). This structural understanding cannot be offloaded. An AI can provide the answer to a specific question, but it cannot provide the cognitive architecture that allows a person to ask the right question, notice when an answer is wrong, or see connections across domains."
-  },
-  {
-    "objectID": "posts/knowledge-information/index.html#the-effort-of-learning-is-not-an-inefficiency",
-    "href": "posts/knowledge-information/index.html#the-effort-of-learning-is-not-an-inefficiency",
-    "title": "Knowledge Is Not Information",
-    "section": "The effort of learning is not an inefficiency",
-    "text": "The effort of learning is not an inefficiency\nA natural response to the availability of AI is to treat the effort of acquiring knowledge as a cost to be minimised. If the answer is one prompt away, why spend hours working through the material yourself?\nThe answer comes from research on desirable difficulties [@bjorkNewTheoryDisuse1992]. Encoding, retrieving, and elaborating knowledge is effortful precisely because that effort is what produces durable, flexible learning. Testing yourself is harder than rereading, but produces better retention. Spacing practice over time feels less efficient than massing it, but leads to more robust memory. Generating an answer before being told the correct one requires more cognitive work, but strengthens understanding.\nWhen a student outsources cognitive work to AI, they receive the output but skip the process that would have produced learning. The deliverable arrives; the competence does not. This is not a side effect of AI use, it is a structural consequence of bypassing the cognitive operations that give rise to learning. The process of struggling with material is not overhead to be optimised away. It is the mechanism of cognitive development."
-  },
-  {
-    "objectID": "posts/knowledge-information/index.html#you-need-knowledge-to-evaluate-knowledge",
-    "href": "posts/knowledge-information/index.html#you-need-knowledge-to-evaluate-knowledge",
-    "title": "Knowledge Is Not Information",
-    "section": "You need knowledge to evaluate knowledge",
-    "text": "You need knowledge to evaluate knowledge\nOne of the more consequential implications of AI-assisted work concerns metacognitive calibration: the ability to monitor and evaluate one’s own understanding. Effective use of AI-generated content requires judging whether that content is accurate, relevant, and complete. This judgement depends on domain knowledge.\nThe problem is circular, and well documented. @krugerUnskilledUnawareIt1999 showed that people with less competence in a domain are also less able to recognise their own incompetence. Applied to AI use, this means that the people least equipped to evaluate AI output are precisely those who would benefit most from doing so. Without a foundation of domain knowledge, a student cannot distinguish a correct AI response from a plausible but wrong one, and cannot calibrate their confidence accordingly.\nFar from making knowledge less important, AI tools make the metacognitive functions that depend on knowledge more important."
-  },
-  {
-    "objectID": "posts/knowledge-information/index.html#cognition-is-inference-not-search",
-    "href": "posts/knowledge-information/index.html#cognition-is-inference-not-search",
-    "title": "Knowledge Is Not Information",
-    "section": "Cognition is inference, not search",
-    "text": "Cognition is inference, not search\nThe “knowledge is less important” framing implicitly models cognition as search: you need a fact, you look it up. But this gets the computational nature of cognition wrong. The mind does not work by searching a database. It works by maintaining an internal model of the world, generating predictions from that model, and updating when those predictions fail.\nSchemas, the knowledge structures that decades of expertise research have documented, function as hierarchical generative models: structured prior knowledge that constrains the space of hypotheses a person entertains [@tenenbaumHowGrowMind2011; @kempLearningOverhypothesesHierarchical2007]. When an experienced physician examines a radiograph, their perceptual system does not search memory for matching patterns. It generates a prediction, shaped by thousands of prior cases, before conscious deliberation begins. The chess master’s advantage in @chasePerceptionChess1973 is not superior recall; it is a generative model of meaningful board positions that makes random arrangements no more memorable than they are for anyone else. The physicist’s deep categorisation in @chiCategorizationRepresentationPhysics1981 reflects priors over causal structure, not a filing system organised by surface features.\nLearning, in this framing, is driven by prediction error: the mismatch between what the model expected and what actually occurred. That signal only exists if you had a prediction in the first place, which requires prior knowledge. No prior knowledge, no predictions. No predictions, no prediction errors. No prediction errors, no learning. The entire mechanism depends on already knowing something.\nThis is why access to an external information source is not a substitute for knowledge in the mind. A search engine or a language model can return an answer, but it cannot restructure the prior distributions that shape how a person perceives, predicts, and reasons. These are not retrieval operations that can be delegated. They are consequences of having knowledge woven into a generative model of the world."
-  },
-  {
-    "objectID": "posts/knowledge-information/index.html#the-stronger-objection",
-    "href": "posts/knowledge-information/index.html#the-stronger-objection",
-    "title": "Knowledge Is Not Information",
-    "section": "The stronger objection",
-    "text": "The stronger objection\nThere is a version of the argument that this analysis does not touch, and it deserves an honest answer. The claim is not that humans can look things up faster, but that the entire cognitive loop, retrieval, comprehension, evaluation, action, can be automated. If one AI system produces information and another AI system consumes, evaluates, and acts on it, the human is no longer a bottleneck. The human is no longer in the loop at all.\nThis is a coherent position, but it is a different argument. It is not claiming that knowledge matters less for humans. It is claiming that humans matter less. And whatever its merits as a prediction about the economy or the labour market, it is not an argument about education. The educational discourse this post is responding to still assumes that students should become competent professionals, thoughtful citizens, people capable of independent judgement. It simply asserts, wrongly, that they can become these things without building knowledge.\nIf someone wants to argue that human competence itself is becoming obsolete, that is a conversation worth having. But it is not a conversation that helps a teacher design a course, a curriculum developer choose learning objectives, or a student decide how to spend their afternoon. For anyone still operating on the premise that human understanding matters, the rest of the argument stands."
-  },
-  {
-    "objectID": "posts/knowledge-information/index.html#what-actually-changes",
-    "href": "posts/knowledge-information/index.html#what-actually-changes",
-    "title": "Knowledge Is Not Information",
-    "section": "What actually changes",
-    "text": "What actually changes\nThis is not to say that AI changes nothing about the value of knowledge. But the common move of distinguishing “mere rote recall” from “higher-order thinking” and then dismissing the former is too hasty. Much of what looks like rote memorisation is actually cognitive infrastructure. A child who has automated the times table is not simply recalling facts; they have freed working memory for algebra, estimation, and mathematical reasoning. A person who knows the chronology of the French Revolution is not hoarding trivia; they have a temporal scaffold on which to hang causal explanations. The distinction that matters is not between memorised knowledge and conceptual understanding, because the former is often the substrate of the latter.\nWhat does shift is the return on different types of knowledge. Genuinely isolated facts, the kind that serve no further cognitive function, were arguably never the most important educational outcome. Conceptual understanding, the ability to frame problems, to integrate information across domains, to evaluate and critique, these become more important when AI handles routine lookup and generation. But the path to conceptual understanding runs through a large body of well-organised, readily accessible knowledge. There are no shortcuts.\nThe implication for education is not that we should teach less knowledge, but that we should be more thoughtful about which knowledge we prioritise and how we help students build it. The goal is not to compete with AI on information retrieval, but to develop the deep, structured understanding that makes AI tools genuinely useful rather than superficially convenient."
-  },
-  {
-    "objectID": "posts/knowledge-information/index.html#the-container-is-not-the-cognition",
-    "href": "posts/knowledge-information/index.html#the-container-is-not-the-cognition",
-    "title": "Knowledge Is Not Information",
-    "section": "The container is not the cognition",
-    "text": "The container is not the cognition\nThe claim that knowledge matters less in the age of AI mistakes the container for the cognition. AI changes where information is stored and how fast it can be retrieved. It does not change the fact that human thinking, understanding, judgement, and learning are constitutively dependent on knowledge organised in human minds.\nA future in which people have less knowledge is not a future in which knowledge matters less. It is a future in which people are less capable of using the tools available to them. The very instruments designed to make cognition easier may, if used naively, undermine the knowledge base required to use them well. Recognising this paradox is the first step toward designing educational environments that harness AI without hollowing out the learning it is meant to support."
-  },
-  {
-    "objectID": "about/index.html",
-    "href": "about/index.html",
-    "title": "About",
-    "section": "",
-    "text": "The Virtual Academy (Virtuelle Akademie) is a research and development unit at the Bern University of Applied Sciences, focused on the intersection of technology and education."
-  },
-  {
-    "objectID": "about/index.html#about-the-virtual-academy",
-    "href": "about/index.html#about-the-virtual-academy",
-    "title": "About",
-    "section": "",
-    "text": "The Virtual Academy (Virtuelle Akademie) is a research and development unit at the Bern University of Applied Sciences, focused on the intersection of technology and education."
-  },
-  {
-    "objectID": "about/index.html#team",
-    "href": "about/index.html#team",
-    "title": "About",
-    "section": "Team",
-    "text": "Team\n\n\nDr. Andrew Ellis\nResearcher specializing in AI applications in educational technology, intelligent tutoring systems, and learning analytics.\n Contact |  Profile"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Virtuelle Akademie",
-    "section": "",
-    "text": "This is the research and teaching platform of the Virtuelle Akademie, focusing on AI in higher education. We explore how artificial intelligence can enhance teaching and learning, with a focus on intelligent tutoring systems, adaptive learning, and human-AI collaboration. Visit virtuelleakademie.ch for our main site."
-  },
-  {
-    "objectID": "index.html#what-we-do",
-    "href": "index.html#what-we-do",
-    "title": "Virtuelle Akademie",
-    "section": "What We Do",
-    "text": "What We Do\n\n\nResearch\nInvestigating intelligent tutoring systems that adapt to individual learners and provide meaningful feedback grounded in cognitive science.\n\n\nTeaching\nCourses and programs on AI in education, including continuing education at BFH and the CAS Hochschuldidaktik.\n\n\nWorkshops\nHands-on workshops covering generative AI tools, prompt engineering, and practical applications for educators."
-  },
-  {
-    "objectID": "index.html#about",
-    "href": "index.html#about",
-    "title": "Virtuelle Akademie",
-    "section": "About",
-    "text": "About\nVirtuelle Akademie is part of Bern University of Applied Sciences. We are members of the BeLEARN research network advancing the science of learning through interdisciplinary collaboration.\nLearn more about our team"
+    "objectID": "about/andrew-ellis/index.html#contact",
+    "href": "about/andrew-ellis/index.html#contact",
+    "title": "Dr. Andrew Ellis",
+    "section": "Contact",
+    "text": "Contact\nFor research collaborations, inquiries, or more information about ongoing projects, please reach out via email."
   },
   {
     "objectID": "teaching/index.html",
     "href": "teaching/index.html",
     "title": "Teaching",
     "section": "",
-    "text": "Courses and materials for integrating AI into teaching practice.\n\n\n\nA progressive series of courses on AI in education, offered through BFH continuing education. Three levels: Beginner, Intermediate, and Advanced.\nView Courses →\n\n\n\nModule 4 of the CAS Hochschuldidaktik program, focusing on AI in higher education teaching.\nView Program →",
-    "crumbs": [
-      "Teaching",
-      "Courses",
-      "Teaching"
-    ]
+    "text": "Courses and materials for integrating AI into teaching practice.\n\n\n\nA progressive series of courses on AI in education, offered through BFH continuing education (Weiterbildung). Three levels: Beginner, Intermediate, and Advanced.\nView Courses →\n\n\n\nModule 4 of the CAS Hochschuldidaktik program, focusing on AI in higher education teaching.\nView Program →"
   },
   {
     "objectID": "teaching/index.html#courses",
     "href": "teaching/index.html#courses",
     "title": "Teaching",
     "section": "",
-    "text": "Courses and materials for integrating AI into teaching practice.\n\n\n\nA progressive series of courses on AI in education, offered through BFH continuing education. Three levels: Beginner, Intermediate, and Advanced.\nView Courses →\n\n\n\nModule 4 of the CAS Hochschuldidaktik program, focusing on AI in higher education teaching.\nView Program →",
-    "crumbs": [
-      "Teaching",
-      "Courses",
-      "Teaching"
-    ]
+    "text": "Courses and materials for integrating AI into teaching practice.\n\n\n\nA progressive series of courses on AI in education, offered through BFH continuing education (Weiterbildung). Three levels: Beginner, Intermediate, and Advanced.\nView Courses →\n\n\n\nModule 4 of the CAS Hochschuldidaktik program, focusing on AI in higher education teaching.\nView Program →"
   },
   {
-    "objectID": "teaching/index.html#workshops",
-    "href": "teaching/index.html#workshops",
+    "objectID": "teaching/index.html#special-topics",
+    "href": "teaching/index.html#special-topics",
     "title": "Teaching",
-    "section": "Workshops",
-    "text": "Workshops\nWorkshops on AI in education for various audiences and contexts.\n\n\nSpecial Topics\nSpecialized workshops on focused topics such as fact-checking and lateral reading.\nView Workshops →\n\n\nBespoke Workshops\nCustom workshops developed for specific institutions including UB/HAFL, HKB, and health sector organizations.\nView Workshops →",
-    "crumbs": [
-      "Teaching",
-      "Courses",
-      "Teaching"
-    ]
+    "section": "Special Topics",
+    "text": "Special Topics\n\n\nFact-Checking for AI\n\nFormat: 3-hour Workshop | Focus: Lateral Reading\n\nLearn Lateral Reading: a practical technique to quickly and reliably verify AI responses.\nAccess →"
   },
   {
-    "objectID": "teaching/philosophy/index.html",
-    "href": "teaching/philosophy/index.html",
-    "title": "Teaching Philosophy",
-    "section": "",
-    "text": "Describe your fundamental beliefs about education and learning.\n\n\n\nExplain your methodology and techniques.\n\n\n\nHow you foster active learning and student participation.\n\n\n\nYour approach to evaluating student progress and providing feedback."
-  },
-  {
-    "objectID": "teaching/philosophy/index.html#my-teaching-philosophy",
-    "href": "teaching/philosophy/index.html#my-teaching-philosophy",
-    "title": "Teaching Philosophy",
-    "section": "",
-    "text": "Describe your fundamental beliefs about education and learning.\n\n\n\nExplain your methodology and techniques.\n\n\n\nHow you foster active learning and student participation.\n\n\n\nYour approach to evaluating student progress and providing feedback."
+    "objectID": "teaching/index.html#bespoke-workshops",
+    "href": "teaching/index.html#bespoke-workshops",
+    "title": "Teaching",
+    "section": "Bespoke Workshops",
+    "text": "Bespoke Workshops\nWorkshops developed for specific institutions and contexts.\n\n\nAI Training for UB/HAFL\n\nFormat: Two half-day sessions | Audience: UB/HAFL staff\n\nAI training for the University Library and HAFL covering fundamentals, practical applications, and integration into advisory work.\nAccess →\n\n\nAI for Administration (HKB)\n\nFormat: Interactive Workshop | Audience: HKB Administration\n\nPractical AI applications for administrative tasks at the Bern Academy of the Arts.\nAccess →\n\n\nAI-Enhanced Journal Club\n\nFormat: Workshop | Focus: Academic reading with AI\n\nStrategies for using AI assistants to engage with scientific literature more effectively.\nAccess →\n\n\nAI Training for Health Professionals\n\nFormat: Workshop | Audience: Health sector professionals\n\nAI applications in healthcare education and practice for health sector professionals.\nAccess →"
   },
   {
     "objectID": "teaching/cas-hochschuldidaktik/index.html",
     "href": "teaching/cas-hochschuldidaktik/index.html",
-    "title": "CAS Hochschuldidaktik",
+    "title": "CAS University Didactics",
     "section": "",
-    "text": "Program: Certificate of Advanced Studies | Format: Full-day module\n\nModule 4 of the CAS Hochschuldidaktik program, focusing on AI in higher education teaching.\nLaunch CAS module →",
-    "crumbs": [
-      "Teaching",
-      "Courses",
-      "CAS Hochschuldidaktik"
-    ]
+    "text": "Program: Certificate of Advanced Studies | Format: Full-day module\n\nModule 4 of the CAS Hochschuldidaktik program, focusing on AI in higher education teaching.\nLaunch CAS module →"
   },
   {
-    "objectID": "teaching/cas-hochschuldidaktik/index.html#ki-in-der-lehre",
-    "href": "teaching/cas-hochschuldidaktik/index.html#ki-in-der-lehre",
-    "title": "CAS Hochschuldidaktik",
+    "objectID": "teaching/cas-hochschuldidaktik/index.html#ai-in-teaching-ki-in-der-lehre",
+    "href": "teaching/cas-hochschuldidaktik/index.html#ai-in-teaching-ki-in-der-lehre",
+    "title": "CAS University Didactics",
     "section": "",
-    "text": "Program: Certificate of Advanced Studies | Format: Full-day module\n\nModule 4 of the CAS Hochschuldidaktik program, focusing on AI in higher education teaching.\nLaunch CAS module →",
-    "crumbs": [
-      "Teaching",
-      "Courses",
-      "CAS Hochschuldidaktik"
-    ]
+    "text": "Program: Certificate of Advanced Studies | Format: Full-day module\n\nModule 4 of the CAS Hochschuldidaktik program, focusing on AI in higher education teaching.\nLaunch CAS module →"
   }
 ]

@@ -5,22 +5,11 @@ project:
     port: 8803
     browser: true
 
-babelquarto:
-  mainlanguage: 'en'
-  languages: ['de']
-  languagelinks: 'navbar'
-  languagecodes:
-    - name: en
-      text: "EN"
-    - name: de
-      text: "DE"
-
-lang: en
 license: "CC BY-SA 4.0"
 
 website:
-  title: "Virtuelle Akademie | KI in der Lehre"
-  description: "Forschung und Ressourcen zu KI in der Hochschullehre"
+  title: "Virtuelle Akademie | AI in Teaching"
+  description: "Research and resources on AI in higher education"
 
   site-url: https://virtuelleakademie.github.io/
   repo-url: https://github.com/virtuelleakademie/virtuelleakademie.github.io
@@ -39,53 +28,23 @@ website:
   navbar:
     background: light
     left:
-      - research/index.qmd
-      - teaching/index.qmd
-      - posts/index.qmd
+      - text: "Blog"
+        href: posts/index.qmd
+      - text: "Teaching"
+        href: teaching/index.qmd
+      - text: "Research"
+        href: research/index.qmd
 
     right:
       - about/index.qmd
 
     tools:
-      - icon: house-fill
-        text: "Hauptseite virtuelleakademie.ch"
-        href: https://virtuelleakademie.ch
-        target: _blank
-      - icon: lightbulb-fill
-        text: Knowledge Base
-        href: https://virtuelleakademie.ch/knowledge-base/
-        target: _blank
       - icon: github
         href: https://github.com/virtuelleakademie
         target: _blank
 
-  sidebar:
-    - id: research
-      title: "Research"
-      style: "docked"
-      search: true
-      background: light
-      contents:
-        - research/index.qmd
-    - id: teaching
-      title: "Teaching"
-      style: "docked"
-      search: true
-      background: light
-      contents:
-        - section: "Courses"
-          contents:
-            - teaching/index.qmd
-            - teaching/bfh-weiterbildung/index.qmd
-            - teaching/cas-hochschuldidaktik/index.qmd
-        - section: "Workshops"
-          contents:
-            - workshops/index.qmd
-            - workshops/special-topics/index.qmd
-            - workshops/bespoke/index.qmd
-
 page-footer:
-  left: "© 2026 Virtuelle Akademie | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)"
+  left: "(c) 2026 Virtuelle Akademie | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)"
   right:
     - icon: github
       href: https://github.com/virtuelleakademie
@@ -118,16 +77,3 @@ editor:
 comments:
   hypothesis:
     theme: clean
-
-revealjs-plugins:
-  - attribution
-
-filters:
-  - timer
-  - custom-callout
-
-custom-callout:
-  active-processing:
-    icon-symbol: "📝"
-    collapse: false
-    color: "#333333"
