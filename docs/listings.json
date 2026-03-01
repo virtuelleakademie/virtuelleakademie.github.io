@@ -1,16 +1,10 @@
 [
   {
     "listing": "/index.html",
-    "items": [
-      "/posts/knowledge-information/index.html",
-      "/posts/writing-as-sampling/index.html"
-    ]
+    "items": []
   },
   {
     "listing": "/posts/index.html",
-    "items": [
-      "/posts/knowledge-information/index.html",
-      "/posts/writing-as-sampling/index.html"
-    ]
+    "items": []
   }
 ]
