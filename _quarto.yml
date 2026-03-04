@@ -2,6 +2,10 @@ project:
   type: website
   output-dir: docs
   render:
+    - "*.qmd"
+    - "**/*.qmd"
+    - "!_extensions/"
+    - "!posts/_archive/"
     - "!CLAUDE.md"
   preview:
     port: 8803
